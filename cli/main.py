@@ -5,7 +5,7 @@ from cli.commands import analyze, commit
 
 app = typer.Typer(
     name="inyeon",
-    help="Git workflow AI assistant",
+    help="Your Daniel Craig's Vesper Lynd, the most powerful Git workflow assistant.",
     no_args_is_help=True,
     add_completion=False,
 )
@@ -17,7 +17,7 @@ app.add_typer(commit.app, name="commit")
 
 @app.command()
 def version():
-    """Show version information."""
+    """Show version information"""
     typer.echo("inyeon v0.1.0")
 
 
@@ -30,7 +30,7 @@ def health(
         envvar="INYEON_API_URL",
     ),
 ):
-    """Check backend connection status."""
+    """Check backend connection status"""
     from rich.console import Console
     from cli.api_client import APIClient, APIError
 
