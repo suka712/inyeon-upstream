@@ -1,0 +1,2 @@
+[console_scripts]
+inyeon = cli.main:app
