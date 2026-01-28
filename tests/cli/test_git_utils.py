@@ -1,5 +1,4 @@
-import subprocess
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 from cli.git_utils import (
     run_git,

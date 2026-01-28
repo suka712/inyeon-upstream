@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch, MagicMock
 
-from cli.api_client import APIClient, APIError
+from cli.api_client import APIClient
 
 
 @pytest.fixture
