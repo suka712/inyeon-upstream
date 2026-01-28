@@ -58,7 +58,9 @@ class FileChange(BaseModel):
 
 
 class AnalyzeRequest(BaseModel):
-    diff: str = Field(..., min_length=1, description="Git diff content")
+    diff: str = Field(
+        ..., min_length=1, max_length=50000, description="Git diff content"
+    )
     context: Optional[str] = Field(
         None, description="Additional context about the changes"
     )
@@ -85,7 +87,9 @@ class AnalyzeResponse(BaseModel):
 
 
 class CommitRequest(BaseModel):
-    diff: str = Field(..., min_length=1, description="Git diff content")
+    diff: str = Field(
+        ..., min_length=1, max_length=50000, description="Git diff content"
+    )
     issue_ref: Optional[str] = Field(None, description="Issue reference (e.g., #234)")
 
 
