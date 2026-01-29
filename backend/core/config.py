@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     Example: INYEON_OLLAMA_URL=ollama
     """
 
+    model_config = SettingsConfigDict(env_prefix="INYEON_")
+
     # LLM Provider Selection
     llm_provider: str = "ollama"
 

@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - INYEON_LLM_PROVIDER=gemini
+      - INYEON_GEMINI_API_KEY=${INYEON_GEMINI_API_KEY}
+      - INYEON_GEMINI_MODEL=gemini-2.5-flash
