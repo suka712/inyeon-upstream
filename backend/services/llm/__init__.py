@@ -17,6 +17,17 @@ This is the "Dependency Inversion Principle" from SOLID:
 """
 
 from .base import LLMProvider
-from .ollama import OllamaProvider
+from .ollama import OllamaProvider, OllamaError
+from .gemini import GeminiProvider, GeminiError
+from .factory import create_llm_provider, ProviderType, ProviderConfigError
 
-__all__ = ["LLMProvider", "OllamaProvider"]
+__all__ = [
+    "LLMProvider",
+    "OllamaProvider",
+    "OllamaError",
+    "GeminiProvider",
+    "GeminiError",
+    "create_llm_provider",
+    "ProviderType",
+    "ProviderConfigError",
+]

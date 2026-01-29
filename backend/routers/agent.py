@@ -4,8 +4,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, Field
 
 from backend.agents import GitAgent
-from backend.core.dependencies import get_ollama_client
-from backend.services.llm import OllamaProvider
+from backend.services.llm import create_llm_provider, LLMProvider
 from backend.core.config import settings
 
 
@@ -24,11 +23,14 @@ class AgentResponse(BaseModel):
     analysis: dict[str, Any] = {}
 
 
-def get_llm_provider() -> OllamaProvider:
-    """Dependency that provides the LLM provider."""
-    return OllamaProvider(
-        base_url=settings.ollama_url,
-        model=settings.ollama_model,
+def get_llm_provider() -> LLMProvider:
+    """Dependency that provides the configured LLM provider."""
+    return create_llm_provider(
+        provider=settings.llm_provider,
+        ollama_url=settings.ollama_url,
+        ollama_model=settings.ollama_model,
+        gemini_api_key=settings.gemini_api_key,
+        gemini_model=settings.gemini_model,
         timeout=settings.ollama_timeout,
     )
 
@@ -36,7 +38,7 @@ def get_llm_provider() -> OllamaProvider:
 @router.post("/run", response_model=AgentResponse)
 async def run_agent(
     request: AgentRequest,
-    llm: OllamaProvider = Depends(get_llm_provider),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
     """Run the git workflow agent."""
     try:
