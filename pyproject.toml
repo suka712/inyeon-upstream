@@ -21,6 +21,10 @@
 
       # Diff parsing
       "unidiff>=0.7.5",
+
+      # Agents
+      "langgraph>=0.2.0",
+      "langchain-core>=0.3.0",
   ]
 
   [project.scripts]
