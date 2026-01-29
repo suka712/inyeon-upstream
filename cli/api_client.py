@@ -78,3 +78,12 @@ class APIClient:
             payload["issue_ref"] = issue_ref
 
         return self._request("POST", "/api/v1/generate-commit", json=payload)
+
+    def run_agent(self, diff: str, repo_path: str = ".", verbose: bool = False) -> dict:
+        """Run the git workflow agent."""
+        payload = {
+            "diff": diff,
+            "repo_path": repo_path,
+            "verbose": verbose,
+        }
+        return self._request("POST", "/api/v1/agent/run", json=payload)

@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
 from backend.core.dependencies import get_ollama_client
 from backend.core.logging import logger
-from backend.routers import analyze, commit
+from backend.routers import analyze, commit, agent
 
 
 @asynccontextmanager
@@ -47,6 +47,7 @@ app.add_middleware(
 # Register routers
 app.include_router(analyze.router, prefix="/api/v1", tags=["analyze"])
 app.include_router(commit.router, prefix="/api/v1", tags=["commit"])
+app.include_router(agent.router, prefix="/api/v1")
 
 
 @app.get("/health", tags=["health"])

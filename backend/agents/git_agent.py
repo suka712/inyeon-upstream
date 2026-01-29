@@ -23,9 +23,18 @@ class GitAgent:
         """Construct the LangGraph state machine."""
         graph = StateGraph(AgentState)
 
-        graph.add_node("analyze", lambda s: analyze_diff(s, self.llm))
-        graph.add_node("gather_context", lambda s: gather_context(s, self.llm))
-        graph.add_node("generate_commit", lambda s: generate_commit(s, self.llm))
+        async def _analyze(s: AgentState) -> dict[str, Any]:
+            return await analyze_diff(s, self.llm)
+
+        async def _gather(s: AgentState) -> dict[str, Any]:
+            return await gather_context(s, self.llm)
+
+        async def _generate(s: AgentState) -> dict[str, Any]:
+            return await generate_commit(s, self.llm)
+
+        graph.add_node("analyze", _analyze)
+        graph.add_node("gather_context", _gather)
+        graph.add_node("generate_commit", _generate)
 
         graph.set_entry_point("analyze")
 
