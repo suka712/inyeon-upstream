@@ -1,3 +1,4 @@
+import json
 import typer
 from rich.console import Console
 from rich.panel import Panel
@@ -130,8 +131,6 @@ def commit(
 
     # Output
     if json_output:
-        import json
-
         console.print(json.dumps(result, indent=2))
         raise typer.Exit(0)
 

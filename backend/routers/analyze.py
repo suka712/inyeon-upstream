@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import ValidationError
 
-from backend.core.dependencies import get_ollama_client
+from backend.core.dependencies import get_llm_provider
 from backend.models.schemas import AnalyzeRequest, AnalyzeResponse
 from backend.prompts.analyze_prompt import build_analyze_prompt
-from backend.services.ollama_client import OllamaClient, OllamaError
+from backend.services.llm import LLMProvider, LLMError
 
 
 router = APIRouter()
@@ -18,7 +18,7 @@ router = APIRouter()
 )
 async def analyze_diff(
     request: AnalyzeRequest,
-    ollama: OllamaClient = Depends(get_ollama_client),
+    llm: LLMProvider = Depends(get_llm_provider),
 ) -> AnalyzeResponse:
     """
     Analyze a git diff and return:
@@ -32,8 +32,8 @@ async def analyze_diff(
     prompt = build_analyze_prompt(request.diff, request.context)
 
     try:
-        result = await ollama.generate(prompt, json_mode=True)
-    except OllamaError as e:
+        result = await llm.generate(prompt, json_mode=True)
+    except LLMError as e:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail=f"LLM service error: {e}",

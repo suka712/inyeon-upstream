@@ -1,12 +1,13 @@
+import json
 from typing import Any
 
 from google import genai
 from google.genai import types
 
-from .base import LLMProvider
+from .base import LLMProvider, LLMError
 
 
-class GeminiError(Exception):
+class GeminiError(LLMError):
     """Raised when Gemini request fails."""
 
     pass
@@ -49,8 +50,6 @@ class GeminiProvider(LLMProvider):
             )
 
             if json_mode:
-                import json
-
                 return json.loads(response.text)
             return {"text": response.text}
 

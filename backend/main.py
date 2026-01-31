@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.core.config import settings
-from backend.core.dependencies import get_ollama_client
+from backend.core.dependencies import get_llm_provider
 from backend.core.logging import logger
 from backend.routers import analyze, commit, agent
 
@@ -12,19 +12,16 @@ from backend.routers import analyze, commit, agent
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan handler."""
-    # Startup
     logger.info("Starting Inyeon API...")
-    client = get_ollama_client()
+    llm = get_llm_provider()
 
-    if await client.is_healthy():
-        logger.info(f"Connected to Ollama at {settings.ollama_url}")
-        logger.info(f"Using model: {settings.ollama_model}")
+    if await llm.is_healthy():
+        logger.info(f"LLM provider: {settings.llm_provider}")
     else:
-        logger.warning(f"Ollama not reachable at {settings.ollama_url}")
+        logger.warning("LLM provider not reachable")
 
     yield
 
-    # Shutdown
     logger.info("Shutting down Inyeon API...")
 
 
@@ -35,7 +32,6 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -44,7 +40,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register routers
 app.include_router(analyze.router, prefix="/api/v1", tags=["analyze"])
 app.include_router(commit.router, prefix="/api/v1", tags=["commit"])
 app.include_router(agent.router, prefix="/api/v1")
@@ -53,16 +48,15 @@ app.include_router(agent.router, prefix="/api/v1")
 @app.get("/health", tags=["health"])
 async def health_check():
     """Health check endpoint."""
-    client = get_ollama_client()
-    ollama_healthy = await client.is_healthy()
+    llm = get_llm_provider()
+    llm_healthy = await llm.is_healthy()
 
     return {
-        "status": "healthy" if ollama_healthy else "degraded",
+        "status": "healthy" if llm_healthy else "degraded",
         "version": settings.api_version,
-        "ollama": {
-            "connected": ollama_healthy,
-            "url": settings.ollama_url,
-            "model": settings.ollama_model,
+        "llm": {
+            "provider": settings.llm_provider,
+            "connected": llm_healthy,
         },
     }
 

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import ValidationError
 
-from backend.core.dependencies import get_ollama_client
+from backend.core.dependencies import get_llm_provider
 from backend.models.schemas import CommitRequest, CommitResponse
 from backend.prompts.commit_prompt import build_commit_prompt
-from backend.services.ollama_client import OllamaClient, OllamaError
+from backend.services.llm import LLMProvider, LLMError
 
 
 router = APIRouter()
@@ -18,7 +18,7 @@ router = APIRouter()
 )
 async def generate_commit(
     request: CommitRequest,
-    ollama: OllamaClient = Depends(get_ollama_client),
+    llm: LLMProvider = Depends(get_llm_provider),
 ) -> CommitResponse:
     """
     Generate a conventional commit message including:
@@ -32,8 +32,8 @@ async def generate_commit(
     prompt = build_commit_prompt(request.diff, request.issue_ref)
 
     try:
-        result = await ollama.generate(prompt, json_mode=True)
-    except OllamaError as e:
+        result = await llm.generate(prompt, json_mode=True)
+    except LLMError as e:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail=f"LLM service error: {e}",

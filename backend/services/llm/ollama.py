@@ -3,10 +3,10 @@ from typing import Any
 
 import httpx
 
-from .base import LLMProvider
+from .base import LLMProvider, LLMError
 
 
-class OllamaError(Exception):
+class OllamaError(LLMError):
     """Raised when Ollama request fails."""
 
     pass

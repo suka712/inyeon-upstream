@@ -1,13 +1,11 @@
 from functools import lru_cache
 
-from backend.services.ollama_client import OllamaClient
+from backend.services.llm import LLMProvider, create_llm_provider
 
 
 @lru_cache
-def get_ollama_client() -> OllamaClient:
+def get_llm_provider() -> LLMProvider:
     """
-    Get shared OllamaClient instance.
-
-    Uses lru_cache to ensure single instance across requests.
+    Get shared LLM Provider instance based on configuration.
     """
-    return OllamaClient()
+    return create_llm_provider()

@@ -1,3 +1,4 @@
+import json
 import sys
 
 import typer
@@ -134,8 +135,6 @@ def analyze(
 
     # Output
     if json_output:
-        import json
-
         console.print(json.dumps(result, indent=2))
     else:
         _display_result(result)
