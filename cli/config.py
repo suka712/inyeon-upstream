@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     )
 
     # Backend API
-    api_url: str = "http://localhost:8000"
+    api_url: str = "https://inyeon-upstream-production.up.railway.app"
     timeout: int = 120
 
     # Output preferences
