@@ -30,11 +30,11 @@ git diff | inyeon analyze
 ## 🎯 Features
 
 - **Multi-Agent Intelligence** — Specialized agents for commits, reviews, and task orchestration
-- **RAG-Powered Context** — Understands your entire codebase via ChromaDB embeddings
-- **Flexible LLM Support** — Use Gemini API (cloud) or Ollama (local)
-- **Conventional Commits** — Auto-generates properly formatted commit messages
-- **Smart Code Review** — AI insights on code quality, patterns, and potential issues
-- **Docker-Ready** — Deploy with one command via docker-compose
+- **RAG-Powered Context** - Understands your entire codebase via ChromaDB embeddings
+- **Flexible LLM Support** - Use Gemini API (cloud) or Ollama (local)
+- **Conventional Commits** - Auto-generates properly formatted commit messages
+- **Smart Code Review** - AI insights on code quality, patterns, and potential issues
+- **Docker-Ready** - Deploy with one command via docker-compose
 
 ---
 
