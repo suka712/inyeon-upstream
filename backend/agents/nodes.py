@@ -3,6 +3,7 @@ from typing import Any
 from .state import AgentState
 from .tools import read_file
 from backend.services.llm.base import LLMProvider
+from backend.rag import CodeRetriever
 
 
 async def analyze_diff(state: AgentState, llm: LLMProvider) -> dict[str, Any]:
@@ -35,6 +36,25 @@ DIFF:
     }
 
 
+async def search_rag_context(
+    state: AgentState, retriever: CodeRetriever | None
+) -> dict[str, Any]:
+    """Search for relevant code using RAG."""
+    if not retriever or retriever.count() == 0:
+        return {
+            "rag_context": [],
+            "reasoning": state["reasoning"] + ["No RAG index available"],
+        }
+
+    results = await retriever.search_for_diff(state["diff"], n_results=3)
+
+    return {
+        "rag_context": results,
+        "reasoning": state["reasoning"]
+        + [f"Found {len(results)} relevant files via RAG"],
+    }
+
+
 async def gather_context(state: AgentState, llm: LLMProvider) -> dict[str, Any]:
     """Read files the agent requested for additional context."""
     file_contents = {}
@@ -53,8 +73,19 @@ async def gather_context(state: AgentState, llm: LLMProvider) -> dict[str, Any]:
 async def generate_commit(state: AgentState, llm: LLMProvider) -> dict[str, Any]:
     """Generate the commit message with full context."""
     context = ""
+
+    if state.get("rag_context"):
+        context += "\n\nRELEVANT CODE (from codebase search):\n"
+        for item in state["rag_context"]:
+            context += f"\n--- {item['path']} (relevance: {item['score']:.2f}) ---\n"
+            context += (
+                f"{item['content'][:500]}...\n"
+                if len(item["content"]) > 500
+                else f"{item['content']}\n"
+            )
+
     if state.get("file_contents"):
-        context = "\n\nRELATED FILES:\n"
+        context += "\n\nRELATED FILES:\n"
         for path, content in state["file_contents"].items():
             context += f"\n--- {path} ---\n{content}\n"
 

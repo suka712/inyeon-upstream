@@ -28,6 +28,9 @@
 
       # LLM Providers
       "google-genai>=1.0.0",
+
+      # RAG
+      "chromadb>=0.4.0",
   ]
 
   [project.scripts]

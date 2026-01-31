@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.core.config import settings
 from backend.core.dependencies import get_llm_provider
 from backend.core.logging import logger
-from backend.routers import analyze, commit, agent
+from backend.routers import analyze, commit, agent, rag
 
 
 @asynccontextmanager
@@ -43,6 +43,7 @@ app.add_middleware(
 app.include_router(analyze.router, prefix="/api/v1", tags=["analyze"])
 app.include_router(commit.router, prefix="/api/v1", tags=["commit"])
 app.include_router(agent.router, prefix="/api/v1")
+app.include_router(rag.router, prefix="/api/v1/rag")
 
 
 @app.get("/health", tags=["health"])

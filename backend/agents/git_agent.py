@@ -3,20 +3,23 @@ from typing import Any
 from langgraph.graph import StateGraph, END
 
 from .state import AgentState
-from .nodes import analyze_diff, gather_context, generate_commit, should_gather_context
+from .nodes import (
+    analyze_diff,
+    gather_context,
+    generate_commit,
+    should_gather_context,
+    search_rag_context,
+)
 from backend.services.llm.base import LLMProvider
+from backend.rag import CodeRetriever
 
 
 class GitAgent:
-    """
-    Git workflow agent that analyzes diffs and generates commit messages.
+    """Git workflow agent with optional RAG support."""
 
-    Uses LangGraph to orchestrate a multi-step workflow:
-    START -> analyze -> [gather_context?] -> generate_commit -> END
-    """
-
-    def __init__(self, llm: LLMProvider):
+    def __init__(self, llm: LLMProvider, retriever: CodeRetriever | None = None):
         self.llm = llm
+        self.retriever = retriever
         self.graph = self._build_graph()
 
     def _build_graph(self) -> StateGraph:
@@ -26,6 +29,9 @@ class GitAgent:
         async def _analyze(s: AgentState) -> dict[str, Any]:
             return await analyze_diff(s, self.llm)
 
+        async def _search_rag(s: AgentState) -> dict[str, Any]:
+            return await search_rag_context(s, self.retriever)
+
         async def _gather(s: AgentState) -> dict[str, Any]:
             return await gather_context(s, self.llm)
 
@@ -33,19 +39,31 @@ class GitAgent:
             return await generate_commit(s, self.llm)
 
         graph.add_node("analyze", _analyze)
+        graph.add_node("search_rag", _search_rag)
         graph.add_node("gather_context", _gather)
         graph.add_node("generate_commit", _generate)
 
         graph.set_entry_point("analyze")
 
-        graph.add_conditional_edges(
-            "analyze",
-            should_gather_context,
-            {
-                "gather_context": "gather_context",
-                "generate_commit": "generate_commit",
-            },
-        )
+        if self.retriever:
+            graph.add_edge("analyze", "search_rag")
+            graph.add_conditional_edges(
+                "search_rag",
+                should_gather_context,
+                {
+                    "gather_context": "gather_context",
+                    "generate_commit": "generate_commit",
+                },
+            )
+        else:
+            graph.add_conditional_edges(
+                "analyze",
+                should_gather_context,
+                {
+                    "gather_context": "gather_context",
+                    "generate_commit": "generate_commit",
+                },
+            )
 
         graph.add_edge("gather_context", "generate_commit")
         graph.add_edge("generate_commit", END)
@@ -61,6 +79,7 @@ class GitAgent:
             "needs_context": False,
             "files_to_read": [],
             "file_contents": {},
+            "rag_context": [],
             "commit_message": None,
             "reasoning": [],
         }
@@ -71,4 +90,5 @@ class GitAgent:
             "commit_message": final_state.get("commit_message"),
             "reasoning": final_state.get("reasoning", []),
             "analysis": final_state.get("analysis"),
+            "rag_context": final_state.get("rag_context", []),
         }
