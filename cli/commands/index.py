@@ -2,7 +2,6 @@ from pathlib import Path
 
 import typer
 from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from cli.api_client import APIClient, APIError
 from cli.git_utils import is_git_repo, get_repo_id, get_tracked_files
@@ -150,32 +149,24 @@ def index(
     console.print(f"[bold]Files to index:[/bold] {len(files_to_index)}")
 
     files_content = {}
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        console=console,
-    ) as progress:
-        task = progress.add_task("Reading files...", total=None)
+    console.print("[dim]Reading files...[/dim]")
 
-        for path in files_to_index:
-            content = _read_file(path)
-            if content:
-                files_content[path] = content
+    for path in files_to_index:
+        content = _read_file(path)
+        if content:
+            files_content[path] = content
 
-        progress.update(task, description=f"Read {len(files_content)} files")
+    if not files_content:
+        console.print("[yellow]No readable files found[/yellow]")
+        raise typer.Exit(0)
 
-        if not files_content:
-            console.print("[yellow]No readable files found[/yellow]")
-            raise typer.Exit(0)
+    console.print(f"[dim]Read {len(files_content)} files. Uploading...[/dim]")
 
-        progress.update(task, description="Uploading to index...")
-
-        try:
-            result = client.rag_index(repo_id, files_content)
-            progress.update(task, description="Done!")
-        except APIError as e:
-            console.print(f"\n[red]Error:[/red] {e}")
-            raise typer.Exit(1)
+    try:
+        result = client.rag_index(repo_id, files_content)
+    except APIError as e:
+        console.print(f"[red]Error:[/red] {e}")
+        raise typer.Exit(1)
 
     console.print(
         f"[green]Indexed {result['indexed']} files (total: {result['total']})[/green]"
