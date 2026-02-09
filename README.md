@@ -18,17 +18,17 @@ pip install git+https://github.com/suka712/inyeon-upstream.git
 
 ### Generate Commit Messages
 ```bash
-inyeon commit --staged                 # From staged changes
-inyeon commit --staged --dry-run       # Preview without committing
-inyeon commit --staged --issue "#123"  # Reference an issue
+inyeon commit --staged                # From staged changes
+inyeon commit --staged --dry-run      # Preview without committing
+inyeon commit --staged --issue "#123" # Reference an issue
 ```
 
 ### Split into Atomic Commits (v2.0.0)
 ```bash
-inyeon split --staged --preview            # Preview how changes will be split
-inyeon split --staged --interactive        # Approve each commit individually
-inyeon split --staged --execute            # Auto-commit all groups
-inyeon split --staged --strategy semantic  # Use specific strategy
+inyeon split --staged --preview           # Preview how changes will be split
+inyeon split --staged --interactive       # Approve each commit individually
+inyeon split --staged --execute           # Auto-commit all groups
+inyeon split --staged --strategy semantic # Use specific strategy
 ```
 
 **Strategies:**
@@ -39,20 +39,20 @@ inyeon split --staged --strategy semantic  # Use specific strategy
 
 ### Code Review
 ```bash
-inyeon review --staged   # Review staged changes
-inyeon review --all      # Review all uncommitted changes
+inyeon review --staged # Review staged changes
+inyeon review --all    # Review all uncommitted changes
 ```
 
 ### Analyze Diffs
 ```bash
-git diff | inyeon analyze             # Pipe any diff
-inyeon analyze -f changes.patch       # From file
-inyeon analyze -c "refactoring auth"  # With context
+git diff | inyeon analyze            # Pipe any diff
+inyeon analyze -f changes.patch      # From file
+inyeon analyze -c "refactoring auth" # With context
 ```
 
 ### Index Codebase (RAG)
 ```bash
-inyeon index    # Index for smart context retrieval
+inyeon index # Index for smart context retrieval
 ```
 
 ---
