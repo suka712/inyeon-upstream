@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import AsyncMock, MagicMock
+from unittest.mock import AsyncMock
 
 from backend.diff import ParsedDiff, ParsedFile, ParsedHunk, FileChangeType
 from backend.clustering import (
