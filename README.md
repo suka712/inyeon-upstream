@@ -64,19 +64,19 @@ inyeon resolve --all --json        # Output raw JSON
 
 ### Generate Changelogs (v3.0.0)
 ```bash
-inyeon changelog --from v2.0.0                        # Changelog since a tag
-inyeon changelog --last 7                             # Changelog from last 7 days
-inyeon changelog --from v2.0.0 --output CHANGELOG.md  # Write to file
-inyeon changelog --json                               # Output raw JSON
+inyeon changelog --from v2.0.0                       # Changelog since a tag
+inyeon changelog --last 7                            # Changelog from last 7 days
+inyeon changelog --from v2.0.0 --output CHANGELOG.md # Write to file
+inyeon changelog --json                              # Output raw JSON
 ```
 
 ### Full Workflow Automation (v3.0.0)
 ```bash
-inyeon auto --staged              # Split → commit → review → PR in one command
-inyeon auto --all --dry-run       # Preview the full pipeline
-inyeon auto --staged --no-review  # Skip code review step
-inyeon auto --staged --no-pr      # Skip PR generation step
-inyeon auto --staged --json       # Output raw JSON
+inyeon auto --staged             # Split → commit → review → PR in one command
+inyeon auto --all --dry-run      # Preview the full pipeline
+inyeon auto --staged --no-review # Skip code review step
+inyeon auto --staged --no-pr     # Skip PR generation step
+inyeon auto --staged --json      # Output raw JSON
 ```
 
 **Cost-optimized short-circuits:**
@@ -86,9 +86,9 @@ inyeon auto --staged --json       # Output raw JSON
 
 ### Git Hooks (v3.0.0)
 ```bash
-inyeon hook install  # Install prepare-commit-msg hook
-inyeon hook remove   # Remove hook (only if installed by Inyeon)
-inyeon hook status   # Check hook installation status
+inyeon hook install # Install prepare-commit-msg hook
+inyeon hook remove  # Remove hook (only if installed by Inyeon)
+inyeon hook status  # Check hook installation status
 ```
 
 ### Analyze Diffs
