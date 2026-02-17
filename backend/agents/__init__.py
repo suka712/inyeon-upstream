@@ -6,6 +6,7 @@ from .commit_agent import CommitAgent
 from .review_agent import ReviewAgent
 from .orchestrator import AgentOrchestrator
 from .git_agent import GitAgent
+from .pr_agent import PRAgent
 from .split_agent import SplitAgent
 
 __all__ = [
@@ -15,5 +16,6 @@ __all__ = [
     "ReviewAgent",
     "AgentOrchestrator",
     "GitAgent",
+    "PRAgent",
     "SplitAgent",
 ]

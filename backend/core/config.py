@@ -28,6 +28,10 @@ class Settings(BaseSettings):
     api_version: str = "2.0.0"
     debug: bool = False
 
+    # Cost Optimization
+    max_diff_chars: int = 30000
+    enable_cache: bool = True
+
 
 # Global settings instance
 settings = Settings()

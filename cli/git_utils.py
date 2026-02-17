@@ -94,6 +94,38 @@ def stage_files(files: list[str]) -> bool:
     return True
 
 
+def get_branch_diff(base_branch: str = "main") -> str:
+    """Get combined diff of current branch against base branch."""
+    stdout, _, code = run_git(["diff", f"{base_branch}...HEAD"])
+    if code != 0:
+        stdout, _, _ = run_git(["diff", f"origin/{base_branch}...HEAD"])
+    return stdout
+
+
+def get_branch_commits(base_branch: str = "main") -> list[dict[str, str]]:
+    """Get commit messages from current branch since diverging from base."""
+    fmt = "%H|||%s|||%b|||%an"
+    stdout, _, code = run_git([
+        "log", f"{base_branch}..HEAD",
+        f"--pretty=format:{fmt}",
+        "--reverse",
+    ])
+    if code != 0 or not stdout.strip():
+        return []
+
+    commits = []
+    for line in stdout.strip().split("\n"):
+        parts = line.split("|||")
+        if len(parts) >= 4:
+            commits.append({
+                "hash": parts[0][:8],
+                "subject": parts[1],
+                "body": parts[2],
+                "author": parts[3],
+            })
+    return commits
+
+
 def unstage_all() -> bool:
     result = subprocess.run(
         ["git", "reset", "HEAD"],

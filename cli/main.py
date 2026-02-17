@@ -1,6 +1,6 @@
 import typer
 
-from cli.commands import analyze, commit, agent, index, review, split
+from cli.commands import analyze, auto, commit, agent, hook, index, pr, review, split
 
 
 app = typer.Typer(
@@ -11,9 +11,12 @@ app = typer.Typer(
 )
 
 app.add_typer(analyze.app, name="analyze")
+app.add_typer(auto.app, name="auto")
 app.add_typer(commit.app, name="commit")
 app.add_typer(agent.app, name="agent")
+app.add_typer(hook.app, name="hook")
 app.add_typer(index.app, name="index")
+app.add_typer(pr.app, name="pr")
 app.add_typer(review.app, name="review")
 app.add_typer(split.app, name="split")
 

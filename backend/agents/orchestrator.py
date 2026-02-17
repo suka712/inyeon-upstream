@@ -4,6 +4,7 @@ from backend.services.llm.base import LLMProvider
 from backend.rag import CodeRetriever
 
 from .commit_agent import CommitAgent
+from .pr_agent import PRAgent
 from .review_agent import ReviewAgent
 from .split_agent import SplitAgent
 
@@ -16,6 +17,7 @@ class AgentOrchestrator:
         self.retriever = retriever
         self.agents = {
             "commit": CommitAgent(llm, retriever),
+            "pr": PRAgent(llm, retriever),
             "review": ReviewAgent(llm, retriever),
             "split": SplitAgent(llm, retriever),
         }

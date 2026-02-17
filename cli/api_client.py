@@ -83,6 +83,22 @@ class APIClient:
         payload = {"repo_id": repo_id}
         return self._request("POST", "/api/v1/rag/clear", json=payload)
 
+    def generate_pr(
+        self,
+        diff: str,
+        commits: list[dict[str, str]] | None = None,
+        branch_name: str = "",
+        base_branch: str = "main",
+    ) -> dict:
+        """Generate a PR description."""
+        payload = {
+            "diff": diff,
+            "commits": commits or [],
+            "branch_name": branch_name,
+            "base_branch": base_branch,
+        }
+        return self._request("POST", "/api/v1/agent/pr", json=payload)
+
     def split_diff(
         self,
         diff: str,
