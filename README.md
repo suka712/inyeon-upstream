@@ -17,6 +17,7 @@ pip install git+https://github.com/suka712/inyeon-upstream.git
 ## 📖 Usage
 
 ### Generate Commit Messages
+
 ```bash
 inyeon commit --staged                # From staged changes
 inyeon commit --all                   # From all uncommitted changes
@@ -26,6 +27,7 @@ inyeon commit --staged --json         # Output raw JSON
 ```
 
 ### Split into Atomic Commits (v2.0.0)
+
 ```bash
 inyeon split --staged --preview           # Preview how changes will be split
 inyeon split --staged --interactive       # Approve each commit individually
@@ -35,12 +37,14 @@ inyeon split --all --strategy directory   # Split all changes by folder
 ```
 
 **Strategies:**
+
 - `directory` - Group by folder structure
 - `semantic` - Group by code similarity (embeddings)
 - `conventional` - Group by commit type (feat, fix, docs)
 - `hybrid` - Combine all strategies (default)
 
 ### Code Review
+
 ```bash
 inyeon review --staged # Review staged changes
 inyeon review --all    # Review all uncommitted changes
@@ -48,6 +52,7 @@ inyeon review --json   # Output raw JSON
 ```
 
 ### Generate PR Descriptions (v3.0.0)
+
 ```bash
 inyeon pr                  # Generate from branch diff vs main
 inyeon pr --branch develop # Compare against different base branch
@@ -56,6 +61,7 @@ inyeon pr --json           # Output raw JSON
 ```
 
 ### Resolve Merge Conflicts (v3.0.0)
+
 ```bash
 inyeon resolve --all               # Resolve all conflicted files
 inyeon resolve --file path/to/file # Resolve a single file
@@ -63,6 +69,7 @@ inyeon resolve --all --json        # Output raw JSON
 ```
 
 ### Generate Changelogs (v3.0.0)
+
 ```bash
 inyeon changelog --from v2.0.0                        # Changelog since a tag
 inyeon changelog --last 7                             # Changelog from last 7 days
@@ -71,6 +78,7 @@ inyeon changelog --json                               # Output raw JSON
 ```
 
 ### Full Workflow Automation (v3.0.0)
+
 ```bash
 inyeon auto --staged              # Split → commit → review → PR in one command
 inyeon auto --all --dry-run       # Preview the full pipeline
@@ -80,11 +88,13 @@ inyeon auto --staged --json       # Output raw JSON
 ```
 
 **Cost-optimized short-circuits:**
+
 - Skips split for single-file changes
 - Skips review for small diffs (< 500 chars)
 - As few as 2 LLM calls for simple changes
 
 ### Git Hooks (v3.0.0)
+
 ```bash
 inyeon hook install  # Install prepare-commit-msg hook
 inyeon hook remove   # Remove hook (only if installed by Inyeon)
@@ -92,6 +102,7 @@ inyeon hook status   # Check hook installation status
 ```
 
 ### Analyze Diffs
+
 ```bash
 git diff | inyeon analyze            # Pipe any diff
 inyeon analyze -f changes.patch      # From file
@@ -99,6 +110,7 @@ inyeon analyze -c "refactoring auth" # With context
 ```
 
 ### Index Codebase (RAG)
+
 ```bash
 inyeon index         # Index for smart context retrieval
 inyeon index --stats # Show index statistics
@@ -106,6 +118,7 @@ inyeon index --clear # Clear the index
 ```
 
 ### Utilities
+
 ```bash
 inyeon version # Show version
 inyeon health  # Check backend & LLM connection status
@@ -132,7 +145,7 @@ inyeon health  # Check backend & LLM connection status
 
 ## 🏗️ Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                     CLI (Typer)                     │
 │   commit  split  review  pr  resolve  changelog     │
@@ -172,7 +185,7 @@ inyeon health  # Check backend & LLM connection status
 ## 🛠️ Tech Stack
 
 | **Layer** | **Technology** |
-|-----------|----------------|
+| --------- | -------------- |
 | **CLI** | Typer, Rich |
 | **Backend** | FastAPI, Pydantic |
 | **Agents** | LangGraph |
@@ -186,7 +199,7 @@ inyeon health  # Check backend & LLM connection status
 ## 📡 API Endpoints
 
 | **Endpoint** | **Purpose** |
-|--------------|-------------|
+| ------------ | ----------- |
 | `GET /health` | Health check (LLM status) |
 | `POST /api/v1/generate-commit` | Generate commit message |
 | `POST /api/v1/analyze` | Analyze a diff |
@@ -203,7 +216,7 @@ inyeon health  # Check backend & LLM connection status
 | `POST /api/v1/rag/stats` | Index statistics |
 | `POST /api/v1/rag/clear` | Clear index for repo |
 
-**Live Docs:** https://inyeon-upstream-production.up.railway.app/docs
+**Live Docs:** [FastAPI Swagger UI](https://inyeon-upstream-production.up.railway.app/docs)
 
 ---
 
@@ -212,7 +225,7 @@ inyeon health  # Check backend & LLM connection status
 All settings use the `INYEON_` prefix and can be set via environment variables or a `.env` file.
 
 | **Variable** | **Default** | **Description** |
-|--------------|-------------|-----------------|
+| ------------ | ----------- | --------------- |
 | `INYEON_LLM_PROVIDER` | `ollama` | LLM backend (`ollama`, `gemini`, or `openai`) |
 | `INYEON_OLLAMA_URL` | `http://localhost:11434` | Ollama server URL |
 | `INYEON_OLLAMA_MODEL` | `qwen2.5-coder:7b` | Ollama model name |
@@ -249,4 +262,4 @@ pytest tests/ -v
 
 ## 📬 Contact
 
-For contributions or inquiries, contact **Anh Tran** at anhdtran.forwork@gmail.com
+For contributions or inquiries, contact **Anh Tran** at [anhdtran.forwork@gmail.com](mailto:anhdtran.forwork@gmail.com)
