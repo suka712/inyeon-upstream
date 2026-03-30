@@ -1,4 +1,4 @@
-from backend.diff import ParsedDiff, ParsedFile, ParsedHunk
+from backend.diff import ParsedDiff
 from backend.services.llm.base import LLMProvider
 from backend.rag.embeddings import EmbeddingService
 from .base import ClusteringStrategy
@@ -39,11 +39,14 @@ class HybridStrategy(ClusteringStrategy):
                 refined_groups.append(group)
 
         for group in refined_groups:
-            sub_diff = self._extract_subdiff(parsed_diff, group)
-            if sub_diff.files:
-                type_groups = await self.conventional.cluster(sub_diff)
-                if type_groups:
-                    group.suggested_type = type_groups[0].suggested_type
+            if len(group.files) > 1:
+                sub_diff = self._extract_subdiff(parsed_diff, group)
+                if sub_diff.files:
+                    type_groups = await self.conventional.cluster(sub_diff)
+                    if type_groups:
+                        group.suggested_type = type_groups[0].suggested_type
+            elif group.files:
+                group.suggested_type = group.suggested_type or "chore"
 
         return refined_groups
 
