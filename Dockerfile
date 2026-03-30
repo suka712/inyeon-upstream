@@ -2,8 +2,6 @@ FROM python:3.12-slim AS builder
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade pip
-
 COPY pyproject.toml .
 COPY backend ./backend
 COPY cli ./cli
