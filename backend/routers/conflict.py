@@ -4,8 +4,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
 from backend.agents.conflict_agent import ConflictAgent
-from backend.services.llm import create_llm_provider, LLMProvider
-from backend.core.config import settings
+from backend.services.llm import LLMProvider
+from backend.core.dependencies import get_llm_provider
 
 
 router = APIRouter(tags=["agent"])
@@ -29,21 +29,10 @@ class ConflictResponse(BaseModel):
     error: str | None = None
 
 
-def get_llm() -> LLMProvider:
-    return create_llm_provider(
-        provider=settings.llm_provider,
-        ollama_url=settings.ollama_url,
-        ollama_model=settings.ollama_model,
-        gemini_api_key=settings.gemini_api_key,
-        gemini_model=settings.gemini_model,
-        timeout=settings.ollama_timeout,
-    )
-
-
 @router.post("/agent/resolve", response_model=ConflictResponse)
 async def resolve_conflicts(
     request: ConflictRequest,
-    llm: LLMProvider = Depends(get_llm),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
     try:
         agent = ConflictAgent(llm=llm, retriever=None)

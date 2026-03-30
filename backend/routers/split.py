@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 from typing import Literal
 
 from backend.agents.split_agent import SplitAgent
-from backend.services.llm import create_llm_provider, LLMProvider
-from backend.core.config import settings
+from backend.services.llm import LLMProvider
+from backend.core.dependencies import get_llm_provider
 
 
 router = APIRouter(tags=["agent"])
@@ -34,21 +34,10 @@ class SplitResponse(BaseModel):
     error: str | None = None
 
 
-def get_llm() -> LLMProvider:
-    return create_llm_provider(
-        provider=settings.llm_provider,
-        ollama_url=settings.ollama_url,
-        ollama_model=settings.ollama_model,
-        gemini_api_key=settings.gemini_api_key,
-        gemini_model=settings.gemini_model,
-        timeout=settings.ollama_timeout,
-    )
-
-
 @router.post("/agent/split", response_model=SplitResponse)
 async def split_diff(
     request: SplitRequest,
-    llm: LLMProvider = Depends(get_llm),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
     try:
         agent = SplitAgent(llm=llm, retriever=None)

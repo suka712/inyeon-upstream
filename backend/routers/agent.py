@@ -4,8 +4,8 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, Field
 
 from backend.agents import CommitAgent, ReviewAgent, AgentOrchestrator
-from backend.services.llm import create_llm_provider, LLMProvider
-from backend.core.config import settings
+from backend.services.llm import LLMProvider
+from backend.core.dependencies import get_llm_provider
 
 
 router = APIRouter(prefix="/agent", tags=["agent"])
@@ -17,7 +17,7 @@ class AgentRequest(BaseModel):
     verbose: bool = Field(default=False)
 
 
-class CommitResponse(BaseModel):
+class AgentCommitResponse(BaseModel):
     commit_message: str
     reasoning: list[str] = []
     analysis: dict[str, Any] = {}
@@ -34,29 +34,16 @@ class OrchestrationRequest(BaseModel):
     repo_path: str = Field(default=".")
 
 
-def get_llm() -> LLMProvider:
-    """Dependency that provides the configured LLM provider."""
-    return create_llm_provider(
-        provider=settings.llm_provider,
-        ollama_url=settings.ollama_url,
-        ollama_model=settings.ollama_model,
-        gemini_api_key=settings.gemini_api_key,
-        gemini_model=settings.gemini_model,
-        timeout=settings.ollama_timeout,
-    )
-
-
-@router.post("/run", response_model=CommitResponse)
+@router.post("/run", response_model=AgentCommitResponse)
 async def run_commit_agent(
     request: AgentRequest,
-    llm: LLMProvider = Depends(get_llm),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
-    """Run the commit agent to generate commit messages."""
     try:
         agent = CommitAgent(llm)
         result = await agent.run(diff=request.diff, repo_path=request.repo_path)
 
-        return CommitResponse(
+        return AgentCommitResponse(
             commit_message=result["commit_message"] or "",
             reasoning=result["reasoning"] if request.verbose else [],
             analysis=result.get("analysis", {}) if request.verbose else {},
@@ -68,9 +55,8 @@ async def run_commit_agent(
 @router.post("/review", response_model=ReviewResponse)
 async def run_review_agent(
     request: AgentRequest,
-    llm: LLMProvider = Depends(get_llm),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
-    """Run the review agent to get code feedback."""
     try:
         agent = ReviewAgent(llm)
         result = await agent.run(diff=request.diff, repo_path=request.repo_path)
@@ -86,9 +72,8 @@ async def run_review_agent(
 @router.post("/orchestrate")
 async def orchestrate(
     request: OrchestrationRequest,
-    llm: LLMProvider = Depends(get_llm),
+    llm: LLMProvider = Depends(get_llm_provider),
 ):
-    """Route to appropriate agent based on task."""
     try:
         orchestrator = AgentOrchestrator(llm)
         result = await orchestrator.route(
@@ -102,7 +87,6 @@ async def orchestrate(
 
 
 @router.get("/list")
-async def list_agents(llm: LLMProvider = Depends(get_llm)):
-    """List available agents."""
+async def list_agents(llm: LLMProvider = Depends(get_llm_provider)):
     orchestrator = AgentOrchestrator(llm)
     return {"agents": orchestrator.list_agents()}
