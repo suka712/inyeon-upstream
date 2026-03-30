@@ -13,8 +13,6 @@ _MAX_RETRIES = 3
 
 
 class GeminiError(LLMError):
-    """Raised when Gemini request fails."""
-
     pass
 
 
@@ -24,17 +22,11 @@ def _is_rate_limit_error(exc: Exception) -> bool:
 
 
 def _extract_retry_delay(exc: Exception) -> float:
-    """Parse retryDelay seconds from a 429 error message, defaulting to 10s."""
     match = _RETRY_DELAY_RE.search(str(exc))
     return float(match.group(1)) + 1 if match else 10.0
 
 
 class GeminiProvider(LLMProvider):
-    """
-    Google Gemini implementation of LLMProvider.
-
-    Free tier: 5 RPM for gemini-2.5-flash, 1M tokens/day.
-    """
 
     def __init__(
         self,
@@ -52,7 +44,6 @@ class GeminiProvider(LLMProvider):
         json_mode: bool = False,
         temperature: float = 0.3,
     ) -> dict[str, Any]:
-        """Generate completion from Gemini with automatic retry on rate limit."""
         config = types.GenerateContentConfig(
             temperature=temperature,
             response_mime_type="application/json" if json_mode else "text/plain",
@@ -66,9 +57,16 @@ class GeminiProvider(LLMProvider):
                     contents=prompt,
                     config=config,
                 )
+
+                text = response.text if response and response.text else None
+                if text is None:
+                    raise GeminiError("Gemini returned an empty response (possibly blocked by safety filters)")
+
                 if json_mode:
-                    return json.loads(response.text)
-                return {"text": response.text}
+                    return json.loads(text)
+                return {"text": text}
+            except GeminiError:
+                raise
             except Exception as e:
                 if _is_rate_limit_error(e) and attempt < _MAX_RETRIES - 1:
                     delay = _extract_retry_delay(e)
@@ -84,7 +82,6 @@ class GeminiProvider(LLMProvider):
         messages: list[dict],
         tools: list[dict],
     ) -> dict[str, Any]:
-        """Generate completion with tool-calling capability, retrying on rate limit."""
         gemini_tools = self._convert_tools(tools)
         contents = self._convert_messages(messages)
         config = types.GenerateContentConfig(
@@ -100,7 +97,13 @@ class GeminiProvider(LLMProvider):
                     config=config,
                 )
 
-                result = {"content": response.text or "", "tool_calls": []}
+                text = ""
+                try:
+                    text = response.text or ""
+                except Exception:
+                    text = ""
+
+                result = {"content": text, "tool_calls": []}
                 if response.candidates and response.candidates[0].content.parts:
                     for part in response.candidates[0].content.parts:
                         if part.function_call:
@@ -113,6 +116,8 @@ class GeminiProvider(LLMProvider):
                                 }
                             )
                 return result
+            except GeminiError:
+                raise
             except Exception as e:
                 if _is_rate_limit_error(e) and attempt < _MAX_RETRIES - 1:
                     delay = _extract_retry_delay(e)
@@ -124,7 +129,6 @@ class GeminiProvider(LLMProvider):
         raise GeminiError(f"Gemini request failed after {_MAX_RETRIES} retries: {last_exc}")
 
     async def is_healthy(self) -> bool:
-        """Check if Gemini is available."""
         try:
             response = await self.client.aio.models.generate_content(
                 model=self.model_name,
@@ -135,7 +139,6 @@ class GeminiProvider(LLMProvider):
             return False
 
     def _convert_messages(self, messages: list[dict]) -> list[types.Content]:
-        """Convert standard messages to Gemini format."""
         contents = []
         for msg in messages:
             role = "user" if msg["role"] == "user" else "model"
@@ -148,7 +151,6 @@ class GeminiProvider(LLMProvider):
         return contents
 
     def _convert_tools(self, tools: list[dict]) -> list[types.Tool]:
-        """Convert standard tools to Gemini format."""
         if not tools:
             return []
 

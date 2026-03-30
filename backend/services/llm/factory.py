@@ -60,3 +60,5 @@ def create_llm_provider(
             model=gemini_model or "gemini-2.5-flash",
             timeout=timeout,
         )
+
+    raise ProviderConfigError(f"Unknown provider: {provider}")
