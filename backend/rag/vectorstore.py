@@ -37,9 +37,8 @@ class VectorStore:
         documents: list[str],
         metadatas: list[dict[str, Any]] | None = None,
     ) -> None:
-        """Add documents with embeddings to the store."""
         try:
-            self.collection.add(
+            self.collection.upsert(
                 ids=ids,
                 embeddings=embeddings,
                 documents=documents,

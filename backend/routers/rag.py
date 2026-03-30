@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel
 
@@ -6,14 +8,20 @@ from backend.rag import CodeRetriever, RAGError
 
 router = APIRouter(tags=["rag"])
 
-retrievers: dict[str, CodeRetriever] = {}
+_MAX_RETRIEVERS = 20
+_retrievers: OrderedDict[str, CodeRetriever] = OrderedDict()
 
 
 def get_retriever(repo_id: str) -> CodeRetriever:
-    """Get or create retriever for a specific repo."""
-    if repo_id not in retrievers:
-        retrievers[repo_id] = CodeRetriever()
-    return retrievers[repo_id]
+    if repo_id in _retrievers:
+        _retrievers.move_to_end(repo_id)
+        return _retrievers[repo_id]
+
+    if len(_retrievers) >= _MAX_RETRIEVERS:
+        _retrievers.popitem(last=False)
+
+    _retrievers[repo_id] = CodeRetriever()
+    return _retrievers[repo_id]
 
 
 class IndexRequest(BaseModel):
@@ -48,7 +56,6 @@ class RepoRequest(BaseModel):
 
 @router.post("/index", response_model=IndexResponse)
 async def index_files(request: IndexRequest) -> IndexResponse:
-    """Index files for a specific repo."""
     try:
         ret = get_retriever(request.repo_id)
         ids = await ret.index_files(request.files)
@@ -62,7 +69,6 @@ async def index_files(request: IndexRequest) -> IndexResponse:
 
 @router.post("/search", response_model=SearchResponse)
 async def search_code(request: SearchRequest) -> SearchResponse:
-    """Search indexed code for a specific repo."""
     try:
         ret = get_retriever(request.repo_id)
         results = await ret.search(request.query, request.n_results)
@@ -76,14 +82,12 @@ async def search_code(request: SearchRequest) -> SearchResponse:
 
 @router.post("/stats")
 async def rag_stats(request: RepoRequest) -> dict:
-    """Get RAG index statistics for a repo."""
     ret = get_retriever(request.repo_id)
     return {"repo_id": request.repo_id, "indexed_files": ret.count()}
 
 
 @router.post("/clear")
 async def clear_index(request: RepoRequest) -> dict:
-    """Clear the RAG index for a repo."""
     ret = get_retriever(request.repo_id)
     ret.clear()
     return {"status": "cleared", "repo_id": request.repo_id}

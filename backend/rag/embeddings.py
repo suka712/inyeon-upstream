@@ -16,10 +16,15 @@ class EmbeddingError(RAGError):
 
 
 class EmbeddingService:
-    """Generate embeddings using Gemini API."""
 
     def __init__(self, api_key: str | None = None):
-        self.client = genai.Client(api_key=api_key or settings.gemini_api_key)
+        key = api_key or settings.gemini_api_key
+        if not key:
+            raise EmbeddingError(
+                "Gemini API key required for embeddings. "
+                "Set INYEON_GEMINI_API_KEY or pass api_key explicitly."
+            )
+        self.client = genai.Client(api_key=key)
         self.model = "text-embedding-004"
 
     async def embed_text(self, text: str) -> list[float]:
