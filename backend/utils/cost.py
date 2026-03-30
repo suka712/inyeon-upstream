@@ -1,15 +1,14 @@
 import hashlib
+import time
 from typing import Any
 
 
 DEFAULT_MAX_DIFF_CHARS = 30000
+_CACHE_MAX_SIZE = 100
+_CACHE_TTL_SECONDS = 300
 
 
 def truncate_diff(diff: str, max_chars: int = DEFAULT_MAX_DIFF_CHARS) -> str:
-    """Truncate a diff to fit within token budget.
-
-    Keeps file headers and first hunks, drops remaining hunks from large files.
-    """
     if len(diff) <= max_chars:
         return diff
 
@@ -37,12 +36,10 @@ def truncate_diff(diff: str, max_chars: int = DEFAULT_MAX_DIFF_CHARS) -> str:
 
 
 def estimate_tokens(text: str) -> int:
-    """Rough token estimate (~4 chars per token for English/code)."""
     return len(text) // 4
 
 
-_cache: dict[str, Any] = {}
-_CACHE_MAX_SIZE = 100
+_cache: dict[str, tuple[float, Any]] = {}
 
 
 def _cache_key(prompt: str) -> str:
@@ -50,18 +47,23 @@ def _cache_key(prompt: str) -> str:
 
 
 def get_cached(prompt: str) -> dict[str, Any] | None:
-    """Return cached LLM response if available."""
-    return _cache.get(_cache_key(prompt))
+    key = _cache_key(prompt)
+    entry = _cache.get(key)
+    if entry is None:
+        return None
+    ts, value = entry
+    if time.time() - ts > _CACHE_TTL_SECONDS:
+        del _cache[key]
+        return None
+    return value
 
 
 def set_cached(prompt: str, response: dict[str, Any]) -> None:
-    """Cache an LLM response with FIFO eviction."""
     if len(_cache) >= _CACHE_MAX_SIZE:
-        oldest = next(iter(_cache))
-        del _cache[oldest]
-    _cache[_cache_key(prompt)] = response
+        oldest_key = min(_cache, key=lambda k: _cache[k][0])
+        del _cache[oldest_key]
+    _cache[_cache_key(prompt)] = (time.time(), response)
 
 
 def clear_cache() -> None:
-    """Clear all cached responses."""
     _cache.clear()
