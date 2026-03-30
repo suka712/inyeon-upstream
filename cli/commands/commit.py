@@ -11,6 +11,7 @@ from cli.git_utils import (
     get_staged_diff,
     get_all_diff,
     create_commit,
+    stage_tracked_changes,
     GitError,
 )
 
@@ -160,6 +161,8 @@ def commit(
 
     if Confirm.ask("Create this commit?"):
         try:
+            if not staged:
+                stage_tracked_changes()
             if create_commit(result["message"]):
                 console.print("[green] Commit created[/green]")
             else:

@@ -1,6 +1,13 @@
+from importlib.metadata import version, PackageNotFoundError
+
 import typer
 
 from cli.commands import analyze, auto, changelog, commit, agent, hook, index, pr, resolve, review, split
+
+try:
+    _pkg_version = version("inyeon")
+except PackageNotFoundError:
+    _pkg_version = "3.0.0"
 
 
 app = typer.Typer(
@@ -23,10 +30,9 @@ app.add_typer(review.app, name="review")
 app.add_typer(split.app, name="split")
 
 
-@app.command()
-def version():
-    """Show version information."""
-    typer.echo("inyeon v3.0.0")
+@app.command("version")
+def show_version():
+    typer.echo(f"inyeon v{_pkg_version}")
 
 
 @app.command()

@@ -38,8 +38,11 @@ def _hook_path() -> str:
 
 
 def _is_inyeon_hook(path: str) -> bool:
-    with open(path, "r") as f:
-        return HOOK_MARKER in f.read()
+    try:
+        with open(path, "r") as f:
+            return HOOK_MARKER in f.read()
+    except OSError:
+        return False
 
 
 @app.command()
