@@ -1,3 +1,4 @@
+import asyncio
 import os
 import subprocess
 from typing import Any, Callable
@@ -38,12 +39,7 @@ def _safe_resolve(path: str, repo_path: str) -> str:
     return resolved
 
 
-async def read_file(path: str, repo_path: str = ".") -> str:
-    try:
-        full_path = _safe_resolve(path, repo_path)
-    except PermissionError as e:
-        return f"Error: {e}"
-
+def _sync_read_file(full_path: str, display_path: str) -> str:
     try:
         with open(full_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -51,9 +47,18 @@ async def read_file(path: str, repo_path: str = ".") -> str:
             content = content[:10000] + "\n... (truncated)"
         return content
     except FileNotFoundError:
-        return f"Error: File not found: {path}"
+        return f"Error: File not found: {display_path}"
     except Exception as e:
         return f"Error reading file: {e}"
+
+
+async def read_file(path: str, repo_path: str = ".") -> str:
+    try:
+        full_path = _safe_resolve(path, repo_path)
+    except PermissionError as e:
+        return f"Error: {e}"
+
+    return await asyncio.to_thread(_sync_read_file, full_path, path)
 
 
 async def list_files(directory: str = ".", repo_path: str = ".") -> str:
@@ -63,7 +68,7 @@ async def list_files(directory: str = ".", repo_path: str = ".") -> str:
         return f"Error: {e}"
 
     try:
-        files = os.listdir(full_path)
+        files = await asyncio.to_thread(os.listdir, full_path)
         return "\n".join(files[:50])
     except Exception as e:
         return f"Error listing directory: {e}"
@@ -71,8 +76,10 @@ async def list_files(directory: str = ".", repo_path: str = ".") -> str:
 
 async def get_git_log(count: int = 5, repo_path: str = ".") -> str:
     count = max(1, min(count, 50))
+    repo_path = _safe_resolve(".", repo_path)
     try:
-        result = subprocess.run(
+        result = await asyncio.to_thread(
+            subprocess.run,
             ["git", "log", f"-{count}", "--oneline"],
             cwd=repo_path,
             capture_output=True,
