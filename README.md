@@ -117,14 +117,31 @@ inyeon index --stats # Show index statistics
 inyeon index --clear # Clear the index
 ```
 
+### Switch LLM Provider (v3.5.0)
+
+```bash
+inyeon providers                          # List available providers on the backend
+inyeon commit --staged --provider openai  # Use OpenAI for this command
+inyeon review --all --provider gemini     # Use Gemini for this command
+```
+
+Set a default provider via environment variable:
+
+```bash
+export INYEON_LLM_PROVIDER=openai   # All commands use OpenAI by default
+inyeon commit --staged              # Uses OpenAI
+inyeon commit --staged -p gemini    # Override to Gemini for this command
+```
+
 ### Utilities
 
 ```bash
-inyeon version # Show version
-inyeon health  # Check backend & LLM connection status
+inyeon version   # Show version
+inyeon health    # Check backend & LLM connection status
+inyeon providers # List available LLM providers
 ```
 
-> **Tip:** All commands accept `--api <url>` to override the backend URL, or set `INYEON_API_URL` env var.
+> **Tip:** All commands accept `--api <url>` to override the backend URL and `--provider` / `-p` to select an LLM provider per-request.
 
 ---
 
@@ -201,6 +218,7 @@ inyeon health  # Check backend & LLM connection status
 | **Endpoint** | **Purpose** |
 | ------------ | ----------- |
 | `GET /health` | Health check (LLM status) |
+| `GET /providers` | List available LLM providers |
 | `POST /api/v1/generate-commit` | Generate commit message |
 | `POST /api/v1/analyze` | Analyze a diff |
 | `POST /api/v1/agent/run` | Run commit agent directly |
