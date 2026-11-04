@@ -58,17 +58,29 @@ class SyncLocalBackend:
 
     def __init__(self, engine):
         self._engine = engine
+        # One event loop for the backend's lifetime. LocalEngine caches its
+        # LLM client, and async clients keep connections bound to the loop
+        # they were first used on, so a fresh asyncio.run() per step made the
+        # first call of every later step fail with a connection error.
+        self._loop = asyncio.new_event_loop()
+
+    def _run(self, coro):
+        return self._loop.run_until_complete(coro)
+
+    def close(self) -> None:
+        if not self._loop.is_closed():
+            self._loop.close()
 
     def split_diff(self, diff: str, strategy: str = "hybrid", repo_path: str = ".") -> dict:
-        result = asyncio.run(self._engine.split_diff(diff, strategy, repo_path))
+        result = self._run(self._engine.split_diff(diff, strategy, repo_path))
         return result.data if not result.error else {"error": result.error, "splits": []}
 
     def generate_commit(self, diff: str, issue_ref: str | None = None) -> dict:
-        result = asyncio.run(self._engine.generate_commit(diff, issue_ref=issue_ref))
+        result = self._run(self._engine.generate_commit(diff, issue_ref=issue_ref))
         return result.data if not result.error else {"error": result.error}
 
     def review(self, diff: str) -> dict:
-        result = asyncio.run(self._engine.review(diff))
+        result = self._run(self._engine.review(diff))
         return result.data if not result.error else {"error": result.error}
 
     def generate_pr(
@@ -78,7 +90,7 @@ class SyncLocalBackend:
         branch_name: str = "",
         base_branch: str = "main",
     ) -> dict:
-        result = asyncio.run(
+        result = self._run(
             self._engine.generate_pr(diff, commits, branch_name, base_branch)
         )
         return result.data if not result.error else {"error": result.error}

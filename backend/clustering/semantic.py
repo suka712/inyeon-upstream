@@ -15,7 +15,8 @@ class SemanticStrategy(ClusteringStrategy):
     def __init__(
         self,
         embedding_service: EmbeddingService,
-        similarity_threshold: float = 0.5,
+        # Calibrated for gemini-embedding-001 (768-d) on a by-repo split; see evals/RESULTS.md.
+        similarity_threshold: float = 0.75,
         max_clusters: int = 10,
     ):
         self.embedding_service = embedding_service

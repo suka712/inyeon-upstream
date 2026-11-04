@@ -77,7 +77,13 @@ class Pipeline:
             result.error = f"Commit generation failed: {e}"
             return
 
-        result.commit_message = resp.get("message")
+        if resp.get("error"):
+            result.error = f"Commit generation failed: {resp['error']}"
+            return
+
+        # The commit agent returns `commit_message` on both the local and the
+        # hosted path; `message` is read only as a fallback for old backends.
+        result.commit_message = resp.get("commit_message") or resp.get("message")
         result.steps_completed.append("commit")
 
     def _step_review(
@@ -89,10 +95,17 @@ class Pipeline:
 
         try:
             resp = self.client.review(diff)
-            result.review = resp.get("review")
-            result.steps_completed.append("review")
         except APIError:
             result.steps_skipped.append("review")
+            return
+
+        # A failed or empty review is skipped, not reported as completed.
+        if resp.get("error") or not resp.get("review"):
+            result.steps_skipped.append("review")
+            return
+
+        result.review = resp.get("review")
+        result.steps_completed.append("review")
 
     def _step_pr(
         self,

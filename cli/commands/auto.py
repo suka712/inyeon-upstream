@@ -69,15 +69,19 @@ def auto(
 
     pipeline = Pipeline(backend)
 
-    with console.status("[bold blue]Running pipeline..."):
-        result = pipeline.run(
-            diff=diff,
-            commits=commits,
-            branch_name=branch_name,
-            base_branch=base_branch,
-            skip_review=no_review,
-            skip_pr=no_pr,
-        )
+    try:
+        with console.status("[bold blue]Running pipeline..."):
+            result = pipeline.run(
+                diff=diff,
+                commits=commits,
+                branch_name=branch_name,
+                base_branch=base_branch,
+                skip_review=no_review,
+                skip_pr=no_pr,
+            )
+    finally:
+        if hasattr(backend, "close"):
+            backend.close()
 
     if json_output:
         console.print(json.dumps({

@@ -1,4 +1,5 @@
 from google import genai
+from google.genai import types
 
 from backend.core.config import settings
 
@@ -25,7 +26,9 @@ class EmbeddingService:
                 "Set INYEON_GEMINI_API_KEY or pass api_key explicitly."
             )
         self.client = genai.Client(api_key=key)
-        self.model = "text-embedding-004"
+        # text-embedding-004 was retired by Google and now returns 404.
+        self.model = "gemini-embedding-001"
+        self.config = types.EmbedContentConfig(output_dimensionality=768)
 
     async def embed_text(self, text: str) -> list[float]:
         """Generate embedding for a single text."""
@@ -33,6 +36,7 @@ class EmbeddingService:
             response = await self.client.aio.models.embed_content(
                 model=self.model,
                 contents=text,
+                config=self.config,
             )
             return response.embeddings[0].values
         except Exception as e:
@@ -44,6 +48,7 @@ class EmbeddingService:
             response = await self.client.aio.models.embed_content(
                 model=self.model,
                 contents=texts,
+                config=self.config,
             )
             return [emb.values for emb in response.embeddings]
         except Exception as e:

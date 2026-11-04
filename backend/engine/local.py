@@ -57,10 +57,17 @@ class LocalEngine:
             if not self._gemini_api_key:
                 return None
             try:
-                from backend.rag import CodeRetriever
-
-                self._retriever = CodeRetriever(api_key=self._gemini_api_key)
-            except Exception:
+                from backend.rag import CodeRetriever, EmbeddingService, RAGError
+            except ImportError:
+                return None
+            # Only an expected RAG failure (bad key, store unavailable) turns
+            # retrieval off. A programming error should surface, not silently
+            # disable semantic splitting the way a bare `except` once did.
+            try:
+                self._retriever = CodeRetriever(
+                    embedding_service=EmbeddingService(api_key=self._gemini_api_key)
+                )
+            except RAGError:
                 return None
         return self._retriever
 
