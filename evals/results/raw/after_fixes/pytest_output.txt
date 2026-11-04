@@ -1,0 +1,9 @@
+$ python -m pytest -p no:cacheprovider -q   (after setting similarity_threshold default to 0.75)
+...s........................................s........................... [ 28%]
+........................................................................ [ 56%]
+........................................................................ [ 85%]
+.....................................                                    [100%]
+251 passed, 2 skipped in 14.63s
+
+251 = 244 pre-existing + 7 in tests/cli/test_pipeline_regressions.py. The 2 skips are the live-Ollama tests
+(Ollama is not installed). No existing test asserts the SemanticStrategy threshold, so no test was edited.

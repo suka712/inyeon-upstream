@@ -1,0 +1,1896 @@
+{
+  "created": "2026-11-04",
+  "seed": 20261104,
+  "author_filter": "Anh D Tran",
+  "max_diff_chars": 30000,
+  "repos": {
+    "kiln": {
+      "path": "D:/Projects/K8s-Platform/kiln",
+      "branch": "main",
+      "head": "ed33bbafb36ada60c4abcfc4b38f5b99159167a2",
+      "first_parent_commits": 239
+    },
+    "ferrox": {
+      "path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "branch": "main",
+      "head": "6fcb1403b55b8320fc3027d487952a68308811d8",
+      "first_parent_commits": 70
+    },
+    "commma": {
+      "path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "branch": "enhance/reliability-and-verification",
+      "head": "5eacb421dad75fb4a8ad2a8e1c281edd82806d2d",
+      "first_parent_commits": 445
+    },
+    "inyeon": {
+      "path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "branch": "main",
+      "head": "26248cdca6aa26710f1b74718704e701ce981280",
+      "first_parent_commits": 87
+    },
+    "draft-thinker": {
+      "path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "branch": "main",
+      "head": "e1fbf35bb33524673069f80c496e50112b90fb63",
+      "first_parent_commits": 70
+    }
+  },
+  "selection_rules": {
+    "split": "Windows of 2-4 ADJACENT first-parent commits, all non-merge and authored by 'Anh D Tran'; no lockfile/generated-only commit; no binary files; no renames/copies; squashed diff (git diff <base> <tip>) <= 30,000 chars and touching >= 2 files; every squashed hunk attributed (git blame / blame --reverse over base..tip) to exactly one commit; per-commit added/removed line counts conserved in the squash. Greedy non-overlapping scan, then seeded round-robin sampling across repos.",
+    "commit": "Single non-merge commits by 'Anh D Tran', not lockfile/generated-only, no binary files, diff <= 30,000 chars, not used in any split case. Seeded round-robin sampling across repos.",
+    "auto": "Single-file commits not used above: 3 with diff < 500 chars (review skipped) and 2 with 500-3000 chars (review runs)."
+  },
+  "split_valid_windows_per_repo": {
+    "kiln": 68,
+    "ferrox": 23,
+    "commma": 131,
+    "inyeon": 22,
+    "draft-thinker": 21
+  },
+  "split_reject_reasons": {
+    "kiln": {
+      "merge_or_root": 15,
+      "too_large": 125,
+      "binary": 13,
+      "binary_or_no_hunk_file": 6,
+      "lockfile_or_generated_only": 25,
+      "blame_unattributed": 17,
+      "overlapping_hunk": 6,
+      "rename_or_copy": 3,
+      "interacting_commits": 2,
+      "empty": 1,
+      "fewer_than_2_files": 1
+    },
+    "ferrox": {
+      "merge_or_root": 5,
+      "overlapping_hunk": 12,
+      "lockfile_or_generated_only": 5,
+      "too_large": 2,
+      "blame_unattributed": 3,
+      "interacting_commits": 3
+    },
+    "commma": {
+      "merge_or_root": 9,
+      "other_author": 3,
+      "too_large": 168,
+      "overlapping_hunk": 85,
+      "blame_unattributed": 63,
+      "fewer_than_2_files": 27,
+      "interacting_commits": 13,
+      "binary": 40,
+      "empty": 6,
+      "rename_or_copy": 8
+    },
+    "inyeon": {
+      "merge_or_root": 20,
+      "binary": 11,
+      "binary_or_no_hunk_file": 13,
+      "overlapping_hunk": 9,
+      "fewer_than_2_files": 5,
+      "blame_unattributed": 18,
+      "too_large": 7
+    },
+    "draft-thinker": {
+      "merge_or_root": 6,
+      "overlapping_hunk": 9,
+      "fewer_than_2_files": 1,
+      "too_large": 29,
+      "blame_unattributed": 2,
+      "binary": 16,
+      "interacting_commits": 1
+    }
+  },
+  "commit_eligible_per_repo": {
+    "kiln": 198,
+    "ferrox": 55,
+    "commma": 398,
+    "inyeon": 62,
+    "draft-thinker": 48
+  },
+  "commit_reject_reasons": {
+    "kiln": {
+      "merge_or_root": 3,
+      "too_large": 15,
+      "binary": 2,
+      "no_text_hunks": 1,
+      "lockfile_or_generated_only": 5,
+      "used_in_split_eval": 15
+    },
+    "ferrox": {
+      "merge_or_root": 2,
+      "used_in_split_eval": 12,
+      "lockfile_or_generated_only": 1
+    },
+    "commma": {
+      "merge_or_root": 2,
+      "other_author": 1,
+      "too_large": 20,
+      "used_in_split_eval": 14,
+      "binary": 9,
+      "empty": 1
+    },
+    "inyeon": {
+      "merge_or_root": 5,
+      "no_text_hunks": 1,
+      "binary": 2,
+      "used_in_split_eval": 17
+    },
+    "draft-thinker": {
+      "merge_or_root": 2,
+      "used_in_split_eval": 15,
+      "too_large": 3,
+      "binary": 2
+    }
+  },
+  "split_cases": [
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "5285673778c1d61bbb1cb2708255bd782f7cccb2",
+      "commits": [
+        "08eaf696c345fcdce180ae82531258ad3c4ab72a",
+        "406c391f42c4e050f7d099a6afc99225032ba298"
+      ],
+      "commit_subjects": [
+        "test(api): recap week, prose, and compose helpers",
+        "docs: document weekly recap email job"
+      ],
+      "n_commits": 2,
+      "n_files": 8,
+      "n_hunks": 9,
+      "diff_chars": 14253,
+      "diff_sha256": "74a6bcb954fc6abbbc86d4f20a47d03ed1153a7fd25ec5432bb453c49e0d41f2",
+      "hunk_labels": {
+        "CONTRIBUTING.md:0": 1,
+        "METRICS.md:0": 1,
+        "METRICS.md:1": 1,
+        "ROADMAP.md:0": 1,
+        "SYSTEM_DESIGN.md:0": 1,
+        "apps/api/.env.example:0": 1,
+        "apps/api/test/recap/compose.test.ts:0": 0,
+        "apps/api/test/recap/prose.test.ts:0": 0,
+        "apps/api/test/recap/week.test.ts:0": 0
+      },
+      "hunk_files": {
+        "CONTRIBUTING.md:0": "CONTRIBUTING.md",
+        "METRICS.md:0": "METRICS.md",
+        "METRICS.md:1": "METRICS.md",
+        "ROADMAP.md:0": "ROADMAP.md",
+        "SYSTEM_DESIGN.md:0": "SYSTEM_DESIGN.md",
+        "apps/api/.env.example:0": "apps/api/.env.example",
+        "apps/api/test/recap/compose.test.ts:0": "apps/api/test/recap/compose.test.ts",
+        "apps/api/test/recap/prose.test.ts:0": "apps/api/test/recap/prose.test.ts",
+        "apps/api/test/recap/week.test.ts:0": "apps/api/test/recap/week.test.ts"
+      },
+      "case_id": "split-00"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "645f410596f26c128b03e1cbfe4b0f254ead9452",
+      "commits": [
+        "5a53e9882fe0e62be49991ec590cb3baf0c0c94f",
+        "002ef8802593540fd692c9481b9684cc11bf488b",
+        "86e39d048917b4563ce37c3cf899931e328fbaa0"
+      ],
+      "commit_subjects": [
+        "test(api): reject content-bearing heartbeat fields at ingest",
+        "fix(api): serialize per-user finalize with an advisory lock",
+        "feat(db): add sessions.leaderboard_pending outbox flag"
+      ],
+      "n_commits": 3,
+      "n_files": 7,
+      "n_hunks": 14,
+      "diff_chars": 16929,
+      "diff_sha256": "3a445eb9b46ed63c4bc2824bb956db4c83ad1b25a9cfcbae598b561b2f3aa456",
+      "hunk_labels": {
+        "apps/api/src/aggregate/run.ts:0": 1,
+        "apps/api/src/aggregate/run.ts:1": 1,
+        "apps/api/src/aggregate/run.ts:2": 1,
+        "apps/api/src/aggregate/run.ts:3": 1,
+        "apps/api/src/aggregate/run.ts:4": 1,
+        "apps/api/src/aggregate/run.ts:5": 1,
+        "apps/api/test/aggregate/scanner.integration.test.ts:0": 1,
+        "apps/api/test/helpers/scanner.ts:0": 1,
+        "apps/api/test/routes/integration.test.ts:0": 0,
+        "packages/db/src/migrations/0012_leaderboard_outbox.sql:0": 2,
+        "packages/db/src/migrations/meta/_journal.json:0": 2,
+        "packages/db/src/schema.ts:0": 2,
+        "packages/db/src/schema.ts:1": 2,
+        "packages/db/src/schema.ts:2": 2
+      },
+      "hunk_files": {
+        "apps/api/src/aggregate/run.ts:0": "apps/api/src/aggregate/run.ts",
+        "apps/api/src/aggregate/run.ts:1": "apps/api/src/aggregate/run.ts",
+        "apps/api/src/aggregate/run.ts:2": "apps/api/src/aggregate/run.ts",
+        "apps/api/src/aggregate/run.ts:3": "apps/api/src/aggregate/run.ts",
+        "apps/api/src/aggregate/run.ts:4": "apps/api/src/aggregate/run.ts",
+        "apps/api/src/aggregate/run.ts:5": "apps/api/src/aggregate/run.ts",
+        "apps/api/test/aggregate/scanner.integration.test.ts:0": "apps/api/test/aggregate/scanner.integration.test.ts",
+        "apps/api/test/helpers/scanner.ts:0": "apps/api/test/helpers/scanner.ts",
+        "apps/api/test/routes/integration.test.ts:0": "apps/api/test/routes/integration.test.ts",
+        "packages/db/src/migrations/0012_leaderboard_outbox.sql:0": "packages/db/src/migrations/0012_leaderboard_outbox.sql",
+        "packages/db/src/migrations/meta/_journal.json:0": "packages/db/src/migrations/meta/_journal.json",
+        "packages/db/src/schema.ts:0": "packages/db/src/schema.ts",
+        "packages/db/src/schema.ts:1": "packages/db/src/schema.ts",
+        "packages/db/src/schema.ts:2": "packages/db/src/schema.ts"
+      },
+      "case_id": "split-01"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "81a9624147e14a7b2a434dd45493e6c6629481d9",
+      "commits": [
+        "7f764c636eb6c41fc1a33c5e53e2b12921a8ef7c",
+        "0a3d30ae4625e87a11b088c8c701782fee75e3f6"
+      ],
+      "commit_subjects": [
+        "feat(web): add join-the-waitlist landing section",
+        "fix(web): surface notification toggle failures and roll back partial subscriptions"
+      ],
+      "n_commits": 2,
+      "n_files": 4,
+      "n_hunks": 8,
+      "diff_chars": 10930,
+      "diff_sha256": "05f7ee849db333560457f4461bc1f6c59e3103b5510b1ea909b0bf54354e80e6",
+      "hunk_labels": {
+        "apps/web/src/App.tsx:0": 0,
+        "apps/web/src/App.tsx:1": 0,
+        "apps/web/src/App.tsx:2": 0,
+        "apps/web/src/lib/api.ts:0": 0,
+        "apps/web/src/lib/push.ts:0": 1,
+        "apps/web/src/lib/push.ts:1": 1,
+        "apps/web/src/pages/EditProfile.tsx:0": 1,
+        "apps/web/src/pages/EditProfile.tsx:1": 1
+      },
+      "hunk_files": {
+        "apps/web/src/App.tsx:0": "apps/web/src/App.tsx",
+        "apps/web/src/App.tsx:1": "apps/web/src/App.tsx",
+        "apps/web/src/App.tsx:2": "apps/web/src/App.tsx",
+        "apps/web/src/lib/api.ts:0": "apps/web/src/lib/api.ts",
+        "apps/web/src/lib/push.ts:0": "apps/web/src/lib/push.ts",
+        "apps/web/src/lib/push.ts:1": "apps/web/src/lib/push.ts",
+        "apps/web/src/pages/EditProfile.tsx:0": "apps/web/src/pages/EditProfile.tsx",
+        "apps/web/src/pages/EditProfile.tsx:1": "apps/web/src/pages/EditProfile.tsx"
+      },
+      "case_id": "split-02"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "0e470c85af85dddec260a7d3b1558d48ae13d2ff",
+      "commits": [
+        "a9743f07e468da7e0a663fbe6b52970cc7954972",
+        "35dcffb4990a642d78bf87c7070c498d083e98f9"
+      ],
+      "commit_subjects": [
+        "docs(infra): update deployment stack to EC2/Railway/Upstash/Vercel",
+        "fix(web): change color"
+      ],
+      "n_commits": 2,
+      "n_files": 5,
+      "n_hunks": 6,
+      "diff_chars": 5981,
+      "diff_sha256": "ec64ad9e2042b073e9717ac57e9a9ffe391e061b7cbf3f7456c2b09d616d1ca1",
+      "hunk_labels": {
+        "ARCHITECTURE_DECISIONS.md:0": 0,
+        "README.md:0": 0,
+        "SYSTEM_DESIGN.md:0": 0,
+        "apps/web/src/App.tsx:0": 1,
+        "apps/web/src/index.css:0": 1,
+        "apps/web/src/index.css:1": 1
+      },
+      "hunk_files": {
+        "ARCHITECTURE_DECISIONS.md:0": "ARCHITECTURE_DECISIONS.md",
+        "README.md:0": "README.md",
+        "SYSTEM_DESIGN.md:0": "SYSTEM_DESIGN.md",
+        "apps/web/src/App.tsx:0": "apps/web/src/App.tsx",
+        "apps/web/src/index.css:0": "apps/web/src/index.css",
+        "apps/web/src/index.css:1": "apps/web/src/index.css"
+      },
+      "case_id": "split-03"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "bbfd40da319de253c7e1e13f83e7ec721a521d3e",
+      "commits": [
+        "decb12309356a3bd4f7cabaa268fabac6d02cb1c",
+        "878705d77d3d4cf7febafe962e189f1d99cc24bb",
+        "b9cebc5ebde554362c68691428160999c36038ba"
+      ],
+      "commit_subjects": [
+        "feat(web): show an owned-team notice instead of the create form",
+        "docs(web): log the one-team-per-plan cap",
+        "feat(api): raise the team-ownership cap to two"
+      ],
+      "n_commits": 3,
+      "n_files": 5,
+      "n_hunks": 6,
+      "diff_chars": 4097,
+      "diff_sha256": "636fdfa96295435e2af56452b9371fa9d9f7b79c567ec8cb3720fab228936a54",
+      "hunk_labels": {
+        "CHANGELOG.md:0": 1,
+        "apps/api/src/lib/teams.ts:0": 2,
+        "apps/api/src/routes/teams.ts:0": 2,
+        "apps/web/src/pages/Changelog.tsx:0": 1,
+        "apps/web/src/pages/Teams.tsx:0": 0,
+        "apps/web/src/pages/Teams.tsx:1": 0
+      },
+      "hunk_files": {
+        "CHANGELOG.md:0": "CHANGELOG.md",
+        "apps/api/src/lib/teams.ts:0": "apps/api/src/lib/teams.ts",
+        "apps/api/src/routes/teams.ts:0": "apps/api/src/routes/teams.ts",
+        "apps/web/src/pages/Changelog.tsx:0": "apps/web/src/pages/Changelog.tsx",
+        "apps/web/src/pages/Teams.tsx:0": "apps/web/src/pages/Teams.tsx",
+        "apps/web/src/pages/Teams.tsx:1": "apps/web/src/pages/Teams.tsx"
+      },
+      "case_id": "split-04"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "base": "c8dc38a4ceaf9af089aa361fc4dc3e7d3bc81d43",
+      "commits": [
+        "eba32dfe9d7196946c74cde59d5d0184c2c75436",
+        "83f9ca10c268f63afb1885da6f523e894d45599c"
+      ],
+      "commit_subjects": [
+        "perf(web): eliminate page-wide scroll jank",
+        "docs: refresh METRICS free-mode billing and Lighthouse mobile perf"
+      ],
+      "n_commits": 2,
+      "n_files": 5,
+      "n_hunks": 10,
+      "diff_chars": 13075,
+      "diff_sha256": "8af1971a6066841e658e87ff9b3d9528d589b51bceb63e57dab7114e8330afc8",
+      "hunk_labels": {
+        "CHANGELOG.md:0": 0,
+        "METRICS.md:0": 1,
+        "METRICS.md:1": 1,
+        "METRICS.md:2": 1,
+        "METRICS.md:3": 1,
+        "apps/web/src/App.tsx:0": 0,
+        "apps/web/src/index.css:0": 0,
+        "apps/web/src/index.css:1": 0,
+        "apps/web/src/index.css:2": 0,
+        "apps/web/src/lib/changelog.ts:0": 0
+      },
+      "hunk_files": {
+        "CHANGELOG.md:0": "CHANGELOG.md",
+        "METRICS.md:0": "METRICS.md",
+        "METRICS.md:1": "METRICS.md",
+        "METRICS.md:2": "METRICS.md",
+        "METRICS.md:3": "METRICS.md",
+        "apps/web/src/App.tsx:0": "apps/web/src/App.tsx",
+        "apps/web/src/index.css:0": "apps/web/src/index.css",
+        "apps/web/src/index.css:1": "apps/web/src/index.css",
+        "apps/web/src/index.css:2": "apps/web/src/index.css",
+        "apps/web/src/lib/changelog.ts:0": "apps/web/src/lib/changelog.ts"
+      },
+      "case_id": "split-05"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "5b5f4cb76ee9fee634027c323c0ace51f143cbbf",
+      "commits": [
+        "1abb0cb5092bd170e4a11786a55dc0c0f67fde2d",
+        "ddec59959ef4e41cb7a30bc7926e46ac04b6da3c",
+        "c38a4a0d15ffd7d2af46d2a26f5c3ce7df95d59d"
+      ],
+      "commit_subjects": [
+        "add entropy computation engine",
+        "add entropy and heavyweight config sections",
+        "add entropy and routing metrics"
+      ],
+      "n_commits": 3,
+      "n_files": 12,
+      "n_hunks": 17,
+      "diff_chars": 19110,
+      "diff_sha256": "b38ce51e2999e2ebfe2de1750beed84f7eb8cd88c5e715857cc6fe6665dcb05a",
+      "hunk_labels": {
+        "config.yaml:0": 1,
+        "internal/config/config.go:0": 1,
+        "internal/config/config.go:1": 1,
+        "internal/config/config_test.go:0": 1,
+        "internal/config/config_test.go:1": 1,
+        "internal/config/load.go:0": 1,
+        "internal/config/load.go:1": 1,
+        "internal/entropy/entropy.go:0": 0,
+        "internal/entropy/entropy_test.go:0": 0,
+        "internal/entropy/window.go:0": 0,
+        "internal/entropy/window_test.go:0": 0,
+        "internal/metrics/noop.go:0": 2,
+        "internal/metrics/prometheus.go:0": 2,
+        "internal/metrics/prometheus.go:1": 2,
+        "internal/metrics/prometheus.go:2": 2,
+        "internal/metrics/prometheus_test.go:0": 2,
+        "internal/metrics/recorder.go:0": 2
+      },
+      "hunk_files": {
+        "config.yaml:0": "config.yaml",
+        "internal/config/config.go:0": "internal/config/config.go",
+        "internal/config/config.go:1": "internal/config/config.go",
+        "internal/config/config_test.go:0": "internal/config/config_test.go",
+        "internal/config/config_test.go:1": "internal/config/config_test.go",
+        "internal/config/load.go:0": "internal/config/load.go",
+        "internal/config/load.go:1": "internal/config/load.go",
+        "internal/entropy/entropy.go:0": "internal/entropy/entropy.go",
+        "internal/entropy/entropy_test.go:0": "internal/entropy/entropy_test.go",
+        "internal/entropy/window.go:0": "internal/entropy/window.go",
+        "internal/entropy/window_test.go:0": "internal/entropy/window_test.go",
+        "internal/metrics/noop.go:0": "internal/metrics/noop.go",
+        "internal/metrics/prometheus.go:0": "internal/metrics/prometheus.go",
+        "internal/metrics/prometheus.go:1": "internal/metrics/prometheus.go",
+        "internal/metrics/prometheus.go:2": "internal/metrics/prometheus.go",
+        "internal/metrics/prometheus_test.go:0": "internal/metrics/prometheus_test.go",
+        "internal/metrics/recorder.go:0": "internal/metrics/recorder.go"
+      },
+      "case_id": "split-06"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "0077382d5960a047eee267dd09e586e90c7941c0",
+      "commits": [
+        "215ef0566600faa9f54c6392ebc48558eef65c4b",
+        "105c1a0ff47ee089802fbb0dc0945b8b4da2f67b"
+      ],
+      "commit_subjects": [
+        "Update source information",
+        "Utilize Figma MCP for system architecture diagram"
+      ],
+      "n_commits": 2,
+      "n_files": 4,
+      "n_hunks": 18,
+      "diff_chars": 28792,
+      "diff_sha256": "aa52440fe92f738defa01690613f63b3ecc34725615cfab782604afad7913bd5",
+      "hunk_labels": {
+        "README.md:0": 0,
+        "web/src/app/layout.tsx:0": 0,
+        "web/src/app/layout.tsx:1": 0,
+        "web/src/app/layout.tsx:2": 0,
+        "web/src/app/page.tsx:0": 0,
+        "web/src/app/page.tsx:1": 0,
+        "web/src/app/page.tsx:2": 0,
+        "web/src/app/page.tsx:3": 0,
+        "web/src/app/page.tsx:4": 0,
+        "web/src/app/page.tsx:5": 0,
+        "web/src/app/page.tsx:6": 0,
+        "web/src/app/page.tsx:7": 0,
+        "web/src/app/page.tsx:8": 0,
+        "web/src/app/page.tsx:9": 0,
+        "web/src/app/page.tsx:10": 0,
+        "web/src/app/page.tsx:11": 0,
+        "web/src/app/page.tsx:12": 0,
+        "web/src/components/Architecture.tsx:0": 1
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "web/src/app/layout.tsx:0": "web/src/app/layout.tsx",
+        "web/src/app/layout.tsx:1": "web/src/app/layout.tsx",
+        "web/src/app/layout.tsx:2": "web/src/app/layout.tsx",
+        "web/src/app/page.tsx:0": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:1": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:2": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:3": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:4": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:5": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:6": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:7": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:8": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:9": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:10": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:11": "web/src/app/page.tsx",
+        "web/src/app/page.tsx:12": "web/src/app/page.tsx",
+        "web/src/components/Architecture.tsx:0": "web/src/components/Architecture.tsx"
+      },
+      "case_id": "split-07"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "c03a70cb5744acd1a92c4faa2b94c994b114977c",
+      "commits": [
+        "2ce12ea093639b1dec7fbd878a0ca4bbbc0a4b21",
+        "ef8840caa8f1ea0eb8b7e21c322d12c34495405f"
+      ],
+      "commit_subjects": [
+        "add entropy replay and cost model for threshold sweep",
+        "add threshold statistics and report generation"
+      ],
+      "n_commits": 2,
+      "n_files": 8,
+      "n_hunks": 8,
+      "diff_chars": 21857,
+      "diff_sha256": "a95e3da22a8895d43014b209010f02eeb3b929ecf51f8166515190ae70553f28",
+      "hunk_labels": {
+        "benchmarks/internal/sweep/cost.go:0": 0,
+        "benchmarks/internal/sweep/cost_test.go:0": 0,
+        "benchmarks/internal/sweep/replay.go:0": 0,
+        "benchmarks/internal/sweep/replay_test.go:0": 0,
+        "benchmarks/internal/sweep/report.go:0": 1,
+        "benchmarks/internal/sweep/report_test.go:0": 1,
+        "benchmarks/internal/sweep/stats.go:0": 1,
+        "benchmarks/internal/sweep/stats_test.go:0": 1
+      },
+      "hunk_files": {
+        "benchmarks/internal/sweep/cost.go:0": "benchmarks/internal/sweep/cost.go",
+        "benchmarks/internal/sweep/cost_test.go:0": "benchmarks/internal/sweep/cost_test.go",
+        "benchmarks/internal/sweep/replay.go:0": "benchmarks/internal/sweep/replay.go",
+        "benchmarks/internal/sweep/replay_test.go:0": "benchmarks/internal/sweep/replay_test.go",
+        "benchmarks/internal/sweep/report.go:0": "benchmarks/internal/sweep/report.go",
+        "benchmarks/internal/sweep/report_test.go:0": "benchmarks/internal/sweep/report_test.go",
+        "benchmarks/internal/sweep/stats.go:0": "benchmarks/internal/sweep/stats.go",
+        "benchmarks/internal/sweep/stats_test.go:0": "benchmarks/internal/sweep/stats_test.go"
+      },
+      "case_id": "split-08"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "eb902030f2d33d7f05d32c89361a816da7e8cf83",
+      "commits": [
+        "41059aaadb5d155f1763b63db28206ff090d993b",
+        "d662254e150aa36beaa1c663d7b265a6a29b1ea5",
+        "805216f9667f870b8791b1a432f63a52ba2ea093"
+      ],
+      "commit_subjects": [
+        "Scaffold docs",
+        "Scaffold docs",
+        "add yaml and prometheus dependencies"
+      ],
+      "n_commits": 3,
+      "n_files": 3,
+      "n_hunks": 4,
+      "diff_chars": 4331,
+      "diff_sha256": "1f0d4ef6a3f1a862be18472481ab26701cc3ede573aed37dc53d6dc9526266e7",
+      "hunk_labels": {
+        "README.md:0": 1,
+        "README.md:1": 0,
+        "go.mod:0": 2,
+        "go.sum:0": 2
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "go.mod:0": "go.mod",
+        "go.sum:0": "go.sum"
+      },
+      "case_id": "split-09"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "0be06871a4e5f0c96194a0730a73ba5116dd9aa2",
+      "commits": [
+        "7f777bd167e8ef5c2ae2cce0e41becae56ed611d",
+        "deb839371a4187d725db3bb52b4d29f41354869a"
+      ],
+      "commit_subjects": [
+        "switch provider to OpenAI and set calibrated threshold T=2.0",
+        "update docs with Phase 3 calibration results"
+      ],
+      "n_commits": 2,
+      "n_files": 8,
+      "n_hunks": 20,
+      "diff_chars": 19317,
+      "diff_sha256": "fa154a7ef7183a199cbb4ea6fb5eab51a53e1eae684c41e48f5990fcd4efb885",
+      "hunk_labels": {
+        "README.md:0": 1,
+        "README.md:1": 1,
+        "README.md:2": 1,
+        "cmd/gateway/main.go:0": 0,
+        "cmd/gateway/main.go:1": 0,
+        "config.yaml:0": 0,
+        "docs/METRICS.md:0": 1,
+        "docs/PHASES.md:0": 1,
+        "docs/PHASES.md:1": 1,
+        "docs/PHASES.md:2": 1,
+        "docs/PHASES.md:3": 1,
+        "docs/SYSTEM_DESIGN.md:0": 1,
+        "docs/SYSTEM_DESIGN.md:1": 1,
+        "docs/SYSTEM_DESIGN.md:2": 1,
+        "docs/SYSTEM_DESIGN.md:3": 1,
+        "docs/SYSTEM_DESIGN.md:4": 1,
+        "internal/config/config_test.go:0": 0,
+        "internal/config/config_test.go:1": 0,
+        "internal/config/load.go:0": 0,
+        "internal/config/load.go:1": 0
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "README.md:2": "README.md",
+        "cmd/gateway/main.go:0": "cmd/gateway/main.go",
+        "cmd/gateway/main.go:1": "cmd/gateway/main.go",
+        "config.yaml:0": "config.yaml",
+        "docs/METRICS.md:0": "docs/METRICS.md",
+        "docs/PHASES.md:0": "docs/PHASES.md",
+        "docs/PHASES.md:1": "docs/PHASES.md",
+        "docs/PHASES.md:2": "docs/PHASES.md",
+        "docs/PHASES.md:3": "docs/PHASES.md",
+        "docs/SYSTEM_DESIGN.md:0": "docs/SYSTEM_DESIGN.md",
+        "docs/SYSTEM_DESIGN.md:1": "docs/SYSTEM_DESIGN.md",
+        "docs/SYSTEM_DESIGN.md:2": "docs/SYSTEM_DESIGN.md",
+        "docs/SYSTEM_DESIGN.md:3": "docs/SYSTEM_DESIGN.md",
+        "docs/SYSTEM_DESIGN.md:4": "docs/SYSTEM_DESIGN.md",
+        "internal/config/config_test.go:0": "internal/config/config_test.go",
+        "internal/config/config_test.go:1": "internal/config/config_test.go",
+        "internal/config/load.go:0": "internal/config/load.go",
+        "internal/config/load.go:1": "internal/config/load.go"
+      },
+      "case_id": "split-10"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "base": "588855adb2c7b4c0784e2e7d450d33d9c14927c9",
+      "commits": [
+        "c1062fdd73135e41c1bb5189c3cb0290f3080825",
+        "b693a41cfb3410e26d68b1b6a852584c4fc0a3f5",
+        "f24d59c53bd3fc8aa4b4899a05354034097dcc8c"
+      ],
+      "commit_subjects": [
+        "add Redis client with go-redis/v9",
+        "add VectorStore orchestrator with lookup, insert, and evict",
+        "add Redis and Qdrant services to docker compose"
+      ],
+      "n_commits": 3,
+      "n_files": 9,
+      "n_hunks": 11,
+      "diff_chars": 18825,
+      "diff_sha256": "a3579018fde83e03b3b279ab6e9488f47d80d35a64a9cdc58962a030adfc2bda",
+      "hunk_labels": {
+        "docker-compose.yml:0": 2,
+        "docker-compose.yml:1": 2,
+        "go.mod:0": 0,
+        "go.sum:0": 0,
+        "go.sum:1": 0,
+        "internal/cache/new.go:0": 1,
+        "internal/cache/redis.go:0": 0,
+        "internal/cache/redis_test.go:0": 0,
+        "internal/cache/store.go:0": 1,
+        "internal/cache/store_test.go:0": 1,
+        "internal/cache/uuid.go:0": 1
+      },
+      "hunk_files": {
+        "docker-compose.yml:0": "docker-compose.yml",
+        "docker-compose.yml:1": "docker-compose.yml",
+        "go.mod:0": "go.mod",
+        "go.sum:0": "go.sum",
+        "go.sum:1": "go.sum",
+        "internal/cache/new.go:0": "internal/cache/new.go",
+        "internal/cache/redis.go:0": "internal/cache/redis.go",
+        "internal/cache/redis_test.go:0": "internal/cache/redis_test.go",
+        "internal/cache/store.go:0": "internal/cache/store.go",
+        "internal/cache/store_test.go:0": "internal/cache/store_test.go",
+        "internal/cache/uuid.go:0": "internal/cache/uuid.go"
+      },
+      "case_id": "split-11"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "6fc4941ecbc142aac85d716f4389c33bc23380bc",
+      "commits": [
+        "0b81fd85f8f0342e13298158f0eabc5a0de53fac",
+        "d5cd12f30f2cd288e884f0b0c89587d8042d9eb5"
+      ],
+      "commit_subjects": [
+        "rename: VelocityMatch to Ferrox",
+        "feat: add trader_id field to Order for trader identification"
+      ],
+      "n_commits": 2,
+      "n_files": 8,
+      "n_hunks": 19,
+      "diff_chars": 9118,
+      "diff_sha256": "103cf6175196191ad8429763f3d1ebe6cec24e86eca8f0d877e46a260790e07a",
+      "hunk_labels": {
+        "Cargo.lock:0": 0,
+        "Cargo.lock:1": 0,
+        "Cargo.toml:0": 0,
+        "README.md:0": 0,
+        "docs/SYSTEM_DESIGN.md:0": 0,
+        "docs/SYSTEM_DESIGN.md:1": 0,
+        "src/book.rs:0": 1,
+        "src/main.rs:0": 0,
+        "src/matching.rs:0": 1,
+        "src/matching.rs:1": 1,
+        "src/matching.rs:2": 1,
+        "src/matching.rs:3": 1,
+        "src/matching.rs:4": 1,
+        "src/matching.rs:5": 1,
+        "src/matching.rs:6": 1,
+        "src/order.rs:0": 1,
+        "src/order.rs:1": 1,
+        "src/order.rs:2": 1,
+        "src/order.rs:3": 1
+      },
+      "hunk_files": {
+        "Cargo.lock:0": "Cargo.lock",
+        "Cargo.lock:1": "Cargo.lock",
+        "Cargo.toml:0": "Cargo.toml",
+        "README.md:0": "README.md",
+        "docs/SYSTEM_DESIGN.md:0": "docs/SYSTEM_DESIGN.md",
+        "docs/SYSTEM_DESIGN.md:1": "docs/SYSTEM_DESIGN.md",
+        "src/book.rs:0": "src/book.rs",
+        "src/main.rs:0": "src/main.rs",
+        "src/matching.rs:0": "src/matching.rs",
+        "src/matching.rs:1": "src/matching.rs",
+        "src/matching.rs:2": "src/matching.rs",
+        "src/matching.rs:3": "src/matching.rs",
+        "src/matching.rs:4": "src/matching.rs",
+        "src/matching.rs:5": "src/matching.rs",
+        "src/matching.rs:6": "src/matching.rs",
+        "src/order.rs:0": "src/order.rs",
+        "src/order.rs:1": "src/order.rs",
+        "src/order.rs:2": "src/order.rs",
+        "src/order.rs:3": "src/order.rs"
+      },
+      "case_id": "split-12"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "0300ee59995215a2533bf0c6a3e6d0269780a8bd",
+      "commits": [
+        "27e516ac0f519032adc59e1481686bd14e06c25a",
+        "6fc4941ecbc142aac85d716f4389c33bc23380bc"
+      ],
+      "commit_subjects": [
+        "chore: update main.rs placeholder",
+        "docs: mark Phase 1 as done in README"
+      ],
+      "n_commits": 2,
+      "n_files": 2,
+      "n_hunks": 2,
+      "diff_chars": 935,
+      "diff_sha256": "1e63534746263d44dc869548fb0ebbad357f93270848d2e2802ff7d983cc5528",
+      "hunk_labels": {
+        "README.md:0": 1,
+        "src/main.rs:0": 0
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "src/main.rs:0": "src/main.rs"
+      },
+      "case_id": "split-13"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "dd6c6826bff46d65877e4028452a2078532764f1",
+      "commits": [
+        "30e6a198459e20d2cf10bfd939ea4c22dbe56dc3",
+        "d07af413adaec30a6d80564196c3020a478014b3"
+      ],
+      "commit_subjects": [
+        "docs: update metrics, phases, and README for Phase 7",
+        "refactor: remove unnecessary comments from Phase 7 files"
+      ],
+      "n_commits": 2,
+      "n_files": 7,
+      "n_hunks": 20,
+      "diff_chars": 12138,
+      "diff_sha256": "ad69b41c4d190c44fc0c15a0abf310ff6e49faa3d36dfe4d90e209a0c8eb2c93",
+      "hunk_labels": {
+        "README.md:0": 0,
+        "README.md:1": 0,
+        "README.md:2": 0,
+        "benches/e2e_bench.rs:0": 1,
+        "benches/e2e_bench.rs:1": 1,
+        "benches/e2e_bench.rs:2": 1,
+        "benches/e2e_bench.rs:3": 1,
+        "benches/e2e_bench.rs:4": 1,
+        "benches/e2e_bench.rs:5": 1,
+        "docs/METRICS.md:0": 0,
+        "docs/PHASES.md:0": 0,
+        "examples/loadgen.rs:0": 1,
+        "examples/loadgen.rs:1": 1,
+        "examples/loadgen.rs:2": 1,
+        "examples/loadgen.rs:3": 1,
+        "examples/loadgen.rs:4": 1,
+        "examples/loadgen.rs:5": 1,
+        "examples/loadgen.rs:6": 1,
+        "src/gateway.rs:0": 1,
+        "src/matching.rs:0": 1
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "README.md:2": "README.md",
+        "benches/e2e_bench.rs:0": "benches/e2e_bench.rs",
+        "benches/e2e_bench.rs:1": "benches/e2e_bench.rs",
+        "benches/e2e_bench.rs:2": "benches/e2e_bench.rs",
+        "benches/e2e_bench.rs:3": "benches/e2e_bench.rs",
+        "benches/e2e_bench.rs:4": "benches/e2e_bench.rs",
+        "benches/e2e_bench.rs:5": "benches/e2e_bench.rs",
+        "docs/METRICS.md:0": "docs/METRICS.md",
+        "docs/PHASES.md:0": "docs/PHASES.md",
+        "examples/loadgen.rs:0": "examples/loadgen.rs",
+        "examples/loadgen.rs:1": "examples/loadgen.rs",
+        "examples/loadgen.rs:2": "examples/loadgen.rs",
+        "examples/loadgen.rs:3": "examples/loadgen.rs",
+        "examples/loadgen.rs:4": "examples/loadgen.rs",
+        "examples/loadgen.rs:5": "examples/loadgen.rs",
+        "examples/loadgen.rs:6": "examples/loadgen.rs",
+        "src/gateway.rs:0": "src/gateway.rs",
+        "src/matching.rs:0": "src/matching.rs"
+      },
+      "case_id": "split-14"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "58cfd3952e3f267e058528727153e787dd3e4de5",
+      "commits": [
+        "782d518b416fa238810b0540bacd370114d92d0b",
+        "ae979f06cffe0f6a7ecebad3d15ff8b8d2d03006"
+      ],
+      "commit_subjects": [
+        "Init Rust and add system design documents",
+        "Update README"
+      ],
+      "n_commits": 2,
+      "n_files": 5,
+      "n_hunks": 5,
+      "diff_chars": 21403,
+      "diff_sha256": "dd48eeeb62309479a14182795714dd16d4d3258e2fa99486f30ac28f96ae2f1a",
+      "hunk_labels": {
+        ".gitignore:0": 0,
+        "Cargo.toml:0": 0,
+        "README.md:0": 1,
+        "docs/SYSTEM_DESIGN.md:0": 0,
+        "src/main.rs:0": 0
+      },
+      "hunk_files": {
+        ".gitignore:0": ".gitignore",
+        "Cargo.toml:0": "Cargo.toml",
+        "README.md:0": "README.md",
+        "docs/SYSTEM_DESIGN.md:0": "docs/SYSTEM_DESIGN.md",
+        "src/main.rs:0": "src/main.rs"
+      },
+      "case_id": "split-15"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "0e3da152b3b723d8fc9a045823d0f3eee9e808c1",
+      "commits": [
+        "7ce720bf764a7645875e78c59aa8462d77bd9705",
+        "d9573cb3f45f7be966f0175fd1994827ad660c71"
+      ],
+      "commit_subjects": [
+        "perf: pre-allocate fills buffer and use smaller test arenas",
+        "docs: add performance metrics tracking"
+      ],
+      "n_commits": 2,
+      "n_files": 2,
+      "n_hunks": 30,
+      "diff_chars": 12344,
+      "diff_sha256": "ecd1457fdacd795db9100c39bdb4e716a7a5ccf35dfd24151514a1f80ac2a1a8",
+      "hunk_labels": {
+        "docs/METRICS.md:0": 1,
+        "src/matching.rs:0": 0,
+        "src/matching.rs:1": 0,
+        "src/matching.rs:2": 0,
+        "src/matching.rs:3": 0,
+        "src/matching.rs:4": 0,
+        "src/matching.rs:5": 0,
+        "src/matching.rs:6": 0,
+        "src/matching.rs:7": 0,
+        "src/matching.rs:8": 0,
+        "src/matching.rs:9": 0,
+        "src/matching.rs:10": 0,
+        "src/matching.rs:11": 0,
+        "src/matching.rs:12": 0,
+        "src/matching.rs:13": 0,
+        "src/matching.rs:14": 0,
+        "src/matching.rs:15": 0,
+        "src/matching.rs:16": 0,
+        "src/matching.rs:17": 0,
+        "src/matching.rs:18": 0,
+        "src/matching.rs:19": 0,
+        "src/matching.rs:20": 0,
+        "src/matching.rs:21": 0,
+        "src/matching.rs:22": 0,
+        "src/matching.rs:23": 0,
+        "src/matching.rs:24": 0,
+        "src/matching.rs:25": 0,
+        "src/matching.rs:26": 0,
+        "src/matching.rs:27": 0,
+        "src/matching.rs:28": 0
+      },
+      "hunk_files": {
+        "docs/METRICS.md:0": "docs/METRICS.md",
+        "src/matching.rs:0": "src/matching.rs",
+        "src/matching.rs:1": "src/matching.rs",
+        "src/matching.rs:2": "src/matching.rs",
+        "src/matching.rs:3": "src/matching.rs",
+        "src/matching.rs:4": "src/matching.rs",
+        "src/matching.rs:5": "src/matching.rs",
+        "src/matching.rs:6": "src/matching.rs",
+        "src/matching.rs:7": "src/matching.rs",
+        "src/matching.rs:8": "src/matching.rs",
+        "src/matching.rs:9": "src/matching.rs",
+        "src/matching.rs:10": "src/matching.rs",
+        "src/matching.rs:11": "src/matching.rs",
+        "src/matching.rs:12": "src/matching.rs",
+        "src/matching.rs:13": "src/matching.rs",
+        "src/matching.rs:14": "src/matching.rs",
+        "src/matching.rs:15": "src/matching.rs",
+        "src/matching.rs:16": "src/matching.rs",
+        "src/matching.rs:17": "src/matching.rs",
+        "src/matching.rs:18": "src/matching.rs",
+        "src/matching.rs:19": "src/matching.rs",
+        "src/matching.rs:20": "src/matching.rs",
+        "src/matching.rs:21": "src/matching.rs",
+        "src/matching.rs:22": "src/matching.rs",
+        "src/matching.rs:23": "src/matching.rs",
+        "src/matching.rs:24": "src/matching.rs",
+        "src/matching.rs:25": "src/matching.rs",
+        "src/matching.rs:26": "src/matching.rs",
+        "src/matching.rs:27": "src/matching.rs",
+        "src/matching.rs:28": "src/matching.rs"
+      },
+      "case_id": "split-16"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "base": "923e209ec0680863559700101f2607178dd67dd5",
+      "commits": [
+        "7fd4c4ab4e3cd4d18dd39da35dce495140a89765",
+        "7afb7f47b50c09c494416d8f2e2381cf7d60186b"
+      ],
+      "commit_subjects": [
+        "Add phases for product development plan",
+        "Update README"
+      ],
+      "n_commits": 2,
+      "n_files": 2,
+      "n_hunks": 4,
+      "diff_chars": 14235,
+      "diff_sha256": "f55ee64f4d100aaa36a1afdec9d761bad98b199a26ed894dbce96518ea1fea30",
+      "hunk_labels": {
+        "README.md:0": 1,
+        "README.md:1": 1,
+        "README.md:2": 1,
+        "docs/PHASES.md:0": 0
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "README.md:2": "README.md",
+        "docs/PHASES.md:0": "docs/PHASES.md"
+      },
+      "case_id": "split-17"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "126a0bda4f0447dad59dd1c3b9bd5bda7c039d69",
+      "commits": [
+        "08bc4dee3a48de85f27f9127ece6237809141705",
+        "f5df570f2566213d91283ce13143480bb0483de9"
+      ],
+      "commit_subjects": [
+        "fix(llm): harden retry logic and cache eviction across providers",
+        "fix(docker): run container as non-root user"
+      ],
+      "n_commits": 2,
+      "n_files": 4,
+      "n_hunks": 8,
+      "diff_chars": 6575,
+      "diff_sha256": "1ae1576f42facf877f71b24de1789561495aefd7a658f9c08432a5e4a8221c7f",
+      "hunk_labels": {
+        "Dockerfile:0": 1,
+        "backend/services/llm/gemini.py:0": 0,
+        "backend/services/llm/gemini.py:1": 0,
+        "backend/services/llm/ollama.py:0": 0,
+        "backend/services/llm/ollama.py:1": 0,
+        "backend/services/llm/ollama.py:2": 0,
+        "backend/services/llm/ollama.py:3": 0,
+        "backend/utils/cost.py:0": 0
+      },
+      "hunk_files": {
+        "Dockerfile:0": "Dockerfile",
+        "backend/services/llm/gemini.py:0": "backend/services/llm/gemini.py",
+        "backend/services/llm/gemini.py:1": "backend/services/llm/gemini.py",
+        "backend/services/llm/ollama.py:0": "backend/services/llm/ollama.py",
+        "backend/services/llm/ollama.py:1": "backend/services/llm/ollama.py",
+        "backend/services/llm/ollama.py:2": "backend/services/llm/ollama.py",
+        "backend/services/llm/ollama.py:3": "backend/services/llm/ollama.py",
+        "backend/utils/cost.py:0": "backend/utils/cost.py"
+      },
+      "case_id": "split-18"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "c2aaad6a3c421ffc2eaab8a6c22be57a8bad38dc",
+      "commits": [
+        "1a84a442af6237d56c275432bc0826f717d5e20c",
+        "ba273a9e3b59aad5edd32995b96f5152d728d932",
+        "8418a08cf46194af994e40b9f7e4eef6c903e5e1"
+      ],
+      "commit_subjects": [
+        "Add LLM selection and Gemini configuration",
+        "Finalize Gemini provider, provider factory & config, then use factory",
+        "Initialize Docker setup"
+      ],
+      "n_commits": 3,
+      "n_files": 4,
+      "n_hunks": 6,
+      "diff_chars": 3967,
+      "diff_sha256": "b8a4003223e695687a442b80b9dc157d81c723464c76e478bcafcefe869ddb66",
+      "hunk_labels": {
+        "Dockerfile:0": 2,
+        "backend/core/config.py:0": 0,
+        "backend/routers/agent.py:0": 1,
+        "backend/routers/agent.py:1": 1,
+        "backend/routers/agent.py:2": 1,
+        "backend/services/llm/__init__.py:0": 1
+      },
+      "hunk_files": {
+        "Dockerfile:0": "Dockerfile",
+        "backend/core/config.py:0": "backend/core/config.py",
+        "backend/routers/agent.py:0": "backend/routers/agent.py",
+        "backend/routers/agent.py:1": "backend/routers/agent.py",
+        "backend/routers/agent.py:2": "backend/routers/agent.py",
+        "backend/services/llm/__init__.py:0": "backend/services/llm/__init__.py"
+      },
+      "case_id": "split-19"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "83882dce780a2dcd5fb1cbb22b08d2a380e4cce6",
+      "commits": [
+        "4dbf0997273260563c6ccd1755bcaa1ad79f8306",
+        "fd80229edf246b8ea75112c388e46b113a222733",
+        "c2aaad6a3c421ffc2eaab8a6c22be57a8bad38dc"
+      ],
+      "commit_subjects": [
+        "feat(backend/routers/agent.py): add agent router for running git workflow",
+        "Add main agent orchestrator, routers in backend and cli, and fix CLI API",
+        "Add LLM Provider (Gemini 2.5)"
+      ],
+      "n_commits": 3,
+      "n_files": 9,
+      "n_hunks": 11,
+      "diff_chars": 14834,
+      "diff_sha256": "0da6a1aa2560ab497274ba44ad00b06e013c4544bf1f08449726eebe0fd9f4c1",
+      "hunk_labels": {
+        "backend/agents/git_agent.py:0": 1,
+        "backend/main.py:0": 1,
+        "backend/main.py:1": 1,
+        "backend/routers/agent.py:0": 0,
+        "backend/services/llm/factory.py:0": 2,
+        "backend/services/llm/gemini.py:0": 2,
+        "cli/api_client.py:0": 1,
+        "cli/commands/agent.py:0": 1,
+        "cli/main.py:0": 1,
+        "cli/main.py:1": 1,
+        "pyproject.toml:0": 2
+      },
+      "hunk_files": {
+        "backend/agents/git_agent.py:0": "backend/agents/git_agent.py",
+        "backend/main.py:0": "backend/main.py",
+        "backend/main.py:1": "backend/main.py",
+        "backend/routers/agent.py:0": "backend/routers/agent.py",
+        "backend/services/llm/factory.py:0": "backend/services/llm/factory.py",
+        "backend/services/llm/gemini.py:0": "backend/services/llm/gemini.py",
+        "cli/api_client.py:0": "cli/api_client.py",
+        "cli/commands/agent.py:0": "cli/commands/agent.py",
+        "cli/main.py:0": "cli/main.py",
+        "cli/main.py:1": "cli/main.py",
+        "pyproject.toml:0": "pyproject.toml"
+      },
+      "case_id": "split-20"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "353298fd01ede6d56dcadfcfd7d7a9cf45730382",
+      "commits": [
+        "58ed68f60be4b58301317d9758cbcd010f1c834f",
+        "6fc82657dcb7697384fd79958a749a61de8f8007"
+      ],
+      "commit_subjects": [
+        "Add test for CLI API client",
+        "Fix tests in analyze and commit"
+      ],
+      "n_commits": 2,
+      "n_files": 3,
+      "n_hunks": 3,
+      "diff_chars": 4201,
+      "diff_sha256": "3f32211c687aa8ca8c4be4a0e947b4667418a98430bba3af8385e6d9e6dd9cbb",
+      "hunk_labels": {
+        "tests/backend/test_analyze.py:0": 1,
+        "tests/backend/test_commit.py:0": 1,
+        "tests/cli/test_api_client.py:0": 0
+      },
+      "hunk_files": {
+        "tests/backend/test_analyze.py:0": "tests/backend/test_analyze.py",
+        "tests/backend/test_commit.py:0": "tests/backend/test_commit.py",
+        "tests/cli/test_api_client.py:0": "tests/cli/test_api_client.py"
+      },
+      "case_id": "split-21"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "eb540dd89711d3fc7b8967bb37d9d5b81db4a943",
+      "commits": [
+        "d28d0431834759397ff78c942c7ba96a8fa10020",
+        "dcadc1f800b9cccef20904388d0c426f3cf14182",
+        "93f03e177a15df23d9d45e9f4d8f6e093e43a383"
+      ],
+      "commit_subjects": [
+        "Prepare for Railway deploy",
+        "Fix Dockerfile",
+        "Fix pass settings to LLM factory"
+      ],
+      "n_commits": 3,
+      "n_files": 3,
+      "n_hunks": 3,
+      "diff_chars": 1550,
+      "diff_sha256": "f30b28ddf9a3006ad1553d68d27e22f62f614e4d90d104e8cf1645489b0a78b4",
+      "hunk_labels": {
+        ".railwayignore:0": 0,
+        "Dockerfile:0": 1,
+        "backend/core/dependencies.py:0": 2
+      },
+      "hunk_files": {
+        ".railwayignore:0": ".railwayignore",
+        "Dockerfile:0": "Dockerfile",
+        "backend/core/dependencies.py:0": "backend/core/dependencies.py"
+      },
+      "case_id": "split-22"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "base": "08968dfb30bc777a2d5bcc771c3c9fab178e8cec",
+      "commits": [
+        "f38914302b6e953d4a76875a1d313511ea56bdfe",
+        "a3e9030027ec705f52175eed2a5f50c081d7b5bd",
+        "400ba914561f0555e305342007bc76fb8921e2d6",
+        "398f707b4d6271963111b61c8438876ffa22b18a"
+      ],
+      "commit_subjects": [
+        "Fix minor bugs",
+        "Refactored the clustering algorithm in backend/clustering/conventional.py to improve performance and scalability. This includes optimizing data structures and reducing computational complexity.",
+        "Refactored the LLM service module in backend/services/llm/gemini.py to improve performance and enhance code readability. This includes restructuring functions, optimizing variable names, and adding comments for better understanding.",
+        "Update Dockerfile"
+      ],
+      "n_commits": 4,
+      "n_files": 15,
+      "n_hunks": 36,
+      "diff_chars": 20124,
+      "diff_sha256": "b59bac5940ff208b0f0adc7c3e140091b226876f87859b4dbd99c19327c4ee7b",
+      "hunk_labels": {
+        "Dockerfile:0": 3,
+        "backend/clustering/conventional.py:0": 1,
+        "backend/clustering/conventional.py:1": 1,
+        "backend/clustering/conventional.py:2": 1,
+        "backend/routers/pr.py:0": 0,
+        "backend/services/llm/gemini.py:0": 2,
+        "backend/services/llm/gemini.py:1": 2,
+        "backend/services/llm/gemini.py:2": 2,
+        "backend/services/llm/gemini.py:3": 2,
+        "backend/utils/cost.py:0": 0,
+        "cli/commands/agent.py:0": 0,
+        "cli/commands/agent.py:1": 0,
+        "cli/commands/agent.py:2": 0,
+        "cli/commands/analyze.py:0": 0,
+        "cli/commands/analyze.py:1": 0,
+        "cli/commands/auto.py:0": 0,
+        "cli/commands/auto.py:1": 0,
+        "cli/commands/auto.py:2": 0,
+        "cli/commands/changelog.py:0": 0,
+        "cli/commands/changelog.py:1": 0,
+        "cli/commands/commit.py:0": 0,
+        "cli/commands/commit.py:1": 0,
+        "cli/commands/commit.py:2": 0,
+        "cli/commands/index.py:0": 0,
+        "cli/commands/index.py:1": 0,
+        "cli/commands/index.py:2": 0,
+        "cli/commands/index.py:3": 0,
+        "cli/commands/pr.py:0": 0,
+        "cli/commands/pr.py:1": 0,
+        "cli/commands/resolve.py:0": 0,
+        "cli/commands/resolve.py:1": 0,
+        "cli/commands/review.py:0": 0,
+        "cli/commands/review.py:1": 0,
+        "cli/commands/split.py:0": 0,
+        "cli/commands/split.py:1": 0,
+        "cli/commands/split.py:2": 0
+      },
+      "hunk_files": {
+        "Dockerfile:0": "Dockerfile",
+        "backend/clustering/conventional.py:0": "backend/clustering/conventional.py",
+        "backend/clustering/conventional.py:1": "backend/clustering/conventional.py",
+        "backend/clustering/conventional.py:2": "backend/clustering/conventional.py",
+        "backend/routers/pr.py:0": "backend/routers/pr.py",
+        "backend/services/llm/gemini.py:0": "backend/services/llm/gemini.py",
+        "backend/services/llm/gemini.py:1": "backend/services/llm/gemini.py",
+        "backend/services/llm/gemini.py:2": "backend/services/llm/gemini.py",
+        "backend/services/llm/gemini.py:3": "backend/services/llm/gemini.py",
+        "backend/utils/cost.py:0": "backend/utils/cost.py",
+        "cli/commands/agent.py:0": "cli/commands/agent.py",
+        "cli/commands/agent.py:1": "cli/commands/agent.py",
+        "cli/commands/agent.py:2": "cli/commands/agent.py",
+        "cli/commands/analyze.py:0": "cli/commands/analyze.py",
+        "cli/commands/analyze.py:1": "cli/commands/analyze.py",
+        "cli/commands/auto.py:0": "cli/commands/auto.py",
+        "cli/commands/auto.py:1": "cli/commands/auto.py",
+        "cli/commands/auto.py:2": "cli/commands/auto.py",
+        "cli/commands/changelog.py:0": "cli/commands/changelog.py",
+        "cli/commands/changelog.py:1": "cli/commands/changelog.py",
+        "cli/commands/commit.py:0": "cli/commands/commit.py",
+        "cli/commands/commit.py:1": "cli/commands/commit.py",
+        "cli/commands/commit.py:2": "cli/commands/commit.py",
+        "cli/commands/index.py:0": "cli/commands/index.py",
+        "cli/commands/index.py:1": "cli/commands/index.py",
+        "cli/commands/index.py:2": "cli/commands/index.py",
+        "cli/commands/index.py:3": "cli/commands/index.py",
+        "cli/commands/pr.py:0": "cli/commands/pr.py",
+        "cli/commands/pr.py:1": "cli/commands/pr.py",
+        "cli/commands/resolve.py:0": "cli/commands/resolve.py",
+        "cli/commands/resolve.py:1": "cli/commands/resolve.py",
+        "cli/commands/review.py:0": "cli/commands/review.py",
+        "cli/commands/review.py:1": "cli/commands/review.py",
+        "cli/commands/split.py:0": "cli/commands/split.py",
+        "cli/commands/split.py:1": "cli/commands/split.py",
+        "cli/commands/split.py:2": "cli/commands/split.py"
+      },
+      "case_id": "split-23"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "0dfc38a71c15e9bb87ffb4f54897daeb303cd91c",
+      "commits": [
+        "060562111a7df6af6ff299710ad6c430d3bdccc3",
+        "a974fdb1a0ea93a659fdfaa058350292dcd3c931"
+      ],
+      "commit_subjects": [
+        "docs(adr): note ADR-0012's supersession scope and ADR-0008's overstated 0007 claim",
+        "docs(audit): split the wire event from the stored entry, grow the action vocabulary, add DATA_MODEL and ADRs 0017-0018"
+      ],
+      "n_commits": 2,
+      "n_files": 5,
+      "n_hunks": 5,
+      "diff_chars": 16413,
+      "diff_sha256": "c793b448147e7c975021db680c471c33dcf863fbb348f25f61733090b0fde5e3",
+      "hunk_labels": {
+        "docs/API_REFERENCE.md:0": 1,
+        "docs/DATA_MODEL.md:0": 1,
+        "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0": 0,
+        "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0": 1,
+        "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0": 1
+      },
+      "hunk_files": {
+        "docs/API_REFERENCE.md:0": "docs/API_REFERENCE.md",
+        "docs/DATA_MODEL.md:0": "docs/DATA_MODEL.md",
+        "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0": "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+        "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0": "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+        "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0": "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+      },
+      "case_id": "split-24"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "87eab0fdcf94efce283cd224a59ef6966d490e51",
+      "commits": [
+        "13fe3016e360cf7e7144a3b95baad37cea7d3425",
+        "5c783a128df7275ed619182490fcec5c0c3eecd3",
+        "afc63945e4fc2a7b873eafb210e3750159f4b1a7"
+      ],
+      "commit_subjects": [
+        "ci: add scheduler unit, perf, and replay jobs",
+        "docs(adr): record workload-class label gating",
+        "docs(adr): record node economics contract and price sources"
+      ],
+      "n_commits": 3,
+      "n_files": 3,
+      "n_hunks": 5,
+      "diff_chars": 7283,
+      "diff_sha256": "88dcb599974cc3c93f8e0ab7c99f1398e214607291a2b38e688c76de33efe708",
+      "hunk_labels": {
+        ".github/workflows/ci.yaml:0": 0,
+        ".github/workflows/ci.yaml:1": 0,
+        ".github/workflows/ci.yaml:2": 0,
+        "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0": 1,
+        "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0": 2
+      },
+      "hunk_files": {
+        ".github/workflows/ci.yaml:0": ".github/workflows/ci.yaml",
+        ".github/workflows/ci.yaml:1": ".github/workflows/ci.yaml",
+        ".github/workflows/ci.yaml:2": ".github/workflows/ci.yaml",
+        "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0": "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+        "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0": "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+      },
+      "case_id": "split-25"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "975eba4a83d1947fb7ffa92947ca86c353db0ab1",
+      "commits": [
+        "310818bb161ba2e38ac2fd689d32c5284961c1f2",
+        "2d5c8d9029b4796bfbf195e63d1455366af24e46",
+        "dcc6176ca9f85afc8e8fe159dc1ed6e8c560927e"
+      ],
+      "commit_subjects": [
+        "ci: check the drawing's assets only, and let the unmounted crystal script carry its own palette",
+        "test(e2e): carry the site's web tree on the throwaway branch so Vercel can read its rules",
+        "chore(web): tell Vercel not to deploy e2e branches"
+      ],
+      "n_commits": 3,
+      "n_files": 4,
+      "n_hunks": 6,
+      "diff_chars": 4518,
+      "diff_sha256": "bbb0c539078d6c8a3416ef4e02642fb8105387edd21279743d638a66c43a2387",
+      "hunk_labels": {
+        ".github/workflows/ci.yaml:0": 0,
+        "e2e/phase2_test.go:0": 1,
+        "web/scripts/build-lattice.ts:0": 0,
+        "web/scripts/build-lattice.ts:1": 0,
+        "web/scripts/build-lattice.ts:2": 0,
+        "web/vercel.json:0": 2
+      },
+      "hunk_files": {
+        ".github/workflows/ci.yaml:0": ".github/workflows/ci.yaml",
+        "e2e/phase2_test.go:0": "e2e/phase2_test.go",
+        "web/scripts/build-lattice.ts:0": "web/scripts/build-lattice.ts",
+        "web/scripts/build-lattice.ts:1": "web/scripts/build-lattice.ts",
+        "web/scripts/build-lattice.ts:2": "web/scripts/build-lattice.ts",
+        "web/vercel.json:0": "web/vercel.json"
+      },
+      "case_id": "split-26"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "a85aa844fe592dca79cdf1e5c6639589dc8985a5",
+      "commits": [
+        "5d60d763cc646950a8476c474e21204cd96b978a",
+        "fd890fc24b98bac119cd0fbbf28c5a14bef5728b"
+      ],
+      "commit_subjects": [
+        "docs: describe the progressive delivery controller, its schema and its tests",
+        "docs(roadmap): mark phase 4 complete"
+      ],
+      "n_commits": 2,
+      "n_files": 6,
+      "n_hunks": 8,
+      "diff_chars": 19936,
+      "diff_sha256": "016e015cc6b7eff88044c1a581c0ddf6b1c1f7cdd7eae0ed6c95c4ef7b4b4729",
+      "hunk_labels": {
+        "README.md:0": 0,
+        "README.md:1": 0,
+        "README.md:2": 0,
+        "docs/API_REFERENCE.md:0": 0,
+        "docs/METRICS.md:0": 0,
+        "docs/ROADMAP.md:0": 1,
+        "docs/SYSTEM_DESIGN.md:0": 0,
+        "docs/TESTING.md:0": 0
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "README.md:2": "README.md",
+        "docs/API_REFERENCE.md:0": "docs/API_REFERENCE.md",
+        "docs/METRICS.md:0": "docs/METRICS.md",
+        "docs/ROADMAP.md:0": "docs/ROADMAP.md",
+        "docs/SYSTEM_DESIGN.md:0": "docs/SYSTEM_DESIGN.md",
+        "docs/TESTING.md:0": "docs/TESTING.md"
+      },
+      "case_id": "split-27"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "74eb1e19ebd891506c2b8b4a50f5e105ac3b061e",
+      "commits": [
+        "961f93fdde30cdb3468748691f6fb87e1678d6db",
+        "266124b5430a4e14826b35b442bc613f00b5c5ee"
+      ],
+      "commit_subjects": [
+        "docs: restyle the readme and swap the ascii diagram for the generated sheet",
+        "fix(e2e): open a fresh connection per simulated request"
+      ],
+      "n_commits": 2,
+      "n_files": 2,
+      "n_hunks": 10,
+      "diff_chars": 15466,
+      "diff_sha256": "526e04be13b911f7a4b8a0ba8f94c87ff91db6f7bdcf5e7b127da5fe6fa74ead",
+      "hunk_labels": {
+        "README.md:0": 0,
+        "README.md:1": 0,
+        "README.md:2": 0,
+        "README.md:3": 0,
+        "README.md:4": 0,
+        "README.md:5": 0,
+        "README.md:6": 0,
+        "e2e/phase7_sim_test.go:0": 1,
+        "e2e/phase7_sim_test.go:1": 1,
+        "e2e/phase7_sim_test.go:2": 1
+      },
+      "hunk_files": {
+        "README.md:0": "README.md",
+        "README.md:1": "README.md",
+        "README.md:2": "README.md",
+        "README.md:3": "README.md",
+        "README.md:4": "README.md",
+        "README.md:5": "README.md",
+        "README.md:6": "README.md",
+        "e2e/phase7_sim_test.go:0": "e2e/phase7_sim_test.go",
+        "e2e/phase7_sim_test.go:1": "e2e/phase7_sim_test.go",
+        "e2e/phase7_sim_test.go:2": "e2e/phase7_sim_test.go"
+      },
+      "case_id": "split-28"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "base": "c0c04d9e222bc2c5e7221f631292169fbdf8d49b",
+      "commits": [
+        "ed18d131ddd775c54d80c41d5cfc27d48e40bf53",
+        "a7c66817863598e7ae6cba9b47ceb057bf71179d",
+        "34c60de5a29b05c99bbd35562365981b396df616"
+      ],
+      "commit_subjects": [
+        "fix(operator): select only the database pod in the Service",
+        "test(operator): assert job pods are never service endpoints",
+        "ci: run operator-integration on the shared kind config again"
+      ],
+      "n_commits": 3,
+      "n_files": 5,
+      "n_hunks": 10,
+      "diff_chars": 8039,
+      "diff_sha256": "dbca05ad670d343859920a586951b45638ee7bf5f6a380718bf1500e95e6a38c",
+      "hunk_labels": {
+        ".github/workflows/ci.yaml:0": 2,
+        "docs/TESTING.md:0": 2,
+        "kind-config-operator.yaml:0": 0,
+        "operator/internal/controller/resources.go:0": 0,
+        "operator/internal/controller/resources.go:1": 0,
+        "operator/internal/controller/resources.go:2": 0,
+        "operator/internal/controller/resources.go:3": 0,
+        "operator/internal/controller/resources.go:4": 0,
+        "operator/internal/controller/tenantdatabase_controller_test.go:0": 1,
+        "operator/internal/controller/tenantdatabase_controller_test.go:1": 1
+      },
+      "hunk_files": {
+        ".github/workflows/ci.yaml:0": ".github/workflows/ci.yaml",
+        "docs/TESTING.md:0": "docs/TESTING.md",
+        "kind-config-operator.yaml:0": "kind-config-operator.yaml",
+        "operator/internal/controller/resources.go:0": "operator/internal/controller/resources.go",
+        "operator/internal/controller/resources.go:1": "operator/internal/controller/resources.go",
+        "operator/internal/controller/resources.go:2": "operator/internal/controller/resources.go",
+        "operator/internal/controller/resources.go:3": "operator/internal/controller/resources.go",
+        "operator/internal/controller/resources.go:4": "operator/internal/controller/resources.go",
+        "operator/internal/controller/tenantdatabase_controller_test.go:0": "operator/internal/controller/tenantdatabase_controller_test.go",
+        "operator/internal/controller/tenantdatabase_controller_test.go:1": "operator/internal/controller/tenantdatabase_controller_test.go"
+      },
+      "case_id": "split-29"
+    }
+  ],
+  "commit_cases": [
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "052f9adf6db8e30e251869f5db1f1f4671242722",
+      "parent": "aced59255911366e8c554abd39f8a84374000328",
+      "author_message": "fix(web): fetch me on EditProfile mount to pre-fill profile form",
+      "n_files": 5,
+      "diff_chars": 6094,
+      "diff_sha256": "4b01c87a417f4a27f7bb224686163a0848a7149c0a0b14e52d17980a414bc34a",
+      "case_id": "commit-00"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "4efcde805f87e6559c13d1d797bad2517808e375",
+      "parent": "a8dad1633bffed5df326635cf082689ba12fd65c",
+      "author_message": "docs(web): document the waitlist endpoint in API reference and privacy policy",
+      "n_files": 3,
+      "diff_chars": 3068,
+      "diff_sha256": "910e4e2cc744eb3fd18e537340db0dc2be4ecdd25017aa6154433b8e0a8f2817",
+      "case_id": "commit-01"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "6564e5cec676dd1379edbe9bc5844cccccbce767",
+      "parent": "1f06b7d1e35cb34f17d6400a7cbef5192acbeae0",
+      "author_message": "docs(changelog): record the headless CLI client",
+      "n_files": 2,
+      "diff_chars": 2232,
+      "diff_sha256": "66f5d2cd59909c20972df4d2db97995ca96c5006371bea381fff7222ffd63852",
+      "case_id": "commit-02"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "a84018c2dacded78d0e0ffc690cd704e53223af7",
+      "parent": "a0ddeb3a444c5b7b8aa80e7f83441253c7fd2c55",
+      "author_message": "feat(api): add public GET heatmap-card endpoint with redis PNG cache\n\nNew unauthenticated GET /v1/sessions/:id/heatmap-card renders the same\ncard as the existing POST, suitable as a literal og:image URL. Serves\nonly privacy='full' sessions (404 otherwise, no existence leak); rate-\nlimited 120/hr per IP; Cache-Control: public, max-age=600.\n\nBoth POST and GET now share a Redis PNG cache (heatmapCardCacheKey,\n10-min TTL) keyed by session + render options so repeated requests skip\nthe sharp rasterization. Cache is fail-open; privacy is re-checked\nagainst Postgres before any cached image is served.",
+      "n_files": 3,
+      "diff_chars": 8865,
+      "diff_sha256": "52b5339fb159f6badb1c795e9463693c13e922f3fc2d713d6abb0eabaff1a866",
+      "case_id": "commit-03"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "cf03249e486d31d75a76ddc4c1ba4922d6219c0e",
+      "parent": "f3544fea46fe77755082573deccbe676400efa80",
+      "author_message": "docs: record GET /v1/leaderboard endpoint (ROADMAP step 62)\n\nNote the cold-start rebuild source and the deferred lang filter + delta field.",
+      "n_files": 3,
+      "diff_chars": 3078,
+      "diff_sha256": "a7087474f2903a5b137f7b9c3898528f0913546f0f498a49a1ec2e80fa720d5e",
+      "case_id": "commit-04"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "ece51c6d49689d8c3e6b575183516275826af411",
+      "parent": "00de6cb87a46556cba299bbe443fe77f5d8e4c58",
+      "author_message": "fix(web): show accent-2 border on sign-in back link hover",
+      "n_files": 1,
+      "diff_chars": 821,
+      "diff_sha256": "ead045c726e02d3c6788614a52b1efc8af9a6d41342c99823b8d285b02cfa72d",
+      "case_id": "commit-05"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "2145c7bd3b655c1d042a25ef76ca8828dbbcb63c",
+      "parent": "952071480e6060c668086e9946e2d5899bdff640",
+      "author_message": "add speculative executor with soft threshold state machine\n\nDRAFTING -> SPECULATING -> ESCALATED or DRAFT_ACCEPTED. Fires\nheavyweight in parallel when token entropy exceeds 0.8*T, cancels\nif drafter recovers. Graceful fallback if heavyweight fails to start.\n8 test cases covering all transitions, errors, and context cancellation.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "n_files": 3,
+      "diff_chars": 14582,
+      "diff_sha256": "b61b458774c74bf0b73f9a4a9aab2e7a603c0f02ddcca31a0ed18d46da86c0c3",
+      "case_id": "commit-06"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "3bbea40ee84a617e53e8a21867b4a04f206ac3e2",
+      "parent": "2218768bc1de916ebd84309a710ea6f5eea8fa0a",
+      "author_message": "Add docs link to metrics",
+      "n_files": 2,
+      "diff_chars": 706,
+      "diff_sha256": "f96249a96ecc6a468e2566143e8f48e8b5121229b6dcaa9e8a205a85c8264015",
+      "case_id": "commit-07"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "60b9c82b1a9d91964fb2bc010decb928a2615c65",
+      "parent": "0a7f9b585df5fd7afd5a664765441973b4cebde4",
+      "author_message": "Prevent global horizontal overflow",
+      "n_files": 1,
+      "diff_chars": 336,
+      "diff_sha256": "818410cd6caacc36933a65f1c0b34bc5c313577c0c448e2ab9dc58775ade2396",
+      "case_id": "commit-08"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "8cbf7a3c5fb2e6d24bda5eb3a27a8fe43ed731a5",
+      "parent": "60b9c82b1a9d91964fb2bc010decb928a2615c65",
+      "author_message": "Minor fix",
+      "n_files": 2,
+      "diff_chars": 818,
+      "diff_sha256": "0f1d9e6cd91267ea57e36f6629d936f5388f1aa96b6ef9117d204f56ed45995d",
+      "case_id": "commit-09"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "8e5ff7bb3748c92bd32f7116716c2834414764bb",
+      "parent": "ef8840caa8f1ea0eb8b7e21c322d12c34495405f",
+      "author_message": "add sweep CLI for threshold analysis\n\nReads collected JSONL, replays entropy traces at each threshold, writes\nCSV and prints summary table. Zero API calls.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "n_files": 1,
+      "diff_chars": 3631,
+      "diff_sha256": "a9bb55eba7c6392b2b369f1355e7d89fa34b88449bee193042a1fee1b86925f7",
+      "case_id": "commit-10"
+    },
+    {
+      "repo": "draft-thinker",
+      "repo_path": "D:/Projects/Cost-Aware_LLM_Gateway/draft-thinker",
+      "sha": "e1fbf35bb33524673069f80c496e50112b90fb63",
+      "parent": "0365f71fb84eef144d43b29a9a673babf182f32f",
+      "author_message": "web: fix phone-width layout\n\nPanels are grid items and inherited min-width: auto, so the benchmark\ntable forced the whole grid row to 508 px on a 390 px screen and clipped\nthe neighbouring panels. Panels now carry min-w-0 so the overflow-x-auto\nwrappers scroll inside the panel instead of widening the page.\n\nNumeric cells in the benchmark and replay tables had no horizontal\npadding, so at the table's minimum width adjacent values ran together.\nRight-aligned cells now have pl-3; the first column keeps its own\nclass string so it does not pick up the padding.\n\nFact lists stack key over value below the sm breakpoint. The entropy\nbars show avg/peak under the bar on phones instead of over the markers.\nThe architecture SVG keeps a 30 rem minimum width and scrolls rather\nthan shrinking its labels below legibility.\n\nChecked at 360, 390, 768 and 1024 px: no element extends past the\nviewport at any width.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>",
+      "n_files": 6,
+      "diff_chars": 8385,
+      "diff_sha256": "3262879c55fb29decfd13d7084654e26229303a5d6895e18af41e196744ec177",
+      "case_id": "commit-11"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "33c65b0b7c1dd6099d2d79b8023acb0809d8a806",
+      "parent": "3b7339e62aa199f425597ebdfe934481acbf4a28",
+      "author_message": "feat: add MatchingEngine::restore_from_orders for snapshot recovery\n\nCold-path constructor that rebuilds engine from resting orders by\ninserting directly into the book without matching. 3 tests.",
+      "n_files": 1,
+      "diff_chars": 2361,
+      "diff_sha256": "82d5c2649349797ed93a631dbadfaf34522e979ceb8007a1302d041cc65887a2",
+      "case_id": "commit-12"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "ac3b7dca678027db55142ceb6f42f786413d3f88",
+      "parent": "96cda9c08e0b24e98bed63bb05eebce2be4ee5c7",
+      "author_message": "feat: add persistence dependencies and serde derives\n\nAdd memmap2, crc32fast, serde, bincode for WAL/snapshot support.\nAdd tempfile dev-dep and wal_bench entry. Add Serialize/Deserialize\nto Side and Order. Declare wal, snapshot, recovery modules.",
+      "n_files": 4,
+      "diff_chars": 3142,
+      "diff_sha256": "24535ceff5574bebcb9c7b9f8866485660790c45dd0f00f2c51771da84dc9787",
+      "case_id": "commit-13"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "c54272ba9770046ccbe0cc9babf49be3a981a952",
+      "parent": "cdb594f61382d326fe101679070c243af010ff34",
+      "author_message": "feat: add Side enum and Order struct with zero-qty rejection",
+      "n_files": 1,
+      "diff_chars": 1613,
+      "diff_sha256": "309e946543b14ed93e2ac311861d6b49dda98bfccf882693c8b99be8c9346265",
+      "case_id": "commit-14"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "d3a31755ff0ca00162a2dad2edc77f55ccb81786",
+      "parent": "56a5f82235937a145cf514506306b47accdedb10",
+      "author_message": "feat: add WAL and snapshot benchmarks\n\nCriterion benchmarks for WAL encode+CRC (single and 10K), mixed\nworkload encode, snapshot capture/serialize/deserialize, and\nrestore_from_orders.",
+      "n_files": 1,
+      "diff_chars": 4832,
+      "diff_sha256": "fa00d6ef8be2474009cf2a73766f23c5801eeba51f119d703eb5f3176fcc12e5",
+      "case_id": "commit-15"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "dd6c6826bff46d65877e4028452a2078532764f1",
+      "parent": "1d4415b5ad95a9cddeb061140ed24a06982dcd9e",
+      "author_message": "feat: add load generator with latency histogram output",
+      "n_files": 1,
+      "diff_chars": 9065,
+      "diff_sha256": "a4fd991216ab116ed98c9c758c3a07b1e451a986c62d2397c9c88edf77ebb82c",
+      "case_id": "commit-16"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "ecfda388ad84bd4681f97bc5db8b9eb4ed2bb478",
+      "parent": "c54272ba9770046ccbe0cc9babf49be3a981a952",
+      "author_message": "feat: add OrderBook with price-time priority and O(1) cancel index",
+      "n_files": 1,
+      "diff_chars": 10017,
+      "diff_sha256": "3114e75d3e4fe21482124562ee3b7dc657ea80d6d69533655d80c34d581ebff7",
+      "case_id": "commit-17"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "4d5e21462d156e4607d2df6eddac913e9438bfca",
+      "parent": "c65e7a2b64003dd21948bcb4605fee5ad1bc73f7",
+      "author_message": "Update env example",
+      "n_files": 1,
+      "diff_chars": 449,
+      "diff_sha256": "3a02ad064d798bd72e37e7dc75797e046fecfa277cd0e2680c0857597fc7a852",
+      "case_id": "commit-18"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "75976ff9cf7674e649b37af8a90a793f2bfb52cf",
+      "parent": "82a5ae4bb07ab902ff1e1778d15227e578072807",
+      "author_message": "test: update tests for dependency injection and clustering mocks\n\n- Replace @patch-based LLM mocks with FastAPI dependency overrides\n- Fix clustering test mocks to match batch classification interface\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "n_files": 5,
+      "diff_chars": 8349,
+      "diff_sha256": "002cb6ebcb259fdd6102c0fe2411e0cc96803a7aa931ccf008e9a946a1cb2970",
+      "case_id": "commit-19"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "8a47711fd70eb7bac21ad35f2f96a0bff221feba",
+      "parent": "0f67dc953c2e0e0168b90cac82a2fac6ce27dce4",
+      "author_message": "fix(cache): add TTL expiration to cost cache\n\nPrevent unbounded memory growth by expiring cache entries after 300s\nand evicting oldest entries when capacity is reached.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+      "n_files": 1,
+      "diff_chars": 1922,
+      "diff_sha256": "d1cf8cf09dc7fa84ec0cd24789171c61c186f2343e9c9ec9b9251c4fc4238494",
+      "case_id": "commit-20"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "a75699eb3ca8ba35faac7404d7664e8fe80a3c47",
+      "parent": "438155d12545e0be1a1d1b7cb0f8b520250fe277",
+      "author_message": "Updated README",
+      "n_files": 1,
+      "diff_chars": 394,
+      "diff_sha256": "2a4418c1af344a433a4288ad52bea0b5b3efc4fdaecb2377f75e69e1d839cc07",
+      "case_id": "commit-21"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "b1949e46095e1a814852c29d3e9b90ae55a87fbc",
+      "parent": "1e907dd3f7a0a97c6ce6caf7fa2fc1abf1ee16fb",
+      "author_message": "Add Git utilities",
+      "n_files": 1,
+      "diff_chars": 2017,
+      "diff_sha256": "44804977a1b361a3a69bcdcf976bb1a321f8362d1c81d1ad6b347a1827e4949d",
+      "case_id": "commit-22"
+    },
+    {
+      "repo": "inyeon",
+      "repo_path": "D:/Projects/Inyeon-TerminalCLI/inyeon-upstream",
+      "sha": "c65e7a2b64003dd21948bcb4605fee5ad1bc73f7",
+      "parent": "8418a08cf46194af994e40b9f7e4eef6c903e5e1",
+      "author_message": "Finalize Docker containerization, fix GenAI packages and configurations",
+      "n_files": 6,
+      "diff_chars": 7093,
+      "diff_sha256": "b030a6609cd421ca02bc44b1beb27d0f967e16edc4ff46417aea1fa39aab2197",
+      "case_id": "commit-23"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "32c3ad3f43e0c507e7732897846d54fd8a792440",
+      "parent": "a6cbf960a9587d3c12500d37b9cafff8058ca96b",
+      "author_message": "docs: the pod-kill bound and the quiescence rule in TESTING and METRICS",
+      "n_files": 2,
+      "diff_chars": 6991,
+      "diff_sha256": "1323aa5f3e9fe400a5360eb750550739c663b3ee5517f3da2b8e26b5d6fd77cc",
+      "case_id": "commit-24"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "3d6cc8f48ef47887faf869984626db5048cf65e0",
+      "parent": "69677191cbd0bd9ed83969294d8d6936876f503b",
+      "author_message": "feat(chaos): controller/agent/burner entrypoint and generated ClusterRoles",
+      "n_files": 3,
+      "diff_chars": 8422,
+      "diff_sha256": "1c5d3df02cc295fc8249cd7772ce6d25e78a5bac68d39d8a1c561f178bae2f3d",
+      "case_id": "commit-25"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "78e0a2a98f0d2e7e3c57a5694a9db8a3c32fc48c",
+      "parent": "91164133c054d0a13599fb409465b0ab99e02602",
+      "author_message": "test(e2e): audit-query count uses the query's own window; a table row with errors fails the run",
+      "n_files": 1,
+      "diff_chars": 1465,
+      "diff_sha256": "7590a9e0b0cfaa982a374bc710f94364f28a5984aa9b1544c498018de0cf6507",
+      "case_id": "commit-26"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "9e74155a729bdd606bb0dd7f5687236c92de1611",
+      "parent": "99f7cb83f48729b7bcd8a8881fa7ea5c49f72a3f",
+      "author_message": "test(scheduler): add envtest placement latency benchmark",
+      "n_files": 3,
+      "diff_chars": 18840,
+      "diff_sha256": "a248989b182b3f009c2204073af34e6a3658bc0ce0323fb492224937699171e5",
+      "case_id": "commit-27"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "9fe6a4872ac4ac32ebbd723bb2a563263e5bda16",
+      "parent": "a0d1db1df5dc04ea93fb05833aae6af9e2ca88a8",
+      "author_message": "docs(testing): name the phase 2 tests",
+      "n_files": 1,
+      "diff_chars": 2074,
+      "diff_sha256": "0af06b55c68c73c52c4b90356326b63a847c34a4419c7a1e7886fe1ce60e4b13",
+      "case_id": "commit-28"
+    },
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "bb3e5e3e43092514ce99aaa5b97abb267f48a712",
+      "parent": "df13199816a5aab75926fa35868667e234ef3d78",
+      "author_message": "feat(operator): add phase transition rules",
+      "n_files": 1,
+      "diff_chars": 2838,
+      "diff_sha256": "9c17826827241ab2cb9b87b581748f443fe01712f1499ecb8d855578d0a59034",
+      "case_id": "commit-29"
+    }
+  ],
+  "auto_cases": [
+    {
+      "repo": "kiln",
+      "repo_path": "D:/Projects/K8s-Platform/kiln",
+      "sha": "c7437c43b36865d4afa4428c9860059b2c3f2a6a",
+      "parent": "9d3aa05dd13c2cc09a37bf0d5aa0cb32aa9a4653",
+      "author_message": "chore(chaos): drop the placeholder package doc for the real module",
+      "n_files": 1,
+      "diff_chars": 151,
+      "diff_sha256": "544ae9667482609b8f49904cc410d5b666f08664145f8bb9666984c85dae44b7",
+      "case_id": "auto-00"
+    },
+    {
+      "repo": "ferrox",
+      "repo_path": "D:/Projects/Trading-Matching-Engine/ferrox",
+      "sha": "037ddac130058e5ed0cc497cf823886ab3d95b1b",
+      "parent": "88a058187d515e80683183d4e2bffe4918225e70",
+      "author_message": "chore: sort module declarations alphabetically",
+      "n_files": 1,
+      "diff_chars": 183,
+      "diff_sha256": "1ab794948f0251dac87a721c7ea18af7f8926c1991cdd850454f254ae7e5247e",
+      "case_id": "auto-01"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "2df60bab5efdc2f42db8606a7597e79088d85770",
+      "parent": "6532a9a3fd54136a99e2c76cb2da792ce9fb5029",
+      "author_message": "Final scaffold",
+      "n_files": 1,
+      "diff_chars": 170,
+      "diff_sha256": "37bdc102f0173b0710e2078555a225ed8ed2d3714d274605eee2c5b356501cf7",
+      "case_id": "auto-02"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "b3e8d75a8d79fb67cb46932a12039853deed20c6",
+      "parent": "8f070b8264cd9521228449673478c5b625effd2b",
+      "author_message": "fix(web): stack cards toggle closed on second tap",
+      "n_files": 1,
+      "diff_chars": 688,
+      "diff_sha256": "29577d05a384ec27f2b013ab8c047041f5e5fb366bff4aa5fafe792ff47737af",
+      "case_id": "auto-03"
+    },
+    {
+      "repo": "commma",
+      "repo_path": "D:/Projects/Commma-Tracker/commma-coding-progress-tracker",
+      "sha": "3178ecef1d0f6636917869a54d7d1b7d97f8f7dd",
+      "parent": "f67cecdbf11c9093f38469559633d3290e4ef49c",
+      "author_message": "chore(web): update github contact info",
+      "n_files": 1,
+      "diff_chars": 845,
+      "diff_sha256": "1f09a59315a82e09ab9cc7d5aec950d599df43ef5c7cd8a8f5a4c3f6d0233e63",
+      "case_id": "auto-04"
+    }
+  ]
+}

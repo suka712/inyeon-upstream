@@ -1,0 +1,7 @@
+{
+ "openai_estimate_usd": 1.0351,
+ "gemini_embedding_upper_bound_usd": 0.1112,
+ "total_estimate_usd": 1.1462,
+ "hard_budget_usd": 1.0
+}
+spend so far (from raw results): 0.0

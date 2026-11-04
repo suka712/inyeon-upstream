@@ -1,0 +1,1201 @@
+{
+ "config": "commit-openai",
+ "settings": {
+  "eval": "commit",
+  "provider": "openai"
+ },
+ "cases": {
+  "commit-00": {
+   "commit_message": "refactor(EditProfile): fetch user data on mount to init form fields\n\nReplaced reliance on auth context user with an explicit getMe(token) API call in EditProfile to initialize form fields. Also applied minor formatting and JSX cleanup across multiple React components, and improved error handling consistency.",
+   "analysis": {
+    "summary": "Minor formatting and code style improvements across multiple React components, addition of a user data fetch in EditProfile to initialize form fields, and slight cleanup of error handling and JSX formatting.",
+    "change_type": "refactor",
+    "needs_context": true,
+    "files_to_read": [
+     "apps/web/src/lib/api.ts",
+     "apps/web/src/lib/auth.tsx",
+     "apps/web/src/pages/EditProfile.tsx"
+    ],
+    "reasoning": "Most changes are formatting and minor refactors that do not require additional context. However, the EditProfile.tsx file now fetches user data via getMe(token) instead of relying solely on the user from auth context, which may affect state initialization and data flow. Understanding the API method getMe and the auth context's user shape would clarify the impact of this change."
+   },
+   "reasoning": [
+    "Most changes are formatting and minor refactors that do not require additional context. However, the EditProfile.tsx file now fetches user data via getMe(token) instead of relying solely on the user from auth context, which may affect state initialization and data flow. Understanding the API method getMe and the auth context's user shape would clarify the impact of this change.",
+    "Read 3 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.6117551999996067,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.9197203000003356,
+      "input_tokens": 1813,
+      "output_tokens": 177,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.63699059999999,
+      "input_tokens": 7250,
+      "output_tokens": 143,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-01": {
+   "commit_message": "feat(web): add waitlist API docs and privacy details\n\nAdded documentation and UI references for the new waitlist API endpoint, including its rate limit. Updated the Privacy Policy to disclose the use of waitlist emails for confirmation and notification purposes. Also updated the changelog to reflect these additions after the waitlist feature shipped.",
+   "analysis": {
+    "summary": "Added documentation and UI references for a new waitlist API endpoint, including its rate limit and privacy policy details.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are self-contained and involve adding a new API endpoint to the API page, updating the privacy policy to mention the waitlist email usage, and updating the changelog to document the fix. No related files need to be read to understand these additions."
+   },
+   "reasoning": [
+    "The changes are self-contained and involve adding a new API endpoint to the API page, updating the privacy policy to mention the waitlist email usage, and updating the changelog to document the fix. No related files need to be read to understand these additions.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.522257799999352,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.187579099998402,
+      "input_tokens": 932,
+      "output_tokens": 108,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.329734599999938,
+      "input_tokens": 1001,
+      "output_tokens": 157,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-02": {
+   "commit_message": "feat(cli): add headless CLI data source for coding activity\n\nIntroduced a new `@commma/cli` headless data source allowing coding activity tracking from any editor that writes files to disk without requiring a dedicated plugin. Added commands include `login`, `logout`, `watch [dir]`, and `status`. The feature reuses the ADR-011 OAuth flow and maintains privacy by never sending key frequency heatmap data. Documentation updated in CHANGELOG.md and progress marked as completed in ROADMAP.md.",
+   "analysis": {
+    "summary": "Added a new CLI headless data source feature for tracking coding activity from any editor without a dedicated plugin, documented in CHANGELOG.md and marked as completed in ROADMAP.md.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are limited to documentation files (CHANGELOG.md and ROADMAP.md) describing a new CLI feature and its progress status. No code changes are present, so no additional context from source files is needed."
+   },
+   "reasoning": [
+    "The changes are limited to documentation files (CHANGELOG.md and ROADMAP.md) describing a new CLI feature and its progress status. No code changes are present, so no additional context from source files is needed.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 9.550702900000033,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1502586000024166,
+      "input_tokens": 778,
+      "output_tokens": 112,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 8.395140299999184,
+      "input_tokens": 851,
+      "output_tokens": 235,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-03": {
+   "commit_message": "feat(sessions-api): add caching and GET endpoint for heatmap card PNGs\n\nIntroduced caching support for heatmap card PNG rendering using Redis with a cache key generator function. Added a new GET /:id/heatmap-card endpoint supporting layout and aspect query parameters. Included cache read/write logic with error logging and tests for the cache key function to ensure distinct keys for different inputs.",
+   "analysis": {
+    "summary": "Added caching support for heatmap card PNG rendering in the sessions API, including a cache key generator and cache read/write logic using Redis. Introduced a new GET endpoint for heatmap cards with query parameters for layout and aspect ratio. Added tests for the cache key function.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The diff is self-contained and focused on adding caching and a new endpoint for heatmap cards. The changes include new functions, API route handlers, and tests all within the same files. No external files or deeper domain logic are necessary to understand these additions."
+   },
+   "reasoning": [
+    "The diff is self-contained and focused on adding caching and a new endpoint for heatmap cards. The changes include new functions, API route handlers, and tests all within the same files. No external files or deeper domain logic are necessary to understand these additions.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.504028399998788,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.657645200000843,
+      "input_tokens": 2806,
+      "output_tokens": 140,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.8415944000007585,
+      "input_tokens": 2908,
+      "output_tokens": 184,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-04": {
+   "commit_message": "docs(api): document GET /v1/leaderboard endpoint\n\nAdd detailed documentation for the new GET /v1/leaderboard API endpoint in API_REFERENCE.md, including its implementation status, behavior, and current limitations. Announce the feature in CHANGELOG.md and mark the endpoint as completed in ROADMAP.md. The endpoint returns the top 100 users by coding time for a given period, excludes users with privacy off, and supports a cold-start rebuild from sessions data. Deferred features such as the lang filter and delta rank change are noted.",
+   "analysis": {
+    "summary": "Documentation updates describing the new GET /v1/leaderboard API endpoint, including its implementation status, behavior, and limitations. The changes add detailed info to API_REFERENCE.md, announce the feature in CHANGELOG.md, and mark the endpoint as completed in ROADMAP.md.",
+    "change_type": "docs",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "All changes are confined to documentation files (API_REFERENCE.md, CHANGELOG.md, ROADMAP.md) and describe the same feature consistently. No source code changes are included, so no additional context from implementation files is needed to understand these updates."
+   },
+   "reasoning": [
+    "All changes are confined to documentation files (API_REFERENCE.md, CHANGELOG.md, ROADMAP.md) and describe the same feature consistently. No source code changes are included, so no additional context from implementation files is needed to understand these updates.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.338821500001359,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3884797999999137,
+      "input_tokens": 998,
+      "output_tokens": 137,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.9459451000002446,
+      "input_tokens": 1096,
+      "output_tokens": 247,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-05": {
+   "commit_message": "feat(SignIn): add border and rounded-full to back link\n\nImproved UI/UX by adding border and rounded-full styles to the back link on the SignIn page. This enhances the visual feedback and overall appearance without changing functionality.",
+   "analysis": {
+    "summary": "Added border and rounded-full styles to the back link on the SignIn page for improved UI/UX.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The change is purely related to styling of an existing component within the SignIn.tsx file. No functional or logic changes were made, so no additional context from other files is necessary."
+   },
+   "reasoning": [
+    "The change is purely related to styling of an existing component within the SignIn.tsx file. No functional or logic changes were made, so no additional context from other files is necessary.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.5697089999994205,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.236756800000876,
+      "input_tokens": 370,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.329311500001495,
+      "input_tokens": 424,
+      "output_tokens": 123,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-06": {
+   "commit_message": "feat(speculative): add speculative executor with entropy-based logic\n\nIntroduces a new speculative executor component that processes streaming token drafts and makes speculative triggering decisions based on entropy thresholds. The executor escalates to a heavyweight LLM client when entropy indicates uncertainty and handles cancellation of speculative requests. Comprehensive unit tests cover scenarios including normal drafting, soft threshold triggering, escalation, error handling, and context cancellation. Defines state and result types to represent the speculative execution lifecycle and outcomes.",
+   "analysis": {
+    "summary": "Introduces a new speculative executor component with logic to handle streaming token drafts, speculative triggering based on entropy thresholds, escalation to heavyweight LLM client, and cancellation handling. Adds comprehensive unit tests for various scenarios and defines state and result types for the speculative execution process.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "internal/entropy/window.go",
+     "internal/metrics/recorder.go",
+     "pkg/client/llmclient.go",
+     "pkg/protocol/protocol.go"
+    ],
+    "reasoning": "The new speculative executor relies heavily on entropy calculations, metrics recording, client streaming interfaces, and protocol data structures. Understanding the entropy window logic, metrics recording behavior, client streaming contract, and protocol message formats is essential to fully grasp the design decisions, correctness, and integration of the new executor and its tests."
+   },
+   "reasoning": [
+    "The new speculative executor relies heavily on entropy calculations, metrics recording, client streaming interfaces, and protocol data structures. Understanding the entropy window logic, metrics recording behavior, client streaming contract, and protocol message formats is essential to fully grasp the design decisions, correctness, and integration of the new executor and its tests.",
+    "Read 4 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 5.423963499997626,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.937463199999911,
+      "input_tokens": 4553,
+      "output_tokens": 187,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.4606382999991183,
+      "input_tokens": 5184,
+      "output_tokens": 211,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-07": {
+   "commit_message": "docs(gitignore): add ignore patterns and update README links\n\nAdded new ignore patterns for benchmark result files (*.jsonl, *.csv) in .gitignore to prevent committing large or generated benchmark data files. Updated README.md to include a new Metrics documentation link for better visibility of available metrics documentation.",
+   "analysis": {
+    "summary": "Added new ignore patterns for benchmark result files in .gitignore and updated README to include a new Metrics documentation link.",
+    "change_type": "docs",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are limited to adding ignore patterns for benchmark result files and updating the README with a documentation link. No code logic is modified, so no additional context from related files is necessary."
+   },
+   "reasoning": [
+    "The changes are limited to adding ignore patterns for benchmark result files and updating the README with a documentation link. No code logic is modified, so no additional context from related files is necessary.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.7718453999987105,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2403178000022308,
+      "input_tokens": 345,
+      "output_tokens": 95,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.527674400000251,
+      "input_tokens": 402,
+      "output_tokens": 148,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-08": {
+   "commit_message": "fix(css): prevent horizontal overflow by hiding overflow-x\n\nAdded CSS rules to set overflow-x to hidden on html and body elements to prevent horizontal scrolling and improve layout stability.",
+   "analysis": {
+    "summary": "Added CSS rules to prevent horizontal overflow by setting overflow-x to hidden on html and body elements.",
+    "change_type": "fix",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The change is a straightforward CSS update to prevent horizontal scrolling. It does not depend on or affect other files or logic, so no additional context is needed."
+   },
+   "reasoning": [
+    "The change is a straightforward CSS update to prevent horizontal scrolling. It does not depend on or affect other files or logic, so no additional context is needed.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.824643500000093,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.504642399999284,
+      "input_tokens": 244,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3162262000005285,
+      "input_tokens": 290,
+      "output_tokens": 97,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-09": {
+   "commit_message": "refactor(styles): simplify global styles and SVG container\n\nRemoved redundant html and body selectors in globals.css and simplified the SVG container class in Architecture.tsx by removing the minimum width constraint. These changes clean up styling without affecting functionality.",
+   "analysis": {
+    "summary": "Removed redundant HTML and body selectors in globals.css and simplified the SVG container class in Architecture.tsx by removing the minimum width constraint.",
+    "change_type": "refactor",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are straightforward CSS and JSX class adjustments that do not depend on other files for understanding. They mainly simplify styling without altering functionality."
+   },
+   "reasoning": [
+    "The changes are straightforward CSS and JSX class adjustments that do not depend on other files for understanding. They mainly simplify styling without altering functionality.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.2677704000016092,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9887886000033177,
+      "input_tokens": 381,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.274488699997164,
+      "input_tokens": 431,
+      "output_tokens": 122,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-10": {
+   "commit_message": "feat(sweep): add sweep CLI tool for benchmark analysis\n\nIntroduces a new command-line tool 'sweep' that loads benchmark records from a JSONL file, filters out errored records, analyzes valid records across multiple thresholds using the sweep package, and outputs results as CSV and summary text. The tool supports configurable thresholds, entropy window size, and early exit token count parameters.\n\nThis enables streamlined post-processing and statistical analysis of benchmark data, leveraging existing internal collect.Record types and sweep package functions for computation and output formatting.",
+   "analysis": {
+    "summary": "Adds a new command-line tool 'sweep' that loads benchmark records from a JSONL file, filters and analyzes them across multiple thresholds, computes statistics using the sweep package, and outputs results as CSV and summary text.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "benchmarks/internal/collect/record.go",
+     "benchmarks/internal/sweep/sweep.go"
+    ],
+    "reasoning": "The new main.go depends heavily on types and functions from the internal 'collect' and 'sweep' packages. Understanding the structure of collect.Record and the behavior of sweep.ComputeStats, sweep.DefaultPricing, sweep.WriteCSV, and sweep.WriteSummary is necessary to fully grasp the data flow and correctness of this new tool."
+   },
+   "reasoning": [
+    "The new main.go depends heavily on types and functions from the internal 'collect' and 'sweep' packages. Understanding the structure of collect.Record and the behavior of sweep.ComputeStats, sweep.DefaultPricing, sweep.WriteCSV, and sweep.WriteSummary is necessary to fully grasp the data flow and correctness of this new tool.",
+    "Read 2 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.5563595999992685,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5927387999981875,
+      "input_tokens": 1283,
+      "output_tokens": 167,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.9485151000008045,
+      "input_tokens": 1740,
+      "output_tokens": 241,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-11": {
+   "commit_message": "refactor(components): refactor table headers and cells for alignment\n\nRefactored className definitions for table headers and cells to ensure consistent text alignment and spacing across BenchmarkTable, ReplayTables, and other components. Added responsive layout improvements including conditional visibility for text elements in EntropyViz and flexible layouts in FactList. Minor styling tweaks include min-width constraints on SVG and container elements to improve layout stability on smaller screens.",
+   "analysis": {
+    "summary": "Refactor table header and cell classNames for consistent alignment and spacing; add responsive layout improvements in several components; minor styling tweaks such as adding min-width constraints and conditional visibility for text elements.",
+    "change_type": "refactor",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are primarily CSS className adjustments and restructuring of JSX elements for layout and styling improvements. There are no logic or data flow changes that require understanding related files."
+   },
+   "reasoning": [
+    "The changes are primarily CSS className adjustments and restructuring of JSX elements for layout and styling improvements. There are no logic or data flow changes that require understanding related files.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.901463899997907,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4145836000025156,
+      "input_tokens": 2491,
+      "output_tokens": 107,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4817729999995208,
+      "input_tokens": 2559,
+      "output_tokens": 196,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-12": {
+   "commit_message": "feat(matching): add restore_from_orders to rebuild order book\n\nIntroduced a new method `restore_from_orders` in MatchingEngine that reconstructs the order book from a snapshot of orders without performing matching. Added multiple tests to verify correct restoration of the book state and subsequent matching behavior.",
+   "analysis": {
+    "summary": "Added a new method `restore_from_orders` to MatchingEngine to rebuild the order book from a snapshot of orders without matching, along with multiple tests verifying this restoration and subsequent matching behavior.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are self-contained within `src/matching.rs` and include both implementation and tests. The new method and tests are clear in purpose and usage, so no additional files are needed to understand the change."
+   },
+   "reasoning": [
+    "The changes are self-contained within `src/matching.rs` and include both implementation and tests. The new method and tests are clear in purpose and usage, so no additional files are needed to understand the change.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.4501673000013398,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.0167103999992833,
+      "input_tokens": 798,
+      "output_tokens": 114,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4291580999997677,
+      "input_tokens": 873,
+      "output_tokens": 142,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-13": {
+   "commit_message": "feat(core): add recovery, snapshot, and wal modules with deps\n\nAdded new dependencies: memmap2, crc32fast, bincode, serde, and tempfile. Introduced new internal modules recovery, snapshot, and wal to support write-ahead logging and state recovery features. Updated existing structs in order.rs to derive serde serialization traits. Added a new benchmark target 'wal_bench' to measure wal performance.",
+   "analysis": {
+    "summary": "Added new dependencies (memmap2, crc32fast, bincode, serde, tempfile) and introduced new modules (recovery, snapshot, wal). Updated existing structs to derive serde serialization traits. Added a new benchmark target 'wal_bench'.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "src/recovery.rs",
+     "src/snapshot.rs",
+     "src/wal.rs"
+    ],
+    "reasoning": "The diff adds new dependencies and new modules related to recovery, snapshot, and write-ahead logging (wal), but does not show their implementations. To fully understand the impact and usage of these new modules and dependencies, reading their source files is necessary. Also, understanding how these modules integrate with existing code requires context from those files."
+   },
+   "reasoning": [
+    "The diff adds new dependencies and new modules related to recovery, snapshot, and write-ahead logging (wal), but does not show their implementations. To fully understand the impact and usage of these new modules and dependencies, reading their source files is necessary. Also, understanding how these modules integrate with existing code requires context from those files.",
+    "Read 3 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.156860700000834,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6129118999997445,
+      "input_tokens": 1319,
+      "output_tokens": 175,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.537189299997408,
+      "input_tokens": 1505,
+      "output_tokens": 195,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-14": {
+   "commit_message": "feat(order): add Order struct and Side enum with validation\n\nIntroduce a new Order struct and Side enum to represent market orders. The Order struct includes fields for id, side, price, quantity, and timestamp, with a constructor enforcing non-zero quantity. Unit tests cover creation of bid and ask orders, rejection of zero quantity, and allowance of negative prices.",
+   "analysis": {
+    "summary": "Add a new Order struct and Side enum to represent market orders, including constructors and basic validation, along with unit tests.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The diff introduces a completely new file defining fundamental data structures and tests that are self-contained. No references to or changes in other files are shown, so additional context is not necessary to understand this addition."
+   },
+   "reasoning": [
+    "The diff introduces a completely new file defining fundamental data structures and tests that are self-contained. No references to or changes in other files are shown, so additional context is not necessary to understand this addition.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.716010500000266,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.158579800001462,
+      "input_tokens": 650,
+      "output_tokens": 99,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5517617000004975,
+      "input_tokens": 710,
+      "output_tokens": 171,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-15": {
+   "commit_message": "test(wal-bench): add benchmarking suite for WAL encoding and snapshots\n\nIntroduces a comprehensive set of Criterion benchmarks covering write-ahead logging (WAL) encoding of new and cancel orders, CRC throughput, snapshot capturing, serialization, deserialization, and restoration of orders in the MatchingEngine. This suite helps measure and optimize performance of critical persistence and recovery paths in the order matching system.",
+   "analysis": {
+    "summary": "Adds a new benchmarking suite for write-ahead logging (WAL) encoding, snapshot capturing, serialization, deserialization, and restoration of orders in the MatchingEngine using Criterion.",
+    "change_type": "test",
+    "needs_context": true,
+    "files_to_read": [
+     "ferrox/protocol.rs",
+     "ferrox/order.rs",
+     "ferrox/matching.rs"
+    ],
+    "reasoning": "The new benchmarks depend on types and functions like Order, EngineCommand, encode_new_order, encode_cancel_order, and MatchingEngine, which are defined in other modules. Understanding their implementations and behavior is important to fully grasp the benchmarks' purpose and correctness."
+   },
+   "reasoning": [
+    "The new benchmarks depend on types and functions like Order, EngineCommand, encode_new_order, encode_cancel_order, and MatchingEngine, which are defined in other modules. Understanding their implementations and behavior is important to fully grasp the benchmarks' purpose and correctness.",
+    "Read 3 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.873530799999571,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4271344999979192,
+      "input_tokens": 1531,
+      "output_tokens": 145,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4384381999989273,
+      "input_tokens": 1690,
+      "output_tokens": 184,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-16": {
+   "commit_message": "feat(loadgen): add Rust load generator example for Ferrox\n\nIntroduces a new load generator example in Rust that benchmarks the Ferrox matching engine in two modes: direct in-process and TCP pipeline. The example includes warmup and measurement phases, and optionally tracks heap allocations and latency metrics. This tool exercises core Ferrox modules such as matching, order handling, protocol encoding, ring buffers, gateway communication, allocation tracking, and metrics to provide comprehensive performance insights.",
+   "analysis": {
+    "summary": "Adds a new load generator example in Rust that benchmarks the Ferrox matching engine both in a direct in-process mode and a TCP pipeline mode, including warmup, measurement, and optional allocation and latency tracking.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "ferrox/src/matching.rs",
+     "ferrox/src/order.rs",
+     "ferrox/src/protocol.rs",
+     "ferrox/src/ring.rs",
+     "ferrox/src/gateway.rs",
+     "ferrox/src/alloc_track.rs",
+     "ferrox/src/metrics.rs"
+    ],
+    "reasoning": "The new file depends heavily on internal Ferrox modules (matching engine, order types, protocol encoding, ring buffer, gateway, allocation tracking, and metrics). Understanding the behavior, interfaces, and performance characteristics of these modules is important to fully grasp the impact and correctness of the load generator. Also, the gateway and protocol details are relevant for the TCP mode."
+   },
+   "reasoning": [
+    "The new file depends heavily on internal Ferrox modules (matching engine, order types, protocol encoding, ring buffer, gateway, allocation tracking, and metrics). Understanding the behavior, interfaces, and performance characteristics of these modules is important to fully grasp the impact and correctness of the load generator. Also, the gateway and protocol details are relevant for the TCP mode.",
+    "Read 7 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 4.184338899998693,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.0815182000005734,
+      "input_tokens": 2486,
+      "output_tokens": 212,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.091217000001052,
+      "input_tokens": 2800,
+      "output_tokens": 213,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-17": {
+   "commit_message": "feat(orderbook): add new OrderBook implementation in Rust\n\nIntroduces a new OrderBook struct to manage bids and asks with support for inserting, canceling, and reducing orders. Tracks best bid and ask prices efficiently and handles errors such as duplicate order IDs and fill quantity overflows. Includes comprehensive unit tests covering insertion, cancellation, quantity reduction, and edge cases to ensure correctness and FIFO ordering within price levels.",
+   "analysis": {
+    "summary": "Adds a new OrderBook implementation in Rust to manage bids and asks with support for inserting, canceling, and reducing orders, including best price tracking and error handling. Also includes comprehensive unit tests for the functionality.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "src/order.rs"
+    ],
+    "reasoning": "The new order book code depends on the Order and Side types from crate::order module. To fully understand the data structures and behavior, especially the Order struct and Side enum, it is necessary to review src/order.rs."
+   },
+   "reasoning": [
+    "The new order book code depends on the Order and Side types from crate::order module. To fully understand the data structures and behavior, especially the Order struct and Side enum, it is necessary to review src/order.rs.",
+    "Read 1 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.381132399998023,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5340204999993148,
+      "input_tokens": 2916,
+      "output_tokens": 125,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.8273064999993949,
+      "input_tokens": 3422,
+      "output_tokens": 193,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-18": {
+   "commit_message": "chore: update .env.example with new env vars\n\nAdded environment variable placeholders for selecting an LLM provider and configuring the Gemini API key in the .env.example file. No code logic or functionality was changed.",
+   "analysis": {
+    "summary": "Updated the .env.example file to add new environment variables for selecting an LLM provider and configuring Gemini API key.",
+    "change_type": "chore",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are limited to adding new environment variable placeholders in the example environment file. No code logic or functionality is changed, so no additional context from related files is necessary."
+   },
+   "reasoning": [
+    "The changes are limited to adding new environment variable placeholders in the example environment file. No code logic or functionality is changed, so no additional context from related files is necessary.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.509191400000418,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1739218000002438,
+      "input_tokens": 269,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.330111899998883,
+      "input_tokens": 323,
+      "output_tokens": 114,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-19": {
+   "commit_message": "refactor(tests): use FastAPI dependency overrides for mock LLM\n\nRefactored multiple backend test files to replace direct patching of LLM provider with FastAPI dependency overrides for injecting mock LLM instances. Added setup and teardown methods to clear dependency overrides before and after each test. Also adjusted mock return values in clustering tests for consistency.",
+   "analysis": {
+    "summary": "Refactored multiple backend test files to replace direct patching of LLM provider with FastAPI dependency overrides for injecting mock LLM instances. Added setup and teardown methods to clear dependency overrides before and after each test. Also adjusted mock return values in clustering tests for consistency.",
+    "change_type": "refactor",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are isolated to test files and primarily involve refactoring how mocks are injected using FastAPI's dependency_overrides instead of patch decorators. The logic of the tests and the application code are not changed, so no additional context from related files is needed."
+   },
+   "reasoning": [
+    "The changes are isolated to test files and primarily involve refactoring how mocks are injected using FastAPI's dependency_overrides instead of patch decorators. The logic of the tests and the application code are not changed, so no additional context from related files is needed.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.119296900000336,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4617682000025525,
+      "input_tokens": 2190,
+      "output_tokens": 141,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6525499999988824,
+      "input_tokens": 2292,
+      "output_tokens": 166,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-20": {
+   "commit_message": "refactor(utils/cost): improve caching with TTL and timestamps\n\nAdded time-to-live (TTL) expiration to cached LLM responses by storing timestamps with each cache entry. Implemented eviction of expired entries and updated cache management to maintain a maximum size with FIFO eviction based on timestamps. Also reorganized imports and cleaned up docstrings for clarity.",
+   "analysis": {
+    "summary": "Improved caching mechanism for LLM responses by adding TTL (time-to-live) expiration and storing timestamps with cached entries. Also reorganized imports and cleaned up docstrings.",
+    "change_type": "refactor",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are confined to a single utility file focused on caching logic. The diff shows internal improvements to cache management without altering external interfaces or dependencies, so no additional files are needed to understand the changes."
+   },
+   "reasoning": [
+    "The changes are confined to a single utility file focused on caching logic. The diff shows internal improvements to cache management without altering external interfaces or dependencies, so no additional files are needed to understand the changes.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.9059161999975913,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2619034999988799,
+      "input_tokens": 674,
+      "output_tokens": 110,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6383462000012514,
+      "input_tokens": 745,
+      "output_tokens": 166,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-21": {
+   "commit_message": "docs(readme): fix markdown code block closure\n\nAdded a closing triple backtick to the README.md file to properly close a markdown code block, ensuring correct formatting in rendered documentation.",
+   "analysis": {
+    "summary": "Added a closing triple backtick to the README.md file to properly close a markdown code block.",
+    "change_type": "docs",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The change is a minor markdown formatting fix in the README file, which does not require understanding of other files or code context."
+   },
+   "reasoning": [
+    "The change is a minor markdown formatting fix in the README file, which does not require understanding of other files or code context.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.114061899999797,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0097071000018332,
+      "input_tokens": 246,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.09985769999912,
+      "input_tokens": 286,
+      "output_tokens": 101,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-22": {
+   "commit_message": "feat(cli): add git utility module for common git operations\n\nIntroduce a new standalone module 'cli/git_utils.py' that provides utility functions to run git commands, check if the current directory is a git repository, retrieve diffs (staged, unstaged, all), create commits, and get the current branch name. This module encapsulates subprocess calls to git and raises a custom GitError on failures when requested.",
+   "analysis": {
+    "summary": "Added a new utility module 'cli/git_utils.py' that provides functions to run git commands, check repository status, get diffs, create commits, and get the current branch name.",
+    "change_type": "feat",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The diff introduces a standalone utility module without dependencies or references to other files. The functions are self-contained wrappers around git commands, so no additional context from other files is needed to understand the changes."
+   },
+   "reasoning": [
+    "The diff introduces a standalone utility module without dependencies or references to other files. The functions are self-contained wrappers around git commands, so no additional context from other files is needed to understand the changes.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.973758200001612,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3847653999982867,
+      "input_tokens": 699,
+      "output_tokens": 111,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.584174299998267,
+      "input_tokens": 771,
+      "output_tokens": 195,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-23": {
+   "commit_message": "refactor(llm, config, docker): update Gemini provider to new Google GenAI client\n\nRefactor Gemini LLM provider integration to use the updated google-genai client library and API. Add environment variable prefix in config.py for better namespacing. Introduce docker-compose files for production and development setups with different LLM providers (Gemini and Ollama). Update dependencies to use google-genai>=1.0.0. Add Railway deployment configuration with health checks and restart policies.",
+   "analysis": {
+    "summary": "Refactor Gemini LLM provider integration to use updated Google GenAI client library and API, add environment variable prefix in config, add docker-compose files for prod and dev with different LLM providers, update dependencies, and add Railway deployment config.",
+    "change_type": "refactor",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are mostly self-contained refactors and configuration additions. The Gemini provider code is updated to a new Google GenAI client API, which is clear from the diff. The config.py change adds an env prefix which is straightforward. The docker-compose and railway.toml files are new configuration files. No other files are needed to understand these changes as they do not depend on other code changes."
+   },
+   "reasoning": [
+    "The changes are mostly self-contained refactors and configuration additions. The Gemini provider code is updated to a new Google GenAI client API, which is clear from the diff. The config.py change adds an env prefix which is straightforward. The docker-compose and railway.toml files are new configuration files. No other files are needed to understand these changes as they do not depend on other code changes.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.7359890000007,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.8892097000025387,
+      "input_tokens": 1869,
+      "output_tokens": 162,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.8428342999977758,
+      "input_tokens": 1992,
+      "output_tokens": 225,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-24": {
+   "commit_message": "docs(docs): add notes on error bounds and pod-kill behavior\n\nAdded detailed notes on error bounds and pod-kill behavior to the metrics and testing documentation. Clarified how pod termination affects latency measurements and test abort conditions, including the rationale behind the 5000 ms p99 abort bound for pod-kill experiments and its impact on in-flight requests.",
+   "analysis": {
+    "summary": "Added detailed notes on error bounds and pod-kill behavior to the metrics and testing documentation, clarifying how pod termination affects latency measurements and test abort conditions.",
+    "change_type": "docs",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are purely documentation updates in markdown files, adding clarifications and elaborations to existing test and metrics descriptions. No code or behavior changes are made, so no additional context from related source files is necessary."
+   },
+   "reasoning": [
+    "The changes are purely documentation updates in markdown files, adding clarifications and elaborations to existing test and metrics descriptions. No code or behavior changes are made, so no additional context from related source files is necessary.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.992820399998891,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2851700999999593,
+      "input_tokens": 1788,
+      "output_tokens": 108,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.703328600000532,
+      "input_tokens": 1858,
+      "output_tokens": 172,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-25": {
+   "commit_message": "feat(cmd,config): add main.go binary with controller, agent, burner modes\n\nIntroduces a new main.go binary for the chaos project that supports three modes: controller, agent, and a resource burner for CPU/memory exhaustion. Adds Kubernetes RBAC ClusterRole manifests for the controller and agent components to define their required permissions.\n\nThe controller and agent modes initialize managers with health probes, metrics, and leader election (controller only). The agent reverts previous faults on startup and scopes its cache to its node. The burner mode runs a short-lived resource contention process.\n\nRBAC manifests grant appropriate access to pods, events, and chaosexperiments resources.",
+   "analysis": {
+    "summary": "Introduces a new main.go binary for the chaos project that supports three modes: controller, agent, and a resource burner. Adds Kubernetes RBAC ClusterRole manifests for the controller and agent components to define their permissions.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "chaos/api/v1",
+     "chaos/internal/agent",
+     "chaos/internal/controller",
+     "chaos/internal/fault",
+     "chaos/slo"
+    ],
+    "reasoning": "The main.go file depends heavily on internal packages (agent, controller, fault, slo) and API definitions (platformv1) that are not included in this diff. Understanding the full behavior, especially the reconciliation logic, fault injection, and metrics integration, requires reviewing these related files. The RBAC manifests are straightforward but relate to the roles needed by the controller and agent binaries, so understanding their permissions in context also benefits from knowing what the controller and agent do."
+   },
+   "reasoning": [
+    "The main.go file depends heavily on internal packages (agent, controller, fault, slo) and API definitions (platformv1) that are not included in this diff. Understanding the full behavior, especially the reconciliation logic, fault injection, and metrics integration, requires reviewing these related files. The RBAC manifests are straightforward but relate to the roles needed by the controller and agent binaries, so understanding their permissions in context also benefits from knowing what the controller and agent do.",
+    "Read 5 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 4.950367199999164,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.6609639000016614,
+      "input_tokens": 2736,
+      "output_tokens": 211,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.281987599999411,
+      "input_tokens": 3123,
+      "output_tokens": 295,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-26": {
+   "commit_message": "test(simulation): add zero-error expectation and refine audit query filtering\n\nAdded an additional expectation in the simulation test report to assert that error counts are zero for each row, ensuring stricter validation of test outcomes. Refined the audit query row time filtering logic to correctly apply a time window when counting expected rows, aligning the test logic with the intended time bounds.",
+   "analysis": {
+    "summary": "Added an additional expectation to check that error counts are zero in the simulation test report, and refined the audit query row time filtering logic to correctly apply a time window when counting expected rows.",
+    "change_type": "test",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are confined to a single end-to-end test file, adding stricter assertions and improving time filtering in test logic. The modifications are self-contained within the test code and do not reference or depend on external files, so no additional context is needed."
+   },
+   "reasoning": [
+    "The changes are confined to a single end-to-end test file, adding stricter assertions and improving time filtering in test logic. The modifications are self-contained within the test code and do not reference or depend on external files, so no additional context is needed.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.087695199999871,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4562929999992775,
+      "input_tokens": 570,
+      "output_tokens": 123,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6260360999986005,
+      "input_tokens": 654,
+      "output_tokens": 172,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-27": {
+   "commit_message": "test(scheduler-plugin): add performance benchmark for placement latency\n\nIntroduce a new benchmark test measuring pod placement latency in the scheduler-plugin using envtest and real scheduler profiles (default and kiln). The test creates synthetic nodes and bursts of pods, measuring latency from pod creation to binding.\n\nAlso update Go module dependencies to include controller-runtime and related packages required for the test environment.",
+   "analysis": {
+    "summary": "Added a new performance benchmark test for placement latency in the scheduler-plugin, and updated Go module dependencies to include controller-runtime and other related packages.",
+    "change_type": "test",
+    "needs_context": true,
+    "files_to_read": [
+     "scheduler-plugin/internal/plugin",
+     "scheduler-plugin/test/perf/perf_test.go"
+    ],
+    "reasoning": "The new test depends on the internal plugin implementation and scheduler behavior, so understanding the plugin code and how the scheduler is configured and extended is necessary to fully grasp the test's purpose and correctness. Also, the go.mod changes add dependencies related to controller-runtime and other libraries, which may be used by the new test or plugin code."
+   },
+   "reasoning": [
+    "The new test depends on the internal plugin implementation and scheduler behavior, so understanding the plugin code and how the scheduler is configured and extended is necessary to fully grasp the test's purpose and correctness. Also, the go.mod changes add dependencies related to controller-runtime and other libraries, which may be used by the new test or plugin code.",
+    "Read 2 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 4.540236900000309,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.452115899999626,
+      "input_tokens": 7820,
+      "output_tokens": 150,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.0605811000023095,
+      "input_tokens": 10635,
+      "output_tokens": 176,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-28": {
+   "commit_message": "docs(testing): enhance TESTING.md with detailed GitOps test info\n\nUpdated the TESTING.md documentation to provide more detailed descriptions of the unit and integration tests related to Crossplane compositions, Kyverno admission rules, and ArgoCD sync behavior in the GitOps provisioning context. This clarifies the test coverage and procedures without any code changes.",
+   "analysis": {
+    "summary": "The TESTING.md documentation was updated to provide more detailed descriptions of the unit and integration tests related to Crossplane compositions, Kyverno admission rules, and ArgoCD sync behavior in the GitOps provisioning context.",
+    "change_type": "docs",
+    "needs_context": false,
+    "files_to_read": [],
+    "reasoning": "The changes are purely documentation updates clarifying existing test procedures and coverage. No code or configuration changes were made that would require understanding related source files."
+   },
+   "reasoning": [
+    "The changes are purely documentation updates clarifying existing test procedures and coverage. No code or configuration changes were made that would require understanding related source files.",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 2.835180999998556,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.195432399999845,
+      "input_tokens": 592,
+      "output_tokens": 106,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6355260000018461,
+      "input_tokens": 660,
+      "output_tokens": 167,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "commit-29": {
+   "commit_message": "feat(lifecycle): add TenantDatabase lifecycle phase machine\n\nImplements a new lifecycle phase machine for TenantDatabase that defines state transitions and rules for backup and restore operations without relying on Kubernetes clients. This enables easier testing of phase transitions and enforces operation constraints based on the current phase and spec conditions.",
+   "analysis": {
+    "summary": "Adds a new lifecycle phase machine implementation for TenantDatabase, defining state transitions and rules for backup and restore operations without Kubernetes dependencies.",
+    "change_type": "feat",
+    "needs_context": true,
+    "files_to_read": [
+     "operator/api/v1/api.go"
+    ],
+    "reasoning": "The new lifecycle.go file depends on platformv1.Phase and related constants/types from the operator API (imported as platformv1). Understanding the phases and their definitions requires reviewing the API types to fully grasp the state machine's context and correctness."
+   },
+   "reasoning": [
+    "The new lifecycle.go file depends on platformv1.Phase and related constants/types from the operator API (imported as platformv1). Understanding the phases and their definitions requires reviewing the API types to fully grasp the state machine's context and correctness.",
+    "Read 1 files for context",
+    "Generated commit message"
+   ],
+   "error": null,
+   "wall_s": 3.213160200000857,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5227739000001748,
+      "input_tokens": 915,
+      "output_tokens": 117,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.683917800000927,
+      "input_tokens": 1018,
+      "output_tokens": 147,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  }
+ },
+ "retriever": "None"
+}

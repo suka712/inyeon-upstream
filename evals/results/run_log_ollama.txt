@@ -1,0 +1,6 @@
+[split-ollama-directory] split-00 groups=0 err=True calls=1 2.4s
+[split-ollama-directory] split-01 groups=0 err=True calls=1 2.3s
+[split-ollama-directory] split-02 groups=0 err=True calls=1 2.3s
+[split-ollama-directory] split-03 groups=0 err=True calls=1 2.3s
+[split-ollama-directory] split-04 groups=0 err=True calls=1 2.3s
+[split-ollama-directory] split-05 groups=0 err=True calls=1 2.3s

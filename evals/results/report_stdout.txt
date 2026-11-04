@@ -1,0 +1,292 @@
+{
+ "commit": {
+  "n_cases": 30,
+  "cases_per_repo": {
+   "commma": 6,
+   "draft-thinker": 6,
+   "ferrox": 6,
+   "inyeon": 6,
+   "kiln": 6
+  },
+  "author_messages_conventional_n": 20,
+  "author_messages_strict_valid_n": 20,
+  "author_type_distribution": {
+   "fix": 3,
+   "docs": 5,
+   "feat": 9,
+   "test": 3
+  },
+  "providers": {
+   "commit-openai": {
+    "n": 30,
+    "n_errors": 0,
+    "errors": [],
+    "n_empty_message": 0,
+    "strict_cc_valid_pct": 93.3333,
+    "strict_cc_valid_n": 28,
+    "strict_cc_valid_pct_ci95": [
+     83.3333,
+     100.0
+    ],
+    "type_match_pct_ci95": [
+     45.0,
+     85.0
+    ],
+    "strict_cc_fail_reasons": {
+     "header_regex": 2
+    },
+    "strict_cc_failing_headers": [
+     "refactor(llm, config, docker): update Gemini provider to new Google GenAI client",
+     "feat(cmd,config): add main.go binary with controller, agent, burner modes"
+    ],
+    "lenient_cc_type_parse_pct": 100.0,
+    "type_match_pct": 65.0,
+    "type_match_n": 13,
+    "type_eval_n": 20,
+    "generated_type_distribution": {
+     "refactor": 6,
+     "feat": 14,
+     "docs": 5,
+     "fix": 1,
+     "test": 3,
+     "chore": 1
+    },
+    "llm_calls_per_run_mean": 2.0,
+    "llm_calls_per_run_distribution": {
+     "2": 30
+    },
+    "http_requests_total": 60,
+    "runs_missing_usage": 0,
+    "input_tokens_per_run_mean": 3551.8333,
+    "input_tokens_per_run_median": 2013.5,
+    "output_tokens_per_run_mean": 305.8667,
+    "output_tokens_per_run_median": 304.5,
+    "context_truncated_calls": 0,
+    "context_truncated_runs": 0,
+    "latency_s_p50": 3.1381,
+    "latency_s_p95": 5.2108,
+    "latency_s_max": 9.5507,
+    "openai_usd": 0.0573
+   }
+  },
+  "type_majority_baseline": {
+   "type": "feat",
+   "pct": 45.0
+  }
+ },
+ "auto": {
+  "auto-openai": [
+   {
+    "case_id": "auto-00",
+    "repo": "kiln",
+    "sha": "c7437c43b3",
+    "diff_chars": 151,
+    "llm_calls": 3,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 1.9223
+   },
+   {
+    "case_id": "auto-01",
+    "repo": "ferrox",
+    "sha": "037ddac130",
+    "diff_chars": 183,
+    "llm_calls": 3,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 2.3221
+   },
+   {
+    "case_id": "auto-02",
+    "repo": "commma",
+    "sha": "2df60bab5e",
+    "diff_chars": 170,
+    "llm_calls": 3,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 2.177
+   },
+   {
+    "case_id": "auto-03",
+    "repo": "commma",
+    "sha": "b3e8d75a8d",
+    "diff_chars": 688,
+    "llm_calls": 5,
+    "http_requests_succeeded": 4,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": true,
+    "steps_completed": [
+     "commit",
+     "review",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 4.6647
+   },
+   {
+    "case_id": "auto-04",
+    "repo": "commma",
+    "sha": "3178ecef1d",
+    "diff_chars": 845,
+    "llm_calls": 5,
+    "http_requests_succeeded": 4,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": true,
+    "steps_completed": [
+     "commit",
+     "review",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 5.497
+   }
+  ],
+  "auto-openai-nopr": [
+   {
+    "case_id": "auto-00",
+    "repo": "kiln",
+    "sha": "c7437c43b3",
+    "diff_chars": 151,
+    "llm_calls": 2,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 3.5353
+   },
+   {
+    "case_id": "auto-01",
+    "repo": "ferrox",
+    "sha": "037ddac130",
+    "diff_chars": 183,
+    "llm_calls": 2,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 2.1631
+   },
+   {
+    "case_id": "auto-02",
+    "repo": "commma",
+    "sha": "2df60bab5e",
+    "diff_chars": 170,
+    "llm_calls": 2,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "commit_message_returned": false,
+    "error": null,
+    "wall_s": 1.8083
+   },
+   {
+    "case_id": "auto-03",
+    "repo": "commma",
+    "sha": "b3e8d75a8d",
+    "diff_chars": 688,
+    "llm_calls": 3,
+    "http_requests_succeeded": 2,
+    "llm_call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ],
+    "review_returned": false,
+    "pr_returned": false,
+    "steps_completed": [
+     "commit",
+     "review"
+    ],
+    "steps_skipped"
+baselines {"one_group": {"mean": 0.0, "ci95": [0.0, 0.0], "n": 30, "group_count_match_pct": 0.0}, "per_file": {"mean": 0.3847, "ci95": [0.2588, 0.5156], "n": 30, "group_count_match_pct": 23.3333}, "per_hunk": {"mean": 0.0667, "ci95": [0.0, 0.1667], "n": 30, "group_count_match_pct": 6.6667}}
+split-openai-conventional n 30 / 30 err 0 ARI {'mean': 0.4002, 'ci95': [0.2611, 0.539], 'n': 30} exec 0.4002 match% 33.3333 calls 3.6 strat {'conventional': 30}
+split-openai-directory n 30 / 30 err 0 ARI {'mean': 0.4742, 'ci95': [0.3279, 0.6176], 'n': 30} exec 0.4742 match% 40.0 calls 2.7667 strat {'directory': 30}
+split-openai-hybrid-inject-gemb001 n 30 / 30 err 0 ARI {'mean': 0.4742, 'ci95': [0.3279, 0.6176], 'n': 30} exec 0.4742 match% 40.0 calls 4.0333 strat {'hybrid': 30}
+split-openai-hybrid-inject-te004 n 12 / 30 err 18 ARI {'mean': 0.5081, 'ci95': [0.2505, 0.7572], 'n': 12} exec 0.5081 match% 50.0 calls 1.5667 strat {'hybrid': 12}
+split-openai-hybrid n 30 / 30 err 0 ARI {'mean': 0.4742, 'ci95': [0.3279, 0.6176], 'n': 30} exec 0.4742 match% 40.0 calls 4.0333 strat {'hybrid': 30}
+split-openai-semantic-inject-gemb001 n 30 / 30 err 0 ARI {'mean': 0.0, 'ci95': [0.0, 0.0], 'n': 30} exec 0.0 match% 0.0 calls 1.0 strat {'semantic': 30}
+split-openai-semantic-inject-te004 n 0 / 30 err 30 ARI {'mean': None, 'ci95': None, 'n': 0} exec None match% None calls 0.0 strat {}
+split-openai-semantic n 30 / 30 err 0 ARI {'mean': 0.4742, 'ci95': [0.3279, 0.6176], 'n': 30} exec 0.4742 match% 40.0 calls 4.0333 strat {'hybrid': 30}

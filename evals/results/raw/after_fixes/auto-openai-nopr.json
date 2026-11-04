@@ -1,0 +1,295 @@
+{
+ "config": "auto-openai-nopr",
+ "settings": {
+  "skip_pr": true,
+  "skip_review": false
+ },
+ "cases": {
+  "auto-00": {
+   "result": {
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "splits": null,
+    "commit_message": "chore(chaos): delete doc.go file\n\nRemoved the doc.go file from the chaos directory as it is no longer needed.",
+    "review": null,
+    "pr_description": null,
+    "error": null
+   },
+   "wall_s": 3.723836199998914,
+   "diff_chars": 151,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9418162000001757,
+      "input_tokens": 182,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.776839899997867,
+      "input_tokens": 216,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-01": {
+   "result": {
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "splits": null,
+    "commit_message": "refactor(lib): reorder module declarations in src/lib.rs\n\nMoved the 'order' module declaration from the top to the bottom of the list in src/lib.rs. This change does not affect functionality or logic.",
+    "review": null,
+    "pr_description": null,
+    "error": null
+   },
+   "wall_s": 4.548693900000217,
+   "diff_chars": 183,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.0419380999992427,
+      "input_tokens": 195,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5016178000005311,
+      "input_tokens": 241,
+      "output_tokens": 114,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-02": {
+   "result": {
+    "steps_completed": [
+     "commit"
+    ],
+    "steps_skipped": [
+     "split",
+     "review",
+     "pr"
+    ],
+    "splits": null,
+    "commit_message": "chore: add SESSION.md to .gitignore\n\nExclude SESSION.md from version control by adding it to the .gitignore file.",
+    "review": null,
+    "pr_description": null,
+    "error": null
+   },
+   "wall_s": 3.013927500000136,
+   "diff_chars": 170,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0655337999996846,
+      "input_tokens": 191,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.9427299999988463,
+      "input_tokens": 235,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-03": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "review"
+    ],
+    "steps_skipped": [
+     "split",
+     "pr"
+    ],
+    "splits": null,
+    "commit_message": "fix(About): blur element on click if focused\n\nAdded an onClick handler to blur the element if it is currently focused, preventing persistent focus styling after click. This improves UI behavior by removing unwanted focus outlines after interacting with the element.",
+    "review": {
+     "summary": "Added an onClick handler to blur the element if it is currently focused when clicked.",
+     "quality_score": 7,
+     "issues": [
+      {
+       "severity": "low",
+       "description": "The onClick handler blurs the element only if it is the active element, which may not be intuitive for users relying on keyboard navigation or accessibility tools.",
+       "suggestion": "Consider adding comments explaining the purpose of this blur behavior to improve maintainability and accessibility. Also, verify that this behavior does not negatively impact keyboard users or screen reader users."
+      },
+      {
+       "severity": "low",
+       "description": "Inline arrow function in JSX can cause unnecessary re-renders if this component is large or rerenders frequently.",
+       "suggestion": "Extract the onClick handler into a named function outside the JSX to improve readability and potentially optimize rendering."
+      }
+     ],
+     "positives": [
+      "The code uses a clear and concise conditional to check focus before blurring, preventing unnecessary blur calls.",
+      "The use of e.currentTarget is appropriate and safe in this context.",
+      "The animationDelay calculation remains untouched and clear."
+     ],
+     "suggestions": [
+      "Add a comment explaining why the blur on click is necessary to help future maintainers understand the intent.",
+      "Consider accessibility implications: test with keyboard navigation and screen readers to ensure this behavior does not hinder usability.",
+      "If this onClick handler is used in multiple places, consider abstracting it into a reusable function."
+     ]
+    },
+    "pr_description": null,
+    "error": null
+   },
+   "wall_s": 4.637934499998664,
+   "diff_chars": 688,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0897200999970664,
+      "input_tokens": 281,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2269904999993742,
+      "input_tokens": 336,
+      "output_tokens": 124,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.3137986000001547,
+      "input_tokens": 293,
+      "output_tokens": 320,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-04": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "review"
+    ],
+    "steps_skipped": [
+     "split",
+     "pr"
+    ],
+    "splits": null,
+    "commit_message": "fix(contact): update GitHub link and username on Contact page\n\nChanged the GitHub URL and displayed username from 'NauriFive/commma-coding-progress-tracker' to 'trnahnh' in the Contact React component. This corrects the link and user attribution without affecting other logic.",
+    "review": {
+     "summary": "Updated the GitHub link and displayed username in the Contact page from a specific repository URL and name to a personal GitHub profile URL and username.",
+     "quality_score": 8,
+     "issues": [
+      {
+       "severity": "low",
+       "description": "The displayed GitHub username and URL were changed, but the surrounding text 'GitHub' and the context do not clarify if this is a personal profile or a project repository.",
+       "suggestion": "Consider updating the label or adding context to clarify that the link points to a personal GitHub profile rather than a repository, to avoid user confusion."
+      },
+      {
+       "severity": "low",
+       "description": "The anchor tag uses single quotes for the href attribute, which is valid but inconsistent with common JSX/TSX style that prefers double quotes.",
+       "suggestion": "Use double quotes for JSX attributes for consistency and readability."
+      }
+     ],
+     "positives": [
+      "The link uses 'rel=\"noopener noreferrer\"' and 'target=\"_blank\"' which is a good security practice to prevent tab-nabbing.",
+      "The class names are descriptive and use utility-first CSS conventions, improving maintainability.",
+      "The code change is minimal and focused, reducing risk of unintended side effects."
+     ],
+     "suggestions": [
+      "Consider extracting the GitHub URL and username into constants or configuration to avoid hardcoding and ease future updates.",
+      "Add aria-label or descriptive text for accessibility to better describe the link purpose to screen readers.",
+      "Verify that the 'break-all' class is necessary and does not negatively impact readability on smaller screens."
+     ]
+    },
+    "pr_description": null,
+    "error": null
+   },
+   "wall_s": 7.079638299997896,
+   "diff_chars": 845,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2274131000012858,
+      "input_tokens": 345,
+      "output_tokens": 97,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.5420943000026455,
+      "input_tokens": 403,
+      "output_tokens": 149,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.3021644999971613,
+      "input_tokens": 356,
+      "output_tokens": 346,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  }
+ }
+}

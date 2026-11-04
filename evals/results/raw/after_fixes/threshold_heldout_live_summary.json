@@ -1,0 +1,48 @@
+{
+ "semantic": {
+  "n_scored": 10,
+  "errors": [
+   "split-14: Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUST",
+   "split-16: Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUST"
+  ],
+  "not_run": [],
+  "offline_mean_on_same_cases": 0.4431,
+  "mean": 0.4432,
+  "ci95": [
+   0.1849,
+   0.6901
+  ],
+  "count_match_pct": 10.0,
+  "per_case_equal_to_offline": 10,
+  "strategy_reasoning_seen": [
+   "'semantic' strategy"
+  ],
+  "llm_calls_mean": 2.42
+ },
+ "hybrid": {
+  "n_scored": 0,
+  "errors": [
+   "split-06: Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUST",
+   "split-07: Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUST"
+  ],
+  "not_run": [
+   "split-08",
+   "split-09",
+   "split-10",
+   "split-11",
+   "split-12",
+   "split-13",
+   "split-14",
+   "split-15",
+   "split-16",
+   "split-17"
+  ],
+  "offline_mean_on_same_cases": null,
+  "mean": null,
+  "ci95": null,
+  "count_match_pct": 0.0,
+  "per_case_equal_to_offline": 0,
+  "strategy_reasoning_seen": [],
+  "llm_calls_mean": 0.0
+ }
+}

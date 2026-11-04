@@ -1,0 +1,421 @@
+{
+ "config": "auto-openai",
+ "settings": {
+  "skip_pr": false,
+  "skip_review": false
+ },
+ "cases": {
+  "auto-00": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split",
+     "review"
+    ],
+    "splits": null,
+    "commit_message": "chore(chaos): remove doc.go file\n\nDeleted the doc.go file from the chaos directory, removing the package declaration. This file contained only a package statement and its removal does not affect other parts of the codebase.",
+    "review": null,
+    "pr_description": {
+     "title": "refactor(chaos): remove obsolete chaos package documentation file",
+     "summary": "This PR removes the outdated chaos/doc.go file from the chaos package to clean up the codebase and eliminate unnecessary documentation artifacts. The removal helps maintain clarity and reduces clutter in the package directory.",
+     "changes": [
+      "- Deleted chaos/doc.go file from the chaos package"
+     ],
+     "testing": "Verify that the chaos package builds successfully without errors and that no references to chaos/doc.go remain in the codebase or documentation.",
+     "breaking_changes": []
+    },
+    "error": null
+   },
+   "wall_s": 7.679315999997925,
+   "diff_chars": 151,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.1777980999977444,
+      "input_tokens": 182,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5301110000000335,
+      "input_tokens": 221,
+      "output_tokens": 120,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.5551345000021684,
+      "input_tokens": 163,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4011165000010806,
+      "input_tokens": 293,
+      "output_tokens": 118,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-01": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split",
+     "review"
+    ],
+    "splits": null,
+    "commit_message": "refactor(lib): reorder module declarations in src/lib.rs\n\nMoved the 'order' module declaration from the top to the bottom of the list in src/lib.rs to improve code organization without changing functionality.",
+    "review": null,
+    "pr_description": {
+     "title": "refactor(src/lib.rs): reorder module declarations for clarity",
+     "summary": "This PR refactors the module declarations in src/lib.rs by moving the `pub mod order;` declaration from the top to the bottom of the module list. The change improves the logical grouping and readability of the module declarations without affecting functionality.",
+     "changes": [
+      "- Moved `pub mod order;` from the top to the bottom of the module declarations in src/lib.rs"
+     ],
+     "testing": "Review the src/lib.rs file to verify the new order of module declarations. Confirm that the project builds successfully and that no runtime behavior is affected.",
+     "breaking_changes": []
+    },
+    "error": null
+   },
+   "wall_s": 14.379229099999066,
+   "diff_chars": 183,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 6.788358199999493,
+      "input_tokens": 195,
+      "output_tokens": 88,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 4.820932099999482,
+      "input_tokens": 244,
+      "output_tokens": 110,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2256544000010763,
+      "input_tokens": 176,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5354428999999072,
+      "input_tokens": 314,
+      "output_tokens": 144,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-02": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split",
+     "review"
+    ],
+    "splits": null,
+    "commit_message": "chore: ignore SESSION.md in .gitignore\n\nAdded SESSION.md to the .gitignore file to exclude it from version control. This prevents accidental commits of session data.",
+    "review": null,
+    "pr_description": {
+     "title": "refactor(.gitignore): exclude SESSION.md from version control",
+     "summary": "This update modifies the .gitignore file to include SESSION.md, preventing it from being tracked by Git. This change helps keep session-related files out of the repository, reducing clutter and potential conflicts.",
+     "changes": [
+      "- Added SESSION.md to the .gitignore file to exclude it from version control"
+     ],
+     "testing": "Verify that SESSION.md is not tracked by Git by running 'git status' after creating or modifying the file. It should appear under untracked files and not staged for commit.",
+     "breaking_changes": []
+    },
+    "error": null
+   },
+   "wall_s": 14.47350109999752,
+   "diff_chars": 170,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2337365999992471,
+      "input_tokens": 191,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.705995799999073,
+      "input_tokens": 237,
+      "output_tokens": 98,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 5.0372735999990255,
+      "input_tokens": 172,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 4.4877181999981985,
+      "input_tokens": 298,
+      "output_tokens": 135,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-03": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "review",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split"
+    ],
+    "splits": null,
+    "commit_message": "fix(About): blur element on click if focused\n\nAdded an onClick handler in About.tsx that blurs the element if it is currently focused. This prevents persistent focus styling after clicking, improving the UI behavior related to focus management.",
+    "review": {
+     "summary": "Added an onClick handler to blur the element if it is currently focused when clicked.",
+     "quality_score": 7,
+     "issues": [
+      {
+       "severity": "low",
+       "description": "The onClick handler blurs the element if it is focused, but the rationale for this behavior is not documented.",
+       "suggestion": "Add a comment explaining why the blur on click is necessary to improve maintainability and clarity."
+      },
+      {
+       "severity": "low",
+       "description": "Using inline arrow functions in JSX can cause unnecessary re-renders or performance overhead in some cases.",
+       "suggestion": "Consider extracting the onClick handler into a named function outside the JSX to improve readability and potentially performance."
+      },
+      {
+       "severity": "low",
+       "description": "The blur logic only triggers if the clicked element is the activeElement, but there is no handling for keyboard accessibility or other focus management.",
+       "suggestion": "Verify that this behavior aligns with accessibility requirements and consider if additional focus management or keyboard event handling is needed."
+      }
+     ],
+     "positives": [
+      "The code uses descriptive variable names like e.currentTarget and document.activeElement correctly.",
+      "The animationDelay style calculation is clear and consistent.",
+      "The added functionality to blur the element on click when focused may improve user experience by preventing unwanted focus styles."
+     ],
+     "suggestions": [
+      "Add comments to clarify the purpose of the onClick blur behavior.",
+      "Extract inline event handlers to named functions to improve readability and maintainability.",
+      "Review accessibility implications to ensure this focus management does not negatively impact keyboard users."
+     ]
+    },
+    "pr_description": {
+     "title": "fix(About): add blur on click to improve focus handling",
+     "summary": "This PR improves focus management on the About page by adding an onClick handler that blurs elements when they are clicked and currently focused. This prevents unwanted focus styles from persisting and enhances overall user experience.",
+     "changes": [
+      "- Added onClick handlers to interactive elements in About.tsx to blur the element if it is focused"
+     ],
+     "testing": "Navigate to the About page, click on interactive elements, and verify that the element loses focus immediately after the click, removing any focus styles.",
+     "breaking_changes": []
+    },
+    "error": null
+   },
+   "wall_s": 10.280501200002618,
+   "diff_chars": 688,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5008572000006097,
+      "input_tokens": 281,
+      "output_tokens": 98,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1801032000003033,
+      "input_tokens": 341,
+      "output_tokens": 124,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.0176363000027777,
+      "input_tokens": 293,
+      "output_tokens": 350,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1194177999968815,
+      "input_tokens": 262,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.4495205000021087,
+      "input_tokens": 317,
+      "output_tokens": 134,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  },
+  "auto-04": {
+   "result": {
+    "steps_completed": [
+     "commit",
+     "review",
+     "pr"
+    ],
+    "steps_skipped": [
+     "split"
+    ],
+    "splits": null,
+    "commit_message": "fix(Contact page): update GitHub link and username display\n\nChanged the GitHub URL and displayed username on the Contact page from 'NauriFive/commma-coding-progress-tracker' to 'trnahnh' to reflect the correct repository and user.",
+    "review": {
+     "summary": "Updated the GitHub link and displayed username in the Contact page from 'NauriFive/commma-coding-progress-tracker' to 'trnahnh', changing both the href and the visible text accordingly.",
+     "quality_score": 8,
+     "issues": [
+      {
+       "severity": "low",
+       "description": "The href link points to a GitHub user profile (https://github.com/trnahnh) but the visible text shows only the username 'trnahnh' without clarifying it's a profile link, which might confuse users expecting a repository link.",
+       "suggestion": "Consider clarifying the link text to indicate it's a GitHub profile, e.g., 'GitHub: trnahnh' or 'GitHub Profile: trnahnh' to improve user understanding."
+      },
+      {
+       "severity": "low",
+       "description": "The anchor tag uses single quotes for href and className attributes, which is valid but inconsistent with common JSX/TSX conventions that often prefer double quotes for attribute values.",
+       "suggestion": "Consider standardizing on double quotes for JSX attributes for consistency and readability."
+      }
+     ],
+     "positives": [
+      "Proper use of 'target=\"_blank\"' with 'rel=\"noopener noreferrer\"' to mitigate security risks when opening external links.",
+      "Clear and semantic JSX structure with appropriate class names for styling and accessibility.",
+      "Use of 'break-all' class to handle long URLs or usernames gracefully, improving UI robustness."
+     ],
+     "suggestions": [
+      "Add descriptive aria-labels or titles to the anchor element for improved accessibility, especially since the link text is minimal.",
+      "Consider extracting the GitHub URL and username into constants or configuration to make future updates easier and reduce hardcoded strings.",
+      "If this link is part of a larger contact or social links component, consider abstracting it into a reusable component to avoid duplication."
+     ]
+    },
+    "pr_description": {
+     "title": "fix(contact): update GitHub link and username on Contact page",
+     "summary": "This PR updates the GitHub URL and displayed username on the Contact page to reflect the correct repository and user. The previous link pointed to an outdated repository, so this change ensures users are directed to the current GitHub profile.",
+     "changes": [
+      "- Updated GitHub URL from 'https://github.com/NauriFive/commma-coding-progress-tracker' to 'https://github.com/trnahnh' on the Contact page",
+      "- Changed displayed GitHub username from 'NauriFive/commma-coding-progress-tracker' to 'trnahnh' on the Contact page"
+     ],
+     "testing": "Navigate to the Contact page and verify that the GitHub link points to 'https://github.com/trnahnh' and that the displayed username is 'trnahnh'. Click the link to confirm it directs to the correct GitHub profile.",
+     "breaking_changes": []
+    },
+    "error": null
+   },
+   "wall_s": 13.663402599999245,
+   "diff_chars": 845,
+   "retriever": "CodeRetriever",
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2681724000030954,
+      "input_tokens": 345,
+      "output_tokens": 101,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.3272154000005685,
+      "input_tokens": 407,
+      "output_tokens": 133,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 3.6316536999984237,
+      "input_tokens": 356,
+      "output_tokens": 405,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.877861999997549,
+      "input_tokens": 326,
+      "output_tokens": 122,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.5466412999994645,
+      "input_tokens": 349,
+      "output_tokens": 207,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   },
+   "connection_errors": 0
+  }
+ }
+}

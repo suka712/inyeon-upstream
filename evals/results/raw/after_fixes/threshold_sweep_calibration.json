@@ -1,0 +1,524 @@
+{
+ "calibration_repos": [
+  "commma",
+  "inyeon",
+  "kiln"
+ ],
+ "heldout_repos": [
+  "draft-thinker",
+  "ferrox"
+ ],
+ "n_cases": 18,
+ "selection_rule": "max mean semantic ARI on calibration; ties -> lowest threshold",
+ "similarity_distribution": {
+  "same_commit_pairs": 614,
+  "cross_commit_pairs": 503,
+  "same_commit_cosine_quantiles": {
+   "0.05": 0.5919,
+   "0.25": 0.6706,
+   "0.5": 0.7197,
+   "0.75": 0.7889,
+   "0.95": 0.8724
+  },
+  "cross_commit_cosine_quantiles": {
+   "0.05": 0.5621,
+   "0.25": 0.591,
+   "0.5": 0.6229,
+   "0.75": 0.6661,
+   "0.95": 0.7474
+  }
+ },
+ "grid": [
+  0.5,
+  0.525,
+  0.55,
+  0.575,
+  0.6,
+  0.625,
+  0.65,
+  0.675,
+  0.7,
+  0.725,
+  0.75,
+  0.775,
+  0.8,
+  0.825,
+  0.85,
+  0.875,
+  0.9,
+  0.925,
+  0.95
+ ],
+ "rows": [
+  {
+   "threshold": 0.5,
+   "semantic": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "count_match_pct": 0.0,
+    "n": 18,
+    "mean_groups": 1.0
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.525,
+   "semantic": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "count_match_pct": 0.0,
+    "n": 18,
+    "mean_groups": 1.0
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.55,
+   "semantic": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "count_match_pct": 0.0,
+    "n": 18,
+    "mean_groups": 1.0
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.575,
+   "semantic": {
+    "mean": 0.0556,
+    "ci95": [
+     0.0,
+     0.1667
+    ],
+    "count_match_pct": 5.5556,
+    "n": 18,
+    "mean_groups": 1.1111
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.6,
+   "semantic": {
+    "mean": 0.0893,
+    "ci95": [
+     0.0,
+     0.2342
+    ],
+    "count_match_pct": 5.5556,
+    "n": 18,
+    "mean_groups": 1.2222
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.625,
+   "semantic": {
+    "mean": 0.2389,
+    "ci95": [
+     0.0771,
+     0.4235
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 1.4444
+   },
+   "hybrid": {
+    "mean": 0.496,
+    "ci95": [
+     0.3204,
+     0.6642
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 2.8889
+   }
+  },
+  {
+   "threshold": 0.65,
+   "semantic": {
+    "mean": 0.3574,
+    "ci95": [
+     0.1774,
+     0.5493
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 1.7778
+   },
+   "hybrid": {
+    "mean": 0.5412,
+    "ci95": [
+     0.365,
+     0.7071
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 3.0
+   }
+  },
+  {
+   "threshold": 0.675,
+   "semantic": {
+    "mean": 0.501,
+    "ci95": [
+     0.3256,
+     0.6728
+    ],
+    "count_match_pct": 27.7778,
+    "n": 18,
+    "mean_groups": 2.1111
+   },
+   "hybrid": {
+    "mean": 0.5412,
+    "ci95": [
+     0.365,
+     0.7071
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 3.0
+   }
+  },
+  {
+   "threshold": 0.7,
+   "semantic": {
+    "mean": 0.5844,
+    "ci95": [
+     0.4152,
+     0.7489
+    ],
+    "count_match_pct": 38.8889,
+    "n": 18,
+    "mean_groups": 2.5
+   },
+   "hybrid": {
+    "mean": 0.4911,
+    "ci95": [
+     0.3219,
+     0.654
+    ],
+    "count_match_pct": 44.4444,
+    "n": 18,
+    "mean_groups": 3.3333
+   }
+  },
+  {
+   "threshold": 0.725,
+   "semantic": {
+    "mean": 0.5923,
+    "ci95": [
+     0.4283,
+     0.7508
+    ],
+    "count_match_pct": 33.3333,
+    "n": 18,
+    "mean_groups": 3.2778
+   },
+   "hybrid": {
+    "mean": 0.4826,
+    "ci95": [
+     0.3132,
+     0.6476
+    ],
+    "count_match_pct": 33.3333,
+    "n": 18,
+    "mean_groups": 3.7222
+   }
+  },
+  {
+   "threshold": 0.75,
+   "semantic": {
+    "mean": 0.6615,
+    "ci95": [
+     0.5135,
+     0.8016
+    ],
+    "count_match_pct": 38.8889,
+    "n": 18,
+    "mean_groups": 3.7778
+   },
+   "hybrid": {
+    "mean": 0.4594,
+    "ci95": [
+     0.2891,
+     0.6308
+    ],
+    "count_match_pct": 33.3333,
+    "n": 18,
+    "mean_groups": 3.9444
+   }
+  },
+  {
+   "threshold": 0.775,
+   "semantic": {
+    "mean": 0.5061,
+    "ci95": [
+     0.3607,
+     0.6559
+    ],
+    "count_match_pct": 27.7778,
+    "n": 18,
+    "mean_groups": 4.5556
+   },
+   "hybrid": {
+    "mean": 0.4296,
+    "ci95": [
+     0.2778,
+     0.5852
+    ],
+    "count_match_pct": 27.7778,
+    "n": 18,
+    "mean_groups": 4.3889
+   }
+  },
+  {
+   "threshold": 0.8,
+   "semantic": {
+    "mean": 0.4286,
+    "ci95": [
+     0.2986,
+     0.565
+    ],
+    "count_match_pct": 11.1111,
+    "n": 18,
+    "mean_groups": 5.2778
+   },
+   "hybrid": {
+    "mean": 0.4094,
+    "ci95": [
+     0.2612,
+     0.5636
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 4.8889
+   }
+  },
+  {
+   "threshold": 0.825,
+   "semantic": {
+    "mean": 0.3627,
+    "ci95": [
+     0.2303,
+     0.5068
+    ],
+    "count_match_pct": 11.1111,
+    "n": 18,
+    "mean_groups": 6.2222
+   },
+   "hybrid": {
+    "mean": 0.3428,
+    "ci95": [
+     0.1986,
+     0.4966
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 5.6111
+   }
+  },
+  {
+   "threshold": 0.85,
+   "semantic": {
+    "mean": 0.2984,
+    "ci95": [
+     0.1743,
+     0.439
+    ],
+    "count_match_pct": 16.6667,
+    "n": 18,
+    "mean_groups": 6.8889
+   },
+   "hybrid": {
+    "mean": 0.3209,
+    "ci95": [
+     0.1769,
+     0.476
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 6.0556
+   }
+  },
+  {
+   "threshold": 0.875,
+   "semantic": {
+    "mean": 0.1861,
+    "ci95": [
+     0.0594,
+     0.3379
+    ],
+    "count_match_pct": 11.1111,
+    "n": 18,
+    "mean_groups": 7.8333
+   },
+   "hybrid": {
+    "mean": 0.289,
+    "ci95": [
+     0.1404,
+     0.4518
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 6.6667
+   }
+  },
+  {
+   "threshold": 0.9,
+   "semantic": {
+    "mean": 0.1401,
+    "ci95": [
+     0.0234,
+     0.2998
+    ],
+    "count_match_pct": 11.1111,
+    "n": 18,
+    "mean_groups": 8.5
+   },
+   "hybrid": {
+    "mean": 0.2708,
+    "ci95": [
+     0.1197,
+     0.4375
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 7.1111
+   }
+  },
+  {
+   "threshold": 0.925,
+   "semantic": {
+    "mean": 0.1171,
+    "ci95": [
+     0.0026,
+     0.2812
+    ],
+    "count_match_pct": 11.1111,
+    "n": 18,
+    "mean_groups": 8.8889
+   },
+   "hybrid": {
+    "mean": 0.2586,
+    "ci95": [
+     0.1034,
+     0.4301
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 7.3889
+   }
+  },
+  {
+   "threshold": 0.95,
+   "semantic": {
+    "mean": 0.0556,
+    "ci95": [
+     0.0,
+     0.1667
+    ],
+    "count_match_pct": 5.5556,
+    "n": 18,
+    "mean_groups": 9.1111
+   },
+   "hybrid": {
+    "mean": 0.2552,
+    "ci95": [
+     0.0993,
+     0.4275
+    ],
+    "count_match_pct": 22.2222,
+    "n": 18,
+    "mean_groups": 7.5
+   }
+  }
+ ],
+ "baselines": {
+  "per_file": {
+   "mean": 0.4067,
+   "ci95": [
+    0.2545,
+    0.567
+   ],
+   "count_match_pct": 16.6667,
+   "n": 18,
+   "mean_groups": 5.3889
+  },
+  "one_group": {
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "count_match_pct": 0.0,
+   "n": 18,
+   "mean_groups": 1.0
+  },
+  "directory": {
+   "mean": 0.496,
+   "ci95": [
+    0.3204,
+    0.6642
+   ],
+   "count_match_pct": 44.4444,
+   "n": 18,
+   "mean_groups": 2.8889
+  }
+ },
+ "chosen_threshold": 0.75
+}

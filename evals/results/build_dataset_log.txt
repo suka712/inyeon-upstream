@@ -1,0 +1,11 @@
+[split] kiln: 68 valid windows; rejects={'merge_or_root': 15, 'too_large': 125, 'binary': 13, 'binary_or_no_hunk_file': 6, 'lockfile_or_generated_only': 25, 'blame_unattributed': 17, 'overlapping_hunk': 6, 'rename_or_copy': 3, 'interacting_commits': 2, 'empty': 1, 'fewer_than_2_files': 1}
+[split] ferrox: 23 valid windows; rejects={'merge_or_root': 5, 'overlapping_hunk': 12, 'lockfile_or_generated_only': 5, 'too_large': 2, 'blame_unattributed': 3, 'interacting_commits': 3}
+[split] commma: 131 valid windows; rejects={'merge_or_root': 9, 'other_author': 3, 'too_large': 168, 'overlapping_hunk': 85, 'blame_unattributed': 63, 'fewer_than_2_files': 27, 'interacting_commits': 13, 'binary': 40, 'empty': 6, 'rename_or_copy': 8}
+[split] inyeon: 22 valid windows; rejects={'merge_or_root': 20, 'binary': 11, 'binary_or_no_hunk_file': 13, 'overlapping_hunk': 9, 'fewer_than_2_files': 5, 'blame_unattributed': 18, 'too_large': 7}
+[split] draft-thinker: 21 valid windows; rejects={'merge_or_root': 6, 'overlapping_hunk': 9, 'fewer_than_2_files': 1, 'too_large': 29, 'blame_unattributed': 2, 'binary': 16, 'interacting_commits': 1}
+[commit] kiln: 198 eligible; rejects={'merge_or_root': 3, 'too_large': 15, 'binary': 2, 'no_text_hunks': 1, 'lockfile_or_generated_only': 5, 'used_in_split_eval': 15}
+[commit] ferrox: 55 eligible; rejects={'merge_or_root': 2, 'used_in_split_eval': 12, 'lockfile_or_generated_only': 1}
+[commit] commma: 398 eligible; rejects={'merge_or_root': 2, 'other_author': 1, 'too_large': 20, 'used_in_split_eval': 14, 'binary': 9, 'empty': 1}
+[commit] inyeon: 62 eligible; rejects={'merge_or_root': 5, 'no_text_hunks': 1, 'binary': 2, 'used_in_split_eval': 17}
+[commit] draft-thinker: 48 eligible; rejects={'merge_or_root': 2, 'used_in_split_eval': 15, 'too_large': 3, 'binary': 2}
+wrote D:\Projects\Inyeon-TerminalCLI\inyeon-upstream\evals\dataset_manifest.json: 30 split, 30 commit, 5 auto cases

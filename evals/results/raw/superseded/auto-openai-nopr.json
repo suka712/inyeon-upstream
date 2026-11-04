@@ -1,0 +1,200 @@
+{
+ "config": "auto-openai-nopr",
+ "settings": {
+  "eval": "auto",
+  "provider": "openai",
+  "skip_pr": true
+ },
+ "cases": {
+  "auto-00": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.2368781000004674,
+   "diff_chars": 151,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.072358700002951,
+      "input_tokens": 182,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1583126000004995,
+      "input_tokens": 221,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-01": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.319845099998929,
+   "diff_chars": 183,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.164590100001078,
+      "input_tokens": 195,
+      "output_tokens": 88,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1491969999988214,
+      "input_tokens": 244,
+      "output_tokens": 124,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-02": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.173284499996953,
+   "diff_chars": 170,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0112748999999894,
+      "input_tokens": 191,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1540051000010862,
+      "input_tokens": 235,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-03": {
+   "steps_completed": [
+    "commit",
+    "review"
+   ],
+   "steps_skipped": [
+    "split",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.0910956999978225,
+   "diff_chars": 688,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0026169999982812,
+      "input_tokens": 281,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.077457499999582,
+      "input_tokens": 332,
+      "output_tokens": 110,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-04": {
+   "steps_completed": [
+    "commit",
+    "review"
+   ],
+   "steps_skipped": [
+    "split",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.4898278000000573,
+   "diff_chars": 845,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2250956000025326,
+      "input_tokens": 345,
+      "output_tokens": 99,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2516249000000244,
+      "input_tokens": 405,
+      "output_tokens": 139,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  }
+ }
+}

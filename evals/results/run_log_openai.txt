@@ -1,0 +1,533 @@
+[split-openai-hybrid] split-00 groups=2 err=False calls=4 5.9s
+[split-openai-hybrid] split-01 groups=2 err=False calls=4 4.8s
+[split-openai-hybrid] split-02 groups=1 err=False calls=2 1.9s
+[split-openai-hybrid] split-03 groups=2 err=False calls=4 3.6s
+[split-openai-hybrid] split-04 groups=3 err=False calls=5 4.2s
+[split-openai-hybrid] split-05 groups=2 err=False calls=4 3.8s
+[split-openai-hybrid] split-06 groups=4 err=False calls=7 6.8s
+[split-openai-hybrid] split-07 groups=2 err=False calls=3 2.6s
+[split-openai-hybrid] split-08 groups=1 err=False calls=2 2.2s
+[split-openai-hybrid] split-09 groups=1 err=False calls=2 1.6s
+[split-openai-hybrid] split-10 groups=4 err=False calls=7 5.5s
+[split-openai-hybrid] split-11 groups=2 err=False calls=4 4.0s
+[split-openai-hybrid] split-12 groups=3 err=False calls=5 4.7s
+[split-openai-hybrid] split-13 groups=2 err=False calls=2 1.9s
+[split-openai-hybrid] split-14 groups=5 err=False calls=7 5.7s
+[split-openai-hybrid] split-15 groups=3 err=False calls=4 3.6s
+[split-openai-hybrid] split-16 groups=2 err=False calls=2 1.6s
+[split-openai-hybrid] split-17 groups=2 err=False calls=2 2.0s
+[split-openai-hybrid] split-18 groups=3 err=False calls=4 3.9s
+[split-openai-hybrid] split-19 groups=4 err=False calls=4 3.7s
+[split-openai-hybrid] split-20 groups=7 err=False calls=9 8.7s
+[split-openai-hybrid] split-21 groups=2 err=False calls=3 3.8s
+[split-openai-hybrid] split-22 groups=2 err=False calls=3 2.8s
+[split-openai-hybrid] split-23 groups=6 err=False calls=7 7.1s
+[split-openai-hybrid] split-24 groups=2 err=False calls=4 4.3s
+[split-openai-hybrid] split-25 groups=2 err=False calls=3 3.1s
+[split-openai-hybrid] split-26 groups=4 err=False calls=4 3.9s
+[split-openai-hybrid] split-27 groups=2 err=False calls=3 2.8s
+[split-openai-hybrid] split-28 groups=2 err=False calls=2 2.4s
+[split-openai-hybrid] split-29 groups=4 err=False calls=5 5.0s
+[split-openai-directory] split-00 groups=2 err=False calls=2 2.1s
+[split-openai-directory] split-01 groups=2 err=False calls=2 2.8s
+[split-openai-directory] split-02 groups=1 err=False calls=1 0.9s
+[split-openai-directory] split-03 groups=2 err=False calls=2 1.9s
+[split-openai-directory] split-04 groups=3 err=False calls=3 2.7s
+[split-openai-directory] split-05 groups=2 err=False calls=2 2.3s
+[split-openai-directory] split-06 groups=4 err=False calls=4 4.4s
+[split-openai-directory] split-07 groups=2 err=False calls=2 2.1s
+[split-openai-directory] split-08 groups=1 err=False calls=1 1.1s
+[split-openai-directory] split-09 groups=1 err=False calls=1 1.0s
+[split-openai-directory] split-10 groups=4 err=False calls=4 3.7s
+[split-openai-directory] split-11 groups=2 err=False calls=2 2.0s
+[split-openai-directory] split-12 groups=3 err=False calls=3 2.6s
+[split-openai-directory] split-13 groups=2 err=False calls=2 1.9s
+[split-openai-directory] split-14 groups=5 err=False calls=5 5.0s
+[split-openai-directory] split-15 groups=3 err=False calls=3 2.9s
+[split-openai-directory] split-16 groups=2 err=False calls=2 2.1s
+[split-openai-directory] split-17 groups=2 err=False calls=2 1.7s
+[split-openai-directory] split-18 groups=3 err=False calls=3 2.7s
+[split-openai-directory] split-19 groups=4 err=False calls=4 3.6s
+[split-openai-directory] split-20 groups=7 err=False calls=7 6.9s
+[split-openai-directory] split-21 groups=2 err=False calls=2 2.0s
+[split-openai-directory] split-22 groups=2 err=False calls=2 1.9s
+[split-openai-directory] split-23 groups=6 err=False calls=6 6.1s
+[split-openai-directory] split-24 groups=2 err=False calls=2 2.2s
+[split-openai-directory] split-25 groups=2 err=False calls=2 2.1s
+[split-openai-directory] split-26 groups=4 err=False calls=4 4.6s
+[split-openai-directory] split-27 groups=2 err=False calls=2 3.2s
+[split-openai-directory] split-28 groups=2 err=False calls=2 1.7s
+[split-openai-directory] split-29 groups=4 err=False calls=4 4.3s
+[split-openai-conventional] split-00 groups=3 err=False calls=4 4.3s
+[split-openai-conventional] split-01 groups=4 err=False calls=5 5.6s
+[split-openai-conventional] split-02 groups=1 err=False calls=2 2.0s
+[split-openai-conventional] split-03 groups=3 err=False calls=4 3.7s
+[split-openai-conventional] split-04 groups=4 err=False calls=5 5.0s
+[split-openai-conventional] split-05 groups=3 err=False calls=4 4.2s
+[split-openai-conventional] split-06 groups=4 err=False calls=5 5.6s
+[split-openai-conventional] split-07 groups=2 err=False calls=3 2.6s
+[split-openai-conventional] split-08 groups=2 err=False calls=3 3.8s
+[split-openai-conventional] split-09 groups=2 err=False calls=3 2.3s
+[split-openai-conventional] split-10 groups=4 err=False calls=5 5.6s
+[split-openai-conventional] split-11 groups=3 err=False calls=4 5.2s
+[split-openai-conventional] split-12 groups=3 err=False calls=4 4.3s
+[split-openai-conventional] split-13 groups=2 err=False calls=3 2.7s
+[split-openai-conventional] split-14 groups=4 err=False calls=5 5.9s
+[split-openai-conventional] split-15 groups=3 err=False calls=4 4.3s
+[split-openai-conventional] split-16 groups=2 err=False calls=3 3.2s
+[split-openai-conventional] split-17 groups=1 err=False calls=2 1.9s
+[split-openai-conventional] split-18 groups=3 err=False calls=4 5.9s
+[split-openai-conventional] split-19 groups=3 err=False calls=4 7.4s
+[split-openai-conventional] split-20 groups=3 err=False calls=4 8.9s
+[split-openai-conventional] split-21 groups=1 err=False calls=2 3.4s
+[split-openai-conventional] split-22 groups=2 err=False calls=3 3.4s
+[split-openai-conventional] split-23 groups=2 err=False calls=3 4.7s
+[split-openai-conventional] split-24 groups=1 err=False calls=2 2.3s
+[split-openai-conventional] split-25 groups=2 err=False calls=3 3.9s
+[split-openai-conventional] split-26 groups=3 err=False calls=4 3.6s
+[split-openai-conventional] split-27 groups=2 err=False calls=3 6.8s
+[split-openai-conventional] split-28 groups=2 err=False calls=3 2.6s
+[split-openai-conventional] split-29 groups=4 err=False calls=5 5.2s
+[split-openai-hybrid-inject-gemb001] split-00 groups=2 err=False calls=4 5.4s
+[split-openai-hybrid-inject-gemb001] split-01 groups=2 err=False calls=4 5.5s
+[split-openai-hybrid-inject-gemb001] split-02 groups=1 err=False calls=2 2.8s
+[split-openai-hybrid-inject-gemb001] split-03 groups=2 err=False calls=4 3.5s
+[split-openai-hybrid-inject-gemb001] split-04 groups=3 err=False calls=5 4.2s
+[split-openai-hybrid-inject-gemb001] split-05 groups=2 err=False calls=4 5.0s
+[split-openai-hybrid-inject-gemb001] split-06 groups=4 err=False calls=7 9.2s
+[split-openai-hybrid-inject-gemb001] split-07 groups=2 err=False calls=3 3.5s
+[split-openai-hybrid-inject-gemb001] split-08 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-gemb001] split-09 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-gemb001] split-10 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-gemb001] split-11 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-gemb001] split-12 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-gemb001] split-13 groups=2 err=False calls=2 1.9s
+[split-openai-hybrid-inject-gemb001] split-14 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-gemb001] split-15 groups=3 err=False calls=4 3.7s
+[split-openai-hybrid-inject-gemb001] split-16 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-gemb001] split-17 groups=2 err=False calls=2 2.1s
+[split-openai-hybrid-inject-gemb001] split-18 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-gemb001] split-19 groups=4 err=False calls=4 3.9s
+[split-openai-hybrid-inject-gemb001] split-20 groups=7 err=False calls=9 8.0s
+[split-openai-hybrid-inject-gemb001] split-21 groups=2 err=False calls=3 2.6s
+[split-openai-hybrid-inject-gemb001] split-22 groups=2 err=False calls=3 3.0s
+[split-openai-hybrid-inject-gemb001] split-23 groups=6 err=False calls=7 10.6s
+[split-openai-hybrid-inject-gemb001] split-24 groups=2 err=False calls=4 4.5s
+[split-openai-hybrid-inject-gemb001] split-25 groups=2 err=False calls=3 3.0s
+[split-openai-hybrid-inject-gemb001] split-26 groups=4 err=False calls=4 4.1s
+[split-openai-hybrid-inject-gemb001] split-27 groups=2 err=False calls=3 3.2s
+[split-openai-hybrid-inject-gemb001] split-28 groups=2 err=False calls=2 2.2s
+[split-openai-hybrid-inject-gemb001] split-29 groups=4 err=False calls=5 4.7s
+[split-openai-semantic-inject-gemb001] split-00 groups=1 err=False calls=1 1.9s
+[split-openai-semantic-inject-gemb001] split-01 groups=1 err=False calls=1 1.7s
+[split-openai-semantic-inject-gemb001] split-02 groups=1 err=False calls=1 1.6s
+[split-openai-semantic-inject-gemb001] split-03 groups=1 err=False calls=1 1.4s
+[split-openai-semantic-inject-gemb001] split-04 groups=1 err=False calls=1 1.8s
+[split-openai-semantic-inject-gemb001] split-05 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-06 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-07 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-08 groups=0 err=True calls=0 0.3s
+[split-openai-semantic-inject-gemb001] split-09 groups=1 err=False calls=1 1.1s
+[split-openai-semantic-inject-gemb001] split-10 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-11 groups=1 err=False calls=1 1.9s
+[split-openai-semantic-inject-gemb001] split-12 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-13 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-14 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-15 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-16 groups=0 err=True calls=0 0.3s
+[split-openai-semantic-inject-gemb001] split-17 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-18 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-19 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-20 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-21 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-22 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-23 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-24 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-25 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-gemb001] split-26 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-27 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-28 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-gemb001] split-29 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-00 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-01 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-02 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-03 groups=2 err=False calls=4 3.5s
+[split-openai-hybrid-inject-te004] split-04 groups=3 err=False calls=5 4.0s
+[split-openai-hybrid-inject-te004] split-05 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-06 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-te004] split-07 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-08 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-09 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-10 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-11 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-12 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-13 groups=2 err=False calls=2 2.3s
+[split-openai-hybrid-inject-te004] split-14 groups=0 err=True calls=0 0.2s
+Task exception was never retrieved
+future: <Task finished name='Task-1716' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-1717' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-1718' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-1722' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+[split-openai-hybrid-inject-te004] split-15 groups=3 err=False calls=4 4.0s
+[split-openai-hybrid-inject-te004] split-16 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-17 groups=2 err=False calls=2 2.3s
+[split-openai-hybrid-inject-te004] split-18 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-19 groups=4 err=False calls=4 3.8s
+[split-openai-hybrid-inject-te004] split-20 groups=7 err=False calls=9 8.3s
+[split-openai-hybrid-inject-te004] split-21 groups=2 err=False calls=3 3.4s
+[split-openai-hybrid-inject-te004] split-22 groups=2 err=False calls=3 2.5s
+[split-openai-hybrid-inject-te004] split-23 groups=0 err=True calls=0 0.3s
+[split-openai-hybrid-inject-te004] split-24 groups=2 err=False calls=4 4.3s
+[split-openai-hybrid-inject-te004] split-25 groups=2 err=False calls=3 3.1s
+[split-openai-hybrid-inject-te004] split-26 groups=4 err=False calls=4 3.7s
+[split-openai-hybrid-inject-te004] split-27 groups=0 err=True calls=0 0.2s
+[split-openai-hybrid-inject-te004] split-28 groups=0 err=True calls=0 0.1s
+[split-openai-hybrid-inject-te004] split-29 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-00 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-01 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-02 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-03 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-04 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-05 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-06 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-07 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-08 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-09 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-10 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-11 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-12 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-13 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-14 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-15 groups=0 err=True calls=0 0.2s
+[split-openai-semantic-inject-te004] split-16 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-17 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-18 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-19 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-20 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-21 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-22 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-23 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-24 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-25 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-26 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-27 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-28 groups=0 err=True calls=0 0.1s
+[split-openai-semantic-inject-te004] split-29 groups=0 err=True calls=0 0.1s
+[split-openai-semantic] split-00 groups=2 err=False calls=4 3.6s
+[split-openai-semantic] split-01 groups=2 err=False calls=4 4.1s
+[split-openai-semantic] split-02 groups=1 err=False calls=2 1.9s
+[split-openai-semantic] split-03 groups=2 err=False calls=4 3.4s
+[split-openai-semantic] split-04 groups=3 err=False calls=5 4.2s
+[split-openai-semantic] split-05 groups=2 err=False calls=4 4.1s
+[split-openai-semantic] split-06 groups=4 err=False calls=7 6.6s
+[split-openai-semantic] split-07 groups=2 err=False calls=3 2.7s
+[split-openai-semantic] split-08 groups=1 err=False calls=2 2.1s
+[split-openai-semantic] split-09 groups=1 err=False calls=2 1.7s
+[split-openai-semantic] split-10 groups=4 err=False calls=7 5.9s
+[split-openai-semantic] split-11 groups=2 err=False calls=4 4.3s
+[split-openai-semantic] split-12 groups=3 err=False calls=5 4.6s
+[split-openai-semantic] split-13 groups=2 err=False calls=2 1.8s
+[split-openai-semantic] split-14 groups=5 err=False calls=7 5.9s
+[split-openai-semantic] split-15 groups=3 err=False calls=4 3.2s
+[split-openai-semantic] split-16 groups=2 err=False calls=2 1.9s
+[split-openai-semantic] split-17 groups=2 err=False calls=2 1.9s
+[split-openai-semantic] split-18 groups=3 err=False calls=4 4.3s
+[split-openai-semantic] split-19 groups=4 err=False calls=4 3.8s
+[split-openai-semantic] split-20 groups=7 err=False calls=9 7.9s
+[split-openai-semantic] split-21 groups=2 err=False calls=3 2.9s
+[split-openai-semantic] split-22 groups=2 err=False calls=3 2.5s
+[split-openai-semantic] split-23 groups=6 err=False calls=7 7.5s
+[split-openai-semantic] split-24 groups=2 err=False calls=4 3.7s
+[split-openai-semantic] split-25 groups=2 err=False calls=3 3.4s
+[split-openai-semantic] split-26 groups=4 err=False calls=4 3.8s
+[split-openai-semantic] split-27 groups=2 err=False calls=3 2.8s
+[split-openai-semantic] split-28 groups=2 err=False calls=2 1.8s
+[split-openai-semantic] split-29 groups=4 err=False calls=5 4.8s
+[commit-openai] commit-00 calls=2 3.6s err=False msg='refactor(EditProfile): fetch user data on mount to init form fields\n\nR'
+[commit-openai] commit-01 calls=2 2.5s err=False msg='feat(web): add waitlist API docs and privacy details\n\nAdded documentat'
+[commit-openai] commit-02 calls=2 9.6s err=False msg='feat(cli): add headless CLI data source for coding activity\n\nIntroduce'
+[commit-openai] commit-03 calls=2 3.5s err=False msg='feat(sessions-api): add caching and GET endpoint for heatmap card PNGs'
+[commit-openai] commit-04 calls=2 3.3s err=False msg='docs(api): document GET /v1/leaderboard endpoint\n\nAdd detailed documen'
+[commit-openai] commit-05 calls=2 2.6s err=False msg='feat(SignIn): add border and rounded-full to back link\n\nImproved UI/UX'
+[commit-openai] commit-06 calls=2 5.4s err=False msg='feat(speculative): add speculative executor with entropy-based logic\n\n'
+[commit-openai] commit-07 calls=2 2.8s err=False msg='docs(gitignore): add ignore patterns and update README links\n\nAdded ne'
+[commit-openai] commit-08 calls=2 2.8s err=False msg='fix(css): prevent horizontal overflow by hiding overflow-x\n\nAdded CSS '
+[commit-openai] commit-09 calls=2 2.3s err=False msg='refactor(styles): simplify global styles and SVG container\n\nRemoved re'
+[commit-openai] commit-10 calls=2 3.6s err=False msg='feat(sweep): add sweep CLI tool for benchmark analysis\n\nIntroduces a n'
+[commit-openai] commit-11 calls=2 2.9s err=False msg='refactor(components): refactor table headers and cells for alignment\n\n'
+[commit-openai] commit-12 calls=2 3.5s err=False msg='feat(matching): add restore_from_orders to rebuild order book\n\nIntrodu'
+[commit-openai] commit-13 calls=2 3.2s err=False msg='feat(core): add recovery, snapshot, and wal modules with deps\n\nAdded n'
+[commit-openai] commit-14 calls=2 2.7s err=False msg='feat(order): add Order struct and Side enum with validation\n\nIntroduce'
+[commit-openai] commit-15 calls=2 2.9s err=False msg='test(wal-bench): add benchmarking suite for WAL encoding and snapshots'
+[commit-openai] commit-16 calls=2 4.2s err=False msg='feat(loadgen): add Rust load generator example for Ferrox\n\nIntroduces '
+[commit-openai] commit-17 calls=2 3.4s err=False msg='feat(orderbook): add new OrderBook implementation in Rust\n\nIntroduces '
+[commit-openai] commit-18 calls=2 2.5s err=False msg='chore: update .env.example with new env vars\n\nAdded environment variab'
+[commit-openai] commit-19 calls=2 3.1s err=False msg='refactor(tests): use FastAPI dependency overrides for mock LLM\n\nRefact'
+[commit-openai] commit-20 calls=2 2.9s err=False msg='refactor(utils/cost): improve caching with TTL and timestamps\n\nAdded t'
+[commit-openai] commit-21 calls=2 2.1s err=False msg='docs(readme): fix markdown code block closure\n\nAdded a closing triple '
+[commit-openai] commit-22 calls=2 3.0s err=False msg='feat(cli): add git utility module for common git operations\n\nIntroduce'
+[commit-openai] commit-23 calls=2 3.7s err=False msg='refactor(llm, config, docker): update Gemini provider to new Google Ge'
+[commit-openai] commit-24 calls=2 4.0s err=False msg='docs(docs): add notes on error bounds and pod-kill behavior\n\nAdded det'
+[commit-openai] commit-25 calls=2 5.0s err=False msg='feat(cmd,config): add main.go binary with controller, agent, burner mo'
+[commit-openai] commit-26 calls=2 3.1s err=False msg='test(simulation): add zero-error expectation and refine audit query fi'
+[commit-openai] commit-27 calls=2 4.5s err=False msg='test(scheduler-plugin): add performance benchmark for placement latenc'
+[commit-openai] commit-28 calls=2 2.8s err=False msg='docs(testing): enhance TESTING.md with detailed GitOps test info\n\nUpda'
+[commit-openai] commit-29 calls=2 3.2s err=False msg='feat(lifecycle): add TenantDatabase lifecycle phase machine\n\nImplement'
+[auto-openai] auto-00 chars=151 calls=3 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+[auto-openai] auto-01 chars=183 calls=3 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+[auto-openai] auto-02 chars=170 calls=3 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+[auto-openai] auto-03 chars=688 calls=5 done=['commit', 'review', 'pr'] skipped=['split'] err=None
+[auto-openai] auto-04 chars=845 calls=5 done=['commit', 'review', 'pr'] skipped=['split'] err=None
+[auto-openai-nopr] auto-00 chars=151 calls=2 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+[auto-openai-nopr] auto-01 chars=183 calls=2 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+[auto-openai-nopr] auto-02 chars=170 calls=2 done=['commit'] skipped=['split', 'review', 'pr'] err=None
+Task exception was never retrieved
+future: <Task finished name='Task-3119' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-3120' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-3121' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-3122' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Task exception was never retrieved
+future: <Task finished name='Task-3123' coro=<AsyncClient.aclose() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 109, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 794, in call_soon
+    self._check_closed()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 540, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+[auto-openai-nopr] auto-03 chars=688 calls=3 done=['commit', 'review'] skipped=['split', 'pr'] err=None
+[auto-openai-nopr] auto-04 chars=845 calls=3 done=['commit', 'review'] skipped=['split', 'pr'] err=None
+DONE

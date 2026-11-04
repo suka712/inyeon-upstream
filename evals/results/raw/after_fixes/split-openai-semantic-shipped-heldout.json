@@ -1,0 +1,1307 @@
+{
+ "config": "split-openai-semantic-shipped-heldout",
+ "cases": {
+  "split-06": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "config.yaml:0",
+      "internal/config/config.go:0",
+      "internal/config/config.go:1",
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "config.yaml",
+      "internal/config/config.go",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "internal/entropy/entropy.go:0",
+      "internal/entropy/entropy_test.go:0"
+     ],
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/entropy_test.go"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-3",
+     "hunks": [
+      "internal/entropy/window.go:0",
+      "internal/entropy/window_test.go:0"
+     ],
+     "files": [
+      "internal/entropy/window.go",
+      "internal/entropy/window_test.go"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-2",
+     "hunks": [
+      "internal/metrics/noop.go:0",
+      "internal/metrics/prometheus.go:0",
+      "internal/metrics/prometheus.go:1",
+      "internal/metrics/prometheus.go:2",
+      "internal/metrics/prometheus_test.go:0",
+      "internal/metrics/recorder.go:0"
+     ],
+     "files": [
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/prometheus_test.go",
+      "internal/metrics/recorder.go"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Created 4 commit groups using 'semantic' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.859427300001698,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4005816999997478,
+      "input_tokens": 120,
+      "output_tokens": 99,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8451829999976326,
+      "input_tokens": 114,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9363303000027372,
+      "input_tokens": 112,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9543697000008251,
+      "input_tokens": 131,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 17,
+      "chars": 16682,
+      "ok": true,
+      "latency_s": 0.6891324000025634
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-07": {
+   "groups": [
+    {
+     "id": "semantic-3",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-2",
+     "hunks": [
+      "web/src/app/layout.tsx:0",
+      "web/src/app/layout.tsx:1",
+      "web/src/app/layout.tsx:2"
+     ],
+     "files": [
+      "web/src/app/layout.tsx"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "web/src/app/page.tsx:0",
+      "web/src/app/page.tsx:1",
+      "web/src/app/page.tsx:2",
+      "web/src/app/page.tsx:3",
+      "web/src/app/page.tsx:4",
+      "web/src/app/page.tsx:5",
+      "web/src/app/page.tsx:6",
+      "web/src/app/page.tsx:7",
+      "web/src/app/page.tsx:8",
+      "web/src/app/page.tsx:9",
+      "web/src/app/page.tsx:10",
+      "web/src/app/page.tsx:11",
+      "web/src/app/page.tsx:12"
+     ],
+     "files": [
+      "web/src/app/page.tsx"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "web/src/components/Architecture.tsx:0"
+     ],
+     "files": [
+      "web/src/components/Architecture.tsx"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Created 4 commit groups using 'semantic' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.664528400000563,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.002964499999507,
+      "input_tokens": 101,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8884859999998298,
+      "input_tokens": 105,
+      "output_tokens": 54,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9318420000017795,
+      "input_tokens": 105,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2515683000019635,
+      "input_tokens": 106,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 18,
+      "chars": 27444,
+      "ok": true,
+      "latency_s": 0.5823879999989003
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-08": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "benchmarks/internal/sweep/cost.go:0",
+      "benchmarks/internal/sweep/cost_test.go:0",
+      "benchmarks/internal/sweep/replay.go:0",
+      "benchmarks/internal/sweep/replay_test.go:0",
+      "benchmarks/internal/sweep/report.go:0",
+      "benchmarks/internal/sweep/report_test.go:0",
+      "benchmarks/internal/sweep/stats.go:0",
+      "benchmarks/internal/sweep/stats_test.go:0"
+     ],
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Created 1 commit groups using 'semantic' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.4507518999998865,
+   "meter": {
+    "llm_calls": 1,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9931070999991789,
+      "input_tokens": 171,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 8,
+      "chars": 19771,
+      "ok": true,
+      "latency_s": 0.45191329999943264
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-09": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "README.md:1"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "go.mod:0",
+      "go.sum:0"
+     ],
+     "files": [
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Created 2 commit groups using 'semantic' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.9737032000011823,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7315407000023697,
+      "input_tokens": 101,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8840913000021828,
+      "input_tokens": 105,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 3977,
+      "ok": true,
+      "latency_s": 0.3546739000012167
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-10": {
+   "groups": [
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0",
+      "docs/PHASES.md:1",
+      "docs/PHASES.md:2",
+      "docs/PHASES.md:3",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1",
+      "docs/SYSTEM_DESIGN.md:2",
+      "docs/SYSTEM_DESIGN.md:3",
+      "docs/SYSTEM_DESIGN.md:4"
+     ],
+     "files": [
+      "README.md",
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:2",
+      "cmd/gateway/main.go:0",
+      "cmd/gateway/main.go:1"
+     ],
+     "files": [
+      "README.md",
+      "cmd/gateway/main.go"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-2",
+     "hunks": [
+      "config.yaml:0",
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "config.yaml",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Created 3 commit groups using 'semantic' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.4124441999992996,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9557893000019249,
+      "input_tokens": 125,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.040258700002596,
+      "input_tokens": 108,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.925199799999973,
+      "input_tokens": 114,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 20,
+      "chars": 17971,
+      "ok": true,
+      "latency_s": 0.4842666000004101
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-11": {
+   "groups": [
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "docker-compose.yml:0",
+      "docker-compose.yml:1"
+     ],
+     "files": [
+      "docker-compose.yml"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-2",
+     "hunks": [
+      "go.mod:0",
+      "go.sum:0",
+      "go.sum:1"
+     ],
+     "files": [
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/cache/new.go:0",
+      "internal/cache/redis.go:0",
+      "internal/cache/redis_test.go:0",
+      "internal/cache/store.go:0",
+      "internal/cache/store_test.go:0"
+     ],
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/redis_test.go",
+      "internal/cache/store.go",
+      "internal/cache/store_test.go"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-3",
+     "hunks": [
+      "internal/cache/uuid.go:0"
+     ],
+     "files": [
+      "internal/cache/uuid.go"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Created 4 commit groups using 'semantic' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.628648899997643,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9660226999985753,
+      "input_tokens": 102,
+      "output_tokens": 56,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8435561000005691,
+      "input_tokens": 105,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.6287245999992592,
+      "input_tokens": 131,
+      "output_tokens": 86,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.537872500000958,
+      "input_tokens": 104,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 11,
+      "chars": 17019,
+      "ok": true,
+      "latency_s": 0.6449995000002673
+     }
+    ],
+    "call_errors": []
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 39.141814386s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}",
+     "reasoning": [
+      "Parsed diff: 9 files, +618/-2 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 39.141814386s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '39s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.4317356999999902,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 11,
+        "chars": 17019,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.42748260000007576
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.559856811s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+     "reasoning": [
+      "Parsed diff: 9 files, +618/-2 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.559856811s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.5511788000003435,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 11,
+        "chars": 17019,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.5468886000016937
+       }
+      ],
+      "call_errors": []
+     }
+    }
+   ]
+  },
+  "split-12": {
+   "groups": [
+    {
+     "id": "semantic-2",
+     "hunks": [
+      "Cargo.lock:0",
+      "Cargo.lock:1"
+     ],
+     "files": [
+      "Cargo.lock"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "Cargo.toml:0",
+      "src/main.rs:0"
+     ],
+     "files": [
+      "Cargo.toml",
+      "src/main.rs"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-3",
+     "hunks": [
+      "README.md:0",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1"
+     ],
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "src/book.rs:0",
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/order.rs:0",
+      "src/order.rs:1",
+      "src/order.rs:2",
+      "src/order.rs:3"
+     ],
+     "files": [
+      "src/book.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Created 4 commit groups using 'semantic' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.144769099999394,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7913161999967997,
+      "input_tokens": 101,
+      "output_tokens": 56,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8192220999990241,
+      "input_tokens": 107,
+      "output_tokens": 63,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.7407596000011836,
+      "input_tokens": 109,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1281990999996196,
+      "input_tokens": 113,
+      "output_tokens": 102,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 19,
+      "chars": 8038,
+      "ok": true,
+      "latency_s": 0.5400616000006266
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-13": {
+   "groups": [
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Created 2 commit groups using 'semantic' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.0167909000010695,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.829598199998145,
+      "input_tokens": 101,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.85887410000214,
+      "input_tokens": 102,
+      "output_tokens": 56,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 2,
+      "chars": 720,
+      "ok": true,
+      "latency_s": 0.3254701000005298
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-14": {
+   "groups": [],
+   "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h14m12.138752948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44052s'}]}}",
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h14m12.138752948s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44052s'}]}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.303956300002028,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 20,
+      "chars": 11105,
+      "ok": false,
+      "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+      "latency_s": 0.3001820999998017
+     }
+    ],
+    "call_errors": []
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h20m29.244969831s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44429s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h20m29.244969831s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44429s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.3564430000005814,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.3524168000003556
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h20m13.961150075s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44413s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h20m13.961150075s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44413s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.24654650000229594,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.2432213000029151
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h19m43.648544139s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44383s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h19m43.648544139s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44383s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.29374639999878127,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.2902654000026814
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h18m43.306338894s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44323s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h18m43.306338894s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44323s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.31149700000241864,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.30797720000191475
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h17m12.934495162s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44232s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h17m12.934495162s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44232s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.43171390000134124,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.42684259999805363
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h15m42.5445399s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44142s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h15m42.5445399s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44142s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.3950760000006994,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 20,
+        "chars": 11105,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.39126870000109193
+       }
+      ],
+      "call_errors": []
+     }
+    }
+   ]
+  },
+  "split-15": {
+   "groups": [
+    {
+     "id": "semantic-2",
+     "hunks": [
+      ".gitignore:0"
+     ],
+     "files": [
+      ".gitignore"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-3",
+     "hunks": [
+      "Cargo.toml:0"
+     ],
+     "files": [
+      "Cargo.toml"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": null
+    },
+    {
+     "id": "semantic-1",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Created 4 commit groups using 'semantic' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.447148800001742,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.7412535000003118,
+      "input_tokens": 102,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8001514999996289,
+      "input_tokens": 102,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2821343999967212,
+      "input_tokens": 109,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1412055000000692,
+      "input_tokens": 102,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 20277,
+      "ok": true,
+      "latency_s": 0.45509390000006533
+     }
+    ],
+    "call_errors": []
+   }
+  },
+  "split-16": {
+   "groups": [],
+   "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h6m13.059159911s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43573s'}]}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h6m13.059159911s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43573s'}]}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.3511942999975872,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 30,
+      "chars": 11799,
+      "ok": false,
+      "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+      "latency_s": 0.34683330000189017
+     }
+    ],
+    "call_errors": []
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h12m30.364917048s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43950s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h12m30.364917048s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43950s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.2278803000008338,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.22436170000219136
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h12m15.083733888s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43935s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h12m15.083733888s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43935s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.35948740000094404,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.35546099999919534
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h11m44.70755942s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43904s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h11m44.70755942s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43904s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.27727690000028815,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.27229309999893303
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h10m44.273513597s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43844s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h10m44.273513597s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43844s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.5240850999980466,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.5188918000021658
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h9m13.839591817s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43753s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h9m13.839591817s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43753s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.40215899999748217,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.3980230999986816
+       }
+      ],
+      "call_errors": []
+     }
+    },
+    {
+     "groups": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h7m43.496299482s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43663s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 1000, model: gemini-embedding-1.0, description: Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 12h7m43.496299482s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '1000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '43663s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.32882360000076005,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 30,
+        "chars": 11799,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.32511710000107996
+       }
+      ],
+      "call_errors": []
+     }
+    }
+   ]
+  },
+  "split-17": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/PHASES.md"
+     ],
+     "suggested_type": null
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Created 1 commit groups using 'semantic' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.8672903000006045,
+   "meter": {
+    "llm_calls": 1,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4095348000009835,
+      "input_tokens": 109,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 13745,
+      "ok": true,
+      "latency_s": 0.453453800000716
+     }
+    ],
+    "call_errors": []
+   }
+  }
+ },
+ "retriever": "CodeRetriever(embeddings=EmbeddingService(model=gemini-embedding-001))",
+ "semantic_default_threshold": 0.75
+}

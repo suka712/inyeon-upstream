@@ -1,0 +1,1823 @@
+{
+ "config": "split-openai-hybrid-inject-te004",
+ "settings": {
+  "eval": "split",
+  "provider": "openai",
+  "strategy": "hybrid",
+  "embedding": "text-embedding-004"
+ },
+ "cases": {
+  "split-00": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +252/-6 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.1371913000002678,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 5092,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1321486000015284
+     }
+    ]
+   }
+  },
+  "split-01": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 7 files, +409/-7 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.10384649999832618,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 9,
+      "chars": 13836,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09851709999929881
+     }
+    ]
+   }
+  },
+  "split-02": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +201/-9 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09523839999746997,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 10108,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09101440000085859
+     }
+    ]
+   }
+  },
+  "split-03": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "ARCHITECTURE_DECISIONS.md:0",
+      "README.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(auto-detect): update architecture and system design docs\n\n- Revised ARCHITECTURE_DECISIONS.md with latest decisions\n- Improved SYSTEM_DESIGN.md for clarity and completeness\n- Updated README.md to reflect new documentation structure",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "hunk_count": 3,
+     "commit_message": "feat(apps/web): update App.tsx and index.css for new UI features\n\n- Enhance App.tsx with new component logic\n- Improve styling in index.css for better user experience\n\nThese changes introduce new UI features and styling improvements to the web app.",
+     "commit_type": "feat",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +22/-18 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.4509460000008403,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6445271000011417,
+      "input_tokens": 356,
+      "output_tokens": 29,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7500392000001739,
+      "input_tokens": 282,
+      "output_tokens": 21,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9636970999999903,
+      "input_tokens": 115,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.089263399997435,
+      "input_tokens": 109,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-04": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "CHANGELOG.md:0"
+     ],
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-apps-api",
+     "hunks": [
+      "apps/api/src/lib/teams.ts:0",
+      "apps/api/src/routes/teams.ts:0"
+     ],
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/pages/Changelog.tsx:0",
+      "apps/web/src/pages/Teams.tsx:0",
+      "apps/web/src/pages/Teams.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update changelog with recent changes\n\nUpdated CHANGELOG.md to reflect the latest modifications and improvements.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-api",
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(apps/api): correct team handling in API routes\n\nResolved issues in team-related logic within the API routes and library files to ensure proper data processing and response handling.",
+     "commit_type": "fix",
+     "scope": "apps/api"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(apps/web): update documentation pages content\n\nRefreshed content and improved clarity on Changelog and Teams pages.",
+     "commit_type": "docs",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +37/-3 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.010462700000062,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5449759000002814,
+      "input_tokens": 228,
+      "output_tokens": 24,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6975554000018747,
+      "input_tokens": 268,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9201456999981019,
+      "input_tokens": 100,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9873852999990049,
+      "input_tokens": 112,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8560528000016348,
+      "input_tokens": 115,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-05": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +83/-37 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16294550000020536,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 8796,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1594559000004665
+     }
+    ]
+   }
+  },
+  "split-06": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.26795320000019274,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 4419,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.261697699999786
+     }
+    ]
+   }
+  },
+  "split-07": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16515529999742284,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 17,
+      "chars": 26851,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.15843169999789097
+     }
+    ]
+   }
+  },
+  "split-08": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16730370000004768,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 19771,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.16141480000078445
+     }
+    ]
+   }
+  },
+  "split-09": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.23714590000236058,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 3977,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.23413419999997132
+     }
+    ]
+   }
+  },
+  "split-10": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.19662919999973383,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 3945,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.19097749999855296
+     }
+    ]
+   }
+  },
+  "split-11": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16648050000003423,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 3378,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1616154999974242
+     }
+    ]
+   }
+  },
+  "split-12": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16552149999915855,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 915,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1617045999992115
+     }
+    ]
+   }
+  },
+  "split-13": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs\n\nGeneral maintenance and minor improvements in src/main.rs.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.2608491999999387,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4082105000015872,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8498998000031861,
+      "input_tokens": 98,
+      "output_tokens": 52,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-14": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.2207406000015908,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 2986,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.21672680000119726
+     }
+    ]
+   }
+  },
+  "split-15": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".gitignore:0",
+      "Cargo.toml:0",
+      "README.md:0"
+     ],
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update project configuration and docs\n\n- Modify .gitignore to improve ignored files\n- Update Cargo.toml dependencies or metadata\n- Revise README.md for clarity or accuracy",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update system design documentation\n\nUpdated the SYSTEM_DESIGN.md file to reflect recent architectural changes and improvements.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs with maintenance changes\n\nPerformed routine maintenance and minor updates in src/main.rs to improve codebase hygiene.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.951445999999123,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6834756999996898,
+      "input_tokens": 230,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1823321999982,
+      "input_tokens": 109,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8198788999980025,
+      "input_tokens": 101,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.022401499998523,
+      "input_tokens": 98,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-16": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16663109999717562,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 29,
+      "chars": 9847,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.16117669999948703
+     }
+    ]
+   }
+  },
+  "split-17": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update PHASES.md documentation\n\nUpdated the PHASES.md file to improve clarity and accuracy of the project phases documentation.",
+     "commit_type": "chore",
+     "scope": "docs"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.3443090000000666,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2895910000006552,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0510278000001563,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-18": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +70/-36 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09467919999951846,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 4969,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09108199999900535
+     }
+    ]
+   }
+  },
+  "split-19": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/config.py:0"
+     ],
+     "files": [
+      "backend/core/config.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0",
+      "backend/routers/agent.py:1",
+      "backend/routers/agent.py:2"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/__init__.py:0"
+     ],
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve environment setup and dependencies installation, ensuring smoother builds and consistency across deployments.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/config.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update configuration settings\n\nRefined configuration parameters in backend/core/config.py to improve maintainability and clarity.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactor and clean up the agent.py router to improve maintainability and prepare for upcoming features.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/services): update llm service initialization\n\nRefactored the __init__.py in backend/services/llm to improve module setup and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/services"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +54/-17 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 3.7955584000010276,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8361237999997684,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9002093000017339,
+      "input_tokens": 100,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1469141999987187,
+      "input_tokens": 103,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9086917000022368,
+      "input_tokens": 105,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-20": {
+   "groups": [
+    {
+     "id": "dir-backend-agents",
+     "hunks": [
+      "backend/agents/git_agent.py:0"
+     ],
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend",
+     "hunks": [
+      "backend/main.py:0",
+      "backend/main.py:1"
+     ],
+     "files": [
+      "backend/main.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/factory.py:0",
+      "backend/services/llm/gemini.py:0"
+     ],
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "dir-cli",
+     "hunks": [
+      "cli/api_client.py:0",
+      "cli/main.py:0",
+      "cli/main.py:1"
+     ],
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "dir-cli-commands",
+     "hunks": [
+      "cli/commands/agent.py:0"
+     ],
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-root",
+     "hunks": [
+      "pyproject.toml:0"
+     ],
+     "files": [
+      "pyproject.toml"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-backend-agents",
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/agents): update git_agent.py for maintenance\n\nPerformed general maintenance and minor improvements in git_agent.py to enhance code quality and readability.",
+     "commit_type": "chore",
+     "scope": "backend/agents"
+    },
+    {
+     "group_id": "dir-backend",
+     "files": [
+      "backend/main.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(backend): update backend main.py\n\nGeneral maintenance and minor improvements in backend/main.py.",
+     "commit_type": "chore",
+     "scope": "backend"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactored and cleaned up the agent router code to improve maintainability and readability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(backend/services): add Gemini LLM integration\n\n- Implement Gemini model support in llm factory\n- Add Gemini-specific logic and configuration\n\nThis enhancement enables the backend to utilize Gemini LLM for improved language model capabilities.",
+     "commit_type": "feat",
+     "scope": "backend/services"
+    },
+    {
+     "group_id": "dir-cli",
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "refactor(cli): improve code structure in api_client and main\n\nRefactored the code in cli/api_client.py and cli/main.py to enhance readability and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "cli"
+    },
+    {
+     "group_id": "dir-cli-commands",
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(cli/commands): update agent.py for maintenance\n\nPerformed routine updates and cleanup in the agent.py file to improve code maintainability and prepare for future enhancements.",
+     "commit_type": "chore",
+     "scope": "cli/commands"
+    },
+    {
+     "group_id": "dir-root",
+     "files": [
+      "pyproject.toml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update pyproject.toml configuration\n\nUpdated the pyproject.toml file to improve or adjust project settings and dependencies as part of routine maintenance.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +403/-5 lines",
+    "Created 7 commit groups using 'hybrid' strategy",
+    "Generated 7 commit messages"
+   ],
+   "wall_s": 8.258870900001057,
+   "meter": {
+    "llm_calls": 9,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9346081000003323,
+      "input_tokens": 238,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5594223000007332,
+      "input_tokens": 206,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9306588000035845,
+      "input_tokens": 103,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9088268000014068,
+      "input_tokens": 98,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9133213000022806,
+      "input_tokens": 103,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.185542200000782,
+      "input_tokens": 115,
+      "output_tokens": 80,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.071830000000773,
+      "input_tokens": 105,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8998237999985577,
+      "input_tokens": 103,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8484669999998005,
+      "input_tokens": 101,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-21": {
+   "groups": [
+    {
+     "id": "dir-tests-backend",
+     "hunks": [
+      "tests/backend/test_analyze.py:0",
+      "tests/backend/test_commit.py:0"
+     ],
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "dir-tests-cli",
+     "hunks": [
+      "tests/cli/test_api_client.py:0"
+     ],
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-tests-backend",
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(tests/backend): add tests for analyze and commit modules\n\nAdded new test cases in test_analyze.py and test_commit.py to improve coverage and verify backend functionality.",
+     "commit_type": "test",
+     "scope": "tests/backend"
+    },
+    {
+     "group_id": "dir-tests-cli",
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(tests/cli): update test_api_client.py for CLI tests\n\nRefined and updated the API client tests in the CLI test suite to improve test coverage and maintainability.",
+     "commit_type": "chore",
+     "scope": "tests/cli"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +69/-8 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.434408600001916,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9423438999983773,
+      "input_tokens": 213,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3607807999978832,
+      "input_tokens": 109,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1273963000021467,
+      "input_tokens": 104,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-22": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".railwayignore:0",
+      "Dockerfile:0"
+     ],
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/dependencies.py:0"
+     ],
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update Dockerfile and .railwayignore\n\n- Modified Dockerfile for improved build process\n- Updated .railwayignore to exclude unnecessary files",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update dependencies management\n\nRefactor dependencies.py to improve package handling and version control.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +26/-5 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.5202406000025803,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6909607999987202,
+      "input_tokens": 260,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0095356999991054,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.816907500000525,
+      "input_tokens": 101,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-23": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 15 files, +150/-96 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.26660749999791733,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 6165,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.261356999999407
+     }
+    ]
+   }
+  },
+  "split-24": {
+   "groups": [
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/DATA_MODEL.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0"
+     ],
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs): update API_REFERENCE.md and DATA_MODEL.md\n\n- Revised API_REFERENCE.md with latest endpoints and parameters\n- Updated DATA_MODEL.md to reflect current data structures\n\nThese changes improve documentation accuracy and clarity.",
+     "commit_type": "docs",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(docs/decisions): add new ADRs on platform and audit service\n\nAdd three Architecture Decision Records:\n- 0012: Platform app delivers every module CRD\n- 0017: Audit publishing never blocks a reconcile\n- 0018: The audit service alone computes the hash chain\n\nThese documents clarify design decisions related to platform module delivery and audit service responsibilities.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +122/-12 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.258394499996939,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5580776999995578,
+      "input_tokens": 210,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0717839999997523,
+      "input_tokens": 333,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1071899000016856,
+      "input_tokens": 106,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.517579499999556,
+      "input_tokens": 158,
+      "output_tokens": 119,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-25": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      ".github/workflows/ci.yaml:1",
+      ".github/workflows/ci.yaml:2"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0"
+     ],
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nModify the CI workflow settings in .github/workflows/ci.yaml to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs/decisions): add new workload and node economics docs\n\n- Add 0009-workload-class-label-gates-spot-placement.md\n- Add 0010-node-economics-as-labels-with-pluggable-price-sources.md\n\nThese documents cover workload class label gates for spot placement and node economics using labels with pluggable price sources.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +79/-3 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.1339809999990393,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9803061999991769,
+      "input_tokens": 258,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.819052399998327,
+      "input_tokens": 105,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3310243999985687,
+      "input_tokens": 139,
+      "output_tokens": 113,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-26": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-e2e",
+     "hunks": [
+      "e2e/phase2_test.go:0"
+     ],
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web-scripts",
+     "hunks": [
+      "web/scripts/build-lattice.ts:0",
+      "web/scripts/build-lattice.ts:1",
+      "web/scripts/build-lattice.ts:2"
+     ],
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web",
+     "hunks": [
+      "web/vercel.json:0"
+     ],
+     "files": [
+      "web/vercel.json"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nUpdated the CI workflow in .github/workflows/ci.yaml to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-e2e",
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(e2e): update phase2 e2e test file\n\nRefactor or update the e2e/phase2_test.go to improve test setup or maintenance.",
+     "commit_type": "chore",
+     "scope": "e2e"
+    },
+    {
+     "group_id": "dir-web-scripts",
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(web/scripts): update build-lattice script\n\nUpdate the build-lattice.ts script to improve build process or maintenance.",
+     "commit_type": "chore",
+     "scope": "web/scripts"
+    },
+    {
+     "group_id": "dir-web",
+     "files": [
+      "web/vercel.json"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(web): update vercel.json configuration\n\nUpdate the Vercel deployment configuration file to improve deployment settings and environment setup.",
+     "commit_type": "chore",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +30/-19 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 3.7497135999983584,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8502388999986579,
+      "input_tokens": 105,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9502517000000807,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8193799000000581,
+      "input_tokens": 102,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1268320999988646,
+      "input_tokens": 99,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-27": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 6 files, +58/-22 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.1625276999984635,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 16006,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1587961000004725
+     }
+    ]
+   }
+  },
+  "split-28": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +133/-40 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.14051870000184863,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 7,
+      "chars": 13536,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.13600049999877228
+     }
+    ]
+   }
+  },
+  "split-29": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +25/-14 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.19069569999919622,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 7,
+      "chars": 3742,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1857860999989498
+     }
+    ]
+   }
+  }
+ },
+ "retriever": "injected EmbeddingService(model=text-embedding-004)"
+}

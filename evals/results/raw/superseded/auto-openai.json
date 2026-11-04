@@ -1,0 +1,232 @@
+{
+ "config": "auto-openai",
+ "settings": {
+  "eval": "auto",
+  "provider": "openai",
+  "skip_pr": false
+ },
+ "cases": {
+  "auto-00": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.2732819999982894,
+   "diff_chars": 151,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2343188999984704,
+      "input_tokens": 182,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.023909999999887,
+      "input_tokens": 221,
+      "output_tokens": 86,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-01": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.5674820999993244,
+   "diff_chars": 183,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4128937999994378,
+      "input_tokens": 195,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1411456999994698,
+      "input_tokens": 241,
+      "output_tokens": 112,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-02": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 1.989493400000356,
+   "diff_chars": 170,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0088360000008834,
+      "input_tokens": 191,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9652189999978873,
+      "input_tokens": 235,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-03": {
+   "steps_completed": [
+    "commit",
+    "review",
+    "pr"
+   ],
+   "steps_skipped": [
+    "split"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": true,
+   "error": null,
+   "wall_s": 4.922216599999956,
+   "diff_chars": 688,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2188368999995873,
+      "input_tokens": 281,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1081363999983296,
+      "input_tokens": 332,
+      "output_tokens": 106,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2690306999975292,
+      "input_tokens": 262,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3062839999984135,
+      "input_tokens": 317,
+      "output_tokens": 154,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "auto-04": {
+   "steps_completed": [
+    "commit",
+    "review",
+    "pr"
+   ],
+   "steps_skipped": [
+    "split"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": true,
+   "error": null,
+   "wall_s": 5.340755499997613,
+   "diff_chars": 845,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1385778000003484,
+      "input_tokens": 345,
+      "output_tokens": 90,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1518418000014208,
+      "input_tokens": 396,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0303506999989622,
+      "input_tokens": 326,
+      "output_tokens": 122,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.001373800001602,
+      "input_tokens": 349,
+      "output_tokens": 206,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  }
+ }
+}

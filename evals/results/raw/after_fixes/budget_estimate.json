@@ -1,0 +1,18 @@
+{
+ "calibration_repos": [
+  "commma",
+  "inyeon",
+  "kiln"
+ ],
+ "heldout_repos": [
+  "draft-thinker",
+  "ferrox"
+ ],
+ "gemini_embedding_upper_bound_usd": 0.1103,
+ "openai_auto_upper_bound_usd": 0.108,
+ "openai_live_heldout_split_upper_bound_usd": 0.265,
+ "total_upper_bound_usd": 0.4833,
+ "expected_from_earlier_runs_usd": 0.1278,
+ "hard_cap_usd": 0.5,
+ "stop_at_usd": 0.45
+}

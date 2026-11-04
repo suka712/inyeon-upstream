@@ -1,0 +1,3617 @@
+{
+ "config": "split-openai-semantic",
+ "settings": {
+  "eval": "split",
+  "provider": "openai",
+  "strategy": "semantic",
+  "embedding": null
+ },
+ "cases": {
+  "split-00": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "CONTRIBUTING.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "ROADMAP.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-apps-api",
+     "hunks": [
+      "apps/api/.env.example:0",
+      "apps/api/test/recap/compose.test.ts:0",
+      "apps/api/test/recap/prose.test.ts:0",
+      "apps/api/test/recap/week.test.ts:0"
+     ],
+     "files": [
+      "apps/api/.env.example",
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update CONTRIBUTING, METRICS, ROADMAP, and SYSTEM_DESIGN\n\nUpdated multiple documentation files to improve clarity and provide up-to-date information on contributing guidelines, metrics tracking, project roadmap, and system design.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-api",
+     "files": [
+      "apps/api/.env.example",
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(apps/api): update env example and recap tests\n\n- Updated .env.example with latest environment variables\n- Added/modified tests in recap suite (compose, prose, week)\n\nThese changes ensure the environment setup is current and recap tests are up to date.",
+     "commit_type": "chore",
+     "scope": "apps/api"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +252/-6 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.6066933999973116,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8264686999973492,
+      "input_tokens": 377,
+      "output_tokens": 36,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8366964000015287,
+      "input_tokens": 432,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9263948000007076,
+      "input_tokens": 117,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0110749999985273,
+      "input_tokens": 136,
+      "output_tokens": 92,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-01": {
+   "groups": [
+    {
+     "id": "dir-apps-api",
+     "hunks": [
+      "apps/api/src/aggregate/run.ts:0",
+      "apps/api/src/aggregate/run.ts:1",
+      "apps/api/src/aggregate/run.ts:2",
+      "apps/api/src/aggregate/run.ts:3",
+      "apps/api/src/aggregate/run.ts:4",
+      "apps/api/src/aggregate/run.ts:5",
+      "apps/api/test/aggregate/scanner.integration.test.ts:0",
+      "apps/api/test/helpers/scanner.ts:0",
+      "apps/api/test/routes/integration.test.ts:0"
+     ],
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "dir-packages-db",
+     "hunks": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql:0",
+      "packages/db/src/migrations/meta/_journal.json:0",
+      "packages/db/src/schema.ts:0",
+      "packages/db/src/schema.ts:1",
+      "packages/db/src/schema.ts:2"
+     ],
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql",
+      "packages/db/src/migrations/meta/_journal.json",
+      "packages/db/src/schema.ts"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-apps-api",
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "hunk_count": 9,
+     "commit_message": "refactor(apps/api): improve structure in aggregate and test files\n\nRefactored code in run.ts and related integration and helper test files to improve readability and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "apps/api"
+    },
+    {
+     "group_id": "dir-packages-db",
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql",
+      "packages/db/src/migrations/meta/_journal.json",
+      "packages/db/src/schema.ts"
+     ],
+     "hunk_count": 5,
+     "commit_message": "feat(packages/db): add leaderboard outbox migration\n\n- Added new migration 0012_leaderboard_outbox.sql to support leaderboard outbox functionality.\n- Updated migration journal to include the new migration.\n- Modified schema.ts to reflect changes related to the leaderboard outbox.\n\nThis update introduces the necessary database changes to support the leaderboard outbox feature.",
+     "commit_type": "feat",
+     "scope": "packages/db"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +409/-7 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.084262200001831,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8755646999998135,
+      "input_tokens": 409,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0345409000001382,
+      "input_tokens": 295,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0389914000006684,
+      "input_tokens": 135,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1305327999980364,
+      "input_tokens": 128,
+      "output_tokens": 108,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-02": {
+   "groups": [
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/App.tsx:1",
+      "apps/web/src/App.tsx:2",
+      "apps/web/src/lib/api.ts:0",
+      "apps/web/src/lib/push.ts:0",
+      "apps/web/src/lib/push.ts:1",
+      "apps/web/src/pages/EditProfile.tsx:0",
+      "apps/web/src/pages/EditProfile.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "hunk_count": 8,
+     "commit_message": "feat(apps/web): add new profile editing and push API features\n\n- Implement profile editing functionality in EditProfile.tsx\n- Update API methods in lib/api.ts for enhanced data handling\n- Add push notification support in lib/push.ts\n- Modify App.tsx to integrate new features and improve user flow",
+     "commit_type": "feat",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +201/-9 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.9142706999991788,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8534521000001405,
+      "input_tokens": 365,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0561352000004263,
+      "input_tokens": 129,
+      "output_tokens": 100,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-03": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "ARCHITECTURE_DECISIONS.md:0",
+      "README.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(auto-detect): update architecture and system design docs\n\n- Revised ARCHITECTURE_DECISIONS.md with latest decisions\n- Updated SYSTEM_DESIGN.md to reflect current design\n- Improved README.md for clarity and completeness",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "hunk_count": 3,
+     "commit_message": "feat(apps/web): update App.tsx and index.css with new features\n\n- Modified App.tsx to include new UI components and logic\n- Updated index.css with new styles to support the changes\n\nThese updates enhance the user interface and improve overall user experience.",
+     "commit_type": "feat",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +22/-18 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.3731385999999475,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7292682000006607,
+      "input_tokens": 356,
+      "output_tokens": 29,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7587636000025668,
+      "input_tokens": 282,
+      "output_tokens": 21,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8865240999984962,
+      "input_tokens": 115,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9949708999993163,
+      "input_tokens": 109,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-04": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "CHANGELOG.md:0"
+     ],
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-apps-api",
+     "hunks": [
+      "apps/api/src/lib/teams.ts:0",
+      "apps/api/src/routes/teams.ts:0"
+     ],
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/pages/Changelog.tsx:0",
+      "apps/web/src/pages/Teams.tsx:0",
+      "apps/web/src/pages/Teams.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update changelog with recent changes\n\nUpdated the CHANGELOG.md to reflect the latest modifications and improvements in the project.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-api",
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(apps/api): correct team data handling in API routes\n\nResolved issues in apps/api/src/lib/teams.ts and apps/api/src/routes/teams.ts where team data was improperly processed, leading to errors in API responses. This fix ensures accurate data retrieval and response formatting.",
+     "commit_type": "fix",
+     "scope": "apps/api"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(apps/web): update documentation pages Changelog and Teams\n\nImproved and clarified content in the Changelog and Teams pages to enhance user understanding and navigation.",
+     "commit_type": "docs",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +37/-3 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.180899399998452,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5492057000010391,
+      "input_tokens": 228,
+      "output_tokens": 24,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6603028000026825,
+      "input_tokens": 268,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9752857999992557,
+      "input_tokens": 100,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.070749499998783,
+      "input_tokens": 112,
+      "output_tokens": 91,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9219654000007722,
+      "input_tokens": 115,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-05": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "CHANGELOG.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "METRICS.md:2",
+      "METRICS.md:3"
+     ],
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1",
+      "apps/web/src/index.css:2",
+      "apps/web/src/lib/changelog.ts:0"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update CHANGELOG.md and METRICS.md\n\n- Updated CHANGELOG.md with recent changes\n- Revised METRICS.md for clarity and accuracy",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "hunk_count": 5,
+     "commit_message": "feat(apps/web): add changelog integration and style updates\n\n- Implement changelog functionality in lib/changelog.ts\n- Update App.tsx to incorporate changelog features\n- Modify index.css for improved styling\n\nThis enhances the web app by providing changelog visibility and refined UI.",
+     "commit_type": "feat",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +83/-37 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.057337500002177,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9801754000000074,
+      "input_tokens": 213,
+      "output_tokens": 17,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0245990000003076,
+      "input_tokens": 317,
+      "output_tokens": 38,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9226772000001802,
+      "input_tokens": 106,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1255770999996457,
+      "input_tokens": 118,
+      "output_tokens": 94,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-06": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "config.yaml:0"
+     ],
+     "files": [
+      "config.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-internal-config",
+     "hunks": [
+      "internal/config/config.go:0",
+      "internal/config/config.go:1",
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "internal/config/config.go",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "dir-internal-entropy",
+     "hunks": [
+      "internal/entropy/entropy.go:0",
+      "internal/entropy/entropy_test.go:0",
+      "internal/entropy/window.go:0",
+      "internal/entropy/window_test.go:0"
+     ],
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window.go",
+      "internal/entropy/window_test.go"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "dir-internal-metrics",
+     "hunks": [
+      "internal/metrics/noop.go:0",
+      "internal/metrics/prometheus.go:0",
+      "internal/metrics/prometheus.go:1",
+      "internal/metrics/prometheus.go:2",
+      "internal/metrics/prometheus_test.go:0",
+      "internal/metrics/recorder.go:0"
+     ],
+     "files": [
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/prometheus_test.go",
+      "internal/metrics/recorder.go"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "config.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update config.yaml settings\n\nUpdated configuration parameters in config.yaml to improve auto-detection behavior.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-internal-config",
+     "files": [
+      "internal/config/config.go",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "refactor(internal/config): refactor config loading and tests\n\nImproved the configuration loading logic and updated related tests for better clarity and maintainability in internal/config package.",
+     "commit_type": "refactor",
+     "scope": "internal/config"
+    },
+    {
+     "group_id": "dir-internal-entropy",
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window.go",
+      "internal/entropy/window_test.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "feat(internal/entropy): add new entropy calculation methods\n\nIntroduced additional entropy calculation functions and corresponding tests to improve randomness analysis within the internal/entropy package. Updated windowing logic to support enhanced entropy metrics.",
+     "commit_type": "feat",
+     "scope": "internal/entropy"
+    },
+    {
+     "group_id": "dir-internal-metrics",
+     "files": [
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/prometheus_test.go",
+      "internal/metrics/recorder.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "refactor(internal/metrics): improve code clarity and structure\n\nRefactored the metrics package including noop.go, prometheus.go, prometheus_test.go, and recorder.go to enhance readability and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "internal/metrics"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 6.611634100001538,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7692701999985729,
+      "input_tokens": 338,
+      "output_tokens": 35,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9263747000004514,
+      "input_tokens": 457,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8155520000000251,
+      "input_tokens": 391,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0218620999985433,
+      "input_tokens": 99,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0260272000014083,
+      "input_tokens": 114,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.97110690000045,
+      "input_tokens": 127,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0751845999984653,
+      "input_tokens": 130,
+      "output_tokens": 84,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-07": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web-src",
+     "hunks": [
+      "web/src/app/layout.tsx:0",
+      "web/src/app/layout.tsx:1",
+      "web/src/app/layout.tsx:2",
+      "web/src/app/page.tsx:0",
+      "web/src/app/page.tsx:1",
+      "web/src/app/page.tsx:2",
+      "web/src/app/page.tsx:3",
+      "web/src/app/page.tsx:4",
+      "web/src/app/page.tsx:5",
+      "web/src/app/page.tsx:6",
+      "web/src/app/page.tsx:7",
+      "web/src/app/page.tsx:8",
+      "web/src/app/page.tsx:9",
+      "web/src/app/page.tsx:10",
+      "web/src/app/page.tsx:11",
+      "web/src/app/page.tsx:12",
+      "web/src/components/Architecture.tsx:0"
+     ],
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include information about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-web-src",
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "hunk_count": 17,
+     "commit_message": "refactor(web/src): update layout, page, and architecture components\n\nImproved code structure and readability in layout.tsx, page.tsx, and Architecture.tsx without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "web/src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.722149500001251,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9740075000008801,
+      "input_tokens": 336,
+      "output_tokens": 37,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.818166500001098,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9226816000009421,
+      "input_tokens": 120,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-08": {
+   "groups": [
+    {
+     "id": "dir-benchmarks-internal",
+     "hunks": [
+      "benchmarks/internal/sweep/cost.go:0",
+      "benchmarks/internal/sweep/cost_test.go:0",
+      "benchmarks/internal/sweep/replay.go:0",
+      "benchmarks/internal/sweep/replay_test.go:0",
+      "benchmarks/internal/sweep/report.go:0",
+      "benchmarks/internal/sweep/report_test.go:0",
+      "benchmarks/internal/sweep/stats.go:0",
+      "benchmarks/internal/sweep/stats_test.go:0"
+     ],
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-benchmarks-internal",
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "hunk_count": 8,
+     "commit_message": "feat(benchmarks/internal): add sweep benchmarking features and tests\n\nImplemented new functionalities in sweep benchmarking including cost calculation, replay mechanisms, reporting, and statistics gathering. Corresponding tests were added to ensure coverage and correctness.",
+     "commit_type": "feat",
+     "scope": "benchmarks/internal"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 2.1123626999979024,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1616109999995388,
+      "input_tokens": 821,
+      "output_tokens": 116,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9426843000001099,
+      "input_tokens": 168,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-09": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "go.mod:0",
+      "go.sum:0"
+     ],
+     "files": [
+      "README.md",
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md",
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 4,
+     "commit_message": "docs(auto-detect): update README.md, go.mod, and go.sum\n\nUpdated documentation and module dependencies to reflect recent changes and ensure consistency.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.6956666999976733,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8738115000014659,
+      "input_tokens": 390,
+      "output_tokens": 23,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8188680999992357,
+      "input_tokens": 107,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-10": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "config.yaml:0"
+     ],
+     "files": [
+      "README.md",
+      "config.yaml"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-cmd-gateway",
+     "hunks": [
+      "cmd/gateway/main.go:0",
+      "cmd/gateway/main.go:1"
+     ],
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0",
+      "docs/PHASES.md:1",
+      "docs/PHASES.md:2",
+      "docs/PHASES.md:3",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1",
+      "docs/SYSTEM_DESIGN.md:2",
+      "docs/SYSTEM_DESIGN.md:3",
+      "docs/SYSTEM_DESIGN.md:4"
+     ],
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-internal-config",
+     "hunks": [
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md",
+      "config.yaml"
+     ],
+     "hunk_count": 4,
+     "commit_message": "docs(auto-detect): update README and config documentation\n\n- Revised README.md to improve auto-detect feature explanation\n- Updated config.yaml with latest auto-detect settings\n\nThese changes enhance clarity and usability of the auto-detect configuration.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-cmd-gateway",
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(cmd/gateway): update main.go for maintenance\n\nPerformed routine updates and cleanup in main.go to improve code maintainability and prepare for upcoming features.",
+     "commit_type": "chore",
+     "scope": "cmd/gateway"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 10,
+     "commit_message": "docs(docs): update METRICS, PHASES, and SYSTEM_DESIGN\n\nUpdated the documentation files METRICS.md, PHASES.md, and SYSTEM_DESIGN.md to improve clarity and accuracy.",
+     "commit_type": "docs",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-internal-config",
+     "files": [
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "test(internal/config): add tests for config loading functionality\n\nAdd new test cases in config_test.go to cover various scenarios of the config loading process implemented in load.go. This improves test coverage and ensures reliability of configuration handling.",
+     "commit_type": "test",
+     "scope": "internal/config"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.900014999999257,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.46803390000059153,
+      "input_tokens": 254,
+      "output_tokens": 15,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.610642600000574,
+      "input_tokens": 286,
+      "output_tokens": 33,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8232432000004337,
+      "input_tokens": 264,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0222817000030773,
+      "input_tokens": 103,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8197583999972267,
+      "input_tokens": 102,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1200497999998333,
+      "input_tokens": 117,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0307375000011234,
+      "input_tokens": 107,
+      "output_tokens": 80,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-11": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "docker-compose.yml:0",
+      "docker-compose.yml:1",
+      "go.mod:0",
+      "go.sum:0",
+      "go.sum:1"
+     ],
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-internal-cache",
+     "hunks": [
+      "internal/cache/new.go:0",
+      "internal/cache/redis.go:0",
+      "internal/cache/redis_test.go:0",
+      "internal/cache/store.go:0",
+      "internal/cache/store_test.go:0",
+      "internal/cache/uuid.go:0"
+     ],
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/redis_test.go",
+      "internal/cache/store.go",
+      "internal/cache/store_test.go",
+      "internal/cache/uuid.go"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 5,
+     "commit_message": "chore(auto-detect): update dependencies and docker-compose config\n\n- Updated go.mod and go.sum with latest dependencies\n- Modified docker-compose.yml for improved setup\n\nNo functional changes introduced.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-internal-cache",
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/redis_test.go",
+      "internal/cache/store.go",
+      "internal/cache/store_test.go",
+      "internal/cache/uuid.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "feat(internal/cache): add new cache store implementations and tests\n\n- Introduced new cache store in new.go\n- Implemented Redis cache store with redis.go and redis_test.go\n- Added general store interface and tests in store.go and store_test.go\n- Included UUID utility in uuid.go\n\nThese additions enhance caching capabilities and provide robust testing for cache stores.",
+     "commit_type": "feat",
+     "scope": "internal/cache"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.313563100000465,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.033747299999959,
+      "input_tokens": 398,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7645838999997068,
+      "input_tokens": 664,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1264314000000013,
+      "input_tokens": 108,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3824972000002163,
+      "input_tokens": 135,
+      "output_tokens": 110,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-12": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Cargo.lock:0",
+      "Cargo.lock:1",
+      "Cargo.toml:0",
+      "README.md:0"
+     ],
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1"
+     ],
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/book.rs:0",
+      "src/main.rs:0",
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/order.rs:0",
+      "src/order.rs:1",
+      "src/order.rs:2",
+      "src/order.rs:3"
+     ],
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(dependencies): update Cargo.toml and Cargo.lock\n\n- Updated dependencies in Cargo.toml and Cargo.lock to latest versions.\n- Updated README.md to reflect changes or improvements related to dependencies.\n\nNo functional changes.",
+     "commit_type": "chore",
+     "scope": "dependencies"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(docs): update system design documentation\n\nUpdated the SYSTEM_DESIGN.md file to reflect recent changes and improvements in the system architecture.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "hunk_count": 13,
+     "commit_message": "refactor(src): refactor core modules for clarity and structure\n\nImproved code organization and readability in src/book.rs, src/main.rs, src/matching.rs, and src/order.rs without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.615893099999084,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6179368999983126,
+      "input_tokens": 307,
+      "output_tokens": 24,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7071966000003158,
+      "input_tokens": 395,
+      "output_tokens": 42,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.044231600000785,
+      "input_tokens": 108,
+      "output_tokens": 80,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8271530999991228,
+      "input_tokens": 101,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4144505000003846,
+      "input_tokens": 115,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-13": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs for maintenance\n\nPerformed routine updates and cleanup in src/main.rs to improve codebase maintainability.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.8320061999984318,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8835643000020355,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9448379000023124,
+      "input_tokens": 98,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-14": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-benches",
+     "hunks": [
+      "benches/e2e_bench.rs:0",
+      "benches/e2e_bench.rs:1",
+      "benches/e2e_bench.rs:2",
+      "benches/e2e_bench.rs:3",
+      "benches/e2e_bench.rs:4",
+      "benches/e2e_bench.rs:5"
+     ],
+     "files": [
+      "benches/e2e_bench.rs"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "perf"
+    },
+    {
+     "id": "dir-examples",
+     "hunks": [
+      "examples/loadgen.rs:0",
+      "examples/loadgen.rs:1",
+      "examples/loadgen.rs:2",
+      "examples/loadgen.rs:3",
+      "examples/loadgen.rs:4",
+      "examples/loadgen.rs:5",
+      "examples/loadgen.rs:6"
+     ],
+     "files": [
+      "examples/loadgen.rs"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/gateway.rs:0",
+      "src/matching.rs:0"
+     ],
+     "files": [
+      "src/gateway.rs",
+      "src/matching.rs"
+     ],
+     "suggested_type": "fix"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-benches",
+     "files": [
+      "benches/e2e_bench.rs"
+     ],
+     "hunk_count": 6,
+     "commit_message": "chore(benches): update e2e_bench.rs for benchmarking improvements\n\nRefined the end-to-end benchmark script to enhance performance measurements and maintainability.",
+     "commit_type": "chore",
+     "scope": "benches"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "perf(docs): optimize documentation files\n\nImprove performance by refining content and structure in METRICS.md and PHASES.md to enhance readability and maintainability.",
+     "commit_type": "perf",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-examples",
+     "files": [
+      "examples/loadgen.rs"
+     ],
+     "hunk_count": 7,
+     "commit_message": "chore(examples): update loadgen example code\n\nRefactor and clean up the loadgen.rs example to improve readability and maintainability.",
+     "commit_type": "chore",
+     "scope": "examples"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/gateway.rs",
+      "src/matching.rs"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(src): resolve matching logic bug in gateway\n\nCorrected the matching algorithm in src/matching.rs and adjusted related handling in src/gateway.rs to fix incorrect match results causing runtime errors.",
+     "commit_type": "fix",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Created 5 commit groups using 'hybrid' strategy",
+    "Generated 5 commit messages"
+   ],
+   "wall_s": 5.8743813000000955,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5774196999991545,
+      "input_tokens": 256,
+      "output_tokens": 22,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5460951999993995,
+      "input_tokens": 230,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.077984600000491,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1068024999985937,
+      "input_tokens": 102,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8385146999971766,
+      "input_tokens": 109,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7961281999996572,
+      "input_tokens": 99,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9275293999999121,
+      "input_tokens": 105,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-15": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".gitignore:0",
+      "Cargo.toml:0",
+      "README.md:0"
+     ],
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update config and docs files\n\n- Modify .gitignore to improve ignore rules\n- Update Cargo.toml dependencies or metadata\n- Revise README.md for clarity and accuracy",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update system design documentation\n\nUpdated the SYSTEM_DESIGN.md file to reflect recent architectural changes and improvements.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs\n\nGeneral maintenance and updates to the main source file.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.2002529999990657,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5650371000010637,
+      "input_tokens": 230,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8731508999990183,
+      "input_tokens": 109,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.96940430000177,
+      "input_tokens": 101,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7870143000000098,
+      "input_tokens": 98,
+      "output_tokens": 52,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-16": {
+   "groups": [
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/METRICS.md:0"
+     ],
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/matching.rs:7",
+      "src/matching.rs:8",
+      "src/matching.rs:9",
+      "src/matching.rs:10",
+      "src/matching.rs:11",
+      "src/matching.rs:12",
+      "src/matching.rs:13",
+      "src/matching.rs:14",
+      "src/matching.rs:15",
+      "src/matching.rs:16",
+      "src/matching.rs:17",
+      "src/matching.rs:18",
+      "src/matching.rs:19",
+      "src/matching.rs:20",
+      "src/matching.rs:21",
+      "src/matching.rs:22",
+      "src/matching.rs:23",
+      "src/matching.rs:24",
+      "src/matching.rs:25",
+      "src/matching.rs:26",
+      "src/matching.rs:27",
+      "src/matching.rs:28"
+     ],
+     "files": [
+      "src/matching.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update METRICS.md documentation\n\nUpdated the METRICS.md file to improve clarity and accuracy of the metrics documentation.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/matching.rs"
+     ],
+     "hunk_count": 29,
+     "commit_message": "chore(src): update matching module implementation\n\nRefactor and clean up code in src/matching.rs to improve maintainability and readability.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.9364451999972516,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.805969199998799,
+      "input_tokens": 101,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1262442000006558,
+      "input_tokens": 99,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-17": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README.md content\n\nUpdated the README.md file to improve documentation and clarity.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update PHASES.md documentation\n\nUpdated the PHASES.md file to improve clarity and accuracy of the project phases documentation.",
+     "commit_type": "chore",
+     "scope": "docs"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.9090331999977934,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8777782999968622,
+      "input_tokens": 99,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0256416000011086,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-18": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1",
+      "backend/services/llm/ollama.py:0",
+      "backend/services/llm/ollama.py:1",
+      "backend/services/llm/ollama.py:2",
+      "backend/services/llm/ollama.py:3"
+     ],
+     "files": [
+      "backend/services/llm/gemini.py",
+      "backend/services/llm/ollama.py"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "dir-backend-utils",
+     "hunks": [
+      "backend/utils/cost.py:0"
+     ],
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve the build environment and dependencies configuration.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/gemini.py",
+      "backend/services/llm/ollama.py"
+     ],
+     "hunk_count": 6,
+     "commit_message": "fix(backend/services): fix LLM service bugs in gemini and ollama\n\nResolved issues in the Gemini and Ollama LLM service implementations to improve stability and correctness.",
+     "commit_type": "fix",
+     "scope": "backend/services"
+    },
+    {
+     "group_id": "dir-backend-utils",
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/utils): update cost.py utility functions\n\nRefactored and improved utility functions in cost.py to enhance code maintainability and readability.",
+     "commit_type": "chore",
+     "scope": "backend/utils"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +70/-36 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.3136216000020795,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0790234000014607,
+      "input_tokens": 200,
+      "output_tokens": 33,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8192864999982703,
+      "input_tokens": 99,
+      "output_tokens": 63,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2891083999966213,
+      "input_tokens": 116,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1218014000005496,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-19": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/config.py:0"
+     ],
+     "files": [
+      "backend/core/config.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0",
+      "backend/routers/agent.py:1",
+      "backend/routers/agent.py:2"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/__init__.py:0"
+     ],
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile configuration\n\nUpdated the Dockerfile to improve build process and environment setup.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/config.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update config.py settings\n\nUpdated configuration settings in backend/core/config.py to improve maintainability and clarity.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactored and updated the agent.py router to improve code clarity and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/services): initialize llm service package\n\nAdd __init__.py to backend/services/llm to mark it as a package.",
+     "commit_type": "chore",
+     "scope": "backend/services"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +54/-17 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 3.792460199998459,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7597623000001477,
+      "input_tokens": 99,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3068717999994988,
+      "input_tokens": 100,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9051461999988533,
+      "input_tokens": 103,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8175967000024684,
+      "input_tokens": 105,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-20": {
+   "groups": [
+    {
+     "id": "dir-backend-agents",
+     "hunks": [
+      "backend/agents/git_agent.py:0"
+     ],
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend",
+     "hunks": [
+      "backend/main.py:0",
+      "backend/main.py:1"
+     ],
+     "files": [
+      "backend/main.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/factory.py:0",
+      "backend/services/llm/gemini.py:0"
+     ],
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "dir-cli",
+     "hunks": [
+      "cli/api_client.py:0",
+      "cli/main.py:0",
+      "cli/main.py:1"
+     ],
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "dir-cli-commands",
+     "hunks": [
+      "cli/commands/agent.py:0"
+     ],
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-root",
+     "hunks": [
+      "pyproject.toml:0"
+     ],
+     "files": [
+      "pyproject.toml"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-backend-agents",
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/agents): update git_agent.py for maintenance\n\nPerformed routine updates and cleanup in git_agent.py to improve code maintainability and prepare for future enhancements.",
+     "commit_type": "chore",
+     "scope": "backend/agents"
+    },
+    {
+     "group_id": "dir-backend",
+     "files": [
+      "backend/main.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(backend): update backend main.py for maintenance\n\nPerformed routine updates and maintenance tasks in backend/main.py to improve code quality and prepare for future enhancements.",
+     "commit_type": "chore",
+     "scope": "backend"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactored the agent.py router to improve code clarity and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(backend/services): add Gemini LLM integration\n\n- Implement Gemini model support in llm/gemini.py\n- Update factory.py to include Gemini model creation\n\nThis enables the backend to utilize the Gemini language model for enhanced NLP capabilities.",
+     "commit_type": "feat",
+     "scope": "backend/services"
+    },
+    {
+     "group_id": "dir-cli",
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "refactor(cli): improve code structure in api_client and main\n\nRefactored the code in cli/api_client.py and cli/main.py to enhance readability and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "cli"
+    },
+    {
+     "group_id": "dir-cli-commands",
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(cli/commands): update agent.py with maintenance changes\n\nPerformed routine maintenance and minor improvements in the agent.py command module to enhance code quality and consistency.",
+     "commit_type": "chore",
+     "scope": "cli/commands"
+    },
+    {
+     "group_id": "dir-root",
+     "files": [
+      "pyproject.toml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update pyproject.toml configuration\n\nUpdated the pyproject.toml file to improve project setup and dependencies management.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +403/-5 lines",
+    "Created 7 commit groups using 'hybrid' strategy",
+    "Generated 7 commit messages"
+   ],
+   "wall_s": 7.943363000002137,
+   "meter": {
+    "llm_calls": 9,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6478298000001814,
+      "input_tokens": 238,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5345258000015747,
+      "input_tokens": 206,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.91933649999919,
+      "input_tokens": 103,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9219546999993327,
+      "input_tokens": 98,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8186849000012444,
+      "input_tokens": 103,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2286743999975442,
+      "input_tokens": 115,
+      "output_tokens": 84,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.952552900002047,
+      "input_tokens": 105,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8900699000005261,
+      "input_tokens": 103,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.024397900000622,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-21": {
+   "groups": [
+    {
+     "id": "dir-tests-backend",
+     "hunks": [
+      "tests/backend/test_analyze.py:0",
+      "tests/backend/test_commit.py:0"
+     ],
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "dir-tests-cli",
+     "hunks": [
+      "tests/cli/test_api_client.py:0"
+     ],
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-tests-backend",
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(tests/backend): add tests for analyze and commit modules\n\nAdd new test cases in test_analyze.py and test_commit.py to improve coverage and ensure backend functionalities work as expected.",
+     "commit_type": "test",
+     "scope": "tests/backend"
+    },
+    {
+     "group_id": "dir-tests-cli",
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(tests/cli): update test_api_client.py for CLI tests\n\nRefined and updated the API client tests under the CLI test suite to improve test coverage and maintainability.",
+     "commit_type": "chore",
+     "scope": "tests/cli"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +69/-8 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.8734171999967657,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8782279000006383,
+      "input_tokens": 213,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9236129999990226,
+      "input_tokens": 109,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0681847000014386,
+      "input_tokens": 104,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-22": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".railwayignore:0",
+      "Dockerfile:0"
+     ],
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/dependencies.py:0"
+     ],
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update .railwayignore and Dockerfile\n\n- Modified .railwayignore to improve deployment ignores\n- Updated Dockerfile for better build configuration",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update dependencies management\n\nRefactor dependencies.py to improve package handling and version control.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +26/-5 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.501083800001652,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6970836000000418,
+      "input_tokens": 260,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0554417999992438,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7452374999993481,
+      "input_tokens": 101,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-23": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-clustering",
+     "hunks": [
+      "backend/clustering/conventional.py:0",
+      "backend/clustering/conventional.py:1",
+      "backend/clustering/conventional.py:2"
+     ],
+     "files": [
+      "backend/clustering/conventional.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/pr.py:0"
+     ],
+     "files": [
+      "backend/routers/pr.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1",
+      "backend/services/llm/gemini.py:2",
+      "backend/services/llm/gemini.py:3"
+     ],
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-utils",
+     "hunks": [
+      "backend/utils/cost.py:0"
+     ],
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-cli-commands",
+     "hunks": [
+      "cli/commands/agent.py:0",
+      "cli/commands/agent.py:1",
+      "cli/commands/agent.py:2",
+      "cli/commands/analyze.py:0",
+      "cli/commands/analyze.py:1",
+      "cli/commands/auto.py:0",
+      "cli/commands/auto.py:1",
+      "cli/commands/auto.py:2",
+      "cli/commands/changelog.py:0",
+      "cli/commands/changelog.py:1",
+      "cli/commands/commit.py:0",
+      "cli/commands/commit.py:1",
+      "cli/commands/commit.py:2",
+      "cli/commands/index.py:0",
+      "cli/commands/index.py:1",
+      "cli/commands/index.py:2",
+      "cli/commands/index.py:3",
+      "cli/commands/pr.py:0",
+      "cli/commands/pr.py:1",
+      "cli/commands/resolve.py:0",
+      "cli/commands/resolve.py:1",
+      "cli/commands/review.py:0",
+      "cli/commands/review.py:1",
+      "cli/commands/split.py:0",
+      "cli/commands/split.py:1",
+      "cli/commands/split.py:2"
+     ],
+     "files": [
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve environment setup and dependencies installation, ensuring smoother builds and consistent runtime behavior.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-clustering",
+     "files": [
+      "backend/clustering/conventional.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(backend/clustering): update conventional.py for maintenance\n\nPerformed routine updates and cleanup in conventional.py to improve code maintainability and consistency.",
+     "commit_type": "chore",
+     "scope": "backend/clustering"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/pr.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/routers): update pr router setup\n\nRefactor the PR router configuration to improve maintainability and align with new backend standards.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(backend/services): update Gemini LLM service implementation\n\nRefactored the Gemini LLM service in backend/services/llm/gemini.py to improve code structure and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/services"
+    },
+    {
+     "group_id": "dir-backend-utils",
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/utils): update cost utility functions\n\nRefactor and improve the cost calculation utilities in backend/utils/cost.py for better maintainability and clarity.",
+     "commit_type": "chore",
+     "scope": "backend/utils"
+    },
+    {
+     "group_id": "dir-cli-commands",
+     "files": [
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "hunk_count": 26,
+     "commit_message": "refactor(cli/commands): improve structure and clarity\n\nRefactored multiple CLI command modules to enhance code readability and maintainability. This includes agent.py, analyze.py, auto.py, changelog.py, commit.py, index.py, pr.py, resolve.py, review.py, and split.py.\n\nNo functional changes were introduced.",
+     "commit_type": "refactor",
+     "scope": "cli/commands"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 15 files, +150/-96 lines",
+    "Created 6 commit groups using 'hybrid' strategy",
+    "Generated 6 commit messages"
+   ],
+   "wall_s": 7.522643000000244,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5547045999992406,
+      "input_tokens": 622,
+      "output_tokens": 130,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0265387999970699,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1391970000004221,
+      "input_tokens": 103,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9085228000003553,
+      "input_tokens": 102,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9213024000018777,
+      "input_tokens": 105,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9245890000020154,
+      "input_tokens": 101,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0417882000001555,
+      "input_tokens": 174,
+      "output_tokens": 106,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-24": {
+   "groups": [
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/DATA_MODEL.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0"
+     ],
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs): update API reference and data model docs\n\n- Revised API_REFERENCE.md with latest endpoints and parameters\n- Updated DATA_MODEL.md to reflect current schema changes\n\nThese updates improve documentation accuracy and clarity.",
+     "commit_type": "docs",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(docs/decisions): add new ADRs on platform and audit service\n\nAdd three new Architecture Decision Records:\n- 0012: Platform app delivers every module CRD\n- 0017: Audit publishing never blocks a reconcile\n- 0018: The audit service alone computes the hash chain\n\nThese documents capture key decisions related to platform module delivery and audit service responsibilities.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +122/-12 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.731188400000974,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5947665000021516,
+      "input_tokens": 210,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.99858740000127,
+      "input_tokens": 333,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9587828000003356,
+      "input_tokens": 106,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1750975000031758,
+      "input_tokens": 158,
+      "output_tokens": 120,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-25": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      ".github/workflows/ci.yaml:1",
+      ".github/workflows/ci.yaml:2"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0"
+     ],
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nModify the ci.yaml file to improve or fix CI pipeline settings.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs/decisions): add new workload and node economics ADRs\n\n- Add ADR 0009: Workload class label gates for spot placement\n- Add ADR 0010: Node economics as labels with pluggable price sources\n\nThese documents formalize decisions around workload classification and node pricing strategies.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +79/-3 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.377480099999957,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9734790000002249,
+      "input_tokens": 258,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0225094000015815,
+      "input_tokens": 105,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.378043600001547,
+      "input_tokens": 139,
+      "output_tokens": 103,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-26": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-e2e",
+     "hunks": [
+      "e2e/phase2_test.go:0"
+     ],
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web-scripts",
+     "hunks": [
+      "web/scripts/build-lattice.ts:0",
+      "web/scripts/build-lattice.ts:1",
+      "web/scripts/build-lattice.ts:2"
+     ],
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web",
+     "hunks": [
+      "web/vercel.json:0"
+     ],
+     "files": [
+      "web/vercel.json"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nUpdated the CI workflow in .github/workflows/ci.yaml to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-e2e",
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(e2e): update phase2 e2e test file\n\nRefactor or update the e2e/phase2_test.go to improve test setup or maintenance.",
+     "commit_type": "chore",
+     "scope": "e2e"
+    },
+    {
+     "group_id": "dir-web-scripts",
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(web/scripts): update build-lattice script\n\nUpdate the build-lattice.ts script to improve build process or maintenance.",
+     "commit_type": "chore",
+     "scope": "web/scripts"
+    },
+    {
+     "group_id": "dir-web",
+     "files": [
+      "web/vercel.json"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(web): update vercel configuration\n\nUpdated the web/vercel.json file to reflect new deployment settings.",
+     "commit_type": "chore",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +30/-19 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 3.801250300002721,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9945668999971531,
+      "input_tokens": 105,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9605485000029148,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.872133799999574,
+      "input_tokens": 102,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9708262999993167,
+      "input_tokens": 99,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-27": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/METRICS.md:0",
+      "docs/ROADMAP.md:0",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md",
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md",
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(docs): update multiple documentation files\n\nUpdated the following documentation files to improve clarity and completeness:\n- API_REFERENCE.md\n- METRICS.md\n- ROADMAP.md\n- SYSTEM_DESIGN.md\n- TESTING.md\n\nThese changes enhance the overall documentation quality and provide better guidance for users and developers.",
+     "commit_type": "docs",
+     "scope": "docs"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 6 files, +58/-22 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.8182463999983156,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7935687999997754,
+      "input_tokens": 382,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0031459999991057,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0175731999988784,
+      "input_tokens": 129,
+      "output_tokens": 97,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-28": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "README.md:3",
+      "README.md:4",
+      "README.md:5",
+      "README.md:6"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-e2e",
+     "hunks": [
+      "e2e/phase7_sim_test.go:0",
+      "e2e/phase7_sim_test.go:1",
+      "e2e/phase7_sim_test.go:2"
+     ],
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 7,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-e2e",
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(e2e): update phase7 simulation e2e test\n\nRefine and maintain the phase7 simulation end-to-end test to ensure reliability and consistency in test execution.",
+     "commit_type": "chore",
+     "scope": "e2e"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +133/-40 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.802630499998486,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8581493999990926,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9414426999974239,
+      "input_tokens": 106,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-29": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-root",
+     "hunks": [
+      "kind-config-operator.yaml:0"
+     ],
+     "files": [
+      "kind-config-operator.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-operator-internal",
+     "hunks": [
+      "operator/internal/controller/resources.go:0",
+      "operator/internal/controller/resources.go:1",
+      "operator/internal/controller/resources.go:2",
+      "operator/internal/controller/resources.go:3",
+      "operator/internal/controller/resources.go:4",
+      "operator/internal/controller/tenantdatabase_controller_test.go:0",
+      "operator/internal/controller/tenantdatabase_controller_test.go:1"
+     ],
+     "files": [
+      "operator/internal/controller/resources.go",
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nUpdated the CI workflow settings in .github/workflows/ci.yaml to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): add TESTING.md documentation\n\nAdd a new TESTING.md file to the docs directory to provide guidelines and instructions for testing the project.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-root",
+     "files": [
+      "kind-config-operator.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update kind-config-operator.yaml\n\nUpdated the kind-config-operator.yaml configuration file to reflect recent changes or improvements as part of routine maintenance.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-operator-internal",
+     "files": [
+      "operator/internal/controller/resources.go",
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "hunk_count": 7,
+     "commit_message": "refactor(operator/internal): improve controller resource handling and tenant database tests\n\n- Refactored resource management logic in resources.go for better clarity and maintainability.\n- Updated tenantdatabase_controller_test.go to align with refactored resource handling.\n- No functional changes introduced, purely code structure improvements.",
+     "commit_type": "refactor",
+     "scope": "operator/internal"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +25/-14 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.834789000000455,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6939782999979798,
+      "input_tokens": 244,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.867032799997105,
+      "input_tokens": 105,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8549959000010858,
+      "input_tokens": 100,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0383048000003328,
+      "input_tokens": 102,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.376759700000548,
+      "input_tokens": 113,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  }
+ },
+ "retriever": "None"
+}

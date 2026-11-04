@@ -1,0 +1,271 @@
+{
+ "model": "gemini-embedding-001",
+ "calls": [
+  {
+   "case_id": "split-00",
+   "n_texts": 9,
+   "chars": 12890,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-01",
+   "n_texts": 14,
+   "chars": 15292,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-02",
+   "n_texts": 8,
+   "chars": 10108,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-03",
+   "n_texts": 6,
+   "chars": 5256,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-04",
+   "n_texts": 6,
+   "chars": 3292,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-05",
+   "n_texts": 10,
+   "chars": 12230,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-06",
+   "n_texts": 17,
+   "chars": 16682,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-07",
+   "n_texts": 18,
+   "chars": 27444,
+   "attempt": 0,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-07",
+   "n_texts": 18,
+   "chars": 27444,
+   "attempt": 1,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-07",
+   "n_texts": 18,
+   "chars": 27444,
+   "attempt": 2,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-07",
+   "n_texts": 18,
+   "chars": 27444,
+   "attempt": 3,
+   "ok": true
+  },
+  {
+   "case_id": "split-08",
+   "n_texts": 8,
+   "chars": 19771,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-09",
+   "n_texts": 4,
+   "chars": 3977,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-10",
+   "n_texts": 20,
+   "chars": 17971,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-11",
+   "n_texts": 11,
+   "chars": 17019,
+   "attempt": 0,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-11",
+   "n_texts": 11,
+   "chars": 17019,
+   "attempt": 1,
+   "ok": true
+  },
+  {
+   "case_id": "split-12",
+   "n_texts": 19,
+   "chars": 8038,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-13",
+   "n_texts": 2,
+   "chars": 720,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-14",
+   "n_texts": 20,
+   "chars": 11105,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-15",
+   "n_texts": 5,
+   "chars": 20277,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-16",
+   "n_texts": 30,
+   "chars": 11799,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-17",
+   "n_texts": 4,
+   "chars": 13745,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-18",
+   "n_texts": 8,
+   "chars": 5917,
+   "attempt": 0,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-18",
+   "n_texts": 8,
+   "chars": 5917,
+   "attempt": 1,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-18",
+   "n_texts": 8,
+   "chars": 5917,
+   "attempt": 2,
+   "ok": false,
+   "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head "
+  },
+  {
+   "case_id": "split-18",
+   "n_texts": 8,
+   "chars": 5917,
+   "attempt": 3,
+   "ok": true
+  },
+  {
+   "case_id": "split-19",
+   "n_texts": 6,
+   "chars": 3317,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-20",
+   "n_texts": 11,
+   "chars": 13195,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-21",
+   "n_texts": 3,
+   "chars": 3637,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-22",
+   "n_texts": 3,
+   "chars": 1127,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-23",
+   "n_texts": 36,
+   "chars": 17804,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-24",
+   "n_texts": 5,
+   "chars": 15280,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-25",
+   "n_texts": 5,
+   "chars": 6587,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-26",
+   "n_texts": 6,
+   "chars": 3911,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-27",
+   "n_texts": 8,
+   "chars": 19051,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-28",
+   "n_texts": 10,
+   "chars": 14955,
+   "attempt": 0,
+   "ok": true
+  },
+  {
+   "case_id": "split-29",
+   "n_texts": 10,
+   "chars": 7238,
+   "attempt": 0,
+   "ok": true
+  }
+ ]
+}

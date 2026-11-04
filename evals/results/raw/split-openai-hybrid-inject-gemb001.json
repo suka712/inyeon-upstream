@@ -1,0 +1,4054 @@
+{
+ "config": "split-openai-hybrid-inject-gemb001",
+ "settings": {
+  "eval": "split",
+  "provider": "openai",
+  "strategy": "hybrid",
+  "embedding": "gemini-embedding-001"
+ },
+ "cases": {
+  "split-00": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "CONTRIBUTING.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "ROADMAP.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "apps/api/.env.example:0",
+      "apps/api/test/recap/compose.test.ts:0",
+      "apps/api/test/recap/prose.test.ts:0",
+      "apps/api/test/recap/week.test.ts:0"
+     ],
+     "files": [
+      "apps/api/.env.example",
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update project documentation files\n\nUpdated CONTRIBUTING.md, METRICS.md, ROADMAP.md, and SYSTEM_DESIGN.md to improve clarity and accuracy.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "apps/api/.env.example",
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(api): update env example and recap tests\n\n- Updated apps/api/.env.example with latest environment variables.\n- Modified recap tests in compose.test.ts, prose.test.ts, and week.test.ts to improve coverage and reliability.",
+     "commit_type": "chore",
+     "scope": "api"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +252/-6 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 5.436476499999117,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2010879000008572,
+      "input_tokens": 377,
+      "output_tokens": 42,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7648261999966053,
+      "input_tokens": 432,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.335056200001418,
+      "input_tokens": 117,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9703709999994317,
+      "input_tokens": 137,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 5092,
+      "ok": true,
+      "latency_s": 0.5865654999979597
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 7798,
+      "ok": true,
+      "latency_s": 0.41991890000281273
+     }
+    ]
+   }
+  },
+  "split-01": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "apps/api/src/aggregate/run.ts:0",
+      "apps/api/src/aggregate/run.ts:1",
+      "apps/api/src/aggregate/run.ts:2",
+      "apps/api/src/aggregate/run.ts:3",
+      "apps/api/src/aggregate/run.ts:4",
+      "apps/api/src/aggregate/run.ts:5",
+      "apps/api/test/aggregate/scanner.integration.test.ts:0",
+      "apps/api/test/helpers/scanner.ts:0",
+      "apps/api/test/routes/integration.test.ts:0"
+     ],
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql:0",
+      "packages/db/src/migrations/meta/_journal.json:0",
+      "packages/db/src/schema.ts:0",
+      "packages/db/src/schema.ts:1",
+      "packages/db/src/schema.ts:2"
+     ],
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql",
+      "packages/db/src/migrations/meta/_journal.json",
+      "packages/db/src/schema.ts"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "hunk_count": 9,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic and tests\n\n- Refactored auto-detect implementation in run.ts\n- Updated integration tests for scanner and routes\n- Enhanced test helpers for scanner\n\nThis improves code maintainability and test reliability.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql",
+      "packages/db/src/migrations/meta/_journal.json",
+      "packages/db/src/schema.ts"
+     ],
+     "hunk_count": 5,
+     "commit_message": "feat(db): add leaderboard outbox migration\n\n- Introduced new migration 0012_leaderboard_outbox.sql to support leaderboard outbox functionality.\n- Updated migration journal to include the new migration.\n- Modified schema.ts to reflect changes related to the leaderboard outbox.\n\nThis update enables tracking and processing of leaderboard events through the outbox pattern.",
+     "commit_type": "feat",
+     "scope": "db"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +409/-7 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 5.488420400000905,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8919838999972853,
+      "input_tokens": 409,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9998597999983758,
+      "input_tokens": 295,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0510352999990573,
+      "input_tokens": 136,
+      "output_tokens": 91,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5317896000015025,
+      "input_tokens": 129,
+      "output_tokens": 106,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 9,
+      "chars": 13836,
+      "ok": true,
+      "latency_s": 0.6121085000013409
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 1456,
+      "ok": true,
+      "latency_s": 0.3933415000028617
+     }
+    ]
+   }
+  },
+  "split-02": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/App.tsx:1",
+      "apps/web/src/App.tsx:2",
+      "apps/web/src/lib/api.ts:0",
+      "apps/web/src/lib/push.ts:0",
+      "apps/web/src/lib/push.ts:1",
+      "apps/web/src/pages/EditProfile.tsx:0",
+      "apps/web/src/pages/EditProfile.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "hunk_count": 8,
+     "commit_message": "feat(web): add new features to profile editing and API\n\n- Enhance EditProfile page with improved user interactions\n- Update API utilities for better data handling\n- Integrate push notification support\n- Refactor App component to support new features\n\nThese changes improve user experience and backend communication.",
+     "commit_type": "feat",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +201/-9 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 2.8198360999995202,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0155856999990647,
+      "input_tokens": 365,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1246590000009746,
+      "input_tokens": 130,
+      "output_tokens": 94,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 8,
+      "chars": 10108,
+      "ok": true,
+      "latency_s": 0.6734834999988379
+     }
+    ]
+   }
+  },
+  "split-03": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "ARCHITECTURE_DECISIONS.md:0",
+      "README.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(auto-detect): update architecture and system design docs\n\nUpdated ARCHITECTURE_DECISIONS.md, README.md, and SYSTEM_DESIGN.md to improve clarity and accuracy of the auto-detect feature documentation.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css"
+     ],
+     "hunk_count": 3,
+     "commit_message": "feat(apps/web): update App component and styles\n\n- Modified App.tsx to enhance functionality\n- Updated index.css for improved styling\n\nThese changes improve the user interface and overall app experience.",
+     "commit_type": "feat",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +22/-18 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.452352999996947,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6624987000031979,
+      "input_tokens": 356,
+      "output_tokens": 29,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7756496000001789,
+      "input_tokens": 282,
+      "output_tokens": 21,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.090293199998996,
+      "input_tokens": 115,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9203711000009207,
+      "input_tokens": 109,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-04": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "CHANGELOG.md:0"
+     ],
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-apps-api",
+     "hunks": [
+      "apps/api/src/lib/teams.ts:0",
+      "apps/api/src/routes/teams.ts:0"
+     ],
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "dir-apps-web",
+     "hunks": [
+      "apps/web/src/pages/Changelog.tsx:0",
+      "apps/web/src/pages/Teams.tsx:0",
+      "apps/web/src/pages/Teams.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "CHANGELOG.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update changelog with recent changes\n\nUpdated the CHANGELOG.md file to reflect the latest modifications and improvements in the project.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-apps-api",
+     "files": [
+      "apps/api/src/lib/teams.ts",
+      "apps/api/src/routes/teams.ts"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(apps/api): correct team handling in API routes\n\nResolved issues in team-related logic within the API routes and library files to ensure proper data processing and response handling.",
+     "commit_type": "fix",
+     "scope": "apps/api"
+    },
+    {
+     "group_id": "dir-apps-web",
+     "files": [
+      "apps/web/src/pages/Changelog.tsx",
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(apps/web): update documentation pages content\n\nUpdated the Changelog and Teams pages to improve clarity and accuracy of the documentation.",
+     "commit_type": "docs",
+     "scope": "apps/web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +37/-3 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.160127999999531,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6731074000017543,
+      "input_tokens": 228,
+      "output_tokens": 24,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8223257999998168,
+      "input_tokens": 268,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7889058000000659,
+      "input_tokens": 100,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0541134999984934,
+      "input_tokens": 112,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8183828000001085,
+      "input_tokens": 115,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-05": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "CHANGELOG.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "METRICS.md:2",
+      "METRICS.md:3"
+     ],
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1",
+      "apps/web/src/index.css:2",
+      "apps/web/src/lib/changelog.ts:0"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update changelog and metrics documentation\n\n- Updated CHANGELOG.md with recent changes\n- Revised METRICS.md to reflect current metrics tracking\n\nThese updates improve documentation accuracy for the auto-detect feature.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/index.css",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "hunk_count": 5,
+     "commit_message": "feat(web): add new feature to App and update styles\n\n- Updated App.tsx with new functionality\n- Modified index.css for improved styling\n- Enhanced changelog generation in lib/changelog.ts",
+     "commit_type": "feat",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +83/-37 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 5.001721499997075,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9148238000016136,
+      "input_tokens": 213,
+      "output_tokens": 17,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1321696000013617,
+      "input_tokens": 317,
+      "output_tokens": 38,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8819875999979558,
+      "input_tokens": 106,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.18500800000038,
+      "input_tokens": 119,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 8796,
+      "ok": true,
+      "latency_s": 0.3436226000012539
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 3434,
+      "ok": true,
+      "latency_s": 0.5376632000006794
+     }
+    ]
+   }
+  },
+  "split-06": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "config.yaml:0"
+     ],
+     "files": [
+      "config.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/config/config.go:0",
+      "internal/config/config.go:1",
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "internal/config/config.go",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/entropy/entropy.go:0",
+      "internal/entropy/entropy_test.go:0",
+      "internal/entropy/window.go:0",
+      "internal/entropy/window_test.go:0"
+     ],
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window.go",
+      "internal/entropy/window_test.go"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/metrics/noop.go:0",
+      "internal/metrics/prometheus.go:0",
+      "internal/metrics/prometheus.go:1",
+      "internal/metrics/prometheus.go:2",
+      "internal/metrics/prometheus_test.go:0",
+      "internal/metrics/recorder.go:0"
+     ],
+     "files": [
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/prometheus_test.go",
+      "internal/metrics/recorder.go"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "config.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update config.yaml for auto-detect settings\n\nUpdated the config.yaml file to improve or modify the auto-detect configuration parameters.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "internal/config/config.go",
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in config package\n\nRefactored the auto-detect functionality within the config package to enhance clarity and maintainability. Changes span internal/config/config.go, config_test.go, and load.go to streamline configuration detection and loading processes.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window.go",
+      "internal/entropy/window_test.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "feat(auto-detect): add entropy calculation with sliding window\n\n- Implement entropy calculation logic in entropy.go\n- Add sliding window support in window.go\n- Include comprehensive tests for entropy and window modules\n\nThis feature enhances the auto-detect package by providing entropy-based analysis using a sliding window approach.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/prometheus_test.go",
+      "internal/metrics/recorder.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "refactor(auto-detect): improve metrics auto-detect logic\n\nRefactored the auto-detect functionality within the metrics package, updating noop.go, prometheus.go, prometheus_test.go, and recorder.go to enhance code clarity and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 9.153519799998321,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0533317000008537,
+      "input_tokens": 338,
+      "output_tokens": 30,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.089134699999704,
+      "input_tokens": 457,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8054561000026297,
+      "input_tokens": 391,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.131563000002643,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0434324000016204,
+      "input_tokens": 115,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3118008000019472,
+      "input_tokens": 127,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1298253999993904,
+      "input_tokens": 130,
+      "output_tokens": 92,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 6,
+      "chars": 4419,
+      "ok": true,
+      "latency_s": 0.5535526000021491
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 7806,
+      "ok": true,
+      "latency_s": 0.4038464000004751
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 6,
+      "chars": 4163,
+      "ok": true,
+      "latency_s": 0.6201634000026388
+     }
+    ]
+   }
+  },
+  "split-07": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "web/src/app/layout.tsx:0",
+      "web/src/app/layout.tsx:1",
+      "web/src/app/layout.tsx:2",
+      "web/src/app/page.tsx:0",
+      "web/src/app/page.tsx:1",
+      "web/src/app/page.tsx:2",
+      "web/src/app/page.tsx:3",
+      "web/src/app/page.tsx:4",
+      "web/src/app/page.tsx:5",
+      "web/src/app/page.tsx:6",
+      "web/src/app/page.tsx:7",
+      "web/src/app/page.tsx:8",
+      "web/src/app/page.tsx:9",
+      "web/src/app/page.tsx:10",
+      "web/src/app/page.tsx:11",
+      "web/src/app/page.tsx:12",
+      "web/src/components/Architecture.tsx:0"
+     ],
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the new auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "hunk_count": 17,
+     "commit_message": "refactor(layout): improve component structure and layout\n\nRefactored web/src/app/layout.tsx, web/src/app/page.tsx, and web/src/components/Architecture.tsx to enhance code organization and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "layout"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.4647115000007034,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7681774000011501,
+      "input_tokens": 336,
+      "output_tokens": 36,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.862427200001548,
+      "input_tokens": 99,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2115439000008337,
+      "input_tokens": 121,
+      "output_tokens": 81,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 17,
+      "chars": 26851,
+      "ok": true,
+      "latency_s": 0.6114016000028641
+     }
+    ]
+   }
+  },
+  "split-08": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "benchmarks/internal/sweep/cost.go:0",
+      "benchmarks/internal/sweep/cost_test.go:0",
+      "benchmarks/internal/sweep/replay.go:0",
+      "benchmarks/internal/sweep/replay_test.go:0",
+      "benchmarks/internal/sweep/report.go:0",
+      "benchmarks/internal/sweep/report_test.go:0",
+      "benchmarks/internal/sweep/stats.go:0",
+      "benchmarks/internal/sweep/stats_test.go:0"
+     ],
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "hunk_count": 8,
+     "commit_message": "feat(auto-detect): add auto-detect feature to sweep benchmarks\n\nImplemented auto-detection capabilities across sweep benchmark modules including cost, replay, report, and stats. Updated corresponding tests to cover new functionality and ensure reliability.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 3.2720747999992454,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.333405399996991,
+      "input_tokens": 821,
+      "output_tokens": 116,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2544140000027255,
+      "input_tokens": 169,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 8,
+      "chars": 19771,
+      "ok": true,
+      "latency_s": 0.6767250999982934
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 24.014112999s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}",
+     "reasoning": [
+      "Parsed diff: 8 files, +758/-0 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 24.014112999s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.3214116000017384,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 8,
+        "chars": 19771,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.3152388000016799
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-09": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "go.mod:0",
+      "go.sum:0"
+     ],
+     "files": [
+      "README.md",
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "README.md",
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 4,
+     "commit_message": "docs(auto-detect): update README.md, go.mod, and go.sum\n\nUpdated documentation and module dependency files to reflect recent changes and improve clarity.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Created 1 commit groups using 'hybrid' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 2.1993464000006497,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7430929000001925,
+      "input_tokens": 390,
+      "output_tokens": 23,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0827267999993637,
+      "input_tokens": 107,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 3977,
+      "ok": true,
+      "latency_s": 0.36946370000077877
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.795512528s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+     "reasoning": [
+      "Parsed diff: 3 files, +39/-2 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.795512528s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.183946900000592,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 4,
+        "chars": 3977,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.18111420000059297
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-10": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "config.yaml:0"
+     ],
+     "files": [
+      "README.md",
+      "config.yaml"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-cmd-gateway",
+     "hunks": [
+      "cmd/gateway/main.go:0",
+      "cmd/gateway/main.go:1"
+     ],
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0",
+      "docs/PHASES.md:1",
+      "docs/PHASES.md:2",
+      "docs/PHASES.md:3",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1",
+      "docs/SYSTEM_DESIGN.md:2",
+      "docs/SYSTEM_DESIGN.md:3",
+      "docs/SYSTEM_DESIGN.md:4"
+     ],
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "README.md",
+      "config.yaml"
+     ],
+     "hunk_count": 4,
+     "commit_message": "docs(auto-detect): update README and config.yaml\n\n- Improved documentation related to auto-detect feature in README.md\n- Updated configuration settings in config.yaml for auto-detect\n\nThese changes enhance clarity and usability of the auto-detect functionality.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-cmd-gateway",
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(cmd/gateway): update main.go in gateway command\n\nMake miscellaneous updates to the main.go file within the cmd/gateway directory.",
+     "commit_type": "chore",
+     "scope": "cmd/gateway"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 10,
+     "commit_message": "docs(auto-detect): update documentation for metrics, phases, system design\n\nUpdated the METRICS.md, PHASES.md, and SYSTEM_DESIGN.md files to improve clarity and accuracy of the auto-detect feature documentation.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "internal/config/config_test.go",
+      "internal/config/load.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "test(auto-detect): add tests for config loading\n\nAdd unit tests in config_test.go to verify the behavior of config loading functions in load.go.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 7.853967200000625,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6559349999988626,
+      "input_tokens": 254,
+      "output_tokens": 15,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6077358000002278,
+      "input_tokens": 286,
+      "output_tokens": 33,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9177148999988276,
+      "input_tokens": 264,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0913325999972585,
+      "input_tokens": 103,
+      "output_tokens": 87,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1179677000000083,
+      "input_tokens": 102,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9685576000010769,
+      "input_tokens": 119,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1726220999989891,
+      "input_tokens": 108,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 3945,
+      "ok": true,
+      "latency_s": 0.35456869999688934
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 10,
+      "chars": 10244,
+      "ok": true,
+      "latency_s": 0.6088815000002796
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 2907,
+      "ok": true,
+      "latency_s": 0.3497951999997895
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.590605973s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+     "reasoning": [
+      "Parsed diff: 8 files, +153/-65 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.590605973s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.26462199999878067,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 4,
+        "chars": 3945,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.2590030999999726
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-11": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "docker-compose.yml:0",
+      "docker-compose.yml:1",
+      "go.mod:0",
+      "go.sum:0",
+      "go.sum:1"
+     ],
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "internal/cache/new.go:0",
+      "internal/cache/redis.go:0",
+      "internal/cache/redis_test.go:0",
+      "internal/cache/store.go:0",
+      "internal/cache/store_test.go:0",
+      "internal/cache/uuid.go:0"
+     ],
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/redis_test.go",
+      "internal/cache/store.go",
+      "internal/cache/store_test.go",
+      "internal/cache/uuid.go"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 5,
+     "commit_message": "chore(auto-detect): update dependencies and docker-compose config\n\n- Updated go.mod and go.sum to refresh module dependencies.\n- Modified docker-compose.yml for improved service configuration.\n\nThese changes ensure the environment is up-to-date and consistent.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/redis_test.go",
+      "internal/cache/store.go",
+      "internal/cache/store_test.go",
+      "internal/cache/uuid.go"
+     ],
+     "hunk_count": 6,
+     "commit_message": "feat(auto-detect): add auto-detect feature to cache module\n\n- Implemented auto-detection logic in cache components\n- Updated redis and store implementations to support auto-detect\n- Added tests for new auto-detect functionality\n- Enhanced UUID handling for cache entries\n\nThis feature improves cache adaptability by automatically detecting appropriate configurations.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 5.197348400000919,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7976013000006787,
+      "input_tokens": 398,
+      "output_tokens": 30,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.87057730000015,
+      "input_tokens": 664,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1636217999985092,
+      "input_tokens": 108,
+      "output_tokens": 87,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3395449000017834,
+      "input_tokens": 136,
+      "output_tokens": 105,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 3378,
+      "ok": true,
+      "latency_s": 0.49579889999949955
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 6,
+      "chars": 13641,
+      "ok": true,
+      "latency_s": 0.5218714000002365
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.308946517s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+     "reasoning": [
+      "Parsed diff: 9 files, +618/-2 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.308946517s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.1736064999968221,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 5,
+        "chars": 3378,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.16797000000224216
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-12": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "Cargo.lock:0",
+      "Cargo.lock:1",
+      "Cargo.toml:0",
+      "README.md:0"
+     ],
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1"
+     ],
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "src/book.rs:0",
+      "src/main.rs:0",
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/order.rs:0",
+      "src/order.rs:1",
+      "src/order.rs:2",
+      "src/order.rs:3"
+     ],
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(dependencies): update Cargo.lock and Cargo.toml\n\n- Updated dependencies in Cargo.toml and Cargo.lock to latest versions.\n- Updated README.md to reflect changes or new instructions related to dependencies.\n",
+     "commit_type": "chore",
+     "scope": "dependencies"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(docs): update system design documentation\n\nUpdated the SYSTEM_DESIGN.md file to reflect recent architectural changes and improvements.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "hunk_count": 13,
+     "commit_message": "refactor(matching): refactor matching logic and related modules\n\n- Improved code structure in matching.rs\n- Updated related logic in book.rs, order.rs, and main.rs\n- Enhanced maintainability and readability without changing behavior",
+     "commit_type": "refactor",
+     "scope": "matching"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 5.593836399999418,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7765543000023172,
+      "input_tokens": 307,
+      "output_tokens": 24,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8175212000023748,
+      "input_tokens": 395,
+      "output_tokens": 42,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.125757399997383,
+      "input_tokens": 108,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8194550000007439,
+      "input_tokens": 101,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1481770999998844,
+      "input_tokens": 117,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 915,
+      "ok": true,
+      "latency_s": 0.3323411000019405
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 13,
+      "chars": 5778,
+      "ok": true,
+      "latency_s": 0.5671181999969122
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.056750088s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+     "reasoning": [
+      "Parsed diff: 8 files, +45/-29 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 23.056750088s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.1807526999982656,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 4,
+        "chars": 915,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.17667339999752585
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-13": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include information about the new auto-detect feature or scope.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs for maintenance\n\nPerformed routine updates and cleanup in src/main.rs to improve codebase maintainability.",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 1.9218861999979708,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0695079999968584,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8496279999999388,
+      "input_tokens": 98,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-14": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "benches/e2e_bench.rs:0",
+      "benches/e2e_bench.rs:1",
+      "benches/e2e_bench.rs:2",
+      "benches/e2e_bench.rs:3",
+      "benches/e2e_bench.rs:4",
+      "benches/e2e_bench.rs:5"
+     ],
+     "files": [
+      "benches/e2e_bench.rs"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "examples/loadgen.rs:0",
+      "examples/loadgen.rs:1",
+      "examples/loadgen.rs:2",
+      "examples/loadgen.rs:3",
+      "examples/loadgen.rs:4",
+      "examples/loadgen.rs:5",
+      "examples/loadgen.rs:6"
+     ],
+     "files": [
+      "examples/loadgen.rs"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/gateway.rs:0",
+      "src/matching.rs:0"
+     ],
+     "files": [
+      "src/gateway.rs",
+      "src/matching.rs"
+     ],
+     "suggested_type": "fix"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "benches/e2e_bench.rs"
+     ],
+     "hunk_count": 6,
+     "commit_message": "chore(auto-detect): add end-to-end benchmark script\n\nAdd e2e_bench.rs to provide benchmarking for end-to-end scenarios.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs): update METRICS and PHASES documentation\n\nUpdated the documentation files METRICS.md and PHASES.md to improve clarity and accuracy.",
+     "commit_type": "docs",
+     "scope": "docs"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "examples/loadgen.rs"
+     ],
+     "hunk_count": 7,
+     "commit_message": "chore(auto-detect): update loadgen example code\n\nRefreshed the examples/loadgen.rs file to improve clarity and maintainability.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/gateway.rs",
+      "src/matching.rs"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(src): resolve matching logic error in gateway\n\nCorrected the matching algorithm in src/matching.rs to handle edge cases properly and updated src/gateway.rs to integrate the fix, preventing incorrect match results.",
+     "commit_type": "fix",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Created 5 commit groups using 'hybrid' strategy",
+    "Generated 5 commit messages"
+   ],
+   "wall_s": 6.880072500000097,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.714009300001635,
+      "input_tokens": 256,
+      "output_tokens": 26,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5565912000020035,
+      "input_tokens": 230,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.919420700000046,
+      "input_tokens": 99,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7918951000028756,
+      "input_tokens": 104,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0386187000003702,
+      "input_tokens": 109,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9572145999991335,
+      "input_tokens": 101,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.936244299999089,
+      "input_tokens": 105,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 6,
+      "chars": 2986,
+      "ok": true,
+      "latency_s": 0.4460343999999168
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 7,
+      "chars": 2837,
+      "ok": true,
+      "latency_s": 0.5123134000023128
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 20.745373523s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}",
+     "reasoning": [
+      "Parsed diff: 7 files, +68/-30 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 20.745373523s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-embedding-1.0', 'location': 'global'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.30731400000149733,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 6,
+        "chars": 2986,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.3018271000000823
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-15": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".gitignore:0",
+      "Cargo.toml:0",
+      "README.md:0"
+     ],
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-src",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".gitignore",
+      "Cargo.toml",
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update project config and docs\n\n- Modify .gitignore to improve ignore rules\n- Update Cargo.toml dependencies or metadata\n- Revise README.md for clarity or accuracy",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update system design documentation\n\nUpdated the SYSTEM_DESIGN.md file to reflect recent architectural changes and improvements.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-src",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(src): update src/main.rs with miscellaneous changes",
+     "commit_type": "chore",
+     "scope": "src"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.673173199997109,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.579735499999515,
+      "input_tokens": 230,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.393542300000263,
+      "input_tokens": 109,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8472420999969472,
+      "input_tokens": 101,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8471628000006604,
+      "input_tokens": 98,
+      "output_tokens": 47,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-16": {
+   "groups": [
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/METRICS.md:0"
+     ],
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/matching.rs:7",
+      "src/matching.rs:8",
+      "src/matching.rs:9",
+      "src/matching.rs:10",
+      "src/matching.rs:11",
+      "src/matching.rs:12",
+      "src/matching.rs:13",
+      "src/matching.rs:14",
+      "src/matching.rs:15",
+      "src/matching.rs:16",
+      "src/matching.rs:17",
+      "src/matching.rs:18",
+      "src/matching.rs:19",
+      "src/matching.rs:20",
+      "src/matching.rs:21",
+      "src/matching.rs:22",
+      "src/matching.rs:23",
+      "src/matching.rs:24",
+      "src/matching.rs:25",
+      "src/matching.rs:26",
+      "src/matching.rs:27",
+      "src/matching.rs:28"
+     ],
+     "files": [
+      "src/matching.rs"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update METRICS.md documentation\n\nUpdated the METRICS.md file to reflect recent changes and improvements in metrics tracking and reporting.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "src/matching.rs"
+     ],
+     "hunk_count": 29,
+     "commit_message": "chore(auto-detect): update matching.rs for auto-detect improvements\n\nRefined the auto-detect logic in matching.rs to enhance maintainability and clarity without altering functionality.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.5581985999997414,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.067573000000266,
+      "input_tokens": 101,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8976935999999114,
+      "input_tokens": 101,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 29,
+      "chars": 9847,
+      "ok": true,
+      "latency_s": 0.5834541999975045
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-1.0, description: Embed content requests per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 16.844663877s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}",
+     "reasoning": [
+      "Parsed diff: 2 files, +112/-27 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_requests, limit: 100, model: gemini-embedding-1.0, description: Embed content requests per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 16.844663877s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content requests per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_requests', 'quotaId': 'EmbedContentRequestsPerMinutePerUserPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '100'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '16s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.26223230000323383,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 29,
+        "chars": 9847,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.2580664999986766
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-17": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): update PHASES.md documentation\n\nUpdated the PHASES.md file to improve clarity and accuracy of the project phases documentation.",
+     "commit_type": "chore",
+     "scope": "docs"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.12294550000297,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1942969000010635,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9254209999999148,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-18": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1",
+      "backend/services/llm/ollama.py:0",
+      "backend/services/llm/ollama.py:1",
+      "backend/services/llm/ollama.py:2",
+      "backend/services/llm/ollama.py:3"
+     ],
+     "files": [
+      "backend/services/llm/gemini.py",
+      "backend/services/llm/ollama.py"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "dir-backend-utils",
+     "hunks": [
+      "backend/utils/cost.py:0"
+     ],
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for improved setup\n\nRefine the Dockerfile to enhance build efficiency and environment consistency.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "backend/services/llm/gemini.py",
+      "backend/services/llm/ollama.py"
+     ],
+     "hunk_count": 6,
+     "commit_message": "fix(auto-detect): correct auto-detect logic in LLM services\n\nFixed the auto-detection mechanism in Gemini and Ollama LLM service modules to ensure proper model identification and initialization. This resolves issues where incorrect models were being selected, improving reliability and accuracy of the backend service.",
+     "commit_type": "fix",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-utils",
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/utils): update cost.py utilities\n\nRefined utility functions in cost.py for improved maintainability and code clarity.",
+     "commit_type": "chore",
+     "scope": "backend/utils"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +70/-36 lines",
+    "Created 3 commit groups using 'hybrid' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.1616440000034345,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8799691999993229,
+      "input_tokens": 200,
+      "output_tokens": 29,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9940023999988625,
+      "input_tokens": 99,
+      "output_tokens": 63,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0231796000007307,
+      "input_tokens": 117,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.821298900002148,
+      "input_tokens": 101,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 6,
+      "chars": 4969,
+      "ok": true,
+      "latency_s": 0.43728339999870514
+     }
+    ]
+   },
+   "previous_attempts": [
+    {
+     "groups": [],
+     "splits": [],
+     "error": "Clustering failed: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 14.247771963s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '14s'}]}}",
+     "reasoning": [
+      "Parsed diff: 4 files, +70/-36 lines",
+      "Cluster error: Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/embed_content_free_tier_tokens, limit: 30000, model: gemini-embedding-1.0, description: Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 14.247771963s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Embed content tokens per minute limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/embed_content_free_tier_tokens', 'quotaId': 'EmbedContentTokensPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-embedding-1.0'}, 'quotaValue': '30000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '14s'}]}}",
+      "Stopped due to error"
+     ],
+     "wall_s": 0.28449620000174036,
+     "meter": {
+      "llm_calls": 0,
+      "requests": [],
+      "embed_calls": [
+       {
+        "model": "gemini-embedding-001",
+        "n_texts": 6,
+        "chars": 4969,
+        "ok": false,
+        "error": "Failed to generate embeddings: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head ",
+        "latency_s": 0.2805943000021216
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "split-19": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/config.py:0"
+     ],
+     "files": [
+      "backend/core/config.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0",
+      "backend/routers/agent.py:1",
+      "backend/routers/agent.py:2"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/__init__.py:0"
+     ],
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve environment setup and dependencies installation, ensuring smoother builds and consistent runtime behavior.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/config.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update configuration settings\n\nUpdated the configuration parameters in backend/core/config.py to improve maintainability and clarity.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactor and clean up the agent router implementation to improve maintainability and readability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/__init__.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/services): update llm service initialization\n\nRefactor __init__.py in llm service to improve module setup and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/services"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +54/-17 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 3.947465299999749,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9645129999989877,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1439171000019996,
+      "input_tokens": 100,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9044097000005422,
+      "input_tokens": 103,
+      "output_tokens": 63,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9315979999992123,
+      "input_tokens": 105,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-20": {
+   "groups": [
+    {
+     "id": "dir-backend-agents",
+     "hunks": [
+      "backend/agents/git_agent.py:0"
+     ],
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend",
+     "hunks": [
+      "backend/main.py:0",
+      "backend/main.py:1"
+     ],
+     "files": [
+      "backend/main.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/agent.py:0"
+     ],
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-services",
+     "hunks": [
+      "backend/services/llm/factory.py:0",
+      "backend/services/llm/gemini.py:0"
+     ],
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "dir-cli",
+     "hunks": [
+      "cli/api_client.py:0",
+      "cli/main.py:0",
+      "cli/main.py:1"
+     ],
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "dir-cli-commands",
+     "hunks": [
+      "cli/commands/agent.py:0"
+     ],
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-root",
+     "hunks": [
+      "pyproject.toml:0"
+     ],
+     "files": [
+      "pyproject.toml"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-backend-agents",
+     "files": [
+      "backend/agents/git_agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/agents): update git_agent.py for maintenance\n\nPerformed routine updates and minor refactoring in git_agent.py to improve code clarity and maintainability without changing functionality.",
+     "commit_type": "chore",
+     "scope": "backend/agents"
+    },
+    {
+     "group_id": "dir-backend",
+     "files": [
+      "backend/main.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(backend): update backend main.py file\n\nUpdated the main.py file in the backend to improve code organization and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/routers): update agent router logic\n\nRefactored the agent.py router to improve code clarity and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "dir-backend-services",
+     "files": [
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(backend/services): add Gemini LLM integration\n\n- Implement Gemini model support in llm/gemini.py\n- Update factory.py to include Gemini in LLM service creation\n\nThis enables the backend to utilize Gemini models for language tasks.",
+     "commit_type": "feat",
+     "scope": "backend/services"
+    },
+    {
+     "group_id": "dir-cli",
+     "files": [
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "refactor(cli): improve code structure in CLI modules\n\nRefactored cli/api_client.py and cli/main.py to enhance readability and maintainability without changing existing functionality.",
+     "commit_type": "refactor",
+     "scope": "cli"
+    },
+    {
+     "group_id": "dir-cli-commands",
+     "files": [
+      "cli/commands/agent.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(cli/commands): update agent.py for maintenance\n\nPerformed routine updates and cleanup in agent.py to improve code maintainability and prepare for future enhancements.",
+     "commit_type": "chore",
+     "scope": "cli/commands"
+    },
+    {
+     "group_id": "dir-root",
+     "files": [
+      "pyproject.toml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update pyproject.toml configuration\n\nUpdated the pyproject.toml file to improve project configuration and dependencies management.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +403/-5 lines",
+    "Created 7 commit groups using 'hybrid' strategy",
+    "Generated 7 commit messages"
+   ],
+   "wall_s": 7.9966037000012875,
+   "meter": {
+    "llm_calls": 9,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5549604000007093,
+      "input_tokens": 238,
+      "output_tokens": 27,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8215816999982053,
+      "input_tokens": 206,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9830613000012818,
+      "input_tokens": 103,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8612685000007332,
+      "input_tokens": 98,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8486494999997376,
+      "input_tokens": 103,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1013249999996333,
+      "input_tokens": 115,
+      "output_tokens": 84,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0193268000002718,
+      "input_tokens": 105,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9207497000024887,
+      "input_tokens": 103,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8796421000006376,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-21": {
+   "groups": [
+    {
+     "id": "dir-tests-backend",
+     "hunks": [
+      "tests/backend/test_analyze.py:0",
+      "tests/backend/test_commit.py:0"
+     ],
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "dir-tests-cli",
+     "hunks": [
+      "tests/cli/test_api_client.py:0"
+     ],
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-tests-backend",
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(tests/backend): add tests for analyze and commit modules\n\nAdd new test cases in test_analyze.py and test_commit.py to improve coverage and verify backend functionality.",
+     "commit_type": "test",
+     "scope": "tests/backend"
+    },
+    {
+     "group_id": "dir-tests-cli",
+     "files": [
+      "tests/cli/test_api_client.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(tests/cli): update test_api_client.py tests\n\nRefine and maintain tests in test_api_client.py to ensure stability and accuracy.",
+     "commit_type": "chore",
+     "scope": "tests/cli"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +69/-8 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.5636613000024226,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8555539999979374,
+      "input_tokens": 213,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9070898999998462,
+      "input_tokens": 109,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7974049000004015,
+      "input_tokens": 104,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-22": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      ".railwayignore:0",
+      "Dockerfile:0"
+     ],
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-core",
+     "hunks": [
+      "backend/core/dependencies.py:0"
+     ],
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update .railwayignore and Dockerfile\n\n- Modified .railwayignore to improve deployment ignores\n- Updated Dockerfile for better build configuration",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-core",
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/core): update dependencies management\n\nRefactor dependencies.py to improve package handling and version control.",
+     "commit_type": "chore",
+     "scope": "backend/core"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +26/-5 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.0333099000017683,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7779104000001098,
+      "input_tokens": 260,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3274993999984872,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.924973900000623,
+      "input_tokens": 101,
+      "output_tokens": 55,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-23": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-clustering",
+     "hunks": [
+      "backend/clustering/conventional.py:0",
+      "backend/clustering/conventional.py:1",
+      "backend/clustering/conventional.py:2"
+     ],
+     "files": [
+      "backend/clustering/conventional.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-routers",
+     "hunks": [
+      "backend/routers/pr.py:0"
+     ],
+     "files": [
+      "backend/routers/pr.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1",
+      "backend/services/llm/gemini.py:2",
+      "backend/services/llm/gemini.py:3"
+     ],
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-backend-utils",
+     "hunks": [
+      "backend/utils/cost.py:0"
+     ],
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "cli/commands/agent.py:0",
+      "cli/commands/agent.py:1",
+      "cli/commands/agent.py:2",
+      "cli/commands/analyze.py:0",
+      "cli/commands/analyze.py:1",
+      "cli/commands/auto.py:0",
+      "cli/commands/auto.py:1",
+      "cli/commands/auto.py:2",
+      "cli/commands/changelog.py:0",
+      "cli/commands/changelog.py:1",
+      "cli/commands/commit.py:0",
+      "cli/commands/commit.py:1",
+      "cli/commands/commit.py:2",
+      "cli/commands/index.py:0",
+      "cli/commands/index.py:1",
+      "cli/commands/index.py:2",
+      "cli/commands/index.py:3",
+      "cli/commands/pr.py:0",
+      "cli/commands/pr.py:1",
+      "cli/commands/resolve.py:0",
+      "cli/commands/resolve.py:1",
+      "cli/commands/review.py:0",
+      "cli/commands/review.py:1",
+      "cli/commands/split.py:0",
+      "cli/commands/split.py:1",
+      "cli/commands/split.py:2"
+     ],
+     "files": [
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve environment setup and dependencies installation, ensuring smoother builds and consistency across deployments.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-clustering",
+     "files": [
+      "backend/clustering/conventional.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(backend/clustering): update conventional commit handling logic\n\nRefine the commit parsing and validation in conventional.py to improve reliability and maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/clustering"
+    },
+    {
+     "group_id": "dir-backend-routers",
+     "files": [
+      "backend/routers/pr.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/routers): update backend PR router logic\n\nRefactor and clean up the PR router implementation in the backend to improve maintainability.",
+     "commit_type": "chore",
+     "scope": "backend/routers"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 4,
+     "commit_message": "chore(auto-detect): update backend llm gemini service\n\nRefined the implementation in backend/services/llm/gemini.py to improve maintainability and align with current project standards.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-backend-utils",
+     "files": [
+      "backend/utils/cost.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(backend/utils): update cost.py utilities\n\nRefactor and improve utility functions in cost.py to enhance code maintainability and readability.",
+     "commit_type": "chore",
+     "scope": "backend/utils"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "hunk_count": 26,
+     "commit_message": "refactor(auto-detect): improve and clean up auto-detect commands\n\nRefactored multiple CLI command modules related to auto-detection to enhance code clarity, maintainability, and consistency across the codebase. This includes updates to agent, analyze, auto, changelog, commit, index, pr, resolve, review, and split commands.\n\nNo changes to external behavior or CLI interfaces.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 15 files, +150/-96 lines",
+    "Created 6 commit groups using 'hybrid' strategy",
+    "Generated 6 commit messages"
+   ],
+   "wall_s": 10.605578700000478,
+   "meter": {
+    "llm_calls": 7,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.5536839999986114,
+      "input_tokens": 622,
+      "output_tokens": 130,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8582366999980877,
+      "input_tokens": 99,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7139276000016253,
+      "input_tokens": 103,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0246454000007361,
+      "input_tokens": 102,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1363888999985647,
+      "input_tokens": 106,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9114620000000286,
+      "input_tokens": 101,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.7397936999986996,
+      "input_tokens": 174,
+      "output_tokens": 118,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 4,
+      "chars": 6165,
+      "ok": true,
+      "latency_s": 0.5128963000024669
+     },
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 26,
+      "chars": 7587,
+      "ok": true,
+      "latency_s": 1.1426912999995693
+     }
+    ]
+   }
+  },
+  "split-24": {
+   "groups": [
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/DATA_MODEL.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0"
+     ],
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs): update API reference and data model docs\n\n- Revised docs/API_REFERENCE.md with latest API changes\n- Improved clarity and structure in docs/DATA_MODEL.md\n\nThese updates ensure documentation accuracy and better developer guidance.",
+     "commit_type": "docs",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(docs/decisions): add new architectural decision records\n\nAdd ADRs 0012, 0017, and 0018 covering platform app module delivery, audit publishing behavior, and audit service hash chain computation respectively.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +122/-12 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.46612069999901,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.5738318000003346,
+      "input_tokens": 210,
+      "output_tokens": 19,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5348488000017824,
+      "input_tokens": 333,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2291069000020798,
+      "input_tokens": 106,
+      "output_tokens": 81,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1249485000007553,
+      "input_tokens": 158,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-25": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      ".github/workflows/ci.yaml:1",
+      ".github/workflows/ci.yaml:2"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs-decisions",
+     "hunks": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0"
+     ],
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nModify the CI pipeline settings in the ci.yaml file to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-docs-decisions",
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(docs/decisions): add workload class and node economics ADRs\n\n- Add ADR 0009: Workload class label gates for spot placement\n- Add ADR 0010: Node economics as labels with pluggable price sources\n\nThese documents formalize decisions around workload classification and node pricing strategies.",
+     "commit_type": "docs",
+     "scope": "docs/decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +79/-3 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.034703700002865,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8772819000005256,
+      "input_tokens": 258,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9202679000009084,
+      "input_tokens": 105,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2337635999974736,
+      "input_tokens": 139,
+      "output_tokens": 103,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-26": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-e2e",
+     "hunks": [
+      "e2e/phase2_test.go:0"
+     ],
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web-scripts",
+     "hunks": [
+      "web/scripts/build-lattice.ts:0",
+      "web/scripts/build-lattice.ts:1",
+      "web/scripts/build-lattice.ts:2"
+     ],
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-web",
+     "hunks": [
+      "web/vercel.json:0"
+     ],
+     "files": [
+      "web/vercel.json"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nUpdate the CI workflow settings in .github/workflows/ci.yaml to improve build process and automation.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-e2e",
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(e2e): update phase2 e2e test file\n\nRefactor or update the e2e/phase2_test.go file to improve test setup or maintenance.",
+     "commit_type": "chore",
+     "scope": "e2e"
+    },
+    {
+     "group_id": "dir-web-scripts",
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(web/scripts): update build-lattice script\n\nUpdated the build-lattice.ts script to improve build process and maintainability.",
+     "commit_type": "chore",
+     "scope": "web/scripts"
+    },
+    {
+     "group_id": "dir-web",
+     "files": [
+      "web/vercel.json"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(web): update vercel.json configuration\n\nUpdate the Vercel deployment configuration file to improve deployment settings.",
+     "commit_type": "chore",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +30/-19 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.051631500002259,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.976407800000743,
+      "input_tokens": 105,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9333760999979859,
+      "input_tokens": 105,
+      "output_tokens": 75,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0124314999993658,
+      "input_tokens": 102,
+      "output_tokens": 61,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1266046999990067,
+      "input_tokens": 99,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-27": {
+   "groups": [
+    {
+     "id": "dir-root",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/METRICS.md:0",
+      "docs/ROADMAP.md:0",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md",
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-root",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md",
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update multiple documentation files\n\nUpdated the following documentation files to improve clarity and completeness:\n- API_REFERENCE.md\n- METRICS.md\n- ROADMAP.md\n- SYSTEM_DESIGN.md\n- TESTING.md",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 6 files, +58/-22 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.2356087999978627,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7096821000013733,
+      "input_tokens": 382,
+      "output_tokens": 58,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.983317199999874,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0302319000002171,
+      "input_tokens": 131,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 5,
+      "chars": 16006,
+      "ok": true,
+      "latency_s": 0.5062131000013324
+     }
+    ]
+   }
+  },
+  "split-28": {
+   "groups": [
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "README.md:3",
+      "README.md:4",
+      "README.md:5",
+      "README.md:6"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-e2e",
+     "hunks": [
+      "e2e/phase7_sim_test.go:0",
+      "e2e/phase7_sim_test.go:1",
+      "e2e/phase7_sim_test.go:2"
+     ],
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 7,
+     "commit_message": "chore(auto-detect): update README with auto-detect info\n\nUpdated the README.md file to include details about the auto-detect feature.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "dir-e2e",
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(e2e): update phase7 simulation test\n\nRefine and update the phase7 simulation end-to-end test to improve reliability and coverage.",
+     "commit_type": "chore",
+     "scope": "e2e"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +133/-40 lines",
+    "Created 2 commit groups using 'hybrid' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.2416310000007797,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8769811000020127,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8241817999987688,
+      "input_tokens": 106,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 7,
+      "chars": 13536,
+      "ok": true,
+      "latency_s": 0.5350451000012981
+     }
+    ]
+   }
+  },
+  "split-29": {
+   "groups": [
+    {
+     "id": "dir-.github-workflows",
+     "hunks": [
+      ".github/workflows/ci.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-docs",
+     "hunks": [
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "dir-root",
+     "hunks": [
+      "kind-config-operator.yaml:0"
+     ],
+     "files": [
+      "kind-config-operator.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "semantic-0",
+     "hunks": [
+      "operator/internal/controller/resources.go:0",
+      "operator/internal/controller/resources.go:1",
+      "operator/internal/controller/resources.go:2",
+      "operator/internal/controller/resources.go:3",
+      "operator/internal/controller/resources.go:4",
+      "operator/internal/controller/tenantdatabase_controller_test.go:0",
+      "operator/internal/controller/tenantdatabase_controller_test.go:1"
+     ],
+     "files": [
+      "operator/internal/controller/resources.go",
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "dir-.github-workflows",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(.github/workflows): update ci workflow configuration\n\nModify the ci.yaml file to improve the continuous integration process.",
+     "commit_type": "chore",
+     "scope": ".github/workflows"
+    },
+    {
+     "group_id": "dir-docs",
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(docs): add TESTING.md documentation file\n\nAdd a new TESTING.md file to the docs directory to outline testing procedures and guidelines.",
+     "commit_type": "chore",
+     "scope": "docs"
+    },
+    {
+     "group_id": "dir-root",
+     "files": [
+      "kind-config-operator.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update kind-config-operator.yaml\n\nUpdate kind-config-operator.yaml to reflect latest configuration changes.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "semantic-0",
+     "files": [
+      "operator/internal/controller/resources.go",
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "hunk_count": 7,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in controllers\n\nRefactored the auto-detect functionality in operator/internal/controller/resources.go and enhanced related tests in tenantdatabase_controller_test.go to improve code clarity and maintainability.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +25/-14 lines",
+    "Created 4 commit groups using 'hybrid' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.7432669999980135,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6029923999994935,
+      "input_tokens": 244,
+      "output_tokens": 25,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8326914999997825,
+      "input_tokens": 105,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.823876400001609,
+      "input_tokens": 100,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9824873000034131,
+      "input_tokens": 102,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0248861000000034,
+      "input_tokens": 114,
+      "output_tokens": 85,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [
+     {
+      "model": "gemini-embedding-001",
+      "n_texts": 7,
+      "chars": 3742,
+      "ok": true,
+      "latency_s": 0.4709965999973065
+     }
+    ]
+   }
+  }
+ },
+ "retriever": "injected EmbeddingService(model=gemini-embedding-001)"
+}

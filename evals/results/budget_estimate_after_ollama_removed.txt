@@ -1,0 +1,10 @@
+commit diff chars 144500 split diff chars 370576
+{
+ "measured_split_hybrid_usd": 0.0207,
+ "remaining_split_configs": 7,
+ "split_remaining_usd_est": 0.2898,
+ "commit_openai_usd_est": 0.17613333333333334,
+ "auto_usd_est": 0.01,
+ "gemini_embedding_upper_bound_usd": 0.13340735999999997,
+ "total_est_usd": 0.63
+}

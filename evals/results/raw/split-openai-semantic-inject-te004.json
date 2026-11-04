@@ -1,0 +1,762 @@
+{
+ "config": "split-openai-semantic-inject-te004",
+ "settings": {
+  "eval": "split",
+  "provider": "openai",
+  "strategy": "semantic",
+  "embedding": "text-embedding-004"
+ },
+ "cases": {
+  "split-00": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +252/-6 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.1669192999979714,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 9,
+      "chars": 12890,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.16226900000037858
+     }
+    ]
+   }
+  },
+  "split-01": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 7 files, +409/-7 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.1611537999997381,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 14,
+      "chars": 15292,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1571968000025663
+     }
+    ]
+   }
+  },
+  "split-02": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +201/-9 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.15413080000143964,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 10108,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1499309999999241
+     }
+    ]
+   }
+  },
+  "split-03": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +22/-18 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.13271289999829605,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 5256,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.129175000001851
+     }
+    ]
+   }
+  },
+  "split-04": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +37/-3 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.11073259999830043,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 3292,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.10719040000185487
+     }
+    ]
+   }
+  },
+  "split-05": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +83/-37 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.17374699999709264,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 10,
+      "chars": 12230,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.16987679999874672
+     }
+    ]
+   }
+  },
+  "split-06": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.16383160000259522,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 17,
+      "chars": 16682,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.15729429999919375
+     }
+    ]
+   }
+  },
+  "split-07": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.1587796999992861,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 18,
+      "chars": 27444,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1502035999983491
+     }
+    ]
+   }
+  },
+  "split-08": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.14428819999739062,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 19771,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1384643999990658
+     }
+    ]
+   }
+  },
+  "split-09": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09883629999967525,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 3977,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09583779999957187
+     }
+    ]
+   }
+  },
+  "split-10": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.14920010000059847,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 20,
+      "chars": 17971,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.14508370000112336
+     }
+    ]
+   }
+  },
+  "split-11": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09039589999883901,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 11,
+      "chars": 17019,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08567590000166092
+     }
+    ]
+   }
+  },
+  "split-12": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.0973632000022917,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 19,
+      "chars": 8038,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09325879999960307
+     }
+    ]
+   }
+  },
+  "split-13": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.0950927000012598,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 2,
+      "chars": 720,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09240219999992405
+     }
+    ]
+   }
+  },
+  "split-14": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08248350000212668,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 20,
+      "chars": 11105,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.0778241000007256
+     }
+    ]
+   }
+  },
+  "split-15": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.15826270000252407,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 20277,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.15285140000196407
+     }
+    ]
+   }
+  },
+  "split-16": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08831479999935254,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 30,
+      "chars": 11799,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.084419999999227
+     }
+    ]
+   }
+  },
+  "split-17": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08491720000165515,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 4,
+      "chars": 13745,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08011389999956009
+     }
+    ]
+   }
+  },
+  "split-18": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +70/-36 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.10572949999914272,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 5917,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.10166020000178833
+     }
+    ]
+   }
+  },
+  "split-19": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +54/-17 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.11022329999832436,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 3317,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.10705089999828488
+     }
+    ]
+   }
+  },
+  "split-20": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 9 files, +403/-5 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09185829999842099,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 11,
+      "chars": 13195,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08732550000058836
+     }
+    ]
+   }
+  },
+  "split-21": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 3 files, +69/-8 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09351979999701143,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 3,
+      "chars": 3637,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.0901689999991504
+     }
+    ]
+   }
+  },
+  "split-22": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 3 files, +26/-5 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08786510000209091,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 3,
+      "chars": 1127,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08513369999855058
+     }
+    ]
+   }
+  },
+  "split-23": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 15 files, +150/-96 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.10337300000173855,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 36,
+      "chars": 17804,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09692979999817908
+     }
+    ]
+   }
+  },
+  "split-24": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +122/-12 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08681200000137324,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 15280,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08329969999977038
+     }
+    ]
+   }
+  },
+  "split-25": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 3 files, +79/-3 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.0900614999991376,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 5,
+      "chars": 6587,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08716860000276938
+     }
+    ]
+   }
+  },
+  "split-26": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 4 files, +30/-19 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.08580389999769977,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 6,
+      "chars": 3911,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08285710000200197
+     }
+    ]
+   }
+  },
+  "split-27": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 6 files, +58/-22 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.09134679999988293,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 8,
+      "chars": 19051,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.08821600000010221
+     }
+    ]
+   }
+  },
+  "split-28": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 2 files, +133/-40 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.10693919999903301,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 10,
+      "chars": 14955,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.1020420999993803
+     }
+    ]
+   }
+  },
+  "split-29": {
+   "groups": [],
+   "splits": [],
+   "error": "Clustering failed: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+   "reasoning": [
+    "Parsed diff: 5 files, +25/-14 lines",
+    "Cluster error: Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+    "Stopped due to error"
+   ],
+   "wall_s": 0.0969900999989477,
+   "meter": {
+    "llm_calls": 0,
+    "requests": [],
+    "embed_calls": [
+     {
+      "model": "text-embedding-004",
+      "n_texts": 10,
+      "chars": 7238,
+      "ok": false,
+      "error": "Failed to generate embeddings: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/text-embedding-004 is not found for API version v1beta, or is not supported for embedContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'",
+      "latency_s": 0.09281919999921229
+     }
+    ]
+   }
+  }
+ },
+ "retriever": "injected EmbeddingService(model=text-embedding-004)"
+}

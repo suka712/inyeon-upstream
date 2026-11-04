@@ -1,0 +1,14 @@
+{
+ "note": "Manual probes run against the local Ollama server BEFORE the eval runs, transcribed from terminal output. Not part of any eval table. Ollama (and its model store) was uninstalled from this machine mid-session, before any eval case completed, so no Ollama eval results exist. The only Ollama eval attempt (split-ollama-directory) failed with 'All connection attempts failed' on its first cases and was discarded per the coordinator's instruction.",
+ "date": "2026-11-04",
+ "ollama_version": "0.40.14",
+ "model": "qwen2.5-coder:7b (Q4_K_M, 7.6B, model context_length 32768)",
+ "ollama_ps_after_first_call": {"processor": "18%/82% CPU/GPU", "context": 4096},
+ "probes": [
+  {"id": "cold_start", "prompt_eval_count": 38, "eval_count": 10, "load_duration_s": 35.25, "total_duration_s": 71.25},
+  {"id": "2.7k_token_prompt_run1", "prompt_chars": 7245, "qwen_tokenizer_raw_tokens": 2712, "prompt_eval_count": 2741, "eval_count": 59, "wall_s": 6.8},
+  {"id": "2.7k_token_prompt_run2", "prompt_chars": 7245, "qwen_tokenizer_raw_tokens": 2712, "prompt_eval_count": 2741, "eval_count": 70, "wall_s": 5.5},
+  {"id": "oversized_prompt", "prompt_chars": 49313, "prompt_eval_count": 2050, "eval_count": 21, "done_reason": "stop",
+   "interpretation": "Prompt far larger than the 4096-token default context was silently truncated to 2050 evaluated tokens; no error was returned. OllamaProvider sets no num_ctx, so commit/review prompts with diffs over ~4k tokens would be silently truncated (which part of the prompt is dropped was not verified)."}
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "config": "auto-openai-nopr",
+ "settings": {
+  "eval": "auto",
+  "provider": "openai",
+  "skip_pr": true
+ },
+ "cases": {
+  "auto-00": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 3.535316800000146,
+   "diff_chars": 151,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0508474000016577,
+      "input_tokens": 182,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.4559116999989783,
+      "input_tokens": 219,
+      "output_tokens": 90,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   }
+  },
+  "auto-01": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.1630912000000535,
+   "diff_chars": 183,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0933032000029925,
+      "input_tokens": 195,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0642559999978403,
+      "input_tokens": 245,
+      "output_tokens": 112,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   }
+  },
+  "auto-02": {
+   "steps_completed": [
+    "commit"
+   ],
+   "steps_skipped": [
+    "split",
+    "review",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 1.8082944000016141,
+   "diff_chars": 170,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9041847999978927,
+      "input_tokens": 191,
+      "output_tokens": 83,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8984942999995837,
+      "input_tokens": 235,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": []
+   }
+  },
+  "auto-03": {
+   "steps_completed": [
+    "commit",
+    "review"
+   ],
+   "steps_skipped": [
+    "split",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.4124383999987913,
+   "diff_chars": 688,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0582748999986507,
+      "input_tokens": 281,
+      "output_tokens": 95,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3443087999985437,
+      "input_tokens": 338,
+      "output_tokens": 130,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ]
+   }
+  },
+  "auto-04": {
+   "steps_completed": [
+    "commit",
+    "review"
+   ],
+   "steps_skipped": [
+    "split",
+    "pr"
+   ],
+   "commit_message": null,
+   "has_review": false,
+   "has_pr": false,
+   "error": null,
+   "wall_s": 2.2732303999982832,
+   "diff_chars": 845,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.079200200001651,
+      "input_tokens": 345,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1846542000021145,
+      "input_tokens": 388,
+      "output_tokens": 95,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": [],
+    "call_errors": [
+     "OpenAIError: OpenAI request failed: Connection error."
+    ]
+   }
+  }
+ }
+}

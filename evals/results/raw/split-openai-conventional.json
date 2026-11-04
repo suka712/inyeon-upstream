@@ -1,0 +1,3428 @@
+{
+ "config": "split-openai-conventional",
+ "settings": {
+  "eval": "split",
+  "provider": "openai",
+  "strategy": "conventional",
+  "embedding": null
+ },
+ "cases": {
+  "split-00": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "CONTRIBUTING.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "ROADMAP.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "apps/api/.env.example:0"
+     ],
+     "files": [
+      "apps/api/.env.example"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "apps/api/test/recap/compose.test.ts:0",
+      "apps/api/test/recap/prose.test.ts:0",
+      "apps/api/test/recap/week.test.ts:0"
+     ],
+     "files": [
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "CONTRIBUTING.md",
+      "METRICS.md",
+      "ROADMAP.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update CONTRIBUTING, METRICS, ROADMAP, and SYSTEM_DESIGN\n\nUpdated multiple documentation files to improve clarity and provide up-to-date information on contributing guidelines, project metrics, roadmap, and system design.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "apps/api/.env.example"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update .env.example for API app\n\nUpdated the environment example file in the API application to reflect current configuration requirements.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "apps/api/test/recap/compose.test.ts",
+      "apps/api/test/recap/prose.test.ts",
+      "apps/api/test/recap/week.test.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "test(recap): add tests for recap compose, prose, and week\n\nAdded new test cases in compose.test.ts, prose.test.ts, and week.test.ts to improve coverage and ensure functionality of recap features.",
+     "commit_type": "test",
+     "scope": "recap"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +252/-6 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.255296199997247,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2818404999998165,
+      "input_tokens": 729,
+      "output_tokens": 101,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8621540999993158,
+      "input_tokens": 117,
+      "output_tokens": 81,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1084865999982867,
+      "input_tokens": 102,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9968367000001308,
+      "input_tokens": 130,
+      "output_tokens": 81,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-01": {
+   "groups": [
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "apps/api/src/aggregate/run.ts:0",
+      "apps/api/src/aggregate/run.ts:1",
+      "apps/api/src/aggregate/run.ts:2",
+      "apps/api/src/aggregate/run.ts:3",
+      "apps/api/src/aggregate/run.ts:4",
+      "apps/api/src/aggregate/run.ts:5",
+      "packages/db/src/schema.ts:0",
+      "packages/db/src/schema.ts:1",
+      "packages/db/src/schema.ts:2"
+     ],
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "packages/db/src/schema.ts"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "apps/api/test/aggregate/scanner.integration.test.ts:0",
+      "apps/api/test/helpers/scanner.ts:0",
+      "apps/api/test/routes/integration.test.ts:0"
+     ],
+     "files": [
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql:0"
+     ],
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "packages/db/src/migrations/meta/_journal.json:0"
+     ],
+     "files": [
+      "packages/db/src/migrations/meta/_journal.json"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "apps/api/src/aggregate/run.ts",
+      "packages/db/src/schema.ts"
+     ],
+     "hunk_count": 9,
+     "commit_message": "refactor(auto-detect): improve aggregation and schema logic\n\nRefactored code in run.ts and schema.ts to enhance clarity and maintainability of aggregation processes and database schema definitions.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "apps/api/test/aggregate/scanner.integration.test.ts",
+      "apps/api/test/helpers/scanner.ts",
+      "apps/api/test/routes/integration.test.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "test(auto-detect): add integration tests for scanner functionality\n\n- Added scanner.integration.test.ts to cover aggregate scanner scenarios\n- Updated helpers/scanner.ts with utility functions for tests\n- Enhanced routes/integration.test.ts with scanner-related test cases\n\nThese tests improve coverage and reliability of the scanner features.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "packages/db/src/migrations/0012_leaderboard_outbox.sql"
+     ],
+     "hunk_count": 1,
+     "commit_message": "feat(db): add leaderboard outbox migration\n\nAdd new SQL migration 0012_leaderboard_outbox.sql to support leaderboard outbox feature.",
+     "commit_type": "feat",
+     "scope": "db"
+    },
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "packages/db/src/migrations/meta/_journal.json"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(db): update migration journal file\n\nUpdated the _journal.json file in the migrations metadata to reflect recent changes.",
+     "commit_type": "chore",
+     "scope": "db"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +409/-7 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.591366000000562,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2854622999984713,
+      "input_tokens": 624,
+      "output_tokens": 107,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0251102000001993,
+      "input_tokens": 112,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4355193000010331,
+      "input_tokens": 126,
+      "output_tokens": 97,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9550670999997237,
+      "input_tokens": 111,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8844260000005306,
+      "input_tokens": 106,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-02": {
+   "groups": [
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "apps/web/src/App.tsx:0",
+      "apps/web/src/App.tsx:1",
+      "apps/web/src/App.tsx:2",
+      "apps/web/src/lib/api.ts:0",
+      "apps/web/src/lib/push.ts:0",
+      "apps/web/src/lib/push.ts:1",
+      "apps/web/src/pages/EditProfile.tsx:0",
+      "apps/web/src/pages/EditProfile.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/lib/api.ts",
+      "apps/web/src/lib/push.ts",
+      "apps/web/src/pages/EditProfile.tsx"
+     ],
+     "hunk_count": 8,
+     "commit_message": "feat(web): add new features to profile editing and API\n\n- Enhance EditProfile page with improved editing capabilities\n- Update API utilities for better data handling\n- Modify push notification logic for enhanced user experience\n- Refactor App component to integrate new features seamlessly",
+     "commit_type": "feat",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +201/-9 lines",
+    "Created 1 commit groups using 'conventional' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.9509272999966925,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8804601999981969,
+      "input_tokens": 365,
+      "output_tokens": 53,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.066887900000438,
+      "input_tokens": 130,
+      "output_tokens": 88,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-03": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "ARCHITECTURE_DECISIONS.md:0",
+      "README.md:0",
+      "SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "apps/web/src/App.tsx:0"
+     ],
+     "files": [
+      "apps/web/src/App.tsx"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-style",
+     "hunks": [
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1"
+     ],
+     "files": [
+      "apps/web/src/index.css"
+     ],
+     "suggested_type": "style"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "ARCHITECTURE_DECISIONS.md",
+      "README.md",
+      "SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(auto-detect): update architecture and system design docs\n\nUpdated ARCHITECTURE_DECISIONS.md, README.md, and SYSTEM_DESIGN.md to reflect recent changes and improvements in the auto-detect feature.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "apps/web/src/App.tsx"
+     ],
+     "hunk_count": 1,
+     "commit_message": "feat(auto-detect): add auto-detect feature to App component\n\nImplemented auto-detect functionality in the App component to enhance user experience by automatically configuring settings based on environment or user preferences.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-style",
+     "files": [
+      "apps/web/src/index.css"
+     ],
+     "hunk_count": 2,
+     "commit_message": "style(auto-detect): update styles in index.css\n\nRefine CSS rules in apps/web/src/index.css to improve styling consistency and maintainability.",
+     "commit_type": "style",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +22/-18 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.6779710999981035,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8402425000022049,
+      "input_tokens": 558,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9140125000012631,
+      "input_tokens": 115,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9654608000018925,
+      "input_tokens": 103,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9550961999993888,
+      "input_tokens": 102,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-04": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "CHANGELOG.md:0",
+      "apps/web/src/pages/Changelog.tsx:0"
+     ],
+     "files": [
+      "CHANGELOG.md",
+      "apps/web/src/pages/Changelog.tsx"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "apps/api/src/lib/teams.ts:0"
+     ],
+     "files": [
+      "apps/api/src/lib/teams.ts"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "conv-fix",
+     "hunks": [
+      "apps/api/src/routes/teams.ts:0"
+     ],
+     "files": [
+      "apps/api/src/routes/teams.ts"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "apps/web/src/pages/Teams.tsx:0",
+      "apps/web/src/pages/Teams.tsx:1"
+     ],
+     "files": [
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "CHANGELOG.md",
+      "apps/web/src/pages/Changelog.tsx"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(changelog): update changelog and changelog page\n\n- Updated CHANGELOG.md with recent changes.\n- Modified Changelog.tsx to reflect updated changelog entries.",
+     "commit_type": "docs",
+     "scope": "changelog"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "apps/api/src/lib/teams.ts"
+     ],
+     "hunk_count": 1,
+     "commit_message": "refactor(auto-detect): improve team utilities in API\n\nRefactored the team-related functions in apps/api/src/lib/teams.ts for better readability and maintainability.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-fix",
+     "files": [
+      "apps/api/src/routes/teams.ts"
+     ],
+     "hunk_count": 1,
+     "commit_message": "fix(auto-detect): correct team route handling in API\n\nResolved issues in the teams route implementation to ensure proper request handling and response formatting.",
+     "commit_type": "fix",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "apps/web/src/pages/Teams.tsx"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(auto-detect): add new feature to Teams page\n\nImplemented a new feature in the Teams.tsx page to enhance user experience and functionality.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +37/-3 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 4.974553099997138,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.322087600001396,
+      "input_tokens": 493,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.909663599999476,
+      "input_tokens": 111,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.866462899997714,
+      "input_tokens": 105,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9137344000009762,
+      "input_tokens": 104,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9591422000012244,
+      "input_tokens": 105,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-05": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "CHANGELOG.md:0",
+      "METRICS.md:0",
+      "METRICS.md:1",
+      "METRICS.md:2",
+      "METRICS.md:3",
+      "apps/web/src/lib/changelog.ts:0"
+     ],
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-perf",
+     "hunks": [
+      "apps/web/src/App.tsx:0"
+     ],
+     "files": [
+      "apps/web/src/App.tsx"
+     ],
+     "suggested_type": "perf"
+    },
+    {
+     "id": "conv-style",
+     "hunks": [
+      "apps/web/src/index.css:0",
+      "apps/web/src/index.css:1",
+      "apps/web/src/index.css:2"
+     ],
+     "files": [
+      "apps/web/src/index.css"
+     ],
+     "suggested_type": "style"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "CHANGELOG.md",
+      "METRICS.md",
+      "apps/web/src/lib/changelog.ts"
+     ],
+     "hunk_count": 6,
+     "commit_message": "docs(auto-detect): update changelog and metrics documentation\n\n- Updated CHANGELOG.md with recent changes\n- Revised METRICS.md for clarity\n- Modified apps/web/src/lib/changelog.ts to improve changelog generation logic",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-perf",
+     "files": [
+      "apps/web/src/App.tsx"
+     ],
+     "hunk_count": 1,
+     "commit_message": "perf(auto-detect): improve auto-detect performance in App.tsx\n\nOptimized the auto-detect logic in apps/web/src/App.tsx to enhance runtime efficiency and reduce unnecessary computations.",
+     "commit_type": "perf",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-style",
+     "files": [
+      "apps/web/src/index.css"
+     ],
+     "hunk_count": 3,
+     "commit_message": "style(web): update styles in index.css\n\nRefined CSS rules in apps/web/src/index.css to improve styling consistency and maintainability.",
+     "commit_type": "style",
+     "scope": "web"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +83/-37 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.199646900000516,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0583722999981546,
+      "input_tokens": 450,
+      "output_tokens": 57,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9774870000001101,
+      "input_tokens": 115,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0277749999986554,
+      "input_tokens": 103,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1323093000028166,
+      "input_tokens": 102,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-06": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "config.yaml:0"
+     ],
+     "files": [
+      "config.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "internal/config/config.go:0",
+      "internal/config/config.go:1",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1",
+      "internal/metrics/noop.go:0",
+      "internal/metrics/prometheus.go:0",
+      "internal/metrics/prometheus.go:1",
+      "internal/metrics/prometheus.go:2",
+      "internal/metrics/recorder.go:0"
+     ],
+     "files": [
+      "internal/config/config.go",
+      "internal/config/load.go",
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/recorder.go"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1",
+      "internal/entropy/entropy_test.go:0",
+      "internal/entropy/window_test.go:0",
+      "internal/metrics/prometheus_test.go:0"
+     ],
+     "files": [
+      "internal/config/config_test.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window_test.go",
+      "internal/metrics/prometheus_test.go"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "internal/entropy/entropy.go:0",
+      "internal/entropy/window.go:0"
+     ],
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/window.go"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "config.yaml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update config.yaml settings\n\nUpdated configuration settings in config.yaml to improve auto-detection behavior.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "internal/config/config.go",
+      "internal/config/load.go",
+      "internal/metrics/noop.go",
+      "internal/metrics/prometheus.go",
+      "internal/metrics/recorder.go"
+     ],
+     "hunk_count": 9,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in config and metrics\n\nRefactored the auto-detect functionality within configuration and metrics components to enhance code clarity and maintainability. Changes span internal/config/config.go, internal/config/load.go, and metrics implementations in internal/metrics/noop.go, prometheus.go, and recorder.go.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "internal/config/config_test.go",
+      "internal/entropy/entropy_test.go",
+      "internal/entropy/window_test.go",
+      "internal/metrics/prometheus_test.go"
+     ],
+     "hunk_count": 5,
+     "commit_message": "test(auto-detect): add tests for config, entropy, and metrics\n\nAdded new test cases in internal/config, internal/entropy, and internal/metrics packages to improve coverage and ensure reliability.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "internal/entropy/entropy.go",
+      "internal/entropy/window.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(auto-detect): add entropy-based auto-detection feature\n\nImplemented new entropy calculations and sliding window logic to improve auto-detection accuracy. Changes include updates to internal/entropy/entropy.go and internal/entropy/window.go to support enhanced entropy measurement and detection mechanisms.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 12 files, +610/-12 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.617720000002009,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.348006299998815,
+      "input_tokens": 1124,
+      "output_tokens": 145,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9097145999985514,
+      "input_tokens": 99,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.234591399999772,
+      "input_tokens": 133,
+      "output_tokens": 109,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8863481000007596,
+      "input_tokens": 128,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2325275000002875,
+      "input_tokens": 110,
+      "output_tokens": 90,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-07": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "web/src/app/layout.tsx:0",
+      "web/src/app/layout.tsx:1",
+      "web/src/app/layout.tsx:2",
+      "web/src/app/page.tsx:0",
+      "web/src/app/page.tsx:1",
+      "web/src/app/page.tsx:2",
+      "web/src/app/page.tsx:3",
+      "web/src/app/page.tsx:4",
+      "web/src/app/page.tsx:5",
+      "web/src/app/page.tsx:6",
+      "web/src/app/page.tsx:7",
+      "web/src/app/page.tsx:8",
+      "web/src/app/page.tsx:9",
+      "web/src/app/page.tsx:10",
+      "web/src/app/page.tsx:11",
+      "web/src/app/page.tsx:12",
+      "web/src/components/Architecture.tsx:0"
+     ],
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "docs(auto-detect): update README with auto-detect info\n\nImprove documentation by adding details about the auto-detect feature in the README.md file.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "web/src/app/layout.tsx",
+      "web/src/app/page.tsx",
+      "web/src/components/Architecture.tsx"
+     ],
+     "hunk_count": 17,
+     "commit_message": "refactor(layout): improve structure in layout and architecture components\n\nRefactored web/src/app/layout.tsx, web/src/app/page.tsx, and web/src/components/Architecture.tsx to enhance code clarity and maintainability.",
+     "commit_type": "refactor",
+     "scope": "layout"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +511/-207 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.6486308999992616,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6405761999994866,
+      "input_tokens": 402,
+      "output_tokens": 44,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8186840000016673,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.182424999999057,
+      "input_tokens": 121,
+      "output_tokens": 80,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-08": {
+   "groups": [
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "benchmarks/internal/sweep/cost.go:0",
+      "benchmarks/internal/sweep/replay.go:0",
+      "benchmarks/internal/sweep/report.go:0",
+      "benchmarks/internal/sweep/stats.go:0"
+     ],
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/stats.go"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "benchmarks/internal/sweep/cost_test.go:0",
+      "benchmarks/internal/sweep/replay_test.go:0",
+      "benchmarks/internal/sweep/report_test.go:0",
+      "benchmarks/internal/sweep/stats_test.go:0"
+     ],
+     "files": [
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "benchmarks/internal/sweep/cost.go",
+      "benchmarks/internal/sweep/replay.go",
+      "benchmarks/internal/sweep/report.go",
+      "benchmarks/internal/sweep/stats.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "feat(auto-detect): add auto-detect feature to sweep benchmarks\n\nImplemented auto-detection capabilities across sweep benchmark modules including cost, replay, report, and stats. This enhancement improves automation and accuracy in benchmark analysis.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "benchmarks/internal/sweep/cost_test.go",
+      "benchmarks/internal/sweep/replay_test.go",
+      "benchmarks/internal/sweep/report_test.go",
+      "benchmarks/internal/sweep/stats_test.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "test(sweep): add tests for sweep benchmark components\n\nAdded new test cases in cost_test.go, replay_test.go, report_test.go, and stats_test.go to improve coverage and ensure correctness of sweep benchmark functionalities.",
+     "commit_type": "test",
+     "scope": "sweep"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +758/-0 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.811431400001311,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.0028280000005907,
+      "input_tokens": 821,
+      "output_tokens": 116,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8661776000008103,
+      "input_tokens": 130,
+      "output_tokens": 81,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9360574999991513,
+      "input_tokens": 134,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-09": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "go.mod:0",
+      "go.sum:0"
+     ],
+     "files": [
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(auto-detect): update README with auto-detect info\n\nImprove documentation by adding details about the auto-detect feature in the README.md file.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update go.mod and go.sum\n\nUpdate module dependencies to their latest versions by modifying go.mod and go.sum files.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +39/-2 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.2999611999985063,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.636875100000907,
+      "input_tokens": 390,
+      "output_tokens": 23,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8309792000000016,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.828794500001095,
+      "input_tokens": 103,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-10": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0",
+      "docs/PHASES.md:1",
+      "docs/PHASES.md:2",
+      "docs/PHASES.md:3",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1",
+      "docs/SYSTEM_DESIGN.md:2",
+      "docs/SYSTEM_DESIGN.md:3",
+      "docs/SYSTEM_DESIGN.md:4"
+     ],
+     "files": [
+      "README.md",
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "cmd/gateway/main.go:0",
+      "cmd/gateway/main.go:1"
+     ],
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "config.yaml:0",
+      "internal/config/load.go:0",
+      "internal/config/load.go:1"
+     ],
+     "files": [
+      "config.yaml",
+      "internal/config/load.go"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "internal/config/config_test.go:0",
+      "internal/config/config_test.go:1"
+     ],
+     "files": [
+      "internal/config/config_test.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/METRICS.md",
+      "docs/PHASES.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 13,
+     "commit_message": "docs(auto-detect): update README and docs files\n\nUpdated README.md and documentation files (METRICS.md, PHASES.md, SYSTEM_DESIGN.md) to improve clarity and accuracy regarding the auto-detect feature.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "cmd/gateway/main.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "feat(auto-detect): add auto-detect feature in gateway main\n\nImplemented auto-detection logic in cmd/gateway/main.go to enhance dynamic configuration and improve user experience.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "config.yaml",
+      "internal/config/load.go"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update auto-detect config settings\n\nUpdated config.yaml and internal/config/load.go to improve auto-detect configuration handling.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "internal/config/config_test.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(auto-detect): add tests for config package\n\nAdd unit tests in internal/config/config_test.go to improve coverage and verify configuration loading behavior.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +153/-65 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.5503977999978815,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0858427000021038,
+      "input_tokens": 740,
+      "output_tokens": 88,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2276625000013155,
+      "input_tokens": 123,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9819683999994595,
+      "input_tokens": 102,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2439976000023307,
+      "input_tokens": 105,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0056468000002496,
+      "input_tokens": 102,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-11": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "docker-compose.yml:0",
+      "docker-compose.yml:1",
+      "go.mod:0",
+      "go.sum:0",
+      "go.sum:1"
+     ],
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "internal/cache/new.go:0",
+      "internal/cache/redis.go:0",
+      "internal/cache/store.go:0",
+      "internal/cache/uuid.go:0"
+     ],
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/store.go",
+      "internal/cache/uuid.go"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "internal/cache/redis_test.go:0",
+      "internal/cache/store_test.go:0"
+     ],
+     "files": [
+      "internal/cache/redis_test.go",
+      "internal/cache/store_test.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "docker-compose.yml",
+      "go.mod",
+      "go.sum"
+     ],
+     "hunk_count": 5,
+     "commit_message": "chore(auto-detect): update dependencies and docker-compose setup\n\n- Updated go.mod and go.sum to reflect dependency changes\n- Modified docker-compose.yml for improved configuration\n\nThese changes ensure the environment and dependencies are up to date.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "internal/cache/new.go",
+      "internal/cache/redis.go",
+      "internal/cache/store.go",
+      "internal/cache/uuid.go"
+     ],
+     "hunk_count": 4,
+     "commit_message": "feat(auto-detect): add auto-detect feature to cache module\n\nImplemented auto-detection capabilities across cache components including new.go, redis.go, store.go, and uuid.go to improve cache handling and integration.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "internal/cache/redis_test.go",
+      "internal/cache/store_test.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(cache): add tests for redis and store cache modules\n\nAdded new test cases in redis_test.go and store_test.go to improve coverage and validate cache functionalities.",
+     "commit_type": "test",
+     "scope": "cache"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +618/-2 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 5.1875865000001795,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5855350000019826,
+      "input_tokens": 982,
+      "output_tokens": 95,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.3535864999976184,
+      "input_tokens": 108,
+      "output_tokens": 84,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1566315999989456,
+      "input_tokens": 121,
+      "output_tokens": 80,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0841209999998682,
+      "input_tokens": 110,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-12": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "Cargo.lock:0",
+      "Cargo.lock:1",
+      "Cargo.toml:0"
+     ],
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "docs/SYSTEM_DESIGN.md:0",
+      "docs/SYSTEM_DESIGN.md:1"
+     ],
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "src/book.rs:0",
+      "src/main.rs:0",
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/order.rs:0",
+      "src/order.rs:1",
+      "src/order.rs:2",
+      "src/order.rs:3"
+     ],
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "Cargo.lock",
+      "Cargo.toml"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(cargo): update Cargo.toml and Cargo.lock dependencies\n\nUpdated dependencies in Cargo.toml and regenerated Cargo.lock to ensure compatibility and latest versions.",
+     "commit_type": "chore",
+     "scope": "cargo"
+    },
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 3,
+     "commit_message": "docs(auto-detect): update README and system design docs\n\n- Revised README.md for clarity and completeness.\n- Enhanced docs/SYSTEM_DESIGN.md with updated architecture details and diagrams.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "src/book.rs",
+      "src/main.rs",
+      "src/matching.rs",
+      "src/order.rs"
+     ],
+     "hunk_count": 13,
+     "commit_message": "refactor(matching): refactor matching logic for clarity\n\nImproved the matching module by restructuring code in src/matching.rs and related files (src/book.rs, src/main.rs, src/order.rs) to enhance readability and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "matching"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 8 files, +45/-29 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.305693199999951,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9422642999998061,
+      "input_tokens": 694,
+      "output_tokens": 82,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.412368900000729,
+      "input_tokens": 104,
+      "output_tokens": 68,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9224252999993041,
+      "input_tokens": 107,
+      "output_tokens": 73,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0237299000000348,
+      "input_tokens": 117,
+      "output_tokens": 86,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-13": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "docs(auto-detect): update README with auto-detect details\n\nImprove documentation by adding information about the auto-detect feature in the README.md file.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "feat(auto-detect): add auto-detect feature in main.rs\n\nImplemented auto-detection logic to enhance functionality in src/main.rs.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +2/-2 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.7275660000013886,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6776249000031385,
+      "input_tokens": 205,
+      "output_tokens": 15,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9221033999965584,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1249056000015116,
+      "input_tokens": 100,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-14": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "docs/METRICS.md:0",
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "benches/e2e_bench.rs:0",
+      "benches/e2e_bench.rs:1",
+      "benches/e2e_bench.rs:2",
+      "benches/e2e_bench.rs:3",
+      "benches/e2e_bench.rs:4",
+      "benches/e2e_bench.rs:5",
+      "examples/loadgen.rs:0",
+      "examples/loadgen.rs:1",
+      "examples/loadgen.rs:2",
+      "examples/loadgen.rs:3",
+      "examples/loadgen.rs:4",
+      "examples/loadgen.rs:5",
+      "examples/loadgen.rs:6"
+     ],
+     "files": [
+      "benches/e2e_bench.rs",
+      "examples/loadgen.rs"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "conv-fix",
+     "hunks": [
+      "src/gateway.rs:0"
+     ],
+     "files": [
+      "src/gateway.rs"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "conv-perf",
+     "hunks": [
+      "src/matching.rs:0"
+     ],
+     "files": [
+      "src/matching.rs"
+     ],
+     "suggested_type": "perf"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/METRICS.md",
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(auto-detect): update README and docs files\n\nUpdated README.md, METRICS.md, and PHASES.md to improve clarity and accuracy.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "benches/e2e_bench.rs",
+      "examples/loadgen.rs"
+     ],
+     "hunk_count": 13,
+     "commit_message": "test(auto-detect): add benchmarks and load generator example\n\n- Added e2e benchmark tests in benches/e2e_bench.rs\n- Included load generator example in examples/loadgen.rs\n\nThese additions help validate performance and simulate load scenarios.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-fix",
+     "files": [
+      "src/gateway.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "fix(auto-detect): correct auto-detect logic in gateway\n\nResolved an issue in src/gateway.rs where the auto-detect feature failed under certain conditions, ensuring proper detection and improved reliability.",
+     "commit_type": "fix",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-perf",
+     "files": [
+      "src/matching.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "perf(auto-detect): optimize matching logic for better performance\n\nImproved the matching algorithm in src/matching.rs to reduce computation time and enhance efficiency during auto-detection processes.",
+     "commit_type": "perf",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 7 files, +68/-30 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.896310400003131,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9791764000001422,
+      "input_tokens": 650,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2276052000015625,
+      "input_tokens": 115,
+      "output_tokens": 64,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4551288999973622,
+      "input_tokens": 110,
+      "output_tokens": 86,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0455407000008563,
+      "input_tokens": 101,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1852170999991358,
+      "input_tokens": 101,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-15": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      ".gitignore:0",
+      "Cargo.toml:0"
+     ],
+     "files": [
+      ".gitignore",
+      "Cargo.toml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "src/main.rs:0"
+     ],
+     "files": [
+      "src/main.rs"
+     ],
+     "suggested_type": "feat"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      ".gitignore",
+      "Cargo.toml"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update .gitignore and Cargo.toml\n\n- Added or modified entries in .gitignore\n- Updated dependencies or settings in Cargo.toml\n\nThese changes improve project configuration and dependency management.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(auto-detect): update README and system design docs\n\n- Improved clarity and added details in README.md\n- Expanded system architecture explanations in docs/SYSTEM_DESIGN.md",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "src/main.rs"
+     ],
+     "hunk_count": 1,
+     "commit_message": "feat(auto-detect): add auto-detect feature in main.rs\n\nImplemented auto-detection logic in src/main.rs to enhance functionality and improve user experience.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +561/-1 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 4.262002800001937,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9806792000017595,
+      "input_tokens": 332,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1244887000029848,
+      "input_tokens": 105,
+      "output_tokens": 84,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0241624000009324,
+      "input_tokens": 107,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1261794000020018,
+      "input_tokens": 100,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-16": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "docs/METRICS.md:0"
+     ],
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "src/matching.rs:0",
+      "src/matching.rs:1",
+      "src/matching.rs:2",
+      "src/matching.rs:3",
+      "src/matching.rs:4",
+      "src/matching.rs:5",
+      "src/matching.rs:6",
+      "src/matching.rs:7",
+      "src/matching.rs:8",
+      "src/matching.rs:9",
+      "src/matching.rs:10",
+      "src/matching.rs:11",
+      "src/matching.rs:12",
+      "src/matching.rs:13",
+      "src/matching.rs:14",
+      "src/matching.rs:15",
+      "src/matching.rs:16",
+      "src/matching.rs:17",
+      "src/matching.rs:18",
+      "src/matching.rs:19",
+      "src/matching.rs:20",
+      "src/matching.rs:21",
+      "src/matching.rs:22",
+      "src/matching.rs:23",
+      "src/matching.rs:24",
+      "src/matching.rs:25",
+      "src/matching.rs:26",
+      "src/matching.rs:27",
+      "src/matching.rs:28"
+     ],
+     "files": [
+      "src/matching.rs"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "docs/METRICS.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "docs(auto-detect): update METRICS.md documentation\n\nImprove and clarify metrics documentation to enhance understanding and usage.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "src/matching.rs"
+     ],
+     "hunk_count": 29,
+     "commit_message": "refactor(auto-detect): improve matching logic for clarity\n\nRefactored the matching logic in src/matching.rs to enhance readability and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +112/-27 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.1583004999993136,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.08435499999905,
+      "input_tokens": 248,
+      "output_tokens": 21,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.104530299999169,
+      "input_tokens": 103,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9647267000000284,
+      "input_tokens": 102,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-17": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "docs/PHASES.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/PHASES.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/PHASES.md"
+     ],
+     "hunk_count": 4,
+     "commit_message": "docs(auto-detect): update README and PHASES documentation\n\n- Improved content in README.md\n- Added clarifications and details in docs/PHASES.md",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +226/-13 lines",
+    "Created 1 commit groups using 'conventional' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 1.8842719999993278,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9601631000005,
+      "input_tokens": 228,
+      "output_tokens": 18,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9206135000022186,
+      "input_tokens": 107,
+      "output_tokens": 71,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-18": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-fix",
+     "hunks": [
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1"
+     ],
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "suggested_type": "fix"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "backend/services/llm/ollama.py:0",
+      "backend/services/llm/ollama.py:1",
+      "backend/services/llm/ollama.py:2",
+      "backend/services/llm/ollama.py:3",
+      "backend/utils/cost.py:0"
+     ],
+     "files": [
+      "backend/services/llm/ollama.py",
+      "backend/utils/cost.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile configuration\n\nRefine and update Dockerfile to improve build process and environment setup.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-fix",
+     "files": [
+      "backend/services/llm/gemini.py"
+     ],
+     "hunk_count": 2,
+     "commit_message": "fix(auto-detect): correct Gemini service handling in backend\n\nFixed issues in backend/services/llm/gemini.py related to improper handling of Gemini service calls, improving stability and correctness of auto-detection logic.",
+     "commit_type": "fix",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "backend/services/llm/ollama.py",
+      "backend/utils/cost.py"
+     ],
+     "hunk_count": 5,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in backend modules\n\nRefactored the auto-detect functionality in backend/services/llm/ollama.py and backend/utils/cost.py to enhance code clarity and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +70/-36 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 5.903335700000753,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9860645000007935,
+      "input_tokens": 362,
+      "output_tokens": 48,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.2502658999983396,
+      "input_tokens": 99,
+      "output_tokens": 60,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5474957000005816,
+      "input_tokens": 106,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1157084999977087,
+      "input_tokens": 114,
+      "output_tokens": 91,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-19": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "backend/core/config.py:0"
+     ],
+     "files": [
+      "backend/core/config.py"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "backend/routers/agent.py:0",
+      "backend/routers/agent.py:1",
+      "backend/routers/agent.py:2",
+      "backend/services/llm/__init__.py:0"
+     ],
+     "files": [
+      "backend/routers/agent.py",
+      "backend/services/llm/__init__.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile configuration\n\nRefined the Dockerfile to improve build process and environment setup.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "backend/core/config.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "feat(auto-detect): add auto-detect feature in config\n\nImplemented auto-detection logic in backend/core/config.py to improve configuration handling and reduce manual setup.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "backend/routers/agent.py",
+      "backend/services/llm/__init__.py"
+     ],
+     "hunk_count": 4,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in agent and llm\n\nRefactored the auto-detect functionality in backend/routers/agent.py and backend/services/llm/__init__.py to enhance code clarity and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +54/-17 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 7.4349801999997,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7454691999992065,
+      "input_tokens": 381,
+      "output_tokens": 50,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.053344299998571,
+      "input_tokens": 99,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2013589999987744,
+      "input_tokens": 101,
+      "output_tokens": 69,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 4.430974700000661,
+      "input_tokens": 115,
+      "output_tokens": 96,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-20": {
+   "groups": [
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "backend/agents/git_agent.py:0",
+      "backend/main.py:0",
+      "backend/main.py:1",
+      "cli/api_client.py:0",
+      "cli/main.py:0",
+      "cli/main.py:1"
+     ],
+     "files": [
+      "backend/agents/git_agent.py",
+      "backend/main.py",
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "conv-feat",
+     "hunks": [
+      "backend/routers/agent.py:0",
+      "backend/services/llm/factory.py:0",
+      "backend/services/llm/gemini.py:0",
+      "cli/commands/agent.py:0"
+     ],
+     "files": [
+      "backend/routers/agent.py",
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py",
+      "cli/commands/agent.py"
+     ],
+     "suggested_type": "feat"
+    },
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "pyproject.toml:0"
+     ],
+     "files": [
+      "pyproject.toml"
+     ],
+     "suggested_type": "chore"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "backend/agents/git_agent.py",
+      "backend/main.py",
+      "cli/api_client.py",
+      "cli/main.py"
+     ],
+     "hunk_count": 6,
+     "commit_message": "refactor(auto-detect): improve auto-detect logic in backend and cli\n\nRefactored the auto-detect functionality across backend/agents/git_agent.py, backend/main.py, cli/api_client.py, and cli/main.py to enhance code clarity and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-feat",
+     "files": [
+      "backend/routers/agent.py",
+      "backend/services/llm/factory.py",
+      "backend/services/llm/gemini.py",
+      "cli/commands/agent.py"
+     ],
+     "hunk_count": 4,
+     "commit_message": "feat(auto-detect): add auto-detect feature for agent commands\n\n- Implement auto-detection logic in backend routers and services\n- Update CLI commands to support auto-detect functionality\n- Enhance LLM factory and Gemini service integration\n\nThis feature improves user experience by automatically detecting relevant parameters and streamlining agent interactions.",
+     "commit_type": "feat",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "pyproject.toml"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update pyproject.toml configuration\n\nUpdated the pyproject.toml file to improve project setup and dependencies management.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 9 files, +403/-5 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 8.923790400000144,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4901310999994166,
+      "input_tokens": 709,
+      "output_tokens": 110,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 4.976012600000104,
+      "input_tokens": 120,
+      "output_tokens": 98,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5779948000017612,
+      "input_tokens": 132,
+      "output_tokens": 102,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8741511000007449,
+      "input_tokens": 101,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-21": {
+   "groups": [
+    {
+     "id": "conv-test",
+     "hunks": [
+      "tests/backend/test_analyze.py:0",
+      "tests/backend/test_commit.py:0",
+      "tests/cli/test_api_client.py:0"
+     ],
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py",
+      "tests/cli/test_api_client.py"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-test",
+     "files": [
+      "tests/backend/test_analyze.py",
+      "tests/backend/test_commit.py",
+      "tests/cli/test_api_client.py"
+     ],
+     "hunk_count": 3,
+     "commit_message": "test(auto-detect): add tests for auto-detect functionality\n\nAdd new test cases in backend and CLI modules to cover auto-detect features, improving test coverage and reliability.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +69/-8 lines",
+    "Created 1 commit groups using 'conventional' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 3.3860815999978513,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8226461000012932,
+      "input_tokens": 288,
+      "output_tokens": 33,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.5592322000011336,
+      "input_tokens": 119,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-22": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      ".railwayignore:0",
+      "Dockerfile:0"
+     ],
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "backend/core/dependencies.py:0"
+     ],
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      ".railwayignore",
+      "Dockerfile"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): add .railwayignore and update Dockerfile\n\n- Added .railwayignore to exclude files from deployment\n- Updated Dockerfile for improved build configuration",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "backend/core/dependencies.py"
+     ],
+     "hunk_count": 1,
+     "commit_message": "refactor(auto-detect): improve dependency handling logic\n\nRefactored the dependency management code in backend/core/dependencies.py to enhance clarity and maintainability without changing functionality.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +26/-5 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.445759399997769,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1038305000001856,
+      "input_tokens": 334,
+      "output_tokens": 33,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.4169641000007687,
+      "input_tokens": 105,
+      "output_tokens": 77,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9216920999970171,
+      "input_tokens": 103,
+      "output_tokens": 70,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-23": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      "Dockerfile:0"
+     ],
+     "files": [
+      "Dockerfile"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "backend/clustering/conventional.py:0",
+      "backend/clustering/conventional.py:1",
+      "backend/clustering/conventional.py:2",
+      "backend/routers/pr.py:0",
+      "backend/services/llm/gemini.py:0",
+      "backend/services/llm/gemini.py:1",
+      "backend/services/llm/gemini.py:2",
+      "backend/services/llm/gemini.py:3",
+      "backend/utils/cost.py:0",
+      "cli/commands/agent.py:0",
+      "cli/commands/agent.py:1",
+      "cli/commands/agent.py:2",
+      "cli/commands/analyze.py:0",
+      "cli/commands/analyze.py:1",
+      "cli/commands/auto.py:0",
+      "cli/commands/auto.py:1",
+      "cli/commands/auto.py:2",
+      "cli/commands/changelog.py:0",
+      "cli/commands/changelog.py:1",
+      "cli/commands/commit.py:0",
+      "cli/commands/commit.py:1",
+      "cli/commands/commit.py:2",
+      "cli/commands/index.py:0",
+      "cli/commands/index.py:1",
+      "cli/commands/index.py:2",
+      "cli/commands/index.py:3",
+      "cli/commands/pr.py:0",
+      "cli/commands/pr.py:1",
+      "cli/commands/resolve.py:0",
+      "cli/commands/resolve.py:1",
+      "cli/commands/review.py:0",
+      "cli/commands/review.py:1",
+      "cli/commands/split.py:0",
+      "cli/commands/split.py:1",
+      "cli/commands/split.py:2"
+     ],
+     "files": [
+      "backend/clustering/conventional.py",
+      "backend/routers/pr.py",
+      "backend/services/llm/gemini.py",
+      "backend/utils/cost.py",
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "suggested_type": "refactor"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      "Dockerfile"
+     ],
+     "hunk_count": 1,
+     "commit_message": "chore(auto-detect): update Dockerfile for environment setup\n\nUpdated the Dockerfile to improve environment setup and dependencies management.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "backend/clustering/conventional.py",
+      "backend/routers/pr.py",
+      "backend/services/llm/gemini.py",
+      "backend/utils/cost.py",
+      "cli/commands/agent.py",
+      "cli/commands/analyze.py",
+      "cli/commands/auto.py",
+      "cli/commands/changelog.py",
+      "cli/commands/commit.py",
+      "cli/commands/index.py",
+      "cli/commands/pr.py",
+      "cli/commands/resolve.py",
+      "cli/commands/review.py",
+      "cli/commands/split.py"
+     ],
+     "hunk_count": 35,
+     "commit_message": "refactor(auto-detect): improve command structure and modularity\n\nRefactored the auto-detect functionality across multiple CLI commands and backend modules to enhance code organization, readability, and maintainability. Updated related files in backend clustering, routers, services, and utilities to align with the new structure.\n\nFiles affected:\n- backend/clustering/conventional.py\n- backend/routers/pr.py\n- backend/services/llm/gemini.py\n- backend/utils/cost.py\n- cli/commands/agent.py\n- cli/commands/analyze.py\n- cli/commands/auto.py\n- cli/commands/changelog.py\n- cli/commands/commit.py\n- cli/commands/index.py\n- cli/commands/pr.py\n- cli/commands/resolve.py\n- cli/commands/review.py\n- cli/commands/split.py",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 15 files, +150/-96 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 4.674694599998475,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.5889104999987467,
+      "input_tokens": 975,
+      "output_tokens": 192,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8183486999987508,
+      "input_tokens": 99,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.26217220000035,
+      "input_tokens": 207,
+      "output_tokens": 214,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-24": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "docs/API_REFERENCE.md:0",
+      "docs/DATA_MODEL.md:0",
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md:0",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md:0",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md:0"
+     ],
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md",
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "docs/API_REFERENCE.md",
+      "docs/DATA_MODEL.md",
+      "docs/decisions/0012-platform-app-delivers-every-module-crd.md",
+      "docs/decisions/0017-audit-publishing-never-blocks-a-reconcile.md",
+      "docs/decisions/0018-the-audit-service-alone-computes-the-hash-chain.md"
+     ],
+     "hunk_count": 5,
+     "commit_message": "docs(decisions): update API_REFERENCE, DATA_MODEL, and ADRs\n\n- Updated API_REFERENCE.md and DATA_MODEL.md with latest details\n- Revised ADRs 0012, 0017, and 0018 to reflect current platform decisions\n\nThese changes improve documentation accuracy and clarity.",
+     "commit_type": "docs",
+     "scope": "decisions"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +122/-12 lines",
+    "Created 1 commit groups using 'conventional' strategy",
+    "Generated 1 commit messages"
+   ],
+   "wall_s": 2.3093604000023333,
+   "meter": {
+    "llm_calls": 2,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1415902000007918,
+      "input_tokens": 463,
+      "output_tokens": 97,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1638596000011603,
+      "input_tokens": 170,
+      "output_tokens": 93,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-25": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      ".github/workflows/ci.yaml:1",
+      ".github/workflows/ci.yaml:2"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md:0",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md:0"
+     ],
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "suggested_type": "docs"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      ".github/workflows/ci.yaml"
+     ],
+     "hunk_count": 3,
+     "commit_message": "chore(auto-detect): update CI workflow configuration\n\nUpdated the .github/workflows/ci.yaml file to improve or fix the continuous integration process.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "docs/decisions/0009-workload-class-label-gates-spot-placement.md",
+      "docs/decisions/0010-node-economics-as-labels-with-pluggable-price-sources.md"
+     ],
+     "hunk_count": 2,
+     "commit_message": "docs(auto-detect): add workload class and node economics docs\n\n- Add decision record for workload class label gates and spot placement\n- Add decision record for node economics as labels with pluggable price sources",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 3 files, +79/-3 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 3.897449600000982,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8779954999990878,
+      "input_tokens": 334,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 2.059190600000875,
+      "input_tokens": 104,
+      "output_tokens": 65,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9570605000008072,
+      "input_tokens": 138,
+      "output_tokens": 79,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-26": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      "web/vercel.json:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml",
+      "web/vercel.json"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "e2e/phase2_test.go:0"
+     ],
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "suggested_type": "test"
+    },
+    {
+     "id": "conv-perf",
+     "hunks": [
+      "web/scripts/build-lattice.ts:0",
+      "web/scripts/build-lattice.ts:1",
+      "web/scripts/build-lattice.ts:2"
+     ],
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "suggested_type": "perf"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      ".github/workflows/ci.yaml",
+      "web/vercel.json"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update CI workflow and Vercel config\n\n- Modified .github/workflows/ci.yaml to improve or fix CI pipeline\n- Updated web/vercel.json for deployment configuration\n\nThese changes enhance automation and deployment setup.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "e2e/phase2_test.go"
+     ],
+     "hunk_count": 1,
+     "commit_message": "test(auto-detect): add phase 2 e2e tests\n\nAdd end-to-end tests for phase 2 to improve coverage and ensure stability of the auto-detect feature.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-perf",
+     "files": [
+      "web/scripts/build-lattice.ts"
+     ],
+     "hunk_count": 3,
+     "commit_message": "perf(auto-detect): optimize lattice build script\n\nImprove performance of the lattice build process by refining the build-lattice.ts script, resulting in faster build times and more efficient resource usage.",
+     "commit_type": "perf",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 4 files, +30/-19 lines",
+    "Created 3 commit groups using 'conventional' strategy",
+    "Generated 3 commit messages"
+   ],
+   "wall_s": 3.6004844999988563,
+   "meter": {
+    "llm_calls": 4,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.7475768000003882,
+      "input_tokens": 390,
+      "output_tokens": 52,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9674476999971375,
+      "input_tokens": 110,
+      "output_tokens": 89,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9602045999999973,
+      "input_tokens": 105,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9216125000020838,
+      "input_tokens": 103,
+      "output_tokens": 72,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-27": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "docs/API_REFERENCE.md:0",
+      "docs/METRICS.md:0",
+      "docs/ROADMAP.md:0",
+      "docs/SYSTEM_DESIGN.md:0"
+     ],
+     "files": [
+      "README.md",
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md",
+      "docs/API_REFERENCE.md",
+      "docs/METRICS.md",
+      "docs/ROADMAP.md",
+      "docs/SYSTEM_DESIGN.md"
+     ],
+     "hunk_count": 7,
+     "commit_message": "docs(auto-detect): update multiple documentation files\n\nUpdated README.md and several docs files including API_REFERENCE.md, METRICS.md, ROADMAP.md, and SYSTEM_DESIGN.md to improve clarity and accuracy.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "test(auto-detect): add testing documentation\n\nAdd a new TESTING.md file to provide guidelines and instructions for testing the auto-detect feature.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 6 files, +58/-22 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 6.819546299997455,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0861803999978292,
+      "input_tokens": 442,
+      "output_tokens": 66,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8975056999988738,
+      "input_tokens": 128,
+      "output_tokens": 76,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 4.832457799999247,
+      "input_tokens": 102,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-28": {
+   "groups": [
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "README.md:0",
+      "README.md:1",
+      "README.md:2",
+      "README.md:3",
+      "README.md:4",
+      "README.md:5",
+      "README.md:6"
+     ],
+     "files": [
+      "README.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "e2e/phase7_sim_test.go:0",
+      "e2e/phase7_sim_test.go:1",
+      "e2e/phase7_sim_test.go:2"
+     ],
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "README.md"
+     ],
+     "hunk_count": 7,
+     "commit_message": "docs(auto-detect): update README with auto-detect info\n\nImprove documentation by adding details about the auto-detect feature in the README.md file.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "e2e/phase7_sim_test.go"
+     ],
+     "hunk_count": 3,
+     "commit_message": "test(auto-detect): add e2e tests for phase7 simulation\n\nAdd end-to-end tests in phase7_sim_test.go to verify simulation behavior and ensure auto-detection works as expected.",
+     "commit_type": "test",
+     "scope": "auto-detect"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 2 files, +133/-40 lines",
+    "Created 2 commit groups using 'conventional' strategy",
+    "Generated 2 commit messages"
+   ],
+   "wall_s": 2.625284699999611,
+   "meter": {
+    "llm_calls": 3,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.6778398999995261,
+      "input_tokens": 235,
+      "output_tokens": 21,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.8162171000003582,
+      "input_tokens": 99,
+      "output_tokens": 67,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.1264231000022846,
+      "input_tokens": 106,
+      "output_tokens": 78,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  },
+  "split-29": {
+   "groups": [
+    {
+     "id": "conv-chore",
+     "hunks": [
+      ".github/workflows/ci.yaml:0",
+      "kind-config-operator.yaml:0"
+     ],
+     "files": [
+      ".github/workflows/ci.yaml",
+      "kind-config-operator.yaml"
+     ],
+     "suggested_type": "chore"
+    },
+    {
+     "id": "conv-docs",
+     "hunks": [
+      "docs/TESTING.md:0"
+     ],
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "suggested_type": "docs"
+    },
+    {
+     "id": "conv-refactor",
+     "hunks": [
+      "operator/internal/controller/resources.go:0",
+      "operator/internal/controller/resources.go:1",
+      "operator/internal/controller/resources.go:2",
+      "operator/internal/controller/resources.go:3",
+      "operator/internal/controller/resources.go:4"
+     ],
+     "files": [
+      "operator/internal/controller/resources.go"
+     ],
+     "suggested_type": "refactor"
+    },
+    {
+     "id": "conv-test",
+     "hunks": [
+      "operator/internal/controller/tenantdatabase_controller_test.go:0",
+      "operator/internal/controller/tenantdatabase_controller_test.go:1"
+     ],
+     "files": [
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "suggested_type": "test"
+    }
+   ],
+   "splits": [
+    {
+     "group_id": "conv-chore",
+     "files": [
+      ".github/workflows/ci.yaml",
+      "kind-config-operator.yaml"
+     ],
+     "hunk_count": 2,
+     "commit_message": "chore(auto-detect): update CI workflow and operator config\n\n- Modified .github/workflows/ci.yaml to improve automation\n- Updated kind-config-operator.yaml for better configuration management\n\nThese changes enhance the CI process and operator setup.",
+     "commit_type": "chore",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-docs",
+     "files": [
+      "docs/TESTING.md"
+     ],
+     "hunk_count": 1,
+     "commit_message": "docs(auto-detect): add testing documentation\n\nAdd a new TESTING.md file to provide guidelines and instructions for testing the auto-detect feature.",
+     "commit_type": "docs",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-refactor",
+     "files": [
+      "operator/internal/controller/resources.go"
+     ],
+     "hunk_count": 5,
+     "commit_message": "refactor(auto-detect): improve resource handling in controller\n\nRefactored the resource management logic in operator/internal/controller/resources.go to enhance code clarity and maintainability without changing external behavior.",
+     "commit_type": "refactor",
+     "scope": "auto-detect"
+    },
+    {
+     "group_id": "conv-test",
+     "files": [
+      "operator/internal/controller/tenantdatabase_controller_test.go"
+     ],
+     "hunk_count": 2,
+     "commit_message": "test(tenantdatabase_controller): add tests for tenant database controller\n\nAdd new test cases to improve coverage and validate tenant database controller behavior.",
+     "commit_type": "test",
+     "scope": "tenantdatabase_controller"
+    }
+   ],
+   "error": null,
+   "reasoning": [
+    "Parsed diff: 5 files, +25/-14 lines",
+    "Created 4 commit groups using 'conventional' strategy",
+    "Generated 4 commit messages"
+   ],
+   "wall_s": 5.181269100001373,
+   "meter": {
+    "llm_calls": 5,
+    "requests": [
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9104247000032046,
+      "input_tokens": 444,
+      "output_tokens": 59,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 0.9869359000003897,
+      "input_tokens": 111,
+      "output_tokens": 86,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.0207527999991726,
+      "input_tokens": 102,
+      "output_tokens": 62,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.2354510000004666,
+      "input_tokens": 103,
+      "output_tokens": 74,
+      "cached_input_tokens": 0
+     },
+     {
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "latency_s": 1.02380439999979,
+      "input_tokens": 106,
+      "output_tokens": 63,
+      "cached_input_tokens": 0
+     }
+    ],
+    "embed_calls": []
+   }
+  }
+ },
+ "retriever": "None"
+}
