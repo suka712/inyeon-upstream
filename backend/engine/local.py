@@ -71,6 +71,18 @@ class LocalEngine:
                 return None
         return self._retriever
 
+    async def aclose(self) -> None:
+        """Close the LLM and embedding clients this engine created.
+
+        Call on the loop that ran the engine, before that loop is closed.
+        """
+        if self._llm is not None:
+            await self._llm.aclose()
+            self._llm = None
+        if self._retriever is not None:
+            await self._retriever.embeddings.aclose()
+            self._retriever = None
+
     def _result_from(self, data: dict[str, Any]) -> EngineResult:
         return EngineResult(
             data=data,

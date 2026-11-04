@@ -52,3 +52,12 @@ class LLMProvider(ABC):
     async def is_healthy(self) -> bool:
         """Check if the LLM provider is available."""
         pass
+
+    async def aclose(self) -> None:
+        """Close the provider's async client, on the loop that used it.
+
+        Providers holding an async HTTP client override this. Left open, the
+        client is closed whenever it is garbage-collected, on whatever loop is
+        running then, and its connections still belong to the loop that made
+        them, which by that point is closed.
+        """

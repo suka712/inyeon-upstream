@@ -28,6 +28,9 @@ class OllamaProvider(LLMProvider):
         self.timeout = timeout
         self._client = httpx.AsyncClient(base_url=base_url, timeout=timeout)
 
+    async def aclose(self) -> None:
+        await self._client.aclose()
+
     async def generate(
         self,
         prompt: str,

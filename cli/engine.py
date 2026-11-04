@@ -68,7 +68,22 @@ class SyncLocalBackend:
         return self._loop.run_until_complete(coro)
 
     def close(self) -> None:
-        if not self._loop.is_closed():
+        """Close the engine's clients on this loop, then the loop itself.
+
+        Closing only the loop left the clients' connections bound to a dead
+        loop; when a client was later garbage-collected while another loop was
+        running (several backends in one process), its cleanup printed
+        "RuntimeError: Event loop is closed".
+        """
+        if self._loop.is_closed():
+            return
+        try:
+            aclose = getattr(self._engine, "aclose", None)
+            if aclose is not None:
+                self._loop.run_until_complete(aclose())
+            self._loop.run_until_complete(self._loop.shutdown_asyncgens())
+            self._loop.run_until_complete(self._loop.shutdown_default_executor())
+        finally:
             self._loop.close()
 
     def split_diff(self, diff: str, strategy: str = "hybrid", repo_path: str = ".") -> dict:

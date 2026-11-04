@@ -44,6 +44,9 @@ class GeminiProvider(LLMProvider):
             http_options={"timeout": timeout * 1000},
         )
 
+    async def aclose(self) -> None:
+        await self.client.aio.aclose()
+
     async def generate(
         self,
         prompt: str,

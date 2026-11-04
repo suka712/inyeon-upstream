@@ -30,6 +30,10 @@ class EmbeddingService:
         self.model = "gemini-embedding-001"
         self.config = types.EmbedContentConfig(output_dimensionality=768)
 
+    async def aclose(self) -> None:
+        """Close the async client on the loop that used it (see LLMProvider.aclose)."""
+        await self.client.aio.aclose()
+
     async def embed_text(self, text: str) -> list[float]:
         """Generate embedding for a single text."""
         try:

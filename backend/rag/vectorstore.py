@@ -3,6 +3,8 @@ from typing import Any
 
 import chromadb
 from chromadb.config import Settings
+from chromadb.telemetry.product import ProductTelemetryClient, ProductTelemetryEvent
+from overrides import override  # required by Chroma's Component metaclass
 
 from .embeddings import RAGError
 
@@ -13,11 +15,32 @@ class VectorStoreError(RAGError):
     pass
 
 
+class NoTelemetry(ProductTelemetryClient):
+    """Product telemetry that does nothing.
+
+    anonymized_telemetry=False only stops Chroma's Posthog client from
+    sending: it still reads its user_id on every event, which creates
+    ~/.cache/chroma/telemetry_user_id on the user's machine. Replacing the
+    client means nothing is written at all.
+    """
+
+    @override
+    def capture(self, event: ProductTelemetryEvent) -> None:
+        pass
+
+
+_NO_TELEMETRY = f"{NoTelemetry.__module__}.{NoTelemetry.__qualname__}"
+
+
 class VectorStore:
     """ChromaDB wrapper for code embeddings storage."""
 
     def __init__(self, persist_dir: str | None = None, collection_name: str = "code"):
-        settings = Settings(anonymized_telemetry=False)
+        settings = Settings(
+            anonymized_telemetry=False,
+            chroma_product_telemetry_impl=_NO_TELEMETRY,
+            chroma_telemetry_impl=_NO_TELEMETRY,
+        )
 
         if persist_dir:
             Path(persist_dir).mkdir(parents=True, exist_ok=True)

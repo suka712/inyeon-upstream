@@ -36,6 +36,9 @@ class OpenAIProvider(LLMProvider):
         self.timeout = timeout
         self.client = AsyncOpenAI(api_key=api_key, timeout=timeout, max_retries=0)
 
+    async def aclose(self) -> None:
+        await self.client.close()
+
     async def generate(
         self,
         prompt: str,
